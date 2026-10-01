@@ -1,0 +1,283 @@
+/* ═══════════════════════════════════════════════════
+   Session Management Utility
+   
+   Creates, verifies, and manages opaque session tokens
+   stored in the database as SHA-256 hashes.
+   
+   Milestone 1 (C-01): Tokens are hashed before storage.
+   A DB breach no longer exposes plaintext session tokens.
+   
+   Phase 5: Integrated with enterprise session-manager.ts
+   for rotation, revocation, device tracking, and suspicious
+   login detection.
+   ═══════════════════════════════════════════════════ */
+
+import { db } from './db';
+import { cookies } from 'next/headers';
+import { logger } from './logger';
+import { shouldRotateSession, enforceSessionLimit } from './session-manager';
+
+const SESSION_COOKIE_NAME = 'dmq_session';
+const SESSION_EXPIRY_DAYS = 30;
+
+// ── Session Token Hashing (Milestone 1: C-01) ─────────────────
+// Tokens are stored as SHA-256 hashes in the database.
+// On lookup, we hash the incoming cookie value and compare.
+// This prevents mass session hijack if the database is compromised.
+
+async function hashToken(token: string): Promise<string> {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(`dmq_session:${token}`);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  return Array.from(new Uint8Array(hashBuffer))
+    .map((b) => b.toString(16).padStart(2, '0'))
+    .join('');
+}
+
+/**
+ * Generate a cryptographically random session token.
+ */
+function generateToken(): string {
+  const bytes = crypto.getRandomValues(new Uint8Array(32));
+  return Array.from(bytes)
+    .map((b) => b.toString(16).padStart(2, '0'))
+    .join('');
+}
+
+export { hashToken };
+
+export interface CreateSessionResult {
+  token: string;
+  expiresAt: Date;
+  requiresReauth?: boolean;
+  securityAssessment?: import('./session-manager').SessionSecurityAssessment;
+}
+
+/**
+ * Create a new session for a user. Returns the token and sets httpOnly cookie.
+ * Milestone 1 C-01: Stores SHA-256 hash of token in DB, not plaintext.
+ * Phase 5: Includes security assessment and session limit enforcement.
+ */
+export async function createSession(userId: string): Promise<CreateSessionResult> {
+  const token = generateToken();
+  const expiresAt = new Date(Date.now() + SESSION_EXPIRY_DAYS * 24 * 60 * 60 * 1000);
+
+  // Clean up expired sessions for this user
+  await db.session.deleteMany({
+    where: {
+      userId,
+      expiresAt: { lt: new Date() },
+    },
+  });
+
+  // Milestone 1 C-01: Store SHA-256 hash of token, not plaintext
+  const tokenHash = await hashToken(token);
+
+  await db.session.create({
+    data: {
+      userId,
+      token: tokenHash,
+      expiresAt,
+    },
+  });
+
+  // Phase 5: Enforce concurrent session limit
+  const removed = await enforceSessionLimit(userId);
+  if (removed > 0) {
+    logger.info(`[Session] Removed ${removed} excess sessions for user ${userId}`);
+  }
+
+  // Set httpOnly cookie (still contains plaintext token — only the DB stores the hash)
+  const cookieStore = await cookies();
+  cookieStore.set(SESSION_COOKIE_NAME, token, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'lax',
+    path: '/',
+    expires: expiresAt,
+    maxAge: SESSION_EXPIRY_DAYS * 24 * 60 * 60,
+  });
+
+  return { token, expiresAt };
+}
+
+export interface SessionUser {
+  id: string;
+  email: string;
+  name: string | null;
+  role: string;
+}
+
+/**
+ * Get the current session from the request cookie.
+ * Milestone 1 C-01: Hashes cookie token before DB lookup.
+ * Phase 5: Checks session rotation requirements.
+ * Returns the user if valid session exists, null otherwise.
+ */
+export async function getCurrentSession(): Promise<SessionUser | null> {
+  try {
+    const cookieStore = await cookies();
+    const token = cookieStore.get(SESSION_COOKIE_NAME)?.value;
+
+    if (!token) return null;
+
+    // Milestone 1 C-01: Hash the cookie token before DB lookup
+    const tokenHash = await hashToken(token);
+
+    const session = await db.session.findUnique({
+      where: { token: tokenHash },
+      include: {
+        user: {
+          select: {
+            id: true,
+            email: true,
+            name: true,
+            role: true,
+          },
+        },
+      },
+    });
+
+    if (!session || session.expiresAt < new Date()) {
+      // Clean up expired/invalid session
+      if (session) {
+        await db.session.delete({ where: { id: session.id } });
+      }
+      return null;
+    }
+
+    // Phase 5: Check if session needs rotation
+    if (shouldRotateSession(session.createdAt)) {
+      logger.info(
+        `[Session] Session ${session.id} eligible for rotation (age: ${Math.round((Date.now() - session.createdAt.getTime()) / (24 * 60 * 60 * 1000))}d)`,
+      );
+    }
+
+    // Extend session expiry (rolling expiry)
+    const newExpiry = new Date(Date.now() + SESSION_EXPIRY_DAYS * 24 * 60 * 60 * 1000);
+    await db.session.update({
+      where: { id: session.id },
+      data: { expiresAt: newExpiry },
+    });
+
+    const cookieStore2 = await cookies();
+    cookieStore2.set(SESSION_COOKIE_NAME, token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'lax',
+      path: '/',
+      expires: newExpiry,
+      maxAge: SESSION_EXPIRY_DAYS * 24 * 60 * 60,
+    });
+
+    return {
+      id: session.user.id,
+      email: session.user.email,
+      name: session.user.name,
+      role: session.user.role,
+    };
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Require authentication. Returns user or throws error response.
+ */
+export async function requireAuth(): Promise<SessionUser> {
+  const user = await getCurrentSession();
+  if (!user) {
+    throw new AuthError('Authentication required', 401);
+  }
+  return user;
+}
+
+/**
+ * Delete the current session (logout).
+ * Milestone 1 C-01: Hashes token before DB deletion.
+ */
+export async function destroyCurrentSession(): Promise<void> {
+  const cookieStore = await cookies();
+  const token = cookieStore.get(SESSION_COOKIE_NAME)?.value;
+
+  if (token) {
+    const tokenHash = await hashToken(token);
+    await db.session.deleteMany({ where: { token: tokenHash } });
+  }
+
+  cookieStore.delete(SESSION_COOKIE_NAME);
+}
+
+/**
+ * Validate a session token directly (for use in middleware and API routes
+ * that need to validate a token from a NextRequest rather than cookies()).
+ * Does NOT set cookies or extend expiry — only validates.
+ * Milestone 1 C-01: Hashes token before DB lookup.
+ */
+export async function validateSessionToken(token: string): Promise<SessionUser | null> {
+  if (!token || token.length < 16) return null;
+
+  try {
+    const tokenHash = await hashToken(token);
+
+    const session = await db.session.findUnique({
+      where: { token: tokenHash },
+      include: {
+        user: {
+          select: {
+            id: true,
+            email: true,
+            name: true,
+            role: true,
+          },
+        },
+      },
+    });
+
+    if (!session || session.expiresAt < new Date()) {
+      return null;
+    }
+
+    return {
+      id: session.user.id,
+      email: session.user.email,
+      name: session.user.name,
+      role: session.user.role,
+    };
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Destroy a specific session token (for logout from API routes).
+ * Milestone 1 C-01: Hashes token before DB deletion.
+ */
+export async function destroySessionByToken(token: string): Promise<void> {
+  if (token) {
+    const tokenHash = await hashToken(token);
+    await db.session.deleteMany({ where: { token: tokenHash } });
+  }
+}
+
+/**
+ * Clean up all expired sessions. Call periodically.
+ */
+export async function cleanupExpiredSessions(): Promise<number> {
+  const result = await db.session.deleteMany({
+    where: { expiresAt: { lt: new Date() } },
+  });
+  return result.count;
+}
+
+/**
+ * Custom error class for auth failures.
+ */
+export class AuthError extends Error {
+  status: number;
+  constructor(message: string, status = 401) {
+    super(message);
+    this.name = 'AuthError';
+    this.status = status;
+  }
+}

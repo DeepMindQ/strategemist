@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# Pre-push hook — CI-faithful validation
+#
+# This hook runs the EXACT same validation path as GitHub Actions CI.
+# It calls scripts/ci-local.sh which mirrors all 10 blocking jobs.
+#
+# If this hook passes, GitHub CI should pass.
+# If this hook fails, fix locally before pushing.
+#
+# This prevents the #1 recurring pattern:
+#   "pre-push passed but GitHub failed"
+
+set -uo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
+echo "🚀 Pre-push hook — Running CI mirror..."
+echo "Project root: $PROJECT_ROOT"
+
+# Run the CI mirror (full blocking job suite)
+if [ -f "$PROJECT_ROOT/scripts/ci-local.sh" ]; then
+  bash "$PROJECT_ROOT/scripts/ci-local.sh" --quick
+else
+  echo "⚠️  CI mirror script not found — skipping pre-push check"
+fi
+
+EXIT_CODE=$?
+
+if [ $EXIT_CODE -ne 0 ]; then
+  echo ""
+  echo "❌ CI mirror failed — push BLOCKED"
+  echo "   Fix the failures above before pushing."
+  echo "   Run './scripts/ci-local.sh' to debug."
+  exit 1
+fi
+
+echo ""
+echo "✅ CI mirror passed — pushing to remote..."

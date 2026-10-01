@@ -1,0 +1,95 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { z } from 'zod';
+import { verifyPassword } from '@/lib/password';
+import { requestOtp } from '@/lib/otp';
+import { db } from '@/lib/db';
+import { logger } from '@/lib/logger';
+import { generalApiRateLimit } from '@/lib/auth-helpers';
+
+const schema = z.object({
+  email: z.string().email('Invalid email address'),
+  password: z.string().min(1, 'Password is required'),
+});
+
+export async function POST(request: NextRequest) {
+  try {
+    // Rate limit login attempts by IP
+    const ip = request.headers?.get?.('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+    const rateLimitResult = generalApiRateLimit(ip, 'login');
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many login attempts. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'Retry-After': String(Math.ceil((rateLimitResult.resetAt - Date.now()) / 1000)),
+          },
+        },
+      );
+    }
+
+    const body = await request.json();
+    const parsed = schema.safeParse(body);
+
+    if (!parsed.success) {
+      const msg = parsed.error.issues[0]?.message || 'Validation failed';
+      return NextResponse.json({ error: msg }, { status: 400 });
+    }
+
+    const { email, password } = parsed.data;
+    const normalizedEmail = email.trim().toLowerCase();
+
+    // Find user
+    const user = await db.user.findUnique({ where: { email: normalizedEmail } });
+
+    if (!user) {
+      // Don't reveal user existence — but also don't send OTP to non-existent user
+      // Wait a fixed time to prevent timing attacks
+      await new Promise((r) => setTimeout(r, 1000));
+      return NextResponse.json({ error: 'Invalid email or password' }, { status: 401 });
+    }
+
+    if (!user.passwordHash) {
+      return NextResponse.json(
+        {
+          error: 'No password set. Please use OTP-only login to set your password first.',
+          needsOtpLogin: true,
+        },
+        { status: 403 },
+      );
+    }
+
+    // Verify password
+    const valid = await verifyPassword(password, user.passwordHash);
+    if (!valid) {
+      await new Promise((r) => setTimeout(r, 1000));
+      return NextResponse.json({ error: 'Invalid email or password' }, { status: 401 });
+    }
+
+    // Password verified — now send OTP to email for second factor
+    const otpResult = await requestOtp(normalizedEmail, 'login');
+
+    if (!otpResult.success) {
+      return NextResponse.json({ error: otpResult.error || 'Failed to send OTP' }, { status: 500 });
+    }
+
+    // Milestone 1 H-05: Dev OTP only in development, never staging
+    const devOtpAllowed =
+      process.env.NODE_ENV === 'development' && process.env.ALLOW_DEV_OTP === 'true';
+    return NextResponse.json({
+      success: true,
+      message:
+        devOtpAllowed && otpResult.devCode
+          ? 'Password verified. OTP generated (dev mode).'
+          : 'Password verified. OTP sent to your email.',
+      ...(devOtpAllowed && otpResult.devCode ? { devCode: otpResult.devCode } : {}),
+    });
+  } catch (error) {
+    logger.error('[auth/login] Error:', { error: error });
+    // Do NOT expose internal error details to clients
+    return NextResponse.json(
+      { error: 'Authentication service is temporarily unavailable. Please try again later.' },
+      { status: 503 },
+    );
+  }
+}

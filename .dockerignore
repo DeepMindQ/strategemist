@@ -1,0 +1,52 @@
+# Dependencies
+node_modules
+.git
+.gitignore
+
+# Build artifacts
+.next
+out
+dist
+build
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Development files
+scripts/
+skills/
+docs/
+download/
+worklog.md
+*.md
+!prisma/**/*.md
+
+# Test files
+tests/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+coverage/
+
+# IDE
+.vscode
+.idea
+
+# Data files
+public/data/
+*.pdf
+*.docx
+*.xlsx
+*.pptx
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Misc
+.DS_Store
+*.log

@@ -1,0 +1,244 @@
+# ═══════════════════════════════════════════════════
+# DeepMindQ — Staging Deployment Pipeline
+# M4 Phase 3 — Production-Grade Stabilization
+#
+# Architecture: Vercel Hobby — Preview Deployments as staging
+# Single Vercel project, develop branch → preview deployment
+# Neon PostgreSQL provides separate staging database
+#
+# Trigger: Push to develop branch
+# Flow: Build → Migrate (staging DB) → Preview Deploy → Smoke → Health → Summary
+#
+# SAFETY GATES:
+#   1. Build must succeed with staging env vars
+#   2. Database migration on staging Neon database (with P3005 handling)
+#   3. Vercel preview deployment created (NOT promoted to production)
+#   4. Smoke test suite (18 tests) must pass
+#   5. Health endpoint must return status=ok
+#   6. Summary job always runs for visibility
+# ═══════════════════════════════════════════════════
+name: Deploy Staging
+
+on:
+  push:
+    branches: [develop]
+
+concurrency:
+  group: deploy-staging
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: '22'
+
+jobs:
+  # ═══════════════════════════════════════════════════
+  # STAGE 1: Staging Build
+  # ═══════════════════════════════════════════════════
+  build-staging:
+    name: "Staging — Build"
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - run: npx prisma generate
+      - run: npm run build:vercel
+        env:
+          DATABASE_URL: ${{ secrets.STAGING_DATABASE_URL }}
+          NEXTAUTH_SECRET: ${{ secrets.STAGING_NEXTAUTH_SECRET }}
+          AUTHORIZED_EMAIL: ${{ secrets.STAGING_AUTHORIZED_EMAIL }}
+
+  # ═══════════════════════════════════════════════════
+  # STAGE 2: Database Migration (Staging Neon)
+  # Handles P3005: existing DB without migration history
+  # Uses set +e to capture Prisma exit codes intentionally
+  # ═══════════════════════════════════════════════════
+  migrate-staging:
+    name: "Staging — Database Migration"
+    runs-on: ubuntu-latest
+    needs: [build-staging]
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+
+      - name: Check pending migrations
+        shell: bash
+        run: |
+          set +eo pipefail  # Disable for Prisma status check (grep returns 1 on no match)
+          npx prisma generate --quiet 2>/dev/null
+          PENDING=$(npx prisma migrate status 2>&1 | grep -c "DRIFT\|Pending" || true)
+          echo "Pending migrations: ${PENDING}"
+          set -eo pipefail  # Re-enable for subsequent steps
+          if [ "${PENDING}" = "0" ]; then
+            echo "No pending migrations — skipping"
+          fi
+        env:
+          DATABASE_URL: ${{ secrets.STAGING_DATABASE_URL }}
+          DIRECT_DATABASE_URL: ${{ secrets.STAGING_DIRECT_DATABASE_URL }}
+
+      - name: Run database migration
+        shell: bash
+        run: |
+          set +e  # Capture Prisma exit code intentionally
+          OUTPUT=$(npx prisma migrate deploy 2>&1)
+          MIGRATE_EXIT=$?
+          set -e
+
+          echo "$OUTPUT"
+
+          if echo "$OUTPUT" | grep -q "P3005"; then
+            echo "Database schema exists but no migration history — baselining..."
+            set +e
+            npx prisma migrate resolve --applied 20260701000000_init_baseline 2>&1
+            RESOLVE_EXIT=$?
+            set -e
+            if [ $RESOLVE_EXIT -eq 0 ]; then
+              echo "✅ Baseline resolved successfully"
+            else
+              echo "❌ Baseline resolve failed with exit code ${RESOLVE_EXIT}"
+              exit 1
+            fi
+          elif [ $MIGRATE_EXIT -ne 0 ]; then
+            echo "❌ Migration failed with exit code ${MIGRATE_EXIT}"
+            exit 1
+          else
+            echo "✅ Migration applied successfully"
+          fi
+        env:
+          DATABASE_URL: ${{ secrets.STAGING_DATABASE_URL }}
+          DIRECT_DATABASE_URL: ${{ secrets.STAGING_DIRECT_DATABASE_URL }}
+
+  # ═══════════════════════════════════════════════════
+  # STAGE 3: Deploy to Vercel (Preview Deployment)
+  # Same project as production, NO --prod → preview URL
+  # Vercel auto-generates unique preview URL
+  # ═══════════════════════════════════════════════════
+  deploy-staging:
+    name: "Staging — Preview Deploy"
+    runs-on: ubuntu-latest
+    needs: [migrate-staging]
+    timeout-minutes: 10
+    outputs:
+      deployment_url: ${{ steps.deploy.outputs.deployment_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy to Vercel (Preview)
+        id: deploy
+        uses: amondnet/vercel-action@v42
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+        env:
+          VERCEL_ENV: preview
+
+  # ═══════════════════════════════════════════════════
+  # STAGE 4: Smoke Tests (18 test cases)
+  # ═══════════════════════════════════════════════════
+  smoke-test-staging:
+    name: "Staging — Smoke Tests"
+    runs-on: ubuntu-latest
+    needs: [deploy-staging]
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - run: npx prisma generate
+
+      - name: Run smoke tests against staging preview
+        shell: bash
+        run: |
+          DEPLOY_URL="${{ needs.deploy-staging.outputs.deployment_url }}"
+          if [ -z "$DEPLOY_URL" ]; then
+            echo "::error::No deployment URL available — cannot run smoke tests"
+            exit 1
+          fi
+          npx vitest run --config vitest.smoke.config.ts
+        env:
+          SMOKE_TEST_URL: ${{ needs.deploy-staging.outputs.deployment_url }}
+          SMOKE_TEST_ENV: staging
+
+  # ═══════════════════════════════════════════════════
+  # STAGE 5: Health Validation
+  # Retries 3 times with 15s interval
+  # ═══════════════════════════════════════════════════
+  health-check-staging:
+    name: "Staging — Health Check"
+    runs-on: ubuntu-latest
+    needs: [deploy-staging]
+    timeout-minutes: 3
+    steps:
+      - name: Validate health endpoint
+        shell: bash
+        run: |
+          DEPLOY_URL="${{ needs.deploy-staging.outputs.deployment_url }}"
+          HEALTH_URL="${DEPLOY_URL}/api/health"
+
+          echo "Checking health endpoint: ${HEALTH_URL}"
+
+          for i in 1 2 3; do
+            HTTP_CODE=$(curl -s -o /tmp/health-response.json -w "%{http_code}" --max-time 10 "${HEALTH_URL}" || echo "000")
+            echo "Attempt ${i}: HTTP ${HTTP_CODE}"
+
+            if [ -f /tmp/health-response.json ]; then
+              cat /tmp/health-response.json
+            fi
+
+            if [ "${HTTP_CODE}" = "200" ]; then
+              STATUS=$(python3 -c "import json; print(json.load(open('/tmp/health-response.json')).get('status',''))" 2>/dev/null || echo "")
+              echo "Status: ${STATUS}"
+
+              if [ "${STATUS}" = "ok" ]; then
+                echo "✅ Health check passed"
+                exit 0
+              fi
+            fi
+
+            echo "Retrying in 15 seconds..."
+            sleep 15
+          done
+
+          echo "::error::Health check failed after 3 attempts"
+          exit 1
+
+  # ═══════════════════════════════════════════════════
+  # STAGE 6: Deployment Summary
+  # ═══════════════════════════════════════════════════
+  staging-summary:
+    name: "Staging — Summary"
+    runs-on: ubuntu-latest
+    needs: [smoke-test-staging, health-check-staging]
+    if: always()
+    timeout-minutes: 2
+    steps:
+      - name: Deployment summary
+        shell: bash
+        run: |
+          echo "============================================"
+          echo "  STAGING PREVIEW DEPLOYMENT SUMMARY"
+          echo "============================================"
+          echo "  Commit:     ${{ github.sha }}"
+          echo "  Branch:     ${{ github.ref_name }}"
+          echo "  Smoke:      ${{ needs.smoke-test-staging.result }}"
+          echo "  Health:     ${{ needs.health-check-staging.result }}"
+          echo "============================================"
+          echo ""
+          echo "To promote to production:"
+          echo "  1. Verify staging preview deployment"
+          echo "  2. Create PR: develop → main"
+          echo "  3. Approve after review"
+          echo "  4. Production pipeline auto-deploys on merge"
+          echo "============================================"
