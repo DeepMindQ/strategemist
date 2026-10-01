@@ -9,78 +9,63 @@
 </head>
 <body>
 <div class="slide">
-  <!-- Header strip -->
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
-    <span class="text-wordmark">KEFI TECH</span>
-    <span style="font-family:var(--font-num); font-size:10px; color:var(--text-muted); letter-spacing:0.14em; text-transform:uppercase;">08 / 12</span>
+  <div class="brand-stripe-thin" data-decor></div>
+
+  <!-- Top-left wordmark -->
+  <div style="position:absolute; top:48px; left:104px;"><span class="text-wordmark">KEFI TECH</span></div>
+
+  <!-- Header block -->
+  <div style="position:absolute; top:96px; left:104px; right:104px;">
+    <div class="eyebrow" style="margin-bottom:14px;">INDUSTRY APPLICATIONS · EDUCATION</div>
+    <h1 style="font-family:var(--font-heading); font-size:32px; font-weight:700; color:var(--primary); line-height:1.2; letter-spacing:-0.01em; margin:0;">
+      How quality &amp; security engineering applies to education.
+    </h1>
+    <p style="font-family:var(--font-body); font-size:15px; color:var(--text-secondary); line-height:1.5; margin:12px 0 0 0;">
+      Four industry-specific applications where quality &amp; security engineering creates measurable value.
+    </p>
   </div>
 
-  <!-- Eyebrow + headline + subtitle -->
-  <div class="eyebrow" style="margin-bottom:8px;">INDUSTRY APPLICATIONS · EDUCATION</div>
-  <h1 style="font-family:var(--font-heading); font-size:26px; font-weight:700; color:var(--primary); line-height:1.25; margin:0 0 6px 0; letter-spacing:-0.01em;">
-    How quality &amp; security engineering applies to education.
-  </h1>
-  <p style="font-family:var(--font-body); font-size:14px; color:var(--text-secondary); margin:0 0 22px 0; line-height:1.5;">
-    Four industry-specific applications where quality &amp; security engineering creates measurable value.
-  </p>
+  <!-- 2x2 application grid -->
+  <div style="position:absolute; top:248px; left:104px; right:104px; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:16px; height:344px;">
 
-  <!-- 2x2 grid of application cards -->
-  <div style="display:grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap:16px;">
-
-    <!-- Card I -->
-    <div class="surface-elev" style="padding:18px 22px; height:166px; display:flex; flex-direction:column; gap:10px;">
+    <!-- App I -->
+    <div class="surface-elev" style="padding:18px 22px; display:flex; flex-direction:column; gap:8px;">
       <div style="display:flex; justify-content:space-between; align-items:center;">
         <span class="material-icons" style="font-size:28px; color:var(--brand);">school</span>
-        <span style="font-family:var(--font-num); font-size:14px; color:var(--accent); font-weight:600; letter-spacing:0.06em;">I</span>
+        <span style="font-family:var(--font-num); font-size:13px; color:var(--accent); font-weight:600; letter-spacing:0.10em;">I</span>
       </div>
-      <div style="font-family:var(--font-heading); font-size:22px; font-weight:700; color:var(--primary); line-height:1.2; letter-spacing:-0.005em;">
-        Student &amp; Faculty Assistants
-      </div>
-      <div style="font-family:var(--font-body); font-size:12px; color:var(--text-secondary); line-height:1.5;">
-        AI assistants for student services, faculty support, research help, academic advising.
-      </div>
+      <div style="font-family:var(--font-heading); font-size:22px; font-weight:700; color:var(--primary); line-height:1.2; margin-top:4px;">Student &amp; Faculty Assistants</div>
+      <div style="font-family:var(--font-body); font-size:12px; color:var(--text-secondary); line-height:1.5;">AI assistants for student services, faculty support, research help, academic advising.</div>
     </div>
 
-    <!-- Card II -->
-    <div class="surface-elev" style="padding:18px 22px; height:166px; display:flex; flex-direction:column; gap:10px;">
+    <!-- App II -->
+    <div class="surface-elev" style="padding:18px 22px; display:flex; flex-direction:column; gap:8px;">
       <div style="display:flex; justify-content:space-between; align-items:center;">
         <span class="material-icons" style="font-size:28px; color:var(--brand);">menu_book</span>
-        <span style="font-family:var(--font-num); font-size:14px; color:var(--accent); font-weight:600; letter-spacing:0.06em;">II</span>
+        <span style="font-family:var(--font-num); font-size:13px; color:var(--accent); font-weight:600; letter-spacing:0.10em;">II</span>
       </div>
-      <div style="font-family:var(--font-heading); font-size:22px; font-weight:700; color:var(--primary); line-height:1.2; letter-spacing:-0.005em;">
-        Institutional Knowledge Systems
-      </div>
-      <div style="font-family:var(--font-body); font-size:12px; color:var(--text-secondary); line-height:1.5;">
-        Enterprise search, RAG, document intelligence across academic and administrative systems.
-      </div>
+      <div style="font-family:var(--font-heading); font-size:22px; font-weight:700; color:var(--primary); line-height:1.2; margin-top:4px;">Institutional Knowledge Systems</div>
+      <div style="font-family:var(--font-body); font-size:12px; color:var(--text-secondary); line-height:1.5;">Enterprise search, RAG, document intelligence across academic and administrative systems.</div>
     </div>
 
-    <!-- Card III -->
-    <div class="surface-elev" style="padding:18px 22px; height:166px; display:flex; flex-direction:column; gap:10px;">
+    <!-- App III -->
+    <div class="surface-elev" style="padding:18px 22px; display:flex; flex-direction:column; gap:8px;">
       <div style="display:flex; justify-content:space-between; align-items:center;">
         <span class="material-icons" style="font-size:28px; color:var(--brand);">account_circle</span>
-        <span style="font-family:var(--font-num); font-size:14px; color:var(--accent); font-weight:600; letter-spacing:0.06em;">III</span>
+        <span style="font-family:var(--font-num); font-size:13px; color:var(--accent); font-weight:600; letter-spacing:0.10em;">III</span>
       </div>
-      <div style="font-family:var(--font-heading); font-size:22px; font-weight:700; color:var(--primary); line-height:1.2; letter-spacing:-0.005em;">
-        Student Lifecycle Platform
-      </div>
-      <div style="font-family:var(--font-body); font-size:12px; color:var(--text-secondary); line-height:1.5;">
-        Admissions, enrollment, progression, retention, alumni — unified digital experience.
-      </div>
+      <div style="font-family:var(--font-heading); font-size:22px; font-weight:700; color:var(--primary); line-height:1.2; margin-top:4px;">Student Lifecycle Platform</div>
+      <div style="font-family:var(--font-body); font-size:12px; color:var(--text-secondary); line-height:1.5;">Admissions, enrollment, progression, retention, alumni — unified digital experience.</div>
     </div>
 
-    <!-- Card IV -->
-    <div class="surface-elev" style="padding:18px 22px; height:166px; display:flex; flex-direction:column; gap:10px;">
+    <!-- App IV -->
+    <div class="surface-elev" style="padding:18px 22px; display:flex; flex-direction:column; gap:8px;">
       <div style="display:flex; justify-content:space-between; align-items:center;">
         <span class="material-icons" style="font-size:28px; color:var(--brand);">analytics</span>
-        <span style="font-family:var(--font-num); font-size:14px; color:var(--accent); font-weight:600; letter-spacing:0.06em;">IV</span>
+        <span style="font-family:var(--font-num); font-size:13px; color:var(--accent); font-weight:600; letter-spacing:0.10em;">IV</span>
       </div>
-      <div style="font-family:var(--font-heading); font-size:22px; font-weight:700; color:var(--primary); line-height:1.2; letter-spacing:-0.005em;">
-        Predictive Insights
-      </div>
-      <div style="font-family:var(--font-body); font-size:12px; color:var(--text-secondary); line-height:1.5;">
-        At-risk student identification, enrollment forecasting, resource planning, outcomes analytics.
-      </div>
+      <div style="font-family:var(--font-heading); font-size:22px; font-weight:700; color:var(--primary); line-height:1.2; margin-top:4px;">Predictive Insights</div>
+      <div style="font-family:var(--font-body); font-size:12px; color:var(--text-secondary); line-height:1.5;">At-risk student identification, enrollment forecasting, resource planning, outcomes analytics.</div>
     </div>
 
   </div>

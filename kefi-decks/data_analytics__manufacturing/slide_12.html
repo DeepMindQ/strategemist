@@ -2,47 +2,47 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Closing</title>
+<title>Closing — Kefi Tech</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="global.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
-  .closing-display { font-family: var(--font-heading); font-size: 56px; font-weight: 700; line-height: 1.06; letter-spacing: -0.02em; }
-  .closing-eyebrow { font-family: var(--font-body); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brand); font-weight: 700; }
-  .closing-contact { font-family: var(--font-body); font-size: 16px; color: var(--text-secondary); line-height: 1.6; font-weight: 400; }
-  .v-callout { font-family: var(--font-num); font-size: 22px; letter-spacing: 0.04em; font-weight: 600; color: var(--brand); line-height: 1.4; }
-  .v-callout.accent { color: var(--accent); }
-  .v-divider { width: 1px; background: var(--border); height: 240px; }
+  .close-display { font-family: var(--font-heading); font-size: 56px; font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; }
+  .close-eyebrow { font-family: var(--font-body); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brand); font-weight: 700; }
+  .close-contact { font-family: var(--font-body); font-size: 16px; color: var(--text-secondary); line-height: 1.6; }
+  .v-callout { font-family: var(--font-num); font-size: 18px; letter-spacing: 0.04em; font-weight: 600; line-height: 1.25; }
+  .v-divider { width: 1px; background: var(--border); height: 220px; }
 </style>
 </head>
 <body>
 <div class="slide grid-bg">
-  <div class="brand-stripe" data-decor></div>
+  <div class="brand-stripe" data-decor aria-hidden="true"></div>
 
-  <!-- Top-left logo (single image) -->
+  <!-- Top-left logo (single image, width-locked class — no inline width/height overrides) -->
   <img src="assets/kefi_logo.png" class="kefi-logo-lg" alt="Kefi Tech" style="position:absolute; top:96px; left:104px;">
 
   <!-- Center-left composition -->
-  <div style="position:absolute; top:240px; left:104px; max-width:760px; display:flex; flex-direction:column; gap:22px;">
-    <div class="closing-eyebrow">GET IN TOUCH</div>
-    <h1 class="closing-display">
+  <div style="position:absolute; top:268px; left:104px; max-width:780px; display:flex; flex-direction:column; gap:22px;">
+    <div class="close-eyebrow">GET IN TOUCH</div>
+    <h1 class="close-display">
       <span style="color:var(--primary);">Let us engineer</span><br>
       <span style="color:var(--accent);">what is next.</span>
     </h1>
-    <div style="margin-top:8px;">
-      <div class="closing-contact">info@kefitech.com  ·  www.kefitech.com</div>
-      <div class="closing-contact">Bengaluru, India  ·  Hyderabad, India</div>
+    <div class="accent-bar" data-decor aria-hidden="true"></div>
+    <div style="display:flex; flex-direction:column; gap:4px;">
+      <div class="close-contact">info@kefitech.com  ·  www.kefitech.com</div>
+      <div class="close-contact">Bengaluru, India  ·  Hyderabad, India</div>
     </div>
   </div>
 
-  <!-- Right side vertical hairline + callouts -->
-  <div style="position:absolute; top:240px; right:104px; display:flex; align-items:flex-start; gap:36px;">
-    <div style="display:flex; flex-direction:column; gap:34px; align-items:flex-end; padding-top:6px;">
-      <div class="v-callout">Discover.</div>
-      <div class="v-callout">Engineer.</div>
-      <div class="v-callout accent">Scale.</div>
+  <!-- Right vertical hairline + stacked callouts -->
+  <div style="position:absolute; top:268px; right:104px; display:flex; align-items:flex-start; gap:28px;">
+    <div style="display:flex; flex-direction:column; gap:36px; align-items:flex-end; padding-top:4px;">
+      <div class="v-callout" style="color:var(--brand);">Discover.</div>
+      <div class="v-callout" style="color:var(--brand);">Engineer.</div>
+      <div class="v-callout" style="color:var(--accent);">Scale.</div>
     </div>
-    <div class="v-divider" data-decor></div>
+    <div class="v-divider" data-decor aria-hidden="true"></div>
   </div>
 
   <!-- Bottom rail -->
@@ -51,6 +51,8 @@
     <span>12 / 12</span>
     <span>INFO@KEFITECH.COM · WWW.KEFITECH.COM</span>
   </div>
+
+  <aside data-notes hidden>none</aside>
 </div>
 </body>
 </html>

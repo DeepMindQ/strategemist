@@ -3,159 +3,167 @@
 <head>
 <meta charset="UTF-8">
 <title>AI Transformation — Capability Overview</title>
-<link rel="stylesheet" href="global.css">
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="global.css">
 <style>
-  .slide { padding: 56px 72px 0; }
-  .top-bar { display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; }
-  .top-meta { font-family: var(--font-num); font-size:11px; color:var(--text-muted); letter-spacing:0.16em; text-transform:uppercase; }
-  .headline { font-family: var(--font-heading); font-size: 26px; font-weight:700; color:var(--primary); line-height:1.25; letter-spacing:-0.01em; max-width: 1000px; margin: 4px 0 6px; }
-  .sub { font-family: var(--font-body); font-size: 13px; color: var(--text-secondary); line-height: 1.5; max-width: 1000px; }
-
-  /* Lifecycle flow */
-  .lifecycle {
-    display: flex;
-    align-items: stretch;
-    gap: 0;
-    margin-top: 18px;
-    height: 78px;
-  }
-  .lc-stage {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 0 18px;
-    background: var(--bg-elev);
+  .lifecycle-card {
+    background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 10px;
-  }
-  .lc-stage .material-icons { font-size: 24px !important; color: var(--brand); }
-  .lc-name { font-family: var(--font-heading); font-size: 14px; font-weight: 600; color: var(--primary); letter-spacing: 0.04em; }
-  .lc-arrow {
+    border-radius: 8px;
+    padding: 14px 18px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 28px;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+  }
+  .lifecycle-icon {
+    font-size: 24px !important;
+    color: var(--brand);
+  }
+  .lifecycle-name {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: 0.04em;
+  }
+  .lifecycle-arrow {
     color: var(--accent);
     font-size: 22px;
     font-weight: 700;
     flex-shrink: 0;
   }
-
-  /* Capability grid */
-  .cap-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 12px;
-    margin-top: 14px;
-    height: 270px;
-  }
-  .cap-card-compact {
+  .pillar-card {
     background: var(--bg);
     border: 1px solid var(--border);
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 14px 16px;
+    height: 120px;
     display: flex;
     flex-direction: column;
     gap: 6px;
   }
-  .cap-card-compact .top {
+  .pillar-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .cap-card-compact .icon { font-size: 24px !important; color: var(--brand); }
-  .cap-card-compact .num { font-family: var(--font-num); font-size: 12px; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; }
-  .cap-card-compact .name { font-family: var(--font-heading); font-size: 14px; font-weight: 600; color: var(--primary); line-height: 1.2; }
-  .cap-card-compact .desc { font-family: var(--font-body); font-size: 11px; color: var(--text-secondary); line-height: 1.45; }
+  .pillar-icon {
+    font-size: 24px !important;
+    color: var(--brand);
+  }
+  .pillar-num {
+    font-family: var(--font-num);
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .pillar-name {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1.2;
+  }
+  .pillar-desc {
+    font-family: var(--font-body);
+    font-size: 11px;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
 </style>
 </head>
 <body>
 <div class="slide">
-  <div class="top-bar">
-    <span class="text-wordmark">KEFI TECH</span>
-    <span class="top-meta">CAPABILITIES · 03</span>
+  <div class="brand-stripe-thin" data-decor></div>
+
+  <span class="text-wordmark" style="position:absolute; top:32px; left:72px;">KEFI TECH</span>
+
+  <div style="margin-top:8px;">
+    <div class="eyebrow">CAPABILITIES</div>
+    <h1 style="font-family: var(--font-heading); font-size: var(--fs-h1); font-weight: 700; color: var(--primary); line-height: 1.15; margin-top:10px; letter-spacing: -0.01em;">
+      AI Transformation across the complete lifecycle.
+    </h1>
+    <p style="font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-top:8px;">
+      Six capability pillars covering the full ai transformation spectrum.
+    </p>
   </div>
 
-  <div class="eyebrow">CAPABILITIES</div>
-  <h2 class="headline">AI Transformation across the complete lifecycle.</h2>
-  <p class="sub">Six capability pillars covering the full ai transformation spectrum.</p>
-
-  <!-- Lifecycle flow -->
-  <div class="lifecycle">
-    <div class="lc-stage">
-      <span class="material-icons">lightbulb</span>
-      <span class="lc-name">STRATEGY</span>
+  <!-- Lifecycle flow diagram -->
+  <div style="display:flex; align-items:stretch; gap:0; margin-top:20px; height:90px;">
+    <div class="lifecycle-card">
+      <span class="material-icons lifecycle-icon">lightbulb</span>
+      <span class="lifecycle-name">STRATEGY</span>
     </div>
-    <div class="lc-arrow">►</div>
-    <div class="lc-stage">
-      <span class="material-icons">engineering</span>
-      <span class="lc-name">BUILD</span>
+    <div style="display:flex; align-items:center; padding: 0 10px;"><span class="lifecycle-arrow">►</span></div>
+    <div class="lifecycle-card">
+      <span class="material-icons lifecycle-icon">engineering</span>
+      <span class="lifecycle-name">BUILD</span>
     </div>
-    <div class="lc-arrow">►</div>
-    <div class="lc-stage">
-      <span class="material-icons">integration_instructions</span>
-      <span class="lc-name">INTEGRATE</span>
+    <div style="display:flex; align-items:center; padding: 0 10px;"><span class="lifecycle-arrow">►</span></div>
+    <div class="lifecycle-card">
+      <span class="material-icons lifecycle-icon">integration_instructions</span>
+      <span class="lifecycle-name">INTEGRATE</span>
     </div>
-    <div class="lc-arrow">►</div>
-    <div class="lc-stage">
-      <span class="material-icons">monitoring</span>
-      <span class="lc-name">OPERATE</span>
+    <div style="display:flex; align-items:center; padding: 0 10px;"><span class="lifecycle-arrow">►</span></div>
+    <div class="lifecycle-card">
+      <span class="material-icons lifecycle-icon">monitoring</span>
+      <span class="lifecycle-name">OPERATE</span>
     </div>
   </div>
 
-  <!-- Capability grid -->
-  <div class="cap-grid">
-    <div class="cap-card-compact">
-      <div class="top">
-        <span class="material-icons icon">chat</span>
-        <span class="num">01</span>
+  <!-- 6 pillar cards in 3x2 grid -->
+  <div style="display:grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap: 12px; margin-top: 18px;">
+    <div class="pillar-card">
+      <div class="pillar-top">
+        <span class="material-icons pillar-icon">chat</span>
+        <span class="pillar-num">01</span>
       </div>
-      <div class="name">Generative AI Solutions</div>
-      <div class="desc">Copilots, knowledge assistants, conversational AI, document intelligence, multimodal AI.</div>
+      <div class="pillar-name">Generative AI Solutions</div>
+      <div class="pillar-desc">Copilots, knowledge assistants, conversational AI, document intelligence, multimodal AI.</div>
     </div>
-    <div class="cap-card-compact">
-      <div class="top">
-        <span class="material-icons icon">smart_toy</span>
-        <span class="num">02</span>
+    <div class="pillar-card">
+      <div class="pillar-top">
+        <span class="material-icons pillar-icon">smart_toy</span>
+        <span class="pillar-num">02</span>
       </div>
-      <div class="name">Agentic AI &amp; Automation</div>
-      <div class="desc">AI agents, multi-agent systems, autonomous workflows, human-in-the-loop processes.</div>
+      <div class="pillar-name">Agentic AI &amp; Automation</div>
+      <div class="pillar-desc">AI agents, multi-agent systems, autonomous workflows, human-in-the-loop processes.</div>
     </div>
-    <div class="cap-card-compact">
-      <div class="top">
-        <span class="material-icons icon">menu_book</span>
-        <span class="num">03</span>
+    <div class="pillar-card">
+      <div class="pillar-top">
+        <span class="material-icons pillar-icon">menu_book</span>
+        <span class="pillar-num">03</span>
       </div>
-      <div class="name">Enterprise Knowledge &amp; RAG</div>
-      <div class="desc">RAG applications, enterprise search, vector search, knowledge assistants.</div>
+      <div class="pillar-name">Enterprise Knowledge &amp; RAG</div>
+      <div class="pillar-desc">RAG applications, enterprise search, vector search, knowledge assistants.</div>
     </div>
-    <div class="cap-card-compact">
-      <div class="top">
-        <span class="material-icons icon">analytics</span>
-        <span class="num">04</span>
+    <div class="pillar-card">
+      <div class="pillar-top">
+        <span class="material-icons pillar-icon">analytics</span>
+        <span class="pillar-num">04</span>
       </div>
-      <div class="name">AI/ML &amp; Predictive Intelligence</div>
-      <div class="desc">Predictive analytics, forecasting, classification, recommendation engines, anomaly detection.</div>
+      <div class="pillar-name">AI/ML &amp; Predictive Intelligence</div>
+      <div class="pillar-desc">Predictive analytics, forecasting, classification, recommendation engines, anomaly detection.</div>
     </div>
-    <div class="cap-card-compact">
-      <div class="top">
-        <span class="material-icons icon">memory</span>
-        <span class="num">05</span>
+    <div class="pillar-card">
+      <div class="pillar-top">
+        <span class="material-icons pillar-icon">memory</span>
+        <span class="pillar-num">05</span>
       </div>
-      <div class="name">AI Engineering &amp; LLMOps</div>
-      <div class="desc">Model lifecycle, versioning, monitoring, evaluation, observability, scalable infrastructure.</div>
+      <div class="pillar-name">AI Engineering &amp; LLMOps</div>
+      <div class="pillar-desc">Model lifecycle, versioning, monitoring, evaluation, observability, scalable infrastructure.</div>
     </div>
-    <div class="cap-card-compact">
-      <div class="top">
-        <span class="material-icons icon">shield</span>
-        <span class="num">06</span>
+    <div class="pillar-card">
+      <div class="pillar-top">
+        <span class="material-icons pillar-icon">shield</span>
+        <span class="pillar-num">06</span>
       </div>
-      <div class="name">Responsible AI &amp; Governance</div>
-      <div class="desc">AI governance, privacy, security, guardrails, bias assessment, explainability.</div>
+      <div class="pillar-name">Responsible AI &amp; Governance</div>
+      <div class="pillar-desc">AI governance, privacy, security, guardrails, bias assessment, explainability.</div>
     </div>
   </div>
 

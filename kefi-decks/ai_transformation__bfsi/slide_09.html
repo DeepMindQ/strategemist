@@ -7,81 +7,76 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
-  .s-headline { font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--primary); line-height: 1.2; letter-spacing: -0.01em; }
-  .s-subtitle { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-top: 6px; }
-  .arch-stack { display: flex; flex-direction: column; gap: 10px; margin-top: 22px; }
-  .arch-layer { height: 76px; }
-  .arch-layer-label { width: 130px; }
+  .h-eyebrow { font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.20em; text-transform: uppercase; color: var(--brand); }
+  .h-headline { font-family: var(--font-heading); font-size: 30px; font-weight: 700; line-height: 1.2; color: var(--primary); letter-spacing: -0.01em; }
+  .h-subtitle { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+  .arch-stack { display: flex; flex-direction: column; gap: 10px; margin-top: 22px; width: 1136px; }
+  .arch-layer { min-height: 64px; }
+  .arch-layer-label { font-size: 11px; }
+  .arch-component { padding: 5px 12px; font-size: 11px; font-weight: 500; }
 </style>
 </head>
 <body>
 <div class="slide">
-  <!-- Top-left text wordmark -->
-  <div style="position:absolute; top:64px; left:72px;"><span class="text-wordmark">KEFI TECH</span></div>
+  <div class="brand-stripe" data-decor></div>
 
-  <!-- Eyebrow + Headline + Subtitle -->
-  <div style="margin-top: 24px;">
-    <div class="eyebrow">REFERENCE ARCHITECTURE</div>
-    <h1 class="s-headline" style="margin-top: 10px;">A reference architecture for ai transformation.</h1>
-    <p class="s-subtitle">Five layers from foundation through consumption.</p>
+  <span class="text-wordmark" style="position:absolute; top:48px; left:104px;">KEFI TECH</span>
+
+  <div style="margin-top: 32px;">
+    <div class="h-eyebrow">REFERENCE ARCHITECTURE</div>
+    <h1 class="h-headline" style="margin-top: 12px;">A reference architecture for ai transformation.</h1>
+    <p class="h-subtitle" style="margin-top: 10px;">Five layers from foundation through consumption — with industry-specific components for bfsi &amp; insurance.</p>
   </div>
 
-  <!-- 5-layer architecture stack -->
+  <!-- Five arch layers — INDUSTRY-SPECIFIC component names (FIX 5), NO .kefi-asset variant -->
   <div class="arch-stack">
-
     <div class="arch-layer">
-      <div class="arch-layer-label">Application</div>
+      <div class="arch-layer-label">APPLICATION</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Copilots</span>
-        <span class="arch-component">Assistants</span>
-        <span class="arch-component">Agents</span>
-        <span class="arch-component">Workflows</span>
+        <span class="arch-component">Claims Copilot</span>
+        <span class="arch-component">Underwriting Assistant</span>
+        <span class="arch-component">KYC Agent</span>
+        <span class="arch-component">Policy Query Bot</span>
       </div>
     </div>
-
     <div class="arch-layer">
-      <div class="arch-layer-label">Orchestration</div>
+      <div class="arch-layer-label">ORCHESTRATION</div>
       <div class="arch-layer-content">
-        <span class="arch-component">RAG</span>
-        <span class="arch-component">Function Calling</span>
-        <span class="arch-component">Multi-Agent Orchestration</span>
-        <span class="arch-component">Evaluation Harnesses</span>
+        <span class="arch-component">Claims Triage Flow</span>
+        <span class="arch-component">Fraud Check RAG</span>
+        <span class="arch-component">Auth Decision Engine</span>
+        <span class="arch-component">Compliance Validator</span>
       </div>
     </div>
-
     <div class="arch-layer">
-      <div class="arch-layer-label">Models</div>
+      <div class="arch-layer-label">MODELS</div>
       <div class="arch-layer-content">
-        <span class="arch-component">LLMs</span>
-        <span class="arch-component">Embedding Models</span>
-        <span class="arch-component">ML Models</span>
-        <span class="arch-component">Fine-Tuned Models</span>
+        <span class="arch-component">Fraud Detection LLM</span>
+        <span class="arch-component">Underwriting ML</span>
+        <span class="arch-component">Risk Scoring Model</span>
+        <span class="arch-component">Sentiment Classifier</span>
       </div>
     </div>
-
     <div class="arch-layer">
-      <div class="arch-layer-label">Data</div>
+      <div class="arch-layer-label">DATA</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Vector Stores</span>
-        <span class="arch-component">Knowledge Bases</span>
-        <span class="arch-component">Enterprise Data</span>
-        <span class="arch-component">Document Pipelines</span>
+        <span class="arch-component">Policy Library</span>
+        <span class="arch-component">Claims History</span>
+        <span class="arch-component">Watchlist Data</span>
+        <span class="arch-component">Regulatory Docs</span>
       </div>
     </div>
-
     <div class="arch-layer">
-      <div class="arch-layer-label">Platform</div>
+      <div class="arch-layer-label">PLATFORM</div>
       <div class="arch-layer-content">
-        <span class="arch-component">LLMOps</span>
-        <span class="arch-component">Monitoring</span>
-        <span class="arch-component">Governance</span>
-        <span class="arch-component">Security</span>
+        <span class="arch-component">LLMOps Pipeline</span>
+        <span class="arch-component">Model Monitor</span>
+        <span class="arch-component">AI Governance</span>
+        <span class="arch-component">Audit Logger</span>
       </div>
     </div>
-
   </div>
 
-  <!-- Bottom rail -->
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
     <span>09 / 12</span>

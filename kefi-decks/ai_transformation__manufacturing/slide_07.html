@@ -14,7 +14,8 @@
   .head-h { font-family: var(--font-heading); font-weight: 700; font-size: 36px; color: var(--primary); line-height: 1.15; letter-spacing: -0.01em; margin-top: 10px; }
   .head-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-top: 8px; max-width: 980px; }
 
-  .columns { position: absolute; top: 224px; left: 72px; right: 72px; display: grid; grid-template-columns: 55fr 45fr; gap: 24px; height: 360px; }
+  /* FIX 2: panel height 400px (was 360px) */
+  .columns { position: absolute; top: 224px; left: 72px; right: 72px; display: grid; grid-template-columns: 55fr 45fr; gap: 24px; height: 400px; }
 
   .panel { padding: 22px 24px; display: flex; flex-direction: column; gap: 14px; }
   .panel-eyebrow { font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
@@ -25,10 +26,11 @@
 
   .left-tag-row { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--border); display: flex; gap: 8px; }
 
-  .comp-list { display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .comp-list { display: flex; flex-direction: column; gap: 7px; flex: 1; }
+  /* FIX 2: padding reduced to 7px so 5 cards fit cleanly in 400px panel */
   .comp-card {
     display: grid; grid-template-columns: 28px 24px 1fr; gap: 10px; align-items: flex-start;
-    padding: 9px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+    padding: 7px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
   }
   .comp-num { font-family: var(--font-num); font-size: 11px; color: var(--brand); font-weight: 600; letter-spacing: 0.06em; line-height: 1; padding-top: 4px; }
   .comp-icon { font-size: 18px !important; color: var(--brand-light); }
@@ -116,6 +118,8 @@
     <span>07 / 12</span>
     <span>AI/ML &amp; PREDICTIVE INTELLIGENCE</span>
   </div>
+
+  <aside data-notes hidden>none</aside>
 </div>
 </body>
 </html>

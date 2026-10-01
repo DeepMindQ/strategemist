@@ -16,11 +16,12 @@
   .cover-headline .accent-line { color: var(--accent); display: block; margin-top: 4px; }
   .cover-bar { width: 48px; height: 3px; background: var(--accent); border-radius: 2px; margin-top: 28px; margin-bottom: 22px; }
   .cover-subtitle { font-family: var(--font-body); font-size: 22px; line-height: 1.45; color: var(--text-secondary); font-weight: 400; max-width: 640px; }
-  .cover-right-rail { position: absolute; top: 230px; right: 96px; width: 1px; height: 320px; background: var(--border-strong); z-index: 4; }
-  .cover-right-callouts { position: absolute; top: 240px; right: 116px; display: flex; flex-direction: column; gap: 36px; align-items: flex-end; z-index: 4; }
-  .right-callout { font-family: var(--font-num); font-size: 13px; color: var(--brand); letter-spacing: 0.10em; font-weight: 600; text-align: right; }
-  .right-callout .num { color: var(--accent); font-weight: 700; }
-  .right-callout .label { display: block; color: var(--text-secondary); font-size: 11px; letter-spacing: 0.16em; margin-top: 4px; font-weight: 500; }
+  /* Right rail at ~70% width (x=896) */
+  .cover-right-rail { position: absolute; top: 230px; right: 384px; width: 1px; height: 320px; background: var(--border-strong); z-index: 4; }
+  .cover-right-callouts { position: absolute; top: 240px; right: 96px; width: 280px; display: flex; flex-direction: column; gap: 32px; align-items: flex-end; z-index: 4; }
+  .right-callout { font-family: var(--font-num); font-size: 13px; color: var(--brand); letter-spacing: 0.04em; font-weight: 600; text-align: right; line-height: 1.4; }
+  .right-callout .num { color: var(--accent); font-weight: 700; margin-right: 8px; }
+  .right-callout .label { display: block; color: var(--text-muted); font-size: 10px; letter-spacing: 0.18em; margin-top: 4px; font-weight: 500; text-transform: uppercase; }
 </style>
 </head>
 <body>
@@ -42,16 +43,16 @@
   <div class="cover-right-rail" data-decor aria-hidden="true"></div>
   <div class="cover-right-callouts">
     <div class="right-callout">
-      <span class="num">01</span> Application
-      <span class="label">SECURITY</span>
+      <span class="num">01</span>Application Security &amp; DevSecOps
+      <span class="label">CAPABILITY</span>
     </div>
     <div class="right-callout">
-      <span class="num">02</span> VAPT
-      <span class="label">RISK</span>
+      <span class="num">02</span>VAPT &amp; Risk Assessment
+      <span class="label">CAPABILITY</span>
     </div>
     <div class="right-callout">
-      <span class="num">03</span> Performance
-      <span class="label">ENGINEERING</span>
+      <span class="num">03</span>Performance Engineering
+      <span class="label">CAPABILITY</span>
     </div>
   </div>
 

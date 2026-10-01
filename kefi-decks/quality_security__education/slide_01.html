@@ -11,7 +11,7 @@
 <div class="slide grid-bg">
   <div class="brand-stripe" data-decor></div>
 
-  <!-- Top-left: real logo -->
+  <!-- Top-left: real logo (width-locked class, no inline overrides) -->
   <img src="assets/kefi_logo.png" class="kefi-logo-lg" alt="KEFI TECH" style="position:absolute; top:64px; left:104px;">
 
   <!-- Top-right small label -->
@@ -32,24 +32,28 @@
     </p>
   </div>
 
-  <!-- Right side: vertical hairline + stacked callouts -->
-  <div style="position:absolute; top:248px; left:980px; width:200px; height:340px; display:flex; flex-direction:column; justify-content:flex-end; padding-left:24px; border-left:1px solid var(--border-soft);">
-    <div style="font-family:var(--font-num); font-size:11px; color:var(--brand); letter-spacing:0.10em; line-height:1; padding:6px 0;">
-      <span style="color:var(--text-muted); margin-right:10px; font-weight:500;">01</span><span style="font-weight:600;">Application</span>
+  <!-- Right side: vertical hairline + stacked FULL capability callouts (FIX 4) -->
+  <div style="position:absolute; top:248px; left:980px; width:240px; height:340px; display:flex; flex-direction:column; justify-content:flex-end; padding-left:24px; border-left:1px solid var(--border-soft);">
+    <div style="font-family:var(--font-num); font-size:11px; color:var(--brand); letter-spacing:0.08em; line-height:1.4; padding:6px 0;">
+      <div style="color:var(--text-muted); font-weight:500; margin-bottom:4px;">01</div>
+      <div style="font-weight:600;">Application Security &amp; DevSecOps</div>
     </div>
     <div style="height:1px; background:var(--border); margin:18px 0;"></div>
-    <div style="font-family:var(--font-num); font-size:11px; color:var(--brand); letter-spacing:0.10em; line-height:1; padding:6px 0;">
-      <span style="color:var(--text-muted); margin-right:10px; font-weight:500;">02</span><span style="font-weight:600;">VAPT</span>
+    <div style="font-family:var(--font-num); font-size:11px; color:var(--brand); letter-spacing:0.08em; line-height:1.4; padding:6px 0;">
+      <div style="color:var(--text-muted); font-weight:500; margin-bottom:4px;">02</div>
+      <div style="font-weight:600;">VAPT &amp; Risk Assessment</div>
     </div>
     <div style="height:1px; background:var(--border); margin:18px 0;"></div>
-    <div style="font-family:var(--font-num); font-size:11px; color:var(--brand); letter-spacing:0.10em; line-height:1; padding:6px 0;">
-      <span style="color:var(--text-muted); margin-right:10px; font-weight:500;">03</span><span style="font-weight:600;">Performance</span>
+    <div style="font-family:var(--font-num); font-size:11px; color:var(--brand); letter-spacing:0.08em; line-height:1.4; padding:6px 0;">
+      <div style="color:var(--text-muted); font-weight:500; margin-bottom:4px;">03</div>
+      <div style="font-weight:600;">Performance Engineering</div>
     </div>
   </div>
 
   <!-- Bottom rail -->
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
+    <span></span>
     <span>01 / 12 · QUALITY &amp; SECURITY ENGINEERING SERVICES</span>
   </div>
 </div>

@@ -24,22 +24,28 @@
     margin-top: 8px;
     max-width: 980px;
   }
-  .lifecycle-stage {
-    flex: 1;
-    background: var(--bg-elev);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 14px 16px;
+  .lifecycle-flow {
     display: flex;
     align-items: center;
     gap: 10px;
-    justify-content: center;
+    margin-top: 22px;
   }
-  .lifecycle-icon {
+  .stage-card {
+    flex: 1;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 72px;
+  }
+  .stage-icon {
     color: var(--brand);
     font-size: 24px !important;
   }
-  .lifecycle-name {
+  .stage-name {
     font-family: var(--font-heading);
     font-size: 14px;
     font-weight: 600;
@@ -47,18 +53,25 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
   }
-  .lifecycle-arrow {
+  .stage-arrow {
+    font-family: var(--font-num);
+    font-size: 18px;
     color: var(--accent);
-    font-size: 22px;
     font-weight: 700;
-    width: 28px;
-    text-align: center;
-    flex-shrink: 0;
+    line-height: 1;
+  }
+  .pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 16px;
   }
   .pillar-card {
     background: var(--bg);
     border: 1px solid var(--border);
-    border-radius: 10px;
+    border-left: 3px solid var(--brand);
+    border-radius: 8px;
     padding: 14px 16px;
     display: flex;
     flex-direction: column;
@@ -67,8 +80,8 @@
   }
   .pillar-top {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
   }
   .pillar-icon {
     color: var(--brand);
@@ -76,7 +89,7 @@
   }
   .pillar-num {
     font-family: var(--font-num);
-    font-size: 13px;
+    font-size: 12px;
     color: var(--accent);
     font-weight: 600;
     letter-spacing: 0.06em;
@@ -87,6 +100,7 @@
     font-weight: 600;
     color: var(--primary);
     line-height: 1.2;
+    margin-top: 2px;
   }
   .pillar-desc {
     font-family: var(--font-body);
@@ -113,47 +127,45 @@
   </div>
 
   <!-- Eyebrow + Headline -->
-  <div style="margin-top:20px;">
+  <div style="margin-top:22px;">
     <div class="eyebrow">CAPABILITIES</div>
-    <h1 class="h-title" style="margin-top:10px;">Digital Engineering &amp; Transformation across the complete lifecycle.</h1>
+    <h1 class="h-title" style="margin-top:8px;">Digital Engineering &amp; Transformation across the complete lifecycle.</h1>
     <p class="h-subtitle">Six capability pillars covering the full digital engineering &amp; transformation spectrum.</p>
   </div>
 
-  <!-- Lifecycle flow -->
-  <div style="display:flex; align-items:stretch; margin-top:22px; gap:0;">
-    <div class="lifecycle-stage">
-      <span class="material-icons lifecycle-icon">lightbulb</span>
-      <span class="lifecycle-name">Strategy</span>
+  <!-- Lifecycle flow: STRATEGY → BUILD → INTEGRATE → OPERATE -->
+  <div class="lifecycle-flow">
+    <div class="stage-card">
+      <span class="material-icons stage-icon">lightbulb</span>
+      <span class="stage-name">Strategy</span>
     </div>
-    <div class="lifecycle-arrow">►</div>
-    <div class="lifecycle-stage">
-      <span class="material-icons lifecycle-icon">engineering</span>
-      <span class="lifecycle-name">Build</span>
+    <span class="stage-arrow">►</span>
+    <div class="stage-card">
+      <span class="material-icons stage-icon">engineering</span>
+      <span class="stage-name">Build</span>
     </div>
-    <div class="lifecycle-arrow">►</div>
-    <div class="lifecycle-stage">
-      <span class="material-icons lifecycle-icon">integration_instructions</span>
-      <span class="lifecycle-name">Integrate</span>
+    <span class="stage-arrow">►</span>
+    <div class="stage-card">
+      <span class="material-icons stage-icon">integration_instructions</span>
+      <span class="stage-name">Integrate</span>
     </div>
-    <div class="lifecycle-arrow">►</div>
-    <div class="lifecycle-stage">
-      <span class="material-icons lifecycle-icon">monitoring</span>
-      <span class="lifecycle-name">Operate</span>
+    <span class="stage-arrow">►</span>
+    <div class="stage-card">
+      <span class="material-icons stage-icon">monitoring</span>
+      <span class="stage-name">Operate</span>
     </div>
   </div>
 
-  <!-- 6 capability pillar cards (3x2 grid) -->
-  <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; margin-top:14px;">
+  <!-- 6 capability pillars -->
+  <div class="pillar-grid">
 
     <div class="pillar-card">
       <div class="pillar-top">
         <span class="material-icons pillar-icon">inventory_2</span>
         <span class="pillar-num">01</span>
       </div>
-      <div>
-        <div class="pillar-name">Product &amp; Platform Engineering</div>
-        <div class="pillar-desc">End-to-end product development, SaaS platforms, MVP development, product modernization.</div>
-      </div>
+      <div class="pillar-name">Product &amp; Platform Engineering</div>
+      <div class="pillar-desc">End-to-end product development, SaaS platforms, MVP development, product modernization.</div>
     </div>
 
     <div class="pillar-card">
@@ -161,10 +173,8 @@
         <span class="material-icons pillar-icon">cloud</span>
         <span class="pillar-num">02</span>
       </div>
-      <div>
-        <div class="pillar-name">Cloud-Native &amp; Platform Engineering</div>
-        <div class="pillar-desc">Cloud-native applications, microservices, containers, serverless, platform engineering.</div>
-      </div>
+      <div class="pillar-name">Cloud-Native &amp; Platform Engineering</div>
+      <div class="pillar-desc">Cloud-native applications, microservices, containers, serverless, platform engineering.</div>
     </div>
 
     <div class="pillar-card">
@@ -172,10 +182,8 @@
         <span class="material-icons pillar-icon">cached</span>
         <span class="pillar-num">03</span>
       </div>
-      <div>
-        <div class="pillar-name">Application Modernization</div>
-        <div class="pillar-desc">Legacy modernization, monolith-to-microservices, technology migration, cloud-native modernization.</div>
-      </div>
+      <div class="pillar-name">Application Modernization</div>
+      <div class="pillar-desc">Legacy modernization, monolith-to-microservices, technology migration, cloud-native modernization.</div>
     </div>
 
     <div class="pillar-card">
@@ -183,10 +191,8 @@
         <span class="material-icons pillar-icon">api</span>
         <span class="pillar-num">04</span>
       </div>
-      <div>
-        <div class="pillar-name">API &amp; Integration Engineering</div>
-        <div class="pillar-desc">API development, microservices, enterprise integrations, middleware, system interoperability.</div>
-      </div>
+      <div class="pillar-name">API &amp; Integration Engineering</div>
+      <div class="pillar-desc">API development, microservices, enterprise integrations, middleware, system interoperability.</div>
     </div>
 
     <div class="pillar-card">
@@ -194,10 +200,8 @@
         <span class="material-icons pillar-icon">design_services</span>
         <span class="pillar-num">05</span>
       </div>
-      <div>
-        <div class="pillar-name">UI/UX &amp; Experience Engineering</div>
-        <div class="pillar-desc">UX strategy, user research, information architecture, interaction design, design systems.</div>
-      </div>
+      <div class="pillar-name">UI/UX &amp; Experience Engineering</div>
+      <div class="pillar-desc">UX strategy, user research, information architecture, interaction design, design systems.</div>
     </div>
 
     <div class="pillar-card">
@@ -205,10 +209,8 @@
         <span class="material-icons pillar-icon">hub</span>
         <span class="pillar-num">06</span>
       </div>
-      <div>
-        <div class="pillar-name">DevSecOps &amp; Engineering Consulting</div>
-        <div class="pillar-desc">CI/CD pipelines, DevOps/DevSecOps, solution architecture, engineering standards, scalability.</div>
-      </div>
+      <div class="pillar-name">DevSecOps &amp; Engineering Consulting</div>
+      <div class="pillar-desc">CI/CD pipelines, DevOps/DevSecOps, solution architecture, engineering standards, scalability.</div>
     </div>
 
   </div>

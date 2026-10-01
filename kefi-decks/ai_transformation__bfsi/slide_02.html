@@ -7,35 +7,39 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
-  .s-headline { font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--primary); line-height: 1.2; letter-spacing: -0.01em; max-width: 980px; }
-  .s-subtitle { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; max-width: 980px; margin-top: 8px; }
-  .panel-title { font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
-  .driver-card { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; }
-  .driver-icon { font-size: 20px !important; color: var(--brand); flex-shrink: 0; margin-top: 1px; }
-  .driver-title { font-family: var(--font-heading); font-size: 13px; font-weight: 600; color: var(--primary); line-height: 1.25; }
-  .driver-desc { font-family: var(--font-body); font-size: 11px; color: var(--text-secondary); line-height: 1.45; margin-top: 3px; }
+  .h-eyebrow { font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.20em; text-transform: uppercase; color: var(--brand); }
+  .h-eyebrow-accent { color: var(--accent-dark); }
+  .h-headline { font-family: var(--font-heading); font-size: 32px; font-weight: 700; line-height: 1.2; color: var(--primary); letter-spacing: -0.01em; }
+  .h-subtitle { font-family: var(--font-body); font-size: 15px; color: var(--text-secondary); line-height: 1.5; max-width: 1080px; }
+  .driver-card { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; }
+  .driver-icon { font-size: 20px !important; color: var(--brand); flex-shrink: 0; }
+  .driver-title { font-family: var(--font-heading); font-size: 13px; font-weight: 600; color: var(--primary); line-height: 1.2; }
+  .driver-desc { font-family: var(--font-body); font-size: 11px; color: var(--text-secondary); line-height: 1.4; margin-top: 3px; }
+  .panel-eyebrow { font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand); }
+  .panel-eyebrow-accent { color: var(--accent-dark); }
   .panel-body { font-family: var(--font-body); font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
 </style>
 </head>
 <body>
 <div class="slide">
-  <!-- Top-left text wordmark -->
-  <div style="position:absolute; top:64px; left:72px;"><span class="text-wordmark">KEFI TECH</span></div>
+  <div class="brand-stripe" data-decor></div>
 
-  <!-- Eyebrow + Headline + Subtitle -->
-  <div style="margin-top: 24px;">
-    <div class="eyebrow">INDUSTRY CONTEXT · BFSI &amp; INSURANCE</div>
-    <h1 class="s-headline" style="margin-top: 10px;">BFSI &amp; Insurance operates in a regulated, document-intensive, high-stakes environment.</h1>
-    <p class="s-subtitle">Customer trust, regulatory compliance, transaction integrity and operational resilience define competitive position.</p>
+  <!-- Top-left wordmark -->
+  <span class="text-wordmark" style="position:absolute; top:48px; left:104px;">KEFI TECH</span>
+
+  <!-- Eyebrow + Headline -->
+  <div style="margin-top: 32px;">
+    <div class="h-eyebrow">INDUSTRY CONTEXT · BFSI &amp; INSURANCE</div>
+    <h1 class="h-headline" style="margin-top: 14px; max-width: 1080px;">BFSI &amp; Insurance operates in a regulated, document-intensive, high-stakes environment.</h1>
+    <p class="h-subtitle" style="margin-top: 12px;">Customer trust, regulatory compliance, transaction integrity and operational resilience define competitive position.</p>
   </div>
 
   <!-- Two-column layout -->
-  <div style="display:grid; grid-template-columns: 560px 1fr; gap: 24px; margin-top: 24px;">
-
-    <!-- LEFT panel: WHY BFSI & INSURANCE NEEDS THIS NOW -->
-    <div class="surface-elev" style="padding: 20px 22px; height: 360px; display: flex; flex-direction: column;">
-      <div class="panel-title brand">WHY BFSI &amp; INSURANCE NEEDS THIS NOW</div>
-      <div style="display:flex; flex-direction:column; gap:10px; margin-top: 14px; flex: 1;">
+  <div style="display: grid; grid-template-columns: 560px 440px; gap: 24px; margin-top: 24px;">
+    <!-- LEFT: WHY BFSI & INSURANCE NEEDS THIS NOW -->
+    <div class="surface-elev" style="padding: 20px 22px; height: 360px; display: flex; flex-direction: column; gap: 14px;">
+      <div class="panel-eyebrow">WHY BFSI &amp; INSURANCE NEEDS THIS NOW</div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
         <div class="driver-card">
           <span class="material-icons driver-icon">trending_up</span>
           <div>
@@ -67,13 +71,14 @@
       </div>
     </div>
 
-    <!-- RIGHT panel: WHAT THIS MEANS FOR AI TRANSFORMATION -->
-    <div class="surface-elev" style="padding: 20px 22px; height: 360px; display: flex; flex-direction: column;">
-      <div class="panel-title" style="color: var(--accent-dark);">WHAT THIS MEANS FOR AI TRANSFORMATION</div>
-      <p class="panel-body" style="margin-top: 14px; flex: 1;">AI Transformation applied to bfsi &amp; insurance requires industry-specific capability, not generic technology. The right approach connects ai transformation to the regulatory, operational and customer realities that define bfsi &amp; insurance.</p>
-      <div><span class="tag-pill">INDUSTRY-SPECIFIC APPROACH</span></div>
+    <!-- RIGHT: WHAT THIS MEANS FOR AI TRANSFORMATION -->
+    <div class="surface-elev" style="padding: 20px 22px; height: 360px; display: flex; flex-direction: column; gap: 14px;">
+      <div class="panel-eyebrow panel-eyebrow-accent">WHAT THIS MEANS FOR AI TRANSFORMATION</div>
+      <p class="panel-body">AI Transformation applied to bfsi &amp; insurance requires industry-specific capability, not generic technology. The right approach connects ai transformation to the regulatory, operational and customer realities that define bfsi &amp; insurance.</p>
+      <div style="margin-top: auto;">
+        <span class="tag-pill">INDUSTRY-SPECIFIC APPROACH</span>
+      </div>
     </div>
-
   </div>
 
   <!-- Bottom rail -->

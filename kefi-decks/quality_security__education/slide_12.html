@@ -11,29 +11,38 @@
 <div class="slide grid-bg">
   <div class="brand-stripe" data-decor></div>
 
-  <!-- Top-left: real logo -->
+  <!-- Top-left: real logo (width-locked class, no inline overrides) -->
   <img src="assets/kefi_logo.png" class="kefi-logo-lg" alt="KEFI TECH" style="position:absolute; top:96px; left:104px;">
 
   <!-- Center-left composition -->
-  <div style="position:absolute; top:268px; left:104px; width:760px;">
-    <div class="eyebrow" style="margin-bottom:24px;">GET IN TOUCH</div>
-    <h1 style="font-family:var(--font-heading); font-size:56px; font-weight:700; line-height:1.08; letter-spacing:-0.02em; margin:0;">
+  <div style="position:absolute; top:240px; left:104px; width:760px;">
+    <div class="eyebrow" style="margin-bottom:22px;">GET IN TOUCH</div>
+    <h1 style="font-family:var(--font-heading); font-size:56px; font-weight:700; line-height:1.05; letter-spacing:-0.025em; margin:0;">
       <span style="color:var(--primary); display:block;">Let us engineer</span>
       <span style="color:var(--accent); display:block;">what is next.</span>
     </h1>
-    <div class="accent-bar" style="margin-top:32px; margin-bottom:22px;"></div>
-    <div style="font-family:var(--font-body); font-size:16px; color:var(--text-secondary); line-height:1.6; letter-spacing:0.01em;">
-      info@kefitech.com  ·  www.kefitech.com<br>
-      Bengaluru, India  ·  Hyderabad, India
+    <div style="margin-top:32px; display:flex; flex-direction:column; gap:8px;">
+      <p style="font-family:var(--font-body); font-size:16px; color:var(--text-secondary); line-height:1.5; margin:0;">
+        info@kefitech.com  ·  www.kefitech.com
+      </p>
+      <p style="font-family:var(--font-body); font-size:16px; color:var(--text-secondary); line-height:1.5; margin:0;">
+        Bengaluru, India  ·  Hyderabad, India
+      </p>
     </div>
   </div>
 
-  <!-- Right side: vertical hairline + 3 stacked callouts, right-aligned -->
-  <div style="position:absolute; top:268px; left:980px; width:200px; height:300px; display:flex; flex-direction:column; justify-content:flex-end; align-items:flex-end; padding-right:0;">
-    <div style="border-right:1px solid var(--border-soft); padding-right:24px; display:flex; flex-direction:column; align-items:flex-end; gap:32px; height:100%; justify-content:flex-end;">
-      <div style="font-family:var(--font-num); font-size:14px; color:var(--brand); letter-spacing:0.10em; font-weight:600;">Discover.</div>
-      <div style="font-family:var(--font-num); font-size:14px; color:var(--brand); letter-spacing:0.10em; font-weight:600;">Engineer.</div>
-      <div style="font-family:var(--font-num); font-size:14px; color:var(--accent); letter-spacing:0.10em; font-weight:600;">Scale.</div>
+  <!-- Right side: vertical hairline + 3 stacked callouts -->
+  <div style="position:absolute; top:248px; left:980px; width:200px; height:340px; display:flex; flex-direction:column; justify-content:flex-end; align-items:flex-end; padding-right:24px; border-right:1px solid var(--border-soft);">
+    <div style="font-family:var(--font-heading); font-size:18px; font-weight:600; color:var(--brand); letter-spacing:0.02em; padding:6px 0;">
+      Discover.
+    </div>
+    <div style="height:1px; background:var(--border); margin:14px 0; width:80px;"></div>
+    <div style="font-family:var(--font-heading); font-size:18px; font-weight:600; color:var(--brand); letter-spacing:0.02em; padding:6px 0;">
+      Engineer.
+    </div>
+    <div style="height:1px; background:var(--border); margin:14px 0; width:80px;"></div>
+    <div style="font-family:var(--font-heading); font-size:18px; font-weight:700; color:var(--accent); letter-spacing:0.02em; padding:6px 0;">
+      Scale.
     </div>
   </div>
 

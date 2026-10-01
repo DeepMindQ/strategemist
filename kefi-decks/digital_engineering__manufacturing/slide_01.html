@@ -3,90 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <title>Cover — Digital Engineering & Transformation for Manufacturing</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="global.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
   .cover-headline {
     font-family: var(--font-heading);
     font-size: var(--fs-display);
     font-weight: 800;
     line-height: 1.04;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
   }
-  .top-right-meta {
+  .cover-subtitle {
+    font-family: var(--font-body);
+    font-size: var(--fs-h3);
+    color: var(--text-secondary);
+    line-height: 1.45;
+    max-width: 560px;
+    font-weight: 400;
+  }
+  .top-right-label {
+    position: absolute;
+    top: 64px;
+    right: 72px;
     font-family: var(--font-num);
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+    font-size: 11px;
     color: var(--text-muted);
+    letter-spacing: 0.14em;
     font-weight: 500;
+    text-align: right;
   }
-  .vertical-hairline {
-    position: absolute;
-    top: 200px;
-    bottom: 120px;
-    left: 70%;
-    width: 1px;
-    background: var(--border-strong);
+  .cover-eyebrow {
+    font-family: var(--font-body);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--brand);
+    font-weight: 600;
   }
-  .vertical-callouts {
+  .right-rail {
     position: absolute;
-    top: 240px;
-    left: calc(70% + 32px);
+    top: 220px;
+    right: 72px;
+    width: 280px;
+    padding-left: 24px;
+    border-left: 1px solid var(--border);
     display: flex;
     flex-direction: column;
     gap: 28px;
-    font-family: var(--font-num);
-    font-size: 13px;
-    color: var(--brand);
-    font-weight: 500;
-    letter-spacing: 0.10em;
   }
-  .vertical-callouts .num {
-    color: var(--text-muted);
+  .right-callout {
+    font-family: var(--font-num);
+    font-size: 12px;
+    color: var(--brand);
+    line-height: 1.45;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .right-callout .num {
+    color: var(--accent);
+    font-weight: 600;
     margin-right: 8px;
+  }
+  .right-callout .name {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: -0.005em;
+    display: block;
+    margin-top: 2px;
+  }
+  .logo-anchor {
+    position: absolute;
+    top: 64px;
+    left: 104px;
+    z-index: 2;
+  }
+  .center-block {
+    position: absolute;
+    top: 240px;
+    left: 104px;
+    max-width: 720px;
+  }
+  .accent-bar-cover {
+    width: 48px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin: 22px 0 22px;
   }
 </style>
 </head>
 <body>
 <div class="slide grid-bg">
-  <div class="brand-stripe"></div>
+  <div class="brand-stripe" data-decor aria-hidden="true"></div>
 
-  <!-- Logo top-left -->
-  <img src="assets/kefi_logo.png" class="kefi-logo-lg" style="position:absolute; top:64px; left:104px;" alt="Kefi Tech">
-
-  <!-- Top-right meta -->
-  <div class="top-right-meta" style="position:absolute; top:80px; right:72px;">
-    DIGITAL ENGINEERING AND TRANSFORMATION SERVICES · 2026
+  <!-- Top-left: Kefi Tech logo -->
+  <div class="logo-anchor">
+    <img src="assets/kefi_logo.png" class="kefi-logo-lg" alt="Kefi Tech logo">
   </div>
+
+  <!-- Top-right: small mono label -->
+  <div class="top-right-label">DIGITAL ENGINEERING AND<br>TRANSFORMATION SERVICES · 2026</div>
 
   <!-- Center-left composition -->
-  <div style="position:absolute; top:240px; left:104px; max-width:780px;">
-    <div class="eyebrow" style="color:var(--brand); margin-bottom:18px;">KEFI TECH · MANUFACTURING</div>
-    <h1 class="cover-headline">
-      <span style="display:block; color:var(--primary);">Digital Engineering &amp; Transformation</span>
-      <span style="display:block; color:var(--accent);">for Manufacturing.</span>
+  <div class="center-block">
+    <div class="cover-eyebrow">KEFI TECH · MANUFACTURING</div>
+    <h1 class="cover-headline" style="margin-top: 18px;">
+      <span style="color: var(--primary); display: block;">Digital Engineering &amp; Transformation</span>
+      <span style="color: var(--accent); display: block;">for Manufacturing.</span>
     </h1>
-    <div class="accent-bar" style="margin-top:24px;"></div>
-    <p style="font-family:var(--font-body); font-size:var(--fs-h3); color:var(--text-secondary); line-height:1.45; margin-top:20px; max-width:640px; font-weight:400;">
-      A capability brief on Kefi Tech Digital Engineering &amp; Transformation Services for Manufacturing.
-    </p>
+    <div class="accent-bar-cover"></div>
+    <p class="cover-subtitle">A capability brief on Kefi Tech Digital Engineering &amp; Transformation Services for Manufacturing.</p>
   </div>
 
-  <!-- Right vertical hairline + callouts -->
-  <div class="vertical-hairline"></div>
-  <div class="vertical-callouts">
-    <div><span class="num">01</span>Product</div>
-    <div><span class="num">02</span>Cloud-Native</div>
-    <div><span class="num">03</span>Application</div>
+  <!-- Right rail: full capability names -->
+  <div class="right-rail">
+    <div class="right-callout">
+      <span class="num">01</span>
+      <span class="name">Product &amp; Platform Engineering</span>
+    </div>
+    <div class="right-callout">
+      <span class="num">02</span>
+      <span class="name">Cloud-Native &amp; Platform Engineering</span>
+    </div>
+    <div class="right-callout">
+      <span class="num">03</span>
+      <span class="name">Application Modernization</span>
+    </div>
   </div>
 
-  <!-- Foot rail -->
+  <!-- Bottom rail -->
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
     <span>01 / 12 · DIGITAL ENGINEERING AND TRANSFORMATION SERVICES</span>
   </div>
+
+  <aside data-notes hidden>none</aside>
 </div>
 </body>
 </html>

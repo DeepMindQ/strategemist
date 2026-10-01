@@ -36,16 +36,17 @@
     color: var(--text-secondary);
     line-height: 1.7;
   }
+  /* Fix 2: card padding 7px, panel 400px tall */
   .component-card {
     background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 8px;
-    padding: 8px 12px;
+    padding: 7px 12px;
     display: grid;
     grid-template-columns: 28px 22px 1fr;
     gap: 10px;
     align-items: center;
-    height: 48px;
+    height: 50px;
   }
   .comp-num {
     font-family: var(--font-num);
@@ -90,7 +91,7 @@
   </div>
 
   <!-- Eyebrow + Headline -->
-  <div style="margin-top:28px;">
+  <div style="margin-top:24px;">
     <div class="eyebrow">CAPABILITY 03</div>
     <h1 class="h-title" style="margin-top:10px;">Application Modernization.</h1>
     <p class="h-subtitle">
@@ -99,10 +100,10 @@
   </div>
 
   <!-- Two-column layout -->
-  <div style="display:grid; grid-template-columns: 560px 1fr; gap:32px; margin-top:24px;">
+  <div style="display:grid; grid-template-columns: 560px 1fr; gap:32px; margin-top:22px;">
 
     <!-- LEFT panel: WHAT WE DO -->
-    <div class="surface-elev" style="width:560px; padding:22px 24px; height:360px; display:flex; flex-direction:column;">
+    <div class="surface-elev" style="padding:22px 24px; height:400px; display:flex; flex-direction:column;">
       <div class="panel-title" style="color:var(--brand);">WHAT WE DO</div>
       <div class="hairline-soft" style="margin-top:12px;"></div>
       <p class="body-text" style="margin-top:18px;">
@@ -113,8 +114,8 @@
       </div>
     </div>
 
-    <!-- RIGHT panel: COMPONENTS -->
-    <div class="surface-elev" style="padding:22px 24px; height:360px; display:flex; flex-direction:column;">
+    <!-- RIGHT panel: COMPONENTS (Fix 2: 400px tall) -->
+    <div class="surface-elev" style="padding:22px 24px; height:400px; display:flex; flex-direction:column;">
       <div class="panel-title" style="color:var(--brand-light);">COMPONENTS</div>
       <div class="hairline-soft" style="margin-top:12px;"></div>
       <div style="display:flex; flex-direction:column; gap:8px; margin-top:14px;">

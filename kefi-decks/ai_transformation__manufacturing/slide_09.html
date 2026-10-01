@@ -14,14 +14,15 @@
   .head-h { font-family: var(--font-heading); font-weight: 700; font-size: 30px; color: var(--primary); line-height: 1.2; letter-spacing: -0.01em; margin-top: 12px; }
   .head-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-top: 8px; }
 
+  /* FIX 3: arch-layer-content already has justify-content: space-between in global.css — pills distribute across full row width automatically */
   .arch-stack {
     position: absolute; top: 230px; left: 72px; right: 72px;
     display: flex; flex-direction: column; gap: 10px;
   }
   .arch-layer { height: 70px; }
   .arch-layer-label { width: 140px; font-size: 11px; }
-  .arch-layer-content { padding: 10px 14px; gap: 8px; }
-  .arch-component { font-size: 11px; padding: 5px 11px; }
+  .arch-layer-content { padding: 10px 16px; gap: 8px; }
+  .arch-component { font-size: 11px; padding: 5px 12px; }
 </style>
 </head>
 <body>
@@ -36,53 +37,58 @@
   <div class="head-block">
     <div class="head-eyebrow">REFERENCE ARCHITECTURE</div>
     <h1 class="head-h">A reference architecture for ai transformation.</h1>
-    <p class="head-sub">Five layers from foundation through consumption.</p>
+    <p class="head-sub">Five layers from foundation through consumption — with industry-specific components for manufacturing.</p>
   </div>
 
   <div class="arch-stack">
+    <!-- LAYER 1 — APPLICATION (FIX 5: industry-specific component names) -->
     <div class="arch-layer">
       <div class="arch-layer-label">APPLICATION</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Copilots</span>
-        <span class="arch-component">Assistants</span>
-        <span class="arch-component">Agents</span>
-        <span class="arch-component">Workflows</span>
+        <span class="arch-component">Maintenance Copilot</span>
+        <span class="arch-component">Quality Inspector</span>
+        <span class="arch-component">Ops Dashboard</span>
+        <span class="arch-component">Supplier Comms Bot</span>
       </div>
     </div>
+    <!-- LAYER 2 — ORCHESTRATION -->
     <div class="arch-layer">
       <div class="arch-layer-label">ORCHESTRATION</div>
       <div class="arch-layer-content">
-        <span class="arch-component">RAG</span>
-        <span class="arch-component">Function Calling</span>
-        <span class="arch-component">Multi-Agent Orchestration</span>
-        <span class="arch-component">Evaluation Harnesses</span>
+        <span class="arch-component">Predictive Maintenance Flow</span>
+        <span class="arch-component">Defect Routing</span>
+        <span class="arch-component">Inventory Replenish</span>
+        <span class="arch-component">ECA Assistant</span>
       </div>
     </div>
+    <!-- LAYER 3 — MODELS -->
     <div class="arch-layer">
       <div class="arch-layer-label">MODELS</div>
       <div class="arch-layer-content">
-        <span class="arch-component">LLMs</span>
-        <span class="arch-component">Embedding Models</span>
-        <span class="arch-component">ML Models</span>
-        <span class="arch-component">Fine-Tuned Models</span>
+        <span class="arch-component">Failure Prediction</span>
+        <span class="arch-component">Defect Vision</span>
+        <span class="arch-component">Demand Forecast</span>
+        <span class="arch-component">Energy Optimizer</span>
       </div>
     </div>
+    <!-- LAYER 4 — DATA -->
     <div class="arch-layer">
       <div class="arch-layer-label">DATA</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Vector Stores</span>
-        <span class="arch-component">Knowledge Bases</span>
-        <span class="arch-component">Enterprise Data</span>
-        <span class="arch-component">Document Pipelines</span>
+        <span class="arch-component">Sensor Lake</span>
+        <span class="arch-component">Equipment Manuals</span>
+        <span class="arch-component">Quality Logs</span>
+        <span class="arch-component">Supplier Records</span>
       </div>
     </div>
+    <!-- LAYER 5 — PLATFORM -->
     <div class="arch-layer">
       <div class="arch-layer-label">PLATFORM</div>
       <div class="arch-layer-content">
-        <span class="arch-component">LLMOps</span>
-        <span class="arch-component">Monitoring</span>
-        <span class="arch-component">Governance</span>
-        <span class="arch-component">Security</span>
+        <span class="arch-component">Edge AI Deploy</span>
+        <span class="arch-component">Model Retrain</span>
+        <span class="arch-component">OT/IT Governance</span>
+        <span class="arch-component">Vision Ops</span>
       </div>
     </div>
   </div>
@@ -92,6 +98,8 @@
     <span>09 / 12</span>
     <span>ARCHITECTURE</span>
   </div>
+
+  <aside data-notes hidden>none</aside>
 </div>
 </body>
 </html>

@@ -9,9 +9,9 @@
 <style>
   .cover-display { font-family: var(--font-heading); font-size: 64px; font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; }
   .cover-eyebrow { font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brand); }
-  .cover-subtitle { font-family: var(--font-body); font-size: 22px; font-weight: 400; color: var(--text-secondary); line-height: 1.4; max-width: 560px; }
-  .right-callout { font-family: var(--font-num); font-size: 12px; font-weight: 500; color: var(--brand); letter-spacing: 0.10em; }
-  .right-callout-num { color: var(--accent); font-weight: 600; margin-right: 8px; }
+  .cover-subtitle { font-family: var(--font-body); font-size: 22px; font-weight: 400; color: var(--text-secondary); line-height: 1.4; max-width: 580px; }
+  .right-callout { font-family: var(--font-num); font-size: 12px; font-weight: 500; color: var(--brand); letter-spacing: 0.08em; line-height: 1.4; }
+  .right-callout-num { color: var(--accent); font-weight: 600; margin-right: 10px; }
   .top-right-label { font-family: var(--font-num); font-size: 11px; font-weight: 500; color: var(--text-muted); letter-spacing: 0.12em; }
   .vertical-hairline { position: absolute; top: 240px; bottom: 120px; left: 70%; width: 1px; background: var(--border-strong); }
 </style>
@@ -29,11 +29,11 @@
   <!-- Vertical hairline at 70% width -->
   <div class="vertical-hairline" data-decor></div>
 
-  <!-- Right-side stacked callouts -->
-  <div style="position:absolute; top:260px; right:104px; display:flex; flex-direction:column; gap:32px; text-align:right;">
-    <div class="right-callout"><span class="right-callout-num">01</span>Generative</div>
-    <div class="right-callout"><span class="right-callout-num">02</span>Agentic</div>
-    <div class="right-callout"><span class="right-callout-num">03</span>Enterprise</div>
+  <!-- Right-side stacked callouts — FULL capability names (FIX 4) -->
+  <div style="position:absolute; top:260px; right:104px; display:flex; flex-direction:column; gap:36px; text-align:right; max-width:280px;">
+    <div class="right-callout"><span class="right-callout-num">01</span>Generative AI Solutions</div>
+    <div class="right-callout"><span class="right-callout-num">02</span>Agentic AI &amp; Automation</div>
+    <div class="right-callout"><span class="right-callout-num">03</span>Enterprise Knowledge &amp; RAG</div>
   </div>
 
   <!-- Center-left composition -->

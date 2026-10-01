@@ -3,97 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <title>Closing</title>
-<link rel="stylesheet" href="global.css">
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="global.css">
 <style>
-  .slide { padding: 0 !important; }
-  .logo-anchor { position: absolute; top: 96px; left: 104px; }
-
-  .center-block {
-    position: absolute;
-    top: 232px;
-    left: 104px;
-    right: 540px;
-  }
-  .close-eyebrow { margin-bottom: 20px; }
-  .close-headline {
+  .closing-headline {
     font-family: var(--font-heading);
     font-size: 56px;
     font-weight: 700;
-    line-height: 1.08;
-    letter-spacing: -0.025em;
-    margin: 0;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
   }
-  .close-headline .l1 { color: var(--primary); display: block; }
-  .close-headline .l2 { color: var(--accent); display: block; }
-  .close-contacts {
-    margin-top: 30px;
+  .closing-eyebrow {
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    color: var(--brand);
+    font-weight: 600;
+  }
+  .contact-line {
     font-family: var(--font-body);
     font-size: 16px;
     color: var(--text-secondary);
-    line-height: 1.7;
-    font-weight: 400;
+    line-height: 1.6;
   }
-  .close-contacts div { display: block; }
-
-  .right-rail {
-    position: absolute;
-    top: 220px;
-    bottom: 200px;
-    left: 70%;
-    width: 1px;
-    background: var(--border-strong);
-  }
-  .right-callouts {
-    position: absolute;
-    top: 220px;
-    left: calc(70% + 24px);
-    right: 104px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-    gap: 28px;
+  .closing-callout {
     font-family: var(--font-num);
-    font-size: 18px;
+    font-size: 14px;
     color: var(--brand);
-    letter-spacing: 0.04em;
-    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-align: right;
+    line-height: 1.4;
   }
-  .right-callouts .row { display: block; }
-  .right-callouts .accent { color: var(--accent); font-weight: 700; }
+  .closing-callout.accent { color: var(--accent); font-weight: 600; }
 </style>
 </head>
 <body>
 <div class="slide grid-bg">
-  <div class="brand-stripe" data-decor aria-hidden="true"></div>
+  <div class="brand-stripe" data-decor></div>
 
-  <img src="assets/kefi_logo.png" class="kefi-logo-lg logo-anchor" alt="KEFI TECH">
+  <!-- Logo top-left -->
+  <img src="assets/kefi_logo.png" class="kefi-logo-lg" style="position:absolute; top:96px; left:104px;" alt="Kefi Tech">
 
-  <div class="center-block">
-    <div class="eyebrow close-eyebrow">GET IN TOUCH</div>
-    <h1 class="close-headline">
-      <span class="l1">Let us engineer</span>
-      <span class="l2">what is next.</span>
-    </h1>
-    <div class="close-contacts">
-      <div>info@kefitech.com  &middot;  www.kefitech.com</div>
-      <div>Bengaluru, India  &middot;  Hyderabad, India</div>
+  <!-- Center-left composition -->
+  <div style="position:absolute; top:240px; left:104px; max-width:720px;">
+    <div class="closing-eyebrow">GET IN TOUCH</div>
+    <h1 class="closing-headline" style="margin-top:18px; color: var(--primary);">Let us engineer</h1>
+    <h1 class="closing-headline" style="color: var(--accent);">what is next.</h1>
+    <div style="margin-top:28px;">
+      <div class="contact-line">info@kefitech.com  ·  www.kefitech.com</div>
+      <div class="contact-line">Bengaluru, India  ·  Hyderabad, India</div>
     </div>
   </div>
 
-  <div class="right-rail" data-decor aria-hidden="true"></div>
-  <div class="right-callouts">
-    <span class="row">Discover.</span>
-    <span class="row">Engineer.</span>
-    <span class="row accent">Scale.</span>
+  <!-- Right-side vertical hairline + callouts -->
+  <div style="position:absolute; top:240px; right:96px; height:280px; display:flex; align-items:flex-start; gap:32px;">
+    <div style="width:1px; height:280px; background: var(--border-soft);" data-decor></div>
+    <div style="display:flex; flex-direction:column; gap:36px; padding-top:6px; align-items:flex-end;">
+      <div class="closing-callout">Discover.</div>
+      <div class="closing-callout">Engineer.</div>
+      <div class="closing-callout accent">Scale.</div>
+    </div>
   </div>
 
+  <!-- Bottom rail -->
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
     <span>12 / 12</span>
-    <span>INFO@KEFITECH.COM &middot; WWW.KEFITECH.COM</span>
+    <span>INFO@KEFITECH.COM · WWW.KEFITECH.COM</span>
   </div>
 </div>
 </body>

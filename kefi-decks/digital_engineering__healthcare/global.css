@@ -1,1 +1,1933 @@
-../../shared/global.css
+/* Kefi Tech — Authentic Brand (white deck, #004c97 blue, #ff6c0e orange) */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Palette — extracted from kefitech.com */
+  --bg: #FFFFFF;
+  --bg-elev: #F8FAFC;
+  --surface: #F1F5F9;
+  --surface-2: #E2E8F0;
+  --primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  --brand: #004c97;
+  --brand-dark: #003366;
+  --brand-light: #4c81b3;
+  --brand-soft: rgba(0, 76, 151, 0.08);
+  --accent: #ff6c0e;
+  --accent-bright: #ff9b3d;
+  --accent-dark: #d43f07;
+  --accent-soft: rgba(255, 108, 14, 0.10);
+  --border: #E2E8F0;
+  --border-soft: #CBD5E1;
+  --border-strong: #94A3B8;
+
+  /* Typography tokens */
+  --font-heading: 'Sora', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-num: 'JetBrains Mono', monospace;
+
+  --fs-display: 64px;
+  --fs-h1: 44px;
+  --fs-h2: 32px;
+  --fs-h3: 22px;
+  --fs-body: 15px;
+  --fs-small: 13px;
+  --fs-micro: 11px;
+
+  /* Big-4 deck tokens */
+  --fs-pov-num: 44px;
+  --fs-footnote: 9px;
+  --fs-tag: 10px;
+  --fs-metric: 36px;
+  --fs-metric-label: 11px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--primary);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Slide canvas — exact 1280x720 */
+.slide {
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
+  background: var(--bg);
+  position: relative;
+  padding: 64px 72px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Surface utilities (cards, panels) */
+.surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.surface-elev {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.surface-hover {
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--bg-elev) 100%);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+/* Brand utilities */
+.brand { color: var(--brand); }
+.brand-dark { color: var(--brand-dark); }
+.accent { color: var(--accent); }
+.accent-bright { color: var(--accent-bright); }
+.accent-bar {
+  width: 48px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+.brand-bar {
+  width: 48px;
+  height: 3px;
+  background: var(--brand);
+  border-radius: 2px;
+}
+.accent-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+}
+.brand-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brand);
+  display: inline-block;
+}
+.brand-line {
+  border-left: 2px solid var(--brand);
+}
+.accent-line {
+  border-left: 2px solid var(--accent);
+}
+
+/* Numeric / index marker */
+.num-mono {
+  font-family: var(--font-num);
+  color: var(--brand);
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+/* Hairline divider */
+.hairline { height: 1px; background: var(--border); width: 100%; }
+.hairline-soft { height: 1px; background: var(--border-soft); width: 100%; }
+
+/* Eyebrow / kicker label */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--brand);
+  font-weight: 600;
+}
+
+/* Subtle background grid (light) */
+.grid-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,76,151,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,76,151,0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+  pointer-events: none;
+}
+
+/* Brand corner stripe (top-left) — Kefi Tech signature */
+.brand-stripe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--brand) 0%, var(--brand) 60%, var(--accent) 60%, var(--accent) 100%);
+}
+
+/* Footer rail */
+.foot-rail {
+  position: absolute;
+  left: 72px;
+  right: 72px;
+  bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-micro);
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Material Icons sizing helper */
+.mi-sm { font-size: 18px !important; }
+.mi-md { font-size: 22px !important; }
+.mi-lg { font-size: 32px !important; }
+
+/* Logo utilities — width-locked for proper 5.91:1 aspect ratio */
+.kefi-logo {
+  display: inline-block;
+  width: 210px;
+  height: auto;
+  object-fit: contain;
+  padding-left: 8px;
+}
+.kefi-logo-lg {
+  display: inline-block;
+  width: 260px;
+  height: auto;
+  object-fit: contain;
+  padding-left: 10px;
+}
+.kefi-logo-sm {
+  display: inline-block;
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  padding-left: 4px;
+}
+
+/* Text wordmark — replaces double-logo on slides where the logo already appears in the body */
+.text-wordmark {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--brand);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.text-wordmark::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 14px;
+  background: var(--accent);
+  border-radius: 1px;
+}
+
+/* Brand stripe variants — thin (3px) for section dividers, full (6px) for cover/closing */
+.brand-stripe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--brand) 0%, var(--brand) 60%, var(--accent) 60%, var(--accent) 100%);
+}
+.brand-stripe-thin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--brand) 0%, var(--brand) 60%, var(--accent) 60%, var(--accent) 100%);
+}
+
+/* Chapter numeral variants — chapter 06 uses accent orange */
+.chapter-numeral-accent { color: var(--accent) !important; }
+
+/* Foot-rail — tightened per v4 audit (padding 40px bottom, font 10px) */
+.foot-rail.bordered {
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+.foot-rail {
+  bottom: 40px;
+  font-size: 10px;
+}
+
+/* ============================================ */
+/* Big-4 deck utilities (Bain/Deloitte/Big-4)  */
+/* ============================================ */
+
+/* POV tenet — numbered point of view marker */
+.pov-num {
+  font-family: var(--font-num);
+  font-size: var(--fs-pov-num);
+  font-weight: 500;
+  color: var(--brand);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+/* Footnote — small source citation */
+.footnote {
+  font-family: var(--font-body);
+  font-size: var(--fs-footnote);
+  color: var(--text-muted);
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+.footnote-rule {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+  margin-bottom: 8px;
+}
+.footnote-cite {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* Tag pill — "BEST FOR: X" or category tag */
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  font-family: var(--font-body);
+  font-size: var(--fs-tag);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brand);
+  background: var(--brand-soft);
+  border-radius: 4px;
+  line-height: 1.2;
+}
+.tag-pill-accent {
+  color: var(--accent-dark);
+  background: var(--accent-soft);
+}
+
+/* Metric callout — quantified data point */
+.metric {
+  font-family: var(--font-num);
+  font-size: var(--fs-metric);
+  font-weight: 600;
+  color: var(--brand);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.metric-label {
+  font-family: var(--font-body);
+  font-size: var(--fs-metric-label);
+  color: var(--text-secondary);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin-top: 4px;
+}
+.metric-accent { color: var(--accent); }
+
+/* Framework matrix 2x2 quadrant */
+.matrix-quad {
+  position: relative;
+  padding: 24px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+.matrix-axis-x {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: var(--border-soft);
+}
+.matrix-axis-y {
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: var(--border-soft);
+}
+
+/* Top-border foot-rail (Big-4 running header style) */
+.foot-rail.bordered {
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+
+/* Phase pill for engagement lifecycle */
+.phase-pill {
+  position: relative;
+  padding: 12px 14px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.phase-pill::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 8px solid var(--accent);
+}
+.phase-pill:last-child::after { display: none; }
+
+/* Maturity curve container */
+.maturity-curve {
+  position: relative;
+  height: 60px;
+  margin-top: 12px;
+}
+.maturity-curve::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand-light) 0%, var(--brand) 50%, var(--accent) 100%);
+  border-radius: 2px;
+}
+.maturity-curve::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(180deg, transparent 0%, var(--brand-soft) 100%);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Engagement model card (vertical strip card) */
+.eng-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--brand);
+  border-radius: 10px;
+  padding: 18px 16px;
+  height: 100%;
+}
+.eng-card.accent-top {
+  border-top-color: var(--accent);
+}
+
+/* Case study / spotlight card */
+.spotlight-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--brand);
+  border-radius: 8px;
+  padding: 16px 18px;
+  height: 100%;
+}
+.spotlight-card.accent-left {
+  border-left-color: var(--accent);
+}
+
+/* Source tag (e.g. "Source: Gartner 2024") */
+.source-tag {
+  font-family: var(--font-body);
+  font-size: var(--fs-footnote);
+  color: var(--text-muted);
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+/* ============================================ */
+/* World-class deck tokens (Bain/McKinsey/BCG)  */
+/* ============================================ */
+
+/* Drop cap — opens chapter framing paragraphs (Bain device) */
+.dropcap::first-letter {
+  font-family: var(--font-heading);
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--brand);
+  float: left;
+  line-height: 0.9;
+  margin: 6px 10px 0 0;
+}
+
+/* Pull quote — large italic statement with attribution */
+.pull-quote {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--primary);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  max-width: 720px;
+}
+.pull-quote-attribution {
+  font-family: var(--font-body);
+  font-size: var(--fs-footnote);
+  color: var(--text-muted);
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+/* Footnote superscript marker */
+.fn-sup {
+  font-family: var(--font-num);
+  font-size: 8px;
+  vertical-align: super;
+  color: var(--brand);
+  font-weight: 600;
+  margin-left: 1px;
+}
+
+/* Maturity step (5-level framework) */
+.mat-step {
+  flex: 1;
+  position: relative;
+  padding: 14px 12px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--brand-light);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.mat-step.l4 { border-top-color: var(--brand); }
+.mat-step.l5 { border-top-color: var(--accent); background: var(--accent-soft); }
+.mat-step-num {
+  font-family: var(--font-num);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.10em;
+  font-weight: 600;
+}
+.mat-step-name {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+.mat-step-desc {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+.mat-step-tag {
+  font-family: var(--font-body);
+  font-size: 9px;
+  color: var(--brand);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* Now/Next/Beyond three-horizon strip (Deloitte device) */
+.hzn-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+}
+.hzn-card {
+  padding: 14px 16px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  border-left: 3px solid var(--brand-light);
+}
+.hzn-card.next { border-left-color: var(--brand); }
+.hzn-card.beyond { border-left-color: var(--accent); }
+.hzn-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: 6px;
+}
+.hzn-card.next .hzn-label { color: var(--brand-dark); }
+.hzn-card.beyond .hzn-label { color: var(--accent-dark); }
+.hzn-body {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+.hzn-window {
+  font-family: var(--font-num);
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  margin-top: 6px;
+}
+
+/* Chapter thesis — italic provocative line on section dividers */
+.chapter-thesis {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--brand);
+  line-height: 1.4;
+  max-width: 540px;
+  border-left: 2px solid var(--accent);
+  padding-left: 14px;
+}
+
+/* Manifesto page — large editorial text block */
+.manifesto {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--primary);
+  line-height: 1.5;
+  max-width: 880px;
+  letter-spacing: -0.01em;
+}
+.manifesto .emph { color: var(--brand); font-weight: 700; }
+.manifesto .emph-accent { color: var(--accent); font-weight: 700; font-style: italic; }
+.manifesto-attribution {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 28px;
+  font-weight: 500;
+}
+
+/* 2x2 strategic matrix with named quadrants (BCG device) */
+.matrix-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  position: relative;
+}
+.matrix-quad-named {
+  padding: 18px 20px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+.matrix-quad-named.highlight {
+  background: var(--brand-soft);
+  border-color: var(--brand);
+}
+.matrix-quad-name {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+.matrix-quad-tag {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--brand);
+}
+.matrix-quad-desc {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+.matrix-axis-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+/* Archetype card — ZS-style named client profile */
+.archetype-card {
+  padding: 18px 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--brand);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+.archetype-card.accent-top { border-top-color: var(--accent); }
+.archetype-card.brand-top { border-top-color: var(--brand); }
+.archetype-card.light-top { border-top-color: var(--brand-light); }
+.archetype-voice {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  padding-left: 10px;
+  border-left: 2px solid var(--border-strong);
+}
+.archetype-name {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+.archetype-rec {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--brand);
+  font-weight: 600;
+  margin-top: 6px;
+  letter-spacing: 0.04em;
+}
+
+/* Pathway stage — engagement pathway with commercial frame */
+.pathway-stage {
+  padding: 16px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+.pathway-stage::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  height: 3px;
+  background: var(--brand);
+  border-radius: 10px 10px 0 0;
+}
+.pathway-stage.accent::before { background: var(--accent); }
+.pathway-stage-num {
+  font-family: var(--font-num);
+  font-size: 11px;
+  color: var(--brand);
+  font-weight: 600;
+  letter-spacing: 0.10em;
+}
+.pathway-stage-name {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+.pathway-stage-meta {
+  font-family: var(--font-body);
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.pathway-stage-body {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+.pathway-stage-fee {
+  font-family: var(--font-num);
+  font-size: 12px;
+  color: var(--brand);
+  font-weight: 600;
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+/* Capability card — 5-capability grid (replaces 12-card catalog) */
+.cap-card {
+  padding: 16px 18px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--brand);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+}
+.cap-card.accent-left { border-left-color: var(--accent); }
+.cap-card-num {
+  font-family: var(--font-num);
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.10em;
+}
+.cap-card-name {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.25;
+  margin-top: 2px;
+}
+.cap-card-desc {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-top: 4px;
+}
+.cap-card-proof {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--brand);
+  font-weight: 600;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  line-height: 1.4;
+}
+
+/* Stat delta — metric with comparison anchor */
+.stat-delta {
+  font-family: var(--font-num);
+  font-size: 11px;
+  color: var(--accent-dark);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-top: 2px;
+}
+
+/* ============================================ */
+/* Advanced edition tokens (winning-deck grade)*/
+/* ============================================ */
+
+/* Executive summary — "if you read nothing else" */
+.exec-summary-card {
+  padding: 18px 22px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--brand);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.exec-summary-card.accent { border-left-color: var(--accent); }
+.exec-num {
+  font-family: var(--font-num);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand);
+  letter-spacing: 0.10em;
+}
+.exec-headline {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.25;
+}
+.exec-body {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Proprietary framework card (with ™) */
+.framework-card {
+  padding: 18px 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--brand);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+}
+.framework-card.accent-top { border-top-color: var(--accent); }
+.framework-tag {
+  font-family: var(--font-num);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--brand);
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+.framework-name {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.25;
+}
+.framework-name .tm {
+  font-size: 11px;
+  vertical-align: super;
+  color: var(--accent);
+  font-weight: 600;
+  margin-left: 2px;
+}
+.framework-desc {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.framework-promise {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--brand);
+  font-weight: 600;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  letter-spacing: 0.04em;
+}
+
+/* Value lever tree — tree-diagram style */
+.value-tree {
+  position: relative;
+  font-family: var(--font-body);
+}
+.tree-node {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-elev);
+  font-size: 11px;
+  color: var(--primary);
+  font-weight: 500;
+}
+.tree-node.cap { border-left: 3px solid var(--brand-light); }
+.tree-node.proc { border-left: 3px solid var(--brand); }
+.tree-node.biz { border-left: 3px solid var(--accent); background: var(--accent-soft); }
+.tree-node.fin { border-left: 3px solid var(--accent); background: var(--accent-soft); font-weight: 600; }
+.tree-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tree-connector {
+  flex: 1;
+  height: 1px;
+  background: var(--border-strong);
+  position: relative;
+}
+.tree-connector::after {
+  content: '';
+  position: absolute;
+  right: -1px;
+  top: -3px;
+  width: 0; height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 5px solid var(--border-strong);
+}
+
+/* Risk register row */
+.risk-row {
+  display: grid;
+  grid-template-columns: 28px 1fr 90px 90px 1.4fr;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-elev);
+}
+.risk-num {
+  font-family: var(--font-num);
+  font-size: 11px;
+  color: var(--brand);
+  font-weight: 600;
+}
+.risk-name {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.3;
+}
+.risk-prob, .risk-impact {
+  font-family: var(--font-num);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+.risk-low { color: #047857; background: rgba(16, 185, 129, 0.10); }
+.risk-med { color: #b45309; background: rgba(245, 158, 11, 0.12); }
+.risk-high { color: #b91c1c; background: rgba(239, 68, 68, 0.10); }
+.risk-mit {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Talent / principal profile card */
+.talent-card {
+  padding: 16px 18px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--brand);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+}
+.talent-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  border: 2px solid var(--brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--brand);
+  margin-bottom: 6px;
+}
+.talent-name {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+.talent-role {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--brand);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.talent-meta {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.talent-prior {
+  font-family: var(--font-body);
+  font-size: 10px;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  line-height: 1.4;
+}
+
+/* Competitive positioning bubble */
+.comp-bubble {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  text-align: center;
+  line-height: 1.1;
+  padding: 4px;
+}
+.comp-bubble.kefi {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand-dark);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Gantt chart bar */
+.gantt-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.gantt-label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.3;
+}
+.gantt-track {
+  position: relative;
+  height: 18px;
+  background: var(--surface);
+  border-radius: 4px;
+  overflow: visible;
+}
+.gantt-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: var(--brand);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-num);
+  font-size: 9px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.gantt-bar.accent { background: var(--accent); }
+.gantt-bar.light { background: var(--brand-light); }
+.gantt-milestone {
+  position: absolute;
+  top: -3px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 9px solid var(--accent-dark);
+  transform: translateX(-50%);
+}
+.gantt-month-grid {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  pointer-events: none;
+}
+.gantt-month-grid > div {
+  border-right: 1px dashed var(--border);
+}
+.gantt-month-labels {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+.gantt-month-strip {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  font-family: var(--font-num);
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+.gantt-month-strip > div {
+  text-align: center;
+  padding: 2px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Waterfall chart bar */
+.waterfall-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 4px;
+}
+.waterfall-bar-stack {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100px;
+}
+.waterfall-segment {
+  width: 100%;
+  background: var(--brand);
+  border-top: 1px solid #fff;
+}
+.waterfall-segment.accent { background: var(--accent); }
+.waterfall-segment.light { background: var(--brand-light); }
+.waterfall-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.waterfall-value {
+  font-family: var(--font-num);
+  font-size: 13px;
+  color: var(--brand);
+  font-weight: 700;
+}
+.waterfall-value.accent { color: var(--accent); }
+
+/* Personalization field on cover */
+.personalization-block {
+  position: absolute;
+  bottom: 100px;
+  left: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  max-width: 420px;
+}
+.personalization-row {
+  display: flex;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  line-height: 1.4;
+}
+.personalization-label {
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  min-width: 90px;
+}
+.personalization-value {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Reference architecture layer */
+.arch-layer {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-elev);
+  overflow: hidden;
+}
+.arch-layer-label {
+  width: 130px;
+  padding: 10px 12px;
+  background: var(--brand-soft);
+  border-right: 1px solid var(--border);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--brand);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.arch-layer-content {
+  flex: 1;
+  padding: 8px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.arch-component {
+  padding: 4px 9px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 10px;
+  color: var(--primary);
+  font-weight: 500;
+}
+.arch-component.kefi-asset {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+
+/* ============================================ */
+/* v4 — NEW slide tokens                        */
+/* ============================================ */
+
+/* Client logo wall (NEW slide 7) */
+.logo-wall {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.logo-tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  gap: 6px;
+}
+.logo-tile-name {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  text-align: center;
+}
+.logo-tile-industry {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--brand);
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+/* Testimonial card (NEW slide 34) */
+.testimonial-card {
+  padding: 22px 26px;
+  background: var(--bg-elev);
+  border-left: 4px solid var(--brand);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+.testimonial-card.accent-left { border-left-color: var(--accent); }
+.testimonial-quote {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--primary);
+  line-height: 1.45;
+  letter-spacing: -0.005em;
+}
+.testimonial-meta {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+.testimonial-name {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Cert badge (NEW slide 27) */
+.cert-badge {
+  padding: 16px 18px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+  height: 100%;
+}
+.cert-icon {
+  font-size: 32px !important;
+  color: var(--brand);
+  margin: 0 auto 4px;
+}
+.cert-name {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+.cert-meta {
+  font-family: var(--font-body);
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Geo footprint map row (NEW slide 28) */
+.geo-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+}
+.geo-card {
+  padding: 18px 22px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--brand);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.geo-card.accent-top { border-top-color: var(--accent); }
+.geo-city {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+.geo-role {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--brand);
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+.geo-detail {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* TCO / ROI calculator (NEW slide 36) */
+.tco-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 130px 130px 130px;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-elev);
+}
+.tco-year {
+  font-family: var(--font-num);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--brand);
+  letter-spacing: 0.06em;
+}
+.tco-item {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--primary);
+  font-weight: 600;
+  line-height: 1.3;
+}
+.tco-value {
+  font-family: var(--font-num);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: right;
+}
+.tco-value.cost { color: var(--accent-dark); }
+.tco-value.value { color: var(--brand); }
+.tco-value.net { color: var(--accent); }
+
+/* "Why not X" comparison row (NEW slide 39) */
+.whynot-row {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-elev);
+}
+.whynot-firm {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+.whynot-tradeoff-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+.whynot-tradeoff-text {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+.whynot-tradeoff-text strong {
+  color: var(--brand);
+  font-weight: 700;
+}
+
+/* Founding team card (NEW slide 40) */
+.founder-card {
+  padding: 18px 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--brand);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+}
+.founder-card.accent-top { border-top-color: var(--accent); }
+.founder-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  border: 2px solid var(--brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--brand);
+  margin-bottom: 6px;
+}
+.founder-name {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+.founder-role {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--brand);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.founder-bio {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Contact slide (NEW slide 41) */
+.contact-block {
+  padding: 28px 32px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.contact-icon {
+  font-size: 24px !important;
+  color: var(--brand);
+  width: 32px;
+}
+.contact-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.contact-value {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+}
+
+/* ============================================ */
+/* v5 — Visual diagram tokens                   */
+/* ============================================ */
+
+/* Horizontal flow diagram (3-5 stage methodology) */
+.flow-diagram {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  width: 100%;
+}
+.flow-stage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 14px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  position: relative;
+  gap: 8px;
+  min-height: 160px;
+}
+.flow-stage-num {
+  font-family: var(--font-num);
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.10em;
+}
+.flow-stage-icon {
+  font-size: 32px !important;
+  color: var(--brand);
+}
+.flow-stage-name {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+  text-align: center;
+}
+.flow-stage-desc {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  text-align: center;
+}
+.flow-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  flex-shrink: 0;
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Case study visual flow (3-stage: Challenge → Approach → Result) */
+.case-flow {
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr 40px 1fr;
+  align-items: stretch;
+  gap: 0;
+  width: 100%;
+}
+.case-flow-stage {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.case-flow-stage.challenge { border-top: 3px solid var(--accent); }
+.case-flow-stage.approach { border-top: 3px solid var(--brand); }
+.case-flow-stage.result { border-top: 3px solid #047857; background: rgba(16, 185, 129, 0.04); }
+.case-flow-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+.case-flow-stage.challenge .case-flow-label { color: var(--accent-dark); }
+.case-flow-stage.approach .case-flow-label { color: var(--brand); }
+.case-flow-stage.result .case-flow-label { color: #047857; }
+.case-flow-title {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.25;
+}
+.case-flow-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.case-flow-items li {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  padding-left: 14px;
+  position: relative;
+}
+.case-flow-items li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--brand);
+}
+.case-flow-stage.challenge .case-flow-items li::before { background: var(--accent); }
+.case-flow-stage.result .case-flow-items li::before { background: #047857; }
+.case-flow-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 24px;
+  font-weight: 300;
+}
+
+/* Shift Left / Shift Right interlocking rings diagram */
+.shift-rings-container {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shift-rings-svg {
+  width: 100%;
+  height: 100%;
+}
+.ring-label {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 800;
+  fill: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+.ring-segment-label {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  fill: #FFFFFF;
+  letter-spacing: 0.04em;
+}
+.ring-outer-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  fill: var(--text-muted);
+  letter-spacing: 0.12em;
+}
+.shift-arrow-label {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 800;
+  fill: #FFFFFF;
+  letter-spacing: 0.08em;
+}
+
+/* DevSecOps pipeline — horizontal stages with security activities */
+.devsecops-pipeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+.devsecops-stage {
+  display: grid;
+  grid-template-columns: 140px 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.devsecops-stage-label {
+  background: var(--brand);
+  color: #FFFFFF;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+.devsecops-stage-name {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.devsecops-stage-icon {
+  font-size: 20px !important;
+  margin-bottom: 2px;
+}
+.devsecops-stage-activity {
+  padding: 14px 16px;
+  background: var(--bg-elev);
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.devsecops-activity-label {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.devsecops-activity-text {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--primary);
+  line-height: 1.4;
+}
+
+/* Industry visual card (replaces text deep-dive) */
+.industry-visual-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--brand);
+  border-radius: 10px;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+}
+.industry-visual-card.accent-top { border-top-color: var(--accent); }
+.industry-visual-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.industry-visual-icon {
+  font-size: 36px !important;
+  color: var(--brand);
+}
+.industry-visual-name {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+.industry-visual-capabilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.industry-visual-cap {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--brand);
+  background: var(--brand-soft);
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+.industry-visual-outcome {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+.industry-visual-outcome strong {
+  color: var(--brand);
+  font-weight: 700;
+}
+
+/* Plain checklist (replaces KEFI vs industry comparison) */
+.checklist-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  border-left: 3px solid var(--brand);
+}
+.checklist-num {
+  font-family: var(--font-num);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--brand);
+  min-width: 24px;
+}
+.checklist-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.checklist-question {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.3;
+}
+.checklist-note {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+

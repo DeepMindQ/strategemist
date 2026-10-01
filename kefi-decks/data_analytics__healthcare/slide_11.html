@@ -3,87 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <title>Why Kefi Tech</title>
-<link rel="stylesheet" href="global.css">
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="global.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
-  .slide-headline {
-    font-family: var(--font-heading);
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--primary);
-    line-height: 1.15;
-    letter-spacing: -0.015em;
-  }
-  .slide-subtitle {
-    font-family: var(--font-body);
-    font-size: 14px;
-    color: var(--text-secondary);
-    line-height: 1.5;
-    margin-top: 8px;
-  }
-  .exec-summary-card {
-    height: 180px;
-    padding: 22px 24px;
-    gap: 10px;
-  }
-  .exec-num {
-    font-size: 16px;
-  }
-  .exec-headline {
-    font-size: 20px;
-  }
-  .exec-body {
-    font-size: 13px;
-    line-height: 1.55;
-  }
+  .h1-sora { font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--primary); line-height: 1.2; letter-spacing: -0.01em; }
+  .subtitle { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
 </style>
 </head>
 <body>
 <div class="slide">
-  <div class="brand-stripe-thin" aria-hidden="true"></div>
+  <div class="brand-stripe-thin" data-decor></div>
 
-  <!-- Top header -->
-  <div style="display:flex; justify-content:space-between; align-items:center;">
+  <div style="position:absolute; top:64px; left:104px;">
     <span class="text-wordmark">KEFI TECH</span>
-    <span class="eyebrow">WHY KEFI TECH</span>
   </div>
 
-  <div style="margin-top:20px;">
-    <h1 class="slide-headline">Four reasons enterprises work with us.</h1>
-    <p class="slide-subtitle">Not generic services. Specific differentiators for healthcare &amp; pharma.</p>
+  <div style="position:absolute; top:108px; left:104px; right:72px;">
+    <div class="eyebrow">WHY KEFI TECH</div>
+    <h1 class="h1-sora" style="margin-top:10px;">Four reasons enterprises work with us.</h1>
+    <p class="subtitle" style="margin-top:8px;">Not generic services. Specific differentiators for healthcare &amp; pharma.</p>
   </div>
 
-  <!-- 2x2 grid -->
-  <div style="display:grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap:20px; margin-top:30px;">
+  <!-- 2x2 grid of exec-summary-card -->
+  <div style="position:absolute; top:248px; left:72px; right:72px; display:grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 20px;">
 
-    <div class="exec-summary-card">
+    <div class="exec-summary-card" style="height: 150px;">
       <div class="exec-num">01</div>
       <div class="exec-headline">Decision-grade data</div>
       <div class="exec-body">Data engineered to be operational, governed, and decision-grade.</div>
     </div>
 
-    <div class="exec-summary-card">
+    <div class="exec-summary-card" style="height: 150px;">
       <div class="exec-num">02</div>
       <div class="exec-headline">Lakehouse first</div>
       <div class="exec-body">Modern lakehouse architecture converging warehouse and lake.</div>
     </div>
 
-    <div class="exec-summary-card">
+    <div class="exec-summary-card" style="height: 150px;">
       <div class="exec-num">03</div>
       <div class="exec-headline">AI-powered analytics</div>
-      <div class="exec-body">GenAI over enterprise data &mdash; natural-language querying.</div>
+      <div class="exec-body">GenAI over enterprise data — natural-language querying.</div>
     </div>
 
-    <div class="exec-summary-card accent">
-      <div class="exec-num">04</div>
+    <div class="exec-summary-card accent" style="height: 150px;">
+      <div class="exec-num" style="color: var(--accent);">04</div>
       <div class="exec-headline">Governance embedded</div>
       <div class="exec-body">Data quality, lineage, and MDM as a discipline, not an afterthought.</div>
     </div>
 
   </div>
 
-  <!-- Bottom rail -->
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
     <span>11 / 12</span>

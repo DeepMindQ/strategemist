@@ -3,115 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <title>Reference Architecture</title>
-<link rel="stylesheet" href="global.css">
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="global.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
-  .slide-headline {
-    font-family: var(--font-heading);
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--primary);
-    line-height: 1.18;
-    letter-spacing: -0.015em;
-  }
-  .slide-subtitle {
-    font-family: var(--font-body);
-    font-size: 14px;
-    color: var(--text-secondary);
-    line-height: 1.5;
-    margin-top: 8px;
-  }
-  .arch-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 22px;
-  }
-  .arch-layer {
-    height: 78px;
-  }
-  .arch-layer-label {
-    font-size: 12px;
-    letter-spacing: 0.08em;
-  }
-  .arch-component {
-    font-size: 12px;
-    padding: 6px 12px;
-  }
+  .h1-sora { font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--primary); line-height: 1.2; letter-spacing: -0.01em; }
+  .subtitle { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+  .arch-layer { min-height: 80px; }
 </style>
 </head>
 <body>
 <div class="slide">
-  <div class="brand-stripe-thin" aria-hidden="true"></div>
+  <div class="brand-stripe-thin" data-decor></div>
 
-  <!-- Top header -->
-  <div style="display:flex; justify-content:space-between; align-items:center;">
+  <div style="position:absolute; top:64px; left:104px;">
     <span class="text-wordmark">KEFI TECH</span>
-    <span class="eyebrow">REFERENCE ARCHITECTURE</span>
   </div>
 
-  <div style="margin-top:20px;">
-    <h1 class="slide-headline">A reference architecture for data analytics &amp; data engineering.</h1>
-    <p class="slide-subtitle">Five layers from foundation through consumption.</p>
+  <div style="position:absolute; top:108px; left:104px; right:72px;">
+    <div class="eyebrow">REFERENCE ARCHITECTURE</div>
+    <h1 class="h1-sora" style="margin-top:10px;">A reference architecture for data analytics &amp; data engineering.</h1>
+    <p class="subtitle" style="margin-top:8px;">Five layers from foundation through consumption — with industry-specific components for healthcare &amp; pharma.</p>
   </div>
 
-  <!-- Architecture stack -->
-  <div class="arch-stack">
+  <!-- Stacked vertical column of 5 .arch-layer elements -->
+  <div style="position:absolute; top:236px; left:72px; right:72px; display:flex; flex-direction:column; gap: 10px;">
 
     <div class="arch-layer">
       <div class="arch-layer-label">CONSUMPTION</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Dashboards</span>
-        <span class="arch-component">Reports</span>
-        <span class="arch-component">APIs</span>
-        <span class="arch-component">Conversational Analytics</span>
+        <span class="arch-component">Clinical Outcomes</span>
+        <span class="arch-component">Operational Performance</span>
+        <span class="arch-component">Quality &amp; Safety</span>
+        <span class="arch-component">Financial Performance</span>
       </div>
     </div>
 
     <div class="arch-layer">
       <div class="arch-layer-label">SEMANTIC</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Semantic Layer</span>
-        <span class="arch-component">Metrics Layer</span>
-        <span class="arch-component">Data Catalog</span>
-        <span class="arch-component">Lineage</span>
+        <span class="arch-component">Patient 360</span>
+        <span class="arch-component">Clinical Metrics</span>
+        <span class="arch-component">Care Pathway Lineage</span>
+        <span class="arch-component">Drug Catalog</span>
       </div>
     </div>
 
     <div class="arch-layer">
       <div class="arch-layer-label">PROCESSING</div>
       <div class="arch-layer-content">
-        <span class="arch-component">ETL/ELT</span>
-        <span class="arch-component">Stream Processing</span>
-        <span class="arch-component">Batch Processing</span>
-        <span class="arch-component">Data Quality</span>
+        <span class="arch-component">EHR Stream</span>
+        <span class="arch-component">Device Telemetry</span>
+        <span class="arch-component">Claims Batch</span>
+        <span class="arch-component">Lab Results</span>
       </div>
     </div>
 
     <div class="arch-layer">
       <div class="arch-layer-label">STORAGE</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Data Lake</span>
-        <span class="arch-component">Warehouse</span>
-        <span class="arch-component">Lakehouse</span>
-        <span class="arch-component">NoSQL</span>
+        <span class="arch-component">Patient Lake</span>
+        <span class="arch-component">Clinical Warehouse</span>
+        <span class="arch-component">Trial Lakehouse</span>
+        <span class="arch-component">Imaging NoSQL</span>
       </div>
     </div>
 
     <div class="arch-layer">
       <div class="arch-layer-label">PLATFORM</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Cloud Data Platform</span>
-        <span class="arch-component">Orchestration</span>
-        <span class="arch-component">Governance</span>
-        <span class="arch-component">Security</span>
+        <span class="arch-component">HIPAA Cloud Hub</span>
+        <span class="arch-component">FHIR Orchestrator</span>
+        <span class="arch-component">PHI Governance</span>
+        <span class="arch-component">Consent Catalog</span>
       </div>
     </div>
 
   </div>
 
-  <!-- Bottom rail -->
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
     <span>09 / 12</span>

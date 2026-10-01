@@ -3,113 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <title>Reference Architecture</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="global.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
-  .h1-slide {
-    font-family: var(--font-heading);
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--primary);
-    line-height: 1.18;
-    letter-spacing: -0.015em;
-    max-width: 1100px;
-  }
-  .subtitle {
-    font-family: var(--font-body);
-    font-size: 14px;
-    color: var(--text-secondary);
-    line-height: 1.5;
-    max-width: 1100px;
-  }
-  .arch-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .arch-layer {
-    height: 88px;
-  }
-  .arch-layer-label {
-    width: 130px;
-    font-size: 12px !important;
-  }
-  .arch-layer-content {
-    padding: 14px 18px;
-    gap: 10px;
-  }
-  .arch-component {
-    padding: 8px 14px;
-    font-size: 12px;
-    font-weight: 500;
-  }
+  .arch-layer { height: 78px; }
+  .arch-layer-label { font-size: 12px; }
+  .arch-component { font-size: 11px; padding: 5px 11px; }
 </style>
 </head>
 <body>
-<aside data-notes style="display:none;">none</aside>
 <div class="slide">
-  <span class="text-wordmark" style="position:absolute; top:40px; left:72px;">KEFI TECH</span>
+  <div class="brand-stripe-thin" data-decor></div>
 
-  <!-- Header -->
-  <div style="position:absolute; top:96px; left:72px; right:72px;">
-    <div class="eyebrow">REFERENCE ARCHITECTURE</div>
-    <h1 class="h1-slide" style="margin-top:12px;">A reference architecture for data analytics &amp; data engineering.</h1>
-    <p class="subtitle" style="margin-top:8px;">Five layers from foundation through consumption.</p>
+  <div style="position:absolute; top:48px; left:96px;">
+    <span class="text-wordmark">KEFI TECH</span>
   </div>
 
-  <!-- Architecture stack -->
-  <div style="position:absolute; top:228px; left:72px; right:72px;">
-    <div class="arch-stack">
-      <!-- LAYER 1 -->
-      <div class="arch-layer">
-        <div class="arch-layer-label">LAYER 1<br><span style="font-size:11px; letter-spacing:0.10em;">CONSUMPTION</span></div>
-        <div class="arch-layer-content">
-          <span class="arch-component">Dashboards</span>
-          <span class="arch-component">Reports</span>
-          <span class="arch-component">APIs</span>
-          <span class="arch-component">Conversational Analytics</span>
-        </div>
+  <!-- Header -->
+  <div style="margin-top:24px;">
+    <div class="eyebrow" style="margin-bottom:10px;">REFERENCE ARCHITECTURE</div>
+    <h1 style="font-family:var(--font-heading); font-size:28px; font-weight:700; color:var(--primary); line-height:1.22; letter-spacing:-0.015em; margin:0 0 8px 0;">A reference architecture for data analytics &amp; data engineering.</h1>
+    <p style="font-family:var(--font-body); font-size:14px; color:var(--text-secondary); line-height:1.5; margin:0;">Five layers from foundation through consumption — with industry-specific components for bfsi &amp; insurance.</p>
+  </div>
+
+  <!-- 5 arch layers -->
+  <div style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
+    <!-- LAYER 1 CONSUMPTION -->
+    <div class="arch-layer">
+      <div class="arch-layer-label">CONSUMPTION</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Risk Dashboard</span>
+        <span class="arch-component">Branch Analytics</span>
+        <span class="arch-component">Product P&amp;L</span>
+        <span class="arch-component">Regulatory Metrics</span>
       </div>
-      <!-- LAYER 2 -->
-      <div class="arch-layer">
-        <div class="arch-layer-label">LAYER 2<br><span style="font-size:11px; letter-spacing:0.10em;">SEMANTIC</span></div>
-        <div class="arch-layer-content">
-          <span class="arch-component">Semantic Layer</span>
-          <span class="arch-component">Metrics Layer</span>
-          <span class="arch-component">Data Catalog</span>
-          <span class="arch-component">Lineage</span>
-        </div>
+    </div>
+    <!-- LAYER 2 SEMANTIC -->
+    <div class="arch-layer">
+      <div class="arch-layer-label">SEMANTIC</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Risk Metrics Layer</span>
+        <span class="arch-component">Customer 360 Catalog</span>
+        <span class="arch-component">Policy Lineage</span>
+        <span class="arch-component">Capital Adequacy</span>
       </div>
-      <!-- LAYER 3 -->
-      <div class="arch-layer">
-        <div class="arch-layer-label">LAYER 3<br><span style="font-size:11px; letter-spacing:0.10em;">PROCESSING</span></div>
-        <div class="arch-layer-content">
-          <span class="arch-component">ETL/ELT</span>
-          <span class="arch-component">Stream Processing</span>
-          <span class="arch-component">Batch Processing</span>
-          <span class="arch-component">Data Quality</span>
-        </div>
+    </div>
+    <!-- LAYER 3 PROCESSING -->
+    <div class="arch-layer">
+      <div class="arch-layer-label">PROCESSING</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Real-Time Tx Pipeline</span>
+        <span class="arch-component">Policy ETL</span>
+        <span class="arch-component">Claims Stream</span>
+        <span class="arch-component">Regulatory Batch</span>
       </div>
-      <!-- LAYER 4 -->
-      <div class="arch-layer">
-        <div class="arch-layer-label">LAYER 4<br><span style="font-size:11px; letter-spacing:0.10em;">STORAGE</span></div>
-        <div class="arch-layer-content">
-          <span class="arch-component">Data Lake</span>
-          <span class="arch-component">Warehouse</span>
-          <span class="arch-component">Lakehouse</span>
-          <span class="arch-component">NoSQL</span>
-        </div>
+    </div>
+    <!-- LAYER 4 STORAGE -->
+    <div class="arch-layer">
+      <div class="arch-layer-label">STORAGE</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Transaction Lake</span>
+        <span class="arch-component">Policy Warehouse</span>
+        <span class="arch-component">Claims Lakehouse</span>
+        <span class="arch-component">Watchlist NoSQL</span>
       </div>
-      <!-- LAYER 5 -->
-      <div class="arch-layer">
-        <div class="arch-layer-label">LAYER 5<br><span style="font-size:11px; letter-spacing:0.10em;">PLATFORM</span></div>
-        <div class="arch-layer-content">
-          <span class="arch-component">Cloud Data Platform</span>
-          <span class="arch-component">Orchestration</span>
-          <span class="arch-component">Governance</span>
-          <span class="arch-component">Security</span>
-        </div>
+    </div>
+    <!-- LAYER 5 PLATFORM -->
+    <div class="arch-layer">
+      <div class="arch-layer-label">PLATFORM</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Cloud Data Hub</span>
+        <span class="arch-component">Airflow Orchestrator</span>
+        <span class="arch-component">Risk Governance</span>
+        <span class="arch-component">PII Vault</span>
       </div>
     </div>
   </div>

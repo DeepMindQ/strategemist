@@ -19,21 +19,23 @@
   .right-rail .hair { background: var(--border); }
   .right-callouts {
     display: flex; flex-direction: column; justify-content: space-between;
-    align-items: flex-end; padding: 8px 0;
+    align-items: flex-end; padding: 6px 0;
   }
   .right-callout {
     font-family: var(--font-num); font-size: 13px;
-    color: var(--brand); letter-spacing: 0.10em; font-weight: 500;
-    text-align: right; line-height: 1.3;
+    color: var(--brand); letter-spacing: 0.08em; font-weight: 600;
+    text-align: right; line-height: 1.25;
+    max-width: 230px;
   }
   .right-callout .num { display: block; font-size: 10px; color: var(--text-muted); font-weight: 600; letter-spacing: 0.18em; margin-bottom: 4px; }
+  .right-callout .name { display: block; }
 </style>
 </head>
 <body>
 <div class="slide grid-bg">
   <div class="brand-stripe"></div>
 
-  <!-- Top-left logo -->
+  <!-- Top-left logo (kefi-logo-lg has padding-left:10px to clear stripe) -->
   <img src="assets/kefi_logo.png" class="kefi-logo-lg" alt="Kefi Tech" style="position:absolute; top:64px; left:104px;">
 
   <!-- Top-right tag -->
@@ -54,12 +56,12 @@
     </p>
   </div>
 
-  <!-- Right vertical hairline with three stacked callouts -->
+  <!-- Right vertical hairline with three stacked callouts (FIX 4: full capability names) -->
   <div class="right-rail" aria-hidden="true" data-decor>
     <div class="right-callouts">
-      <div class="right-callout"><span class="num">01</span>Generative</div>
-      <div class="right-callout"><span class="num">02</span>Agentic</div>
-      <div class="right-callout"><span class="num">03</span>Enterprise</div>
+      <div class="right-callout"><span class="num">01</span><span class="name">Generative AI Solutions</span></div>
+      <div class="right-callout"><span class="num">02</span><span class="name">Agentic AI &amp; Automation</span></div>
+      <div class="right-callout"><span class="num">03</span><span class="name">Enterprise Knowledge &amp; RAG</span></div>
     </div>
     <div class="hair"></div>
   </div>
@@ -69,6 +71,8 @@
     <span class="text-wordmark">KEFI TECH</span>
     <span>01 / 12 · AI TRANSFORMATION SERVICES</span>
   </div>
+
+  <aside data-notes hidden>none</aside>
 </div>
 </body>
 </html>

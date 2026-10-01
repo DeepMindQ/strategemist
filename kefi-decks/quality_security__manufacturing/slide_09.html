@@ -13,9 +13,10 @@
   .headline { font-family: var(--font-heading); font-size: 28px; font-weight: 700; line-height: 1.2; color: var(--primary); letter-spacing: -0.015em; margin-top: 6px; }
   .subtitle { font-family: var(--font-body); font-size: 13px; line-height: 1.55; color: var(--text-secondary); margin-top: 8px; max-width: 980px; }
   .arch-stack { display: flex; flex-direction: column; gap: 10px; margin-top: 22px; }
-  .arch-layer { height: 76px; }
-  .arch-layer-label { width: 150px; font-size: 12px; }
-  .arch-component { font-size: 11px; padding: 5px 11px; }
+  /* FIX 3 — .arch-layer-content inherits justify-content: space-between from global.css; pills auto-distribute */
+  .arch-layer { height: 88px; }
+  .arch-layer-label { width: 130px; font-size: 11px; }
+  .arch-component { font-size: 11px; padding: 6px 12px; }
 </style>
 </head>
 <body>
@@ -28,57 +29,53 @@
   <div class="head-block">
     <span class="eyebrow">REFERENCE ARCHITECTURE</span>
     <h1 class="headline">A reference architecture for quality &amp; security engineering.</h1>
-    <p class="subtitle">Five layers from foundation through consumption.</p>
+    <p class="subtitle">Five layers from foundation through consumption — with industry-specific components for manufacturing.</p>
   </div>
 
   <div class="arch-stack">
     <div class="arch-layer">
       <div class="arch-layer-label">LAYER 1 · STANDARDS</div>
       <div class="arch-layer-content">
-        <span class="arch-component">OWASP</span>
-        <span class="arch-component">NIST CSF</span>
-        <span class="arch-component">MITRE ATT&amp;CK</span>
-        <span class="arch-component">ISO 27001</span>
-        <span class="arch-component">SOC 2</span>
+        <span class="arch-component">IEC 62443</span>
+        <span class="arch-component">ISO 9001</span>
+        <span class="arch-component">NIST 800-82</span>
+        <span class="arch-component">MITRE ATT&amp;CK ICS</span>
       </div>
     </div>
     <div class="arch-layer">
       <div class="arch-layer-label">LAYER 2 · SECURITY TESTING</div>
       <div class="arch-layer-content">
-        <span class="arch-component">SAST</span>
-        <span class="arch-component">DAST</span>
-        <span class="arch-component">SCA</span>
-        <span class="arch-component">VAPT</span>
-        <span class="arch-component">Pen Testing</span>
+        <span class="arch-component">Plant Network VAPT</span>
+        <span class="arch-component">MES SAST</span>
+        <span class="arch-component">SCADA Pen Test</span>
+        <span class="arch-component">IIoT DAST</span>
       </div>
     </div>
     <div class="arch-layer">
       <div class="arch-layer-label">LAYER 3 · PERFORMANCE</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Load</span>
-        <span class="arch-component">Stress</span>
-        <span class="arch-component">Spike</span>
-        <span class="arch-component">Capacity</span>
-        <span class="arch-component">Chaos</span>
+        <span class="arch-component">MES Load Test</span>
+        <span class="arch-component">IoT Pipeline Perf</span>
+        <span class="arch-component">ERP Stress Test</span>
+        <span class="arch-component">Quality System Perf</span>
       </div>
     </div>
     <div class="arch-layer">
       <div class="arch-layer-label">LAYER 4 · AUTOMATION</div>
       <div class="arch-layer-content">
-        <span class="arch-component">UI</span>
-        <span class="arch-component">API</span>
-        <span class="arch-component">Mobile</span>
-        <span class="arch-component">BDD</span>
-        <span class="arch-component">AI-Assisted</span>
+        <span class="arch-component">MES Functional</span>
+        <span class="arch-component">ERP Regression</span>
+        <span class="arch-component">Quality System Auto</span>
+        <span class="arch-component">Industrial API</span>
       </div>
     </div>
     <div class="arch-layer">
       <div class="arch-layer-label">LAYER 5 · OPERATIONS</div>
       <div class="arch-layer-content">
-        <span class="arch-component">CI/CD</span>
-        <span class="arch-component">Monitoring</span>
-        <span class="arch-component">Incident Response</span>
-        <span class="arch-component">Governance</span>
+        <span class="arch-component">OT/IT CI/CD</span>
+        <span class="arch-component">Plant Monitoring</span>
+        <span class="arch-component">OT Incident Response</span>
+        <span class="arch-component">IEC 62443 Audit</span>
       </div>
     </div>
   </div>

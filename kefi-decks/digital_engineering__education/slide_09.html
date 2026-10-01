@@ -24,6 +24,7 @@
     margin-top: 6px;
     max-width: 980px;
   }
+  /* Fix 3: rely on global.css justify-content: space-between for distribution */
   .arch-stack {
     display: flex;
     flex-direction: column;
@@ -39,6 +40,9 @@
   .arch-component {
     padding: 6px 12px;
     font-size: 12px;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: 0.01em;
   }
   .top-right-label {
     font-family: var(--font-num);
@@ -61,59 +65,59 @@
   <div style="margin-top:20px;">
     <div class="eyebrow">REFERENCE ARCHITECTURE</div>
     <h1 class="h-title" style="margin-top:8px;">A reference architecture for digital engineering &amp; transformation.</h1>
-    <p class="h-subtitle">Five layers from foundation through consumption.</p>
+    <p class="h-subtitle">Five layers from foundation through consumption — with industry-specific components for education.</p>
   </div>
 
-  <!-- 5-layer architecture stack -->
+  <!-- 5-layer architecture stack (Fix 5: industry-specific education component names) -->
   <div class="arch-stack">
 
     <div class="arch-layer">
       <div class="arch-layer-label">EXPERIENCE</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Web</span>
-        <span class="arch-component">Mobile</span>
-        <span class="arch-component">Portals</span>
-        <span class="arch-component">Design Systems</span>
+        <span class="arch-component">Student Portal</span>
+        <span class="arch-component">Faculty Workstation</span>
+        <span class="arch-component">Advisor Dashboard</span>
+        <span class="arch-component">Admin Portal</span>
       </div>
     </div>
 
     <div class="arch-layer">
       <div class="arch-layer-label">APPLICATION</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Microservices</span>
-        <span class="arch-component">APIs</span>
-        <span class="arch-component">Custom Apps</span>
-        <span class="arch-component">ERP Modules</span>
+        <span class="arch-component">LMS Service</span>
+        <span class="arch-component">SIS Service</span>
+        <span class="arch-component">Financial Aid Service</span>
+        <span class="arch-component">Notification Service</span>
       </div>
     </div>
 
     <div class="arch-layer">
       <div class="arch-layer-label">PLATFORM</div>
       <div class="arch-layer-content">
-        <span class="arch-component">CI/CD</span>
-        <span class="arch-component">Containers</span>
-        <span class="arch-component">Serverless</span>
-        <span class="arch-component">Platform Engineering</span>
+        <span class="arch-component">FERPA CI/CD</span>
+        <span class="arch-component">Kubernetes Cluster</span>
+        <span class="arch-component">LTI Event Bus</span>
+        <span class="arch-component">Developer Portal</span>
       </div>
     </div>
 
     <div class="arch-layer">
       <div class="arch-layer-label">INTEGRATION</div>
       <div class="arch-layer-content">
-        <span class="arch-component">API Gateway</span>
-        <span class="arch-component">Event Bus</span>
-        <span class="arch-component">Middleware</span>
-        <span class="arch-component">Integration Hub</span>
+        <span class="arch-component">LMS-SIS</span>
+        <span class="arch-component">Library Systems</span>
+        <span class="arch-component">Identity Provider</span>
+        <span class="arch-component">Assessment API</span>
       </div>
     </div>
 
     <div class="arch-layer">
       <div class="arch-layer-label">INFRASTRUCTURE</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Cloud</span>
-        <span class="arch-component">Kubernetes</span>
-        <span class="arch-component">Edge</span>
-        <span class="arch-component">Observability</span>
+        <span class="arch-component">FERPA Cloud</span>
+        <span class="arch-component">DR Site</span>
+        <span class="arch-component">Student Data Network</span>
+        <span class="arch-component">Audit Stack</span>
       </div>
     </div>
 

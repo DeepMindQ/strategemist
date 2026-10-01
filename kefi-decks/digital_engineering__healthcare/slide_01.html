@@ -4,118 +4,94 @@
 <meta charset="UTF-8">
 <title>Cover — Digital Engineering & Transformation for Healthcare & Pharma</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="global.css">
 <style>
-  .cover-eyebrow {
-    font-family: var(--font-body);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--brand);
-  }
   .cover-display {
     font-family: var(--font-heading);
     font-size: var(--fs-display);
     font-weight: 800;
     line-height: 1.04;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
   }
-  .cover-display .line2 { color: var(--accent); }
-  .cover-subtitle {
-    font-family: var(--font-body);
-    font-size: var(--fs-h3);
-    color: var(--text-secondary);
-    line-height: 1.45;
-    font-weight: 400;
-    max-width: 640px;
-  }
-  .top-right-label {
+  .cover-eyebrow {
     font-family: var(--font-num);
     font-size: 11px;
-    color: var(--text-muted);
-    letter-spacing: 0.16em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
+    color: var(--brand);
+    font-weight: 600;
+  }
+  .cover-topright {
+    font-family: var(--font-num);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
     font-weight: 500;
   }
-  .vertical-hairline {
+  .callout-list {
     position: absolute;
-    top: 80px;
-    bottom: 80px;
-    left: 70%;
-    width: 1px;
-    background: var(--border);
-  }
-  .right-callouts {
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(0, -50%);
-    margin-left: 32px;
+    top: 240px;
+    right: 96px;
+    width: 280px;
+    border-left: 1px solid var(--border-strong);
+    padding-left: 28px;
     display: flex;
     flex-direction: column;
     gap: 22px;
   }
-  .right-callout {
+  .callout-item {
     font-family: var(--font-num);
-    font-size: 13px;
+    font-size: 12px;
     color: var(--brand);
-    letter-spacing: 0.10em;
-    text-transform: uppercase;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .right-callout .num {
-    color: var(--accent);
     font-weight: 600;
+    letter-spacing: 0.06em;
+    line-height: 1.5;
   }
-  .cover-headline-block {
-    position: absolute;
-    top: 240px;
-    left: 104px;
-    max-width: 720px;
+  .callout-num {
+    color: var(--accent);
+    font-weight: 700;
+    margin-right: 6px;
   }
 </style>
 </head>
 <body>
 <div class="slide grid-bg">
-  <div class="brand-stripe"></div>
+  <div class="brand-stripe" data-decor aria-hidden="true"></div>
 
-  <!-- Top-left: logo -->
-  <img src="assets/kefi_logo.png" class="kefi-logo-lg" alt="KEFI TECH" style="position:absolute; top:64px; left:104px;">
+  <!-- Logo top-left -->
+  <img src="assets/kefi_logo.png" class="kefi-logo-lg" alt="Kefi Tech" style="position:absolute; top:64px; left:104px;">
 
-  <!-- Top-right: micro label -->
-  <div class="top-right-label" style="position:absolute; top:80px; right:72px;">
+  <!-- Top-right meta -->
+  <div class="cover-topright" style="position:absolute; top:78px; right:96px;">
     Digital Engineering and Transformation Services · 2026
   </div>
 
-  <!-- Vertical hairline divider at ~70% -->
-  <div class="vertical-hairline" aria-hidden="true" data-decor></div>
+  <!-- Vertical hairline at ~70% width -->
+  <div data-decor aria-hidden="true" style="position:absolute; top:200px; bottom:160px; left:896px; width:1px; background:var(--border);"></div>
 
-  <!-- Right-side stacked callouts -->
-  <div class="right-callouts">
-    <div class="right-callout"><span class="num">01</span> Product</div>
-    <div class="right-callout"><span class="num">02</span> Cloud-Native</div>
-    <div class="right-callout"><span class="num">03</span> Application</div>
-  </div>
-
-  <!-- Headline block (center-left, ~y=240) -->
-  <div class="cover-headline-block">
+  <!-- Center-left composition -->
+  <div style="position:absolute; top:228px; left:104px; right:440px;">
     <div class="cover-eyebrow">Kefi Tech · Healthcare &amp; Pharma</div>
-    <div class="cover-display" style="margin-top:18px;">
-      <div>Digital Engineering &amp; Transformation</div>
-      <div class="line2">for Healthcare &amp; Pharma.</div>
-    </div>
-    <div class="accent-bar" style="margin-top:24px;"></div>
-    <div class="cover-subtitle" style="margin-top:20px;">
+    <h1 class="cover-display" style="margin-top:18px;">
+      <span style="display:block; color:var(--primary);">Digital Engineering &amp; Transformation</span>
+      <span style="display:block; color:var(--accent);">for Healthcare &amp; Pharma.</span>
+    </h1>
+    <div class="accent-bar" style="margin-top:26px;"></div>
+    <p style="font-family:var(--font-body); font-size:var(--fs-h3); color:var(--text-secondary); line-height:1.5; margin-top:22px; max-width:680px; font-weight:400;">
       A capability brief on Kefi Tech Digital Engineering &amp; Transformation Services for Healthcare &amp; Pharma.
-    </div>
+    </p>
   </div>
 
-  <!-- Foot rail -->
+  <!-- Right-side callouts -->
+  <div class="callout-list">
+    <div class="callout-item"><span class="callout-num">01</span>Product &amp; Platform Engineering</div>
+    <div class="callout-item"><span class="callout-num">02</span>Cloud-Native &amp; Platform Engineering</div>
+    <div class="callout-item"><span class="callout-num">03</span>Application Modernization</div>
+  </div>
+
+  <!-- Foot-rail -->
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
     <span>01 / 12 · Digital Engineering and Transformation Services</span>

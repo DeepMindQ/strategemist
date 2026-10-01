@@ -188,21 +188,24 @@ body {
 /* Logo utilities — width-locked for proper 5.91:1 aspect ratio */
 .kefi-logo {
   display: inline-block;
-  width: 200px;
+  width: 210px;
   height: auto;
   object-fit: contain;
+  padding-left: 8px;
 }
 .kefi-logo-lg {
   display: inline-block;
-  width: 240px;
+  width: 260px;
   height: auto;
   object-fit: contain;
+  padding-left: 10px;
 }
 .kefi-logo-sm {
   display: inline-block;
   width: 100px;
   height: auto;
   object-fit: contain;
+  padding-left: 4px;
 }
 
 /* Text wordmark — replaces double-logo on slides where the logo already appears in the body */
@@ -1261,11 +1264,12 @@ body {
 }
 .arch-layer-content {
   flex: 1;
-  padding: 8px 12px;
+  padding: 8px 16px;
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 12px;
   align-items: center;
+  justify-content: flex-start;
 }
 .arch-component {
   padding: 4px 9px;

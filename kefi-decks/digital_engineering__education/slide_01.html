@@ -38,7 +38,7 @@
     letter-spacing: 0.12em;
     font-weight: 500;
     text-align: right;
-    line-height: 1;
+    line-height: 1.2;
   }
   .cover-callout-num {
     color: var(--text-muted);
@@ -59,7 +59,7 @@
   <!-- Brand stripe -->
   <div class="brand-stripe" data-decor aria-hidden="true"></div>
 
-  <!-- Logo top-left -->
+  <!-- Logo top-left (Fix 1: class only, no inline width/height overrides) -->
   <img src="assets/kefi_logo.png" class="kefi-logo-lg" alt="Kefi Tech" style="position:absolute; top:64px; left:104px;">
 
   <!-- Top-right label -->
@@ -80,14 +80,14 @@
     </p>
   </div>
 
-  <!-- Right side: vertical hairline + stacked callouts -->
+  <!-- Right side: vertical hairline + stacked callouts (Fix 4: FULL capability names) -->
   <div style="position:absolute; left:896px; top:240px; bottom:120px; display:flex; align-items:center;">
     <div style="display:flex; align-items:center; gap:32px;">
       <div style="width:1px; height:300px; background:var(--border-strong);" data-decor aria-hidden="true"></div>
       <div style="display:flex; flex-direction:column; gap:36px;">
-        <div class="cover-callout"><span class="cover-callout-num">01</span>Product</div>
-        <div class="cover-callout"><span class="cover-callout-num">02</span>Cloud-Native</div>
-        <div class="cover-callout"><span class="cover-callout-num">03</span>Application</div>
+        <div class="cover-callout"><span class="cover-callout-num">01</span>Product &amp; Platform Engineering</div>
+        <div class="cover-callout"><span class="cover-callout-num">02</span>Cloud-Native &amp; Platform Engineering</div>
+        <div class="cover-callout"><span class="cover-callout-num">03</span>Application Modernization</div>
       </div>
     </div>
   </div>

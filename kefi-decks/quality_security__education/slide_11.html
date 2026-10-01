@@ -9,48 +9,49 @@
 </head>
 <body>
 <div class="slide">
-  <!-- Header strip -->
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
-    <span class="text-wordmark">KEFI TECH</span>
-    <span style="font-family:var(--font-num); font-size:10px; color:var(--text-muted); letter-spacing:0.14em; text-transform:uppercase;">11 / 12</span>
+  <div class="brand-stripe-thin" data-decor></div>
+
+  <!-- Top-left wordmark -->
+  <div style="position:absolute; top:48px; left:104px;"><span class="text-wordmark">KEFI TECH</span></div>
+
+  <!-- Header block -->
+  <div style="position:absolute; top:96px; left:104px; right:104px;">
+    <div class="eyebrow" style="margin-bottom:14px;">WHY KEFI TECH</div>
+    <h1 style="font-family:var(--font-heading); font-size:32px; font-weight:700; color:var(--primary); line-height:1.2; letter-spacing:-0.01em; margin:0;">
+      Four reasons enterprises work with us.
+    </h1>
+    <p style="font-family:var(--font-body); font-size:15px; color:var(--text-secondary); line-height:1.5; margin:12px 0 0 0;">
+      Not generic services. Specific differentiators for education.
+    </p>
   </div>
 
-  <!-- Eyebrow + headline + subtitle -->
-  <div class="eyebrow" style="margin-bottom:8px;">WHY KEFI TECH</div>
-  <h1 style="font-family:var(--font-heading); font-size:26px; font-weight:700; color:var(--primary); line-height:1.25; margin:0 0 6px 0; letter-spacing:-0.01em;">
-    Four reasons enterprises work with us.
-  </h1>
-  <p style="font-family:var(--font-body); font-size:14px; color:var(--text-secondary); margin:0 0 22px 0; line-height:1.5;">
-    Not generic services. Specific differentiators for education.
-  </p>
-
-  <!-- 2x2 grid of differentiator cards -->
-  <div style="display:grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap:20px;">
+  <!-- 2x2 differentiator grid -->
+  <div style="position:absolute; top:248px; left:104px; right:104px; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:20px; height:340px;">
 
     <!-- Card 1 -->
-    <div class="exec-summary-card" style="height:170px;">
+    <div class="exec-summary-card" style="height:auto;">
       <div class="exec-num">01</div>
       <div class="exec-headline">Dual-focus</div>
       <div class="exec-body">Security and performance tested together — one team, two disciplines.</div>
     </div>
 
     <!-- Card 2 -->
-    <div class="exec-summary-card" style="height:170px;">
+    <div class="exec-summary-card" style="height:auto;">
       <div class="exec-num">02</div>
       <div class="exec-headline">Certified expertise</div>
       <div class="exec-body">CEH, CISM, CISO, CASP, eCPPT, CAP, CVE contributor, Google Bug Bounty.</div>
     </div>
 
     <!-- Card 3 -->
-    <div class="exec-summary-card" style="height:170px;">
+    <div class="exec-summary-card" style="height:auto;">
       <div class="exec-num">03</div>
       <div class="exec-headline">Shift-everywhere</div>
       <div class="exec-body">Testing in every sprint, every pipeline, every release — not a gate.</div>
     </div>
 
     <!-- Card 4 (accent) -->
-    <div class="exec-summary-card accent" style="height:170px;">
-      <div class="exec-num" style="color:var(--accent-dark);">04</div>
+    <div class="exec-summary-card accent" style="height:auto;">
+      <div class="exec-num" style="color:var(--accent);">04</div>
       <div class="exec-headline">AI systems testing</div>
       <div class="exec-body">Dedicated AI testing capability — LLM eval, bias, prompt/response validation.</div>
     </div>

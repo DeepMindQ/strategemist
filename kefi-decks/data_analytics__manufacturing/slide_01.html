@@ -12,16 +12,16 @@
   .cover-eyebrow { font-family: var(--font-body); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brand); font-weight: 700; }
   .cover-sub { font-family: var(--font-body); font-size: var(--fs-h3); color: var(--text-secondary); line-height: 1.45; max-width: 560px; font-weight: 400; }
   .cover-meta { font-family: var(--font-num); font-size: 10px; color: var(--text-muted); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; }
-  .v-callout { font-family: var(--font-num); font-size: 14px; color: var(--brand); letter-spacing: 0.06em; font-weight: 600; }
   .v-callout-num { font-family: var(--font-num); font-size: 10px; color: var(--text-muted); letter-spacing: 0.18em; font-weight: 600; }
+  .v-callout { font-family: var(--font-num); font-size: 13px; color: var(--brand); letter-spacing: 0.04em; font-weight: 600; line-height: 1.25; }
   .v-divider { width: 1px; background: var(--border); height: 240px; }
 </style>
 </head>
 <body>
 <div class="slide grid-bg">
-  <div class="brand-stripe" data-decor></div>
+  <div class="brand-stripe" data-decor aria-hidden="true"></div>
 
-  <!-- Top-left logo (single image) -->
+  <!-- Top-left logo (single image, width-locked class — no inline width/height overrides) -->
   <img src="assets/kefi_logo.png" class="kefi-logo-lg" alt="Kefi Tech" style="position:absolute; top:64px; left:104px;">
 
   <!-- Top-right meta -->
@@ -34,27 +34,27 @@
       <span style="color:var(--primary);">Data Analytics &amp; Data Engineering</span><br>
       <span class="cover-display-line2" style="color:var(--accent);">for Manufacturing.</span>
     </h1>
-    <div class="accent-bar" data-decor></div>
+    <div class="accent-bar" data-decor aria-hidden="true"></div>
     <p class="cover-sub">A capability brief on Kefi Tech Data Analytics &amp; Data Engineering Services for Manufacturing.</p>
   </div>
 
-  <!-- Right vertical hairline + stacked callouts -->
-  <div style="position:absolute; top:240px; right:104px; display:flex; align-items:flex-start; gap:32px;">
-    <div style="display:flex; flex-direction:column; gap:28px; align-items:flex-end; padding-top:4px;">
-      <div>
+  <!-- Right vertical hairline + stacked callouts (FIX 4: FULL capability names) -->
+  <div style="position:absolute; top:240px; right:104px; display:flex; align-items:flex-start; gap:28px;">
+    <div style="display:flex; flex-direction:column; gap:34px; align-items:flex-end; padding-top:2px;">
+      <div style="text-align:right;">
         <div class="v-callout-num">01</div>
-        <div class="v-callout">Data</div>
+        <div class="v-callout">Data Strategy<br>&amp; Governance</div>
       </div>
-      <div>
+      <div style="text-align:right;">
         <div class="v-callout-num">02</div>
-        <div class="v-callout">Data</div>
+        <div class="v-callout">Data Engineering<br>&amp; Integration</div>
       </div>
-      <div>
+      <div style="text-align:right;">
         <div class="v-callout-num">03</div>
-        <div class="v-callout">Data</div>
+        <div class="v-callout">Data Platforms<br>&amp; Modernization</div>
       </div>
     </div>
-    <div class="v-divider" data-decor></div>
+    <div class="v-divider" data-decor aria-hidden="true"></div>
   </div>
 
   <!-- Bottom rail -->
@@ -62,6 +62,8 @@
     <span class="text-wordmark">KEFI TECH</span>
     <span>01 / 12 · DATA ANALYTICS AND DATA ENGINEERING SERVICES</span>
   </div>
+
+  <aside data-notes hidden>none</aside>
 </div>
 </body>
 </html>

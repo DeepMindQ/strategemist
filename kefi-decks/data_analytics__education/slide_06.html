@@ -2,105 +2,163 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Capability 03 — Data Platforms &amp; Modernization</title>
+<title>Slide 06 — Capability 03 · Data Platforms &amp; Modernization</title>
 <link rel="stylesheet" href="global.css">
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
-  .slide { padding: 56px 72px 0; }
-  .top-bar { display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; }
-  .top-meta { font-family: var(--font-num); font-size:11px; color:var(--text-muted); letter-spacing:0.16em; text-transform:uppercase; }
-  .headline { font-family: var(--font-heading); font-size: 28px; font-weight:700; color:var(--primary); line-height:1.2; letter-spacing:-0.01em; margin: 4px 0 6px; }
-  .sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
-
-  .grid-2 { display:grid; grid-template-columns: 55fr 45fr; gap: 20px; margin-top: 22px; }
-  .panel { padding: 22px 22px 20px; min-height: 360px; display: flex; flex-direction: column; }
-  .panel-title { font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  .head-headline {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    margin-top: 4px;
+  }
+  .head-sub {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-top: 8px;
+  }
+  .twocol {
+    display: grid;
+    grid-template-columns: 560px 440px;
+    gap: 24px;
+    margin-top: 22px;
+  }
+  .panel {
+    padding: 22px 24px;
+    border-radius: 12px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  .panel-title {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
   .panel-title.brand { color: var(--brand); }
   .panel-title.brand-light { color: var(--brand-light); }
-
-  .panel-body { font-family: var(--font-body); font-size: 13px; color: var(--text-secondary); line-height: 1.7; margin-top: 16px; }
-  .panel-pill-wrap { margin-top: auto; padding-top: 16px; }
-
-  .component-list { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
-  .component-card {
-    display: grid;
-    grid-template-columns: 24px 22px 1fr;
-    gap: 10px;
-    align-items: center;
-    padding: 9px 12px;
+  .left-body {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  .comp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+  }
+  .comp-card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 6px;
+    border-radius: 8px;
+    padding: 7px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
-  .component-num { font-family: var(--font-num); font-size: 11px; color: var(--brand); font-weight: 600; letter-spacing: 0.06em; }
-  .component-icon { font-size: 18px !important; color: var(--brand-light); }
-  .component-name { font-family: var(--font-heading); font-size: 12px; font-weight: 600; color: var(--primary); line-height: 1.2; }
-  .component-desc { font-family: var(--font-body); font-size: 10px; color: var(--text-secondary); line-height: 1.35; margin-top: 2px; }
+  .comp-num {
+    font-family: var(--font-num);
+    font-size: 11px;
+    color: var(--brand);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    flex-shrink: 0;
+    min-width: 18px;
+  }
+  .comp-icon {
+    color: var(--brand-light);
+    font-size: 18px !important;
+    flex-shrink: 0;
+  }
+  .comp-name {
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  .comp-desc {
+    font-family: var(--font-body);
+    font-size: 10px;
+    color: var(--text-secondary);
+    line-height: 1.35;
+    margin-left: auto;
+    text-align: right;
+    max-width: 220px;
+  }
 </style>
 </head>
 <body>
 <div class="slide">
+  <div class="brand-stripe-thin" data-decor aria-hidden="true"></div>
+
   <div class="top-bar">
     <span class="text-wordmark">KEFI TECH</span>
-    <span class="top-meta">CAPABILITY · 06</span>
+    <span class="eyebrow">CAPABILITY 03</span>
   </div>
 
-  <div class="eyebrow">CAPABILITY 03</div>
-  <h2 class="headline">Data Platforms &amp; Modernization.</h2>
-  <p class="sub">Data lakes, warehouses, lakehouses, cloud data platforms, legacy modernization.</p>
+  <h1 class="head-headline">Data Platforms &amp; Modernization.</h1>
+  <p class="head-sub">Data lakes, warehouses, lakehouses, cloud data platforms, legacy modernization.</p>
 
-  <div class="grid-2">
-    <div class="surface-elev panel">
+  <div class="twocol">
+    <div class="panel surface-elev">
       <div class="panel-title brand">WHAT WE DO</div>
-      <p class="panel-body">Our data platforms &amp; modernization capability is engineered for education environments. We bring together the data analytics &amp; data engineering discipline, the education domain context, and the engineering rigor required to ship production-grade solutions.</p>
-      <div class="panel-pill-wrap">
+      <p class="left-body">Our data platforms &amp; modernization capability is engineered for education environments. We bring together the data analytics &amp; data engineering discipline, the education domain context, and the engineering rigor required to ship production-grade solutions.</p>
+      <div style="margin-top:auto; padding-top:18px;">
         <span class="tag-pill">CAPABILITY 3 OF 6</span>
       </div>
     </div>
 
-    <div class="surface-elev panel">
+    <div class="panel surface-elev">
       <div class="panel-title brand-light">COMPONENTS</div>
-      <div class="component-list">
-        <div class="component-card">
-          <span class="component-num">01</span>
-          <span class="material-icons component-icon">cloud</span>
-          <div>
-            <div class="component-name">Student 360 Platform</div>
-            <div class="component-desc">Unified student data platform across academic, financial, and engagement data.</div>
-          </div>
+      <div class="comp-list">
+        <div class="comp-card">
+          <span class="comp-num">01</span>
+          <span class="material-icons comp-icon">cloud</span>
+          <span class="comp-name">Student 360 Platform</span>
+          <span class="comp-desc">Unified student data platform across academic, financial, and engagement data.</span>
         </div>
-        <div class="component-card">
-          <span class="component-num">02</span>
-          <span class="material-icons component-icon">cloud</span>
-          <div>
-            <div class="component-name">Learning Analytics Warehouse</div>
-            <div class="component-desc">Warehouse purpose-built for learning analytics — outcomes, engagement, retention.</div>
-          </div>
+        <div class="comp-card">
+          <span class="comp-num">02</span>
+          <span class="material-icons comp-icon">cloud</span>
+          <span class="comp-name">Learning Analytics Warehouse</span>
+          <span class="comp-desc">Warehouse purpose-built for learning analytics — outcomes, engagement, retention.</span>
         </div>
-        <div class="component-card">
-          <span class="component-num">03</span>
-          <span class="material-icons component-icon">cloud</span>
-          <div>
-            <div class="component-name">Institutional Research Platform</div>
-            <div class="component-desc">Platform supporting institutional research — enrollment forecasting, accreditation reporting.</div>
-          </div>
+        <div class="comp-card">
+          <span class="comp-num">03</span>
+          <span class="material-icons comp-icon">cloud</span>
+          <span class="comp-name">Institutional Research Platform</span>
+          <span class="comp-desc">Platform supporting institutional research — enrollment forecasting, accreditation reporting.</span>
         </div>
-        <div class="component-card">
-          <span class="component-num">04</span>
-          <span class="material-icons component-icon">cloud</span>
-          <div>
-            <div class="component-name">Real-Time Engagement Monitoring</div>
-            <div class="component-desc">Stream processing platform for real-time student engagement monitoring and alerts.</div>
-          </div>
+        <div class="comp-card">
+          <span class="comp-num">04</span>
+          <span class="material-icons comp-icon">cloud</span>
+          <span class="comp-name">Real-Time Engagement Monitoring</span>
+          <span class="comp-desc">Stream processing platform for real-time student engagement monitoring and alerts.</span>
         </div>
-        <div class="component-card">
-          <span class="component-num">05</span>
-          <span class="material-icons component-icon">cloud</span>
-          <div>
-            <div class="component-name">Cloud Education Data Lakehouse</div>
-            <div class="component-desc">Cloud-native lakehouse for education analytics — FERPA-compliant, scalable.</div>
-          </div>
+        <div class="comp-card">
+          <span class="comp-num">05</span>
+          <span class="material-icons comp-icon">cloud</span>
+          <span class="comp-name">Cloud Education Data Lakehouse</span>
+          <span class="comp-desc">Cloud-native lakehouse for education analytics — FERPA-compliant, scalable.</span>
         </div>
       </div>
     </div>
@@ -111,6 +169,8 @@
     <span>06 / 12</span>
     <span>DATA PLATFORMS &amp; MODERNIZATION</span>
   </div>
+
+  <aside data-notes>none</aside>
 </div>
 </body>
 </html>

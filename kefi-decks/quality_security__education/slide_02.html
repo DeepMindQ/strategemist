@@ -9,71 +9,74 @@
 </head>
 <body>
 <div class="slide">
-  <!-- Header strip -->
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
-    <span class="text-wordmark">KEFI TECH</span>
-    <span style="font-family:var(--font-num); font-size:10px; color:var(--text-muted); letter-spacing:0.14em; text-transform:uppercase;">02 / 12</span>
+  <div class="brand-stripe-thin" data-decor></div>
+
+  <!-- Top-left wordmark -->
+  <div style="position:absolute; top:48px; left:104px;"><span class="text-wordmark">KEFI TECH</span></div>
+
+  <!-- Header block -->
+  <div style="position:absolute; top:96px; left:104px; right:104px;">
+    <div class="eyebrow" style="margin-bottom:14px;">INDUSTRY CONTEXT · EDUCATION</div>
+    <h1 style="font-family:var(--font-heading); font-size:32px; font-weight:700; color:var(--primary); line-height:1.2; letter-spacing:-0.01em; margin:0; max-width:1080px;">
+      Education is being reshaped by digital learning, institutional automation and student lifecycle intelligence.
+    </h1>
+    <p style="font-family:var(--font-body); font-size:15px; color:var(--text-secondary); line-height:1.5; margin:14px 0 0 0; max-width:980px;">
+      Student success, faculty productivity, institutional efficiency and digital experience define modern education.
+    </p>
   </div>
 
-  <!-- Eyebrow + headline + subtitle -->
-  <div class="eyebrow" style="margin-bottom:8px;">INDUSTRY CONTEXT · EDUCATION</div>
-  <h1 style="font-family:var(--font-heading); font-size:26px; font-weight:700; color:var(--primary); line-height:1.25; margin:0 0 8px 0; max-width:1080px; letter-spacing:-0.01em;">
-    Education is being reshaped by digital learning, institutional automation and student lifecycle intelligence.
-  </h1>
-  <p style="font-family:var(--font-body); font-size:14px; color:var(--text-secondary); margin:0 0 22px 0; line-height:1.5;">
-    Student success, faculty productivity, institutional efficiency and digital experience define modern education.
-  </p>
+  <!-- Two-column layout -->
+  <div style="position:absolute; top:280px; left:104px; right:104px; display:flex; gap:24px;">
 
-  <!-- Two-column body -->
-  <div style="display:grid; grid-template-columns: 612px 500px; gap:24px;">
+    <!-- LEFT 55% panel -->
+    <div class="surface-elev" style="width:620px; height:340px; padding:22px 24px; display:flex; flex-direction:column;">
+      <div class="eyebrow" style="margin-bottom:18px;">WHY EDUCATION NEEDS THIS NOW</div>
 
-    <!-- LEFT panel -->
-    <div class="surface-elev" style="padding:20px 22px; height:380px;">
-      <div class="eyebrow" style="margin-bottom:14px;">WHY EDUCATION NEEDS THIS NOW</div>
-      <div style="display:flex; flex-direction:column; gap:10px;">
-
-        <div class="surface" style="padding:11px 14px; display:flex; align-items:flex-start; gap:12px;">
-          <span class="material-icons" style="font-size:20px; color:var(--brand); flex-shrink:0;">trending_up</span>
-          <div>
-            <div style="font-family:var(--font-heading); font-size:13px; font-weight:600; color:var(--primary); line-height:1.25;">Digital transformation pressure</div>
-            <div style="font-family:var(--font-body); font-size:11px; color:var(--text-secondary); line-height:1.45; margin-top:3px;">Enterprise digital adoption accelerating across the industry.</div>
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <!-- Driver 1 -->
+        <div class="surface" style="padding:12px 14px; display:flex; align-items:flex-start; gap:12px;">
+          <span class="material-icons" style="font-size:20px; color:var(--brand);">trending_up</span>
+          <div style="flex:1;">
+            <div style="font-family:var(--font-heading); font-size:13px; font-weight:600; color:var(--primary); line-height:1.2;">Digital transformation pressure</div>
+            <div style="font-family:var(--font-body); font-size:11px; color:var(--text-secondary); line-height:1.45; margin-top:4px;">Enterprise digital adoption accelerating across the industry.</div>
           </div>
         </div>
-
-        <div class="surface" style="padding:11px 14px; display:flex; align-items:flex-start; gap:12px;">
-          <span class="material-icons" style="font-size:20px; color:var(--brand); flex-shrink:0;">shield</span>
-          <div>
-            <div style="font-family:var(--font-heading); font-size:13px; font-weight:600; color:var(--primary); line-height:1.25;">Regulatory &amp; compliance demands</div>
-            <div style="font-family:var(--font-body); font-size:11px; color:var(--text-secondary); line-height:1.45; margin-top:3px;">Industry-specific regulations require continuous compliance technology.</div>
+        <!-- Driver 2 -->
+        <div class="surface" style="padding:12px 14px; display:flex; align-items:flex-start; gap:12px;">
+          <span class="material-icons" style="font-size:20px; color:var(--brand);">shield</span>
+          <div style="flex:1;">
+            <div style="font-family:var(--font-heading); font-size:13px; font-weight:600; color:var(--primary); line-height:1.2;">Regulatory &amp; compliance demands</div>
+            <div style="font-family:var(--font-body); font-size:11px; color:var(--text-secondary); line-height:1.45; margin-top:4px;">Industry-specific regulations require continuous compliance technology.</div>
           </div>
         </div>
-
-        <div class="surface" style="padding:11px 14px; display:flex; align-items:flex-start; gap:12px;">
-          <span class="material-icons" style="font-size:20px; color:var(--brand); flex-shrink:0;">speed</span>
-          <div>
-            <div style="font-family:var(--font-heading); font-size:13px; font-weight:600; color:var(--primary); line-height:1.25;">Operational efficiency mandate</div>
-            <div style="font-family:var(--font-body); font-size:11px; color:var(--text-secondary); line-height:1.45; margin-top:3px;">Cost-to-serve reduction while maintaining quality and resilience.</div>
+        <!-- Driver 3 -->
+        <div class="surface" style="padding:12px 14px; display:flex; align-items:flex-start; gap:12px;">
+          <span class="material-icons" style="font-size:20px; color:var(--brand);">speed</span>
+          <div style="flex:1;">
+            <div style="font-family:var(--font-heading); font-size:13px; font-weight:600; color:var(--primary); line-height:1.2;">Operational efficiency mandate</div>
+            <div style="font-family:var(--font-body); font-size:11px; color:var(--text-secondary); line-height:1.45; margin-top:4px;">Cost-to-serve reduction while maintaining quality and resilience.</div>
           </div>
         </div>
-
-        <div class="surface" style="padding:11px 14px; display:flex; align-items:flex-start; gap:12px;">
-          <span class="material-icons" style="font-size:20px; color:var(--brand); flex-shrink:0;">group</span>
-          <div>
-            <div style="font-family:var(--font-heading); font-size:13px; font-weight:600; color:var(--primary); line-height:1.25;">Customer &amp; employee expectations</div>
-            <div style="font-family:var(--font-body); font-size:11px; color:var(--text-secondary); line-height:1.45; margin-top:3px;">Modern digital experiences are now table stakes, not differentiation.</div>
+        <!-- Driver 4 -->
+        <div class="surface" style="padding:12px 14px; display:flex; align-items:flex-start; gap:12px;">
+          <span class="material-icons" style="font-size:20px; color:var(--brand);">group</span>
+          <div style="flex:1;">
+            <div style="font-family:var(--font-heading); font-size:13px; font-weight:600; color:var(--primary); line-height:1.2;">Customer &amp; employee expectations</div>
+            <div style="font-family:var(--font-body); font-size:11px; color:var(--text-secondary); line-height:1.45; margin-top:4px;">Modern digital experiences are now table stakes, not differentiation.</div>
           </div>
         </div>
-
       </div>
     </div>
 
-    <!-- RIGHT panel -->
-    <div class="surface-elev" style="padding:22px 24px; height:380px; display:flex; flex-direction:column;">
-      <div class="eyebrow" style="color:var(--accent-dark); margin-bottom:16px;">WHAT THIS MEANS FOR QUALITY &amp; SECURITY ENGINEERING</div>
+    <!-- RIGHT 45% panel -->
+    <div class="surface-elev" style="width:476px; height:340px; padding:22px 24px; display:flex; flex-direction:column;">
+      <div class="eyebrow" style="color:var(--accent-dark); margin-bottom:18px;">WHAT THIS MEANS FOR QUALITY &amp; SECURITY ENGINEERING</div>
+
       <p style="font-family:var(--font-body); font-size:13px; color:var(--text-secondary); line-height:1.7; margin:0;">
         Quality &amp; Security Engineering applied to education requires industry-specific capability, not generic technology. The right approach connects quality &amp; security engineering to the regulatory, operational and customer realities that define education.
       </p>
-      <div style="margin-top:auto; padding-top:18px;">
+
+      <div style="margin-top:auto;">
         <span class="tag-pill">INDUSTRY-SPECIFIC APPROACH</span>
       </div>
     </div>

@@ -9,85 +9,88 @@
 </head>
 <body>
 <div class="slide">
-  <!-- Header strip -->
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
-    <span class="text-wordmark">KEFI TECH</span>
-    <span style="font-family:var(--font-num); font-size:10px; color:var(--text-muted); letter-spacing:0.14em; text-transform:uppercase;">05 / 12</span>
+  <div class="brand-stripe-thin" data-decor></div>
+
+  <!-- Top-left wordmark -->
+  <div style="position:absolute; top:48px; left:104px;"><span class="text-wordmark">KEFI TECH</span></div>
+
+  <!-- Header block -->
+  <div style="position:absolute; top:96px; left:104px; right:104px;">
+    <div class="eyebrow" style="margin-bottom:14px;">CAPABILITY 02</div>
+    <h1 style="font-family:var(--font-heading); font-size:32px; font-weight:700; color:var(--primary); line-height:1.2; letter-spacing:-0.01em; margin:0;">
+      VAPT &amp; Risk Assessment.
+    </h1>
+    <p style="font-family:var(--font-body); font-size:15px; color:var(--text-secondary); line-height:1.5; margin:12px 0 0 0;">
+      Web, API, mobile, IoT, cloud, container VAPT. MITRE ATT&amp;CK, CIS frameworks.
+    </p>
   </div>
 
-  <!-- Eyebrow + headline + subtitle -->
-  <div class="eyebrow" style="margin-bottom:8px;">CAPABILITY 02</div>
-  <h1 style="font-family:var(--font-heading); font-size:30px; font-weight:700; color:var(--primary); line-height:1.2; margin:0 0 6px 0; letter-spacing:-0.01em;">
-    VAPT &amp; Risk Assessment.
-  </h1>
-  <p style="font-family:var(--font-body); font-size:14px; color:var(--text-secondary); margin:0 0 22px 0; line-height:1.5;">
-    Web, API, mobile, IoT, cloud, container VAPT. MITRE ATT&amp;CK, CIS frameworks.
-  </p>
+  <!-- Two-column layout -->
+  <div style="position:absolute; top:240px; left:104px; right:104px; display:flex; gap:24px;">
 
-  <!-- Two-column body -->
-  <div style="display:grid; grid-template-columns: 612px 500px; gap:24px;">
+    <!-- LEFT panel 620x400 -->
+    <div class="surface-elev" style="width:620px; height:400px; padding:22px 26px; display:flex; flex-direction:column;">
+      <div class="eyebrow" style="margin-bottom:18px;">WHAT WE DO</div>
 
-    <!-- LEFT panel: WHAT WE DO -->
-    <div class="surface-elev" style="padding:22px 24px; height:380px; display:flex; flex-direction:column;">
-      <div class="eyebrow" style="margin-bottom:16px;">WHAT WE DO</div>
       <p style="font-family:var(--font-body); font-size:13px; color:var(--text-secondary); line-height:1.7; margin:0;">
         Our vapt &amp; risk assessment capability is engineered for education environments. We bring together the quality &amp; security engineering discipline, the education domain context, and the engineering rigor required to ship production-grade solutions.
       </p>
-      <div style="margin-top:auto; padding-top:18px;">
+
+      <div style="margin-top:auto;">
         <span class="tag-pill">CAPABILITY 2 OF 6</span>
       </div>
     </div>
 
-    <!-- RIGHT panel: COMPONENTS -->
-    <div class="surface-elev" style="padding:20px 22px; height:380px; display:flex; flex-direction:column;">
-      <div class="eyebrow" style="color:var(--brand-light); margin-bottom:14px;">COMPONENTS</div>
-      <div style="display:flex; flex-direction:column; gap:8px;">
+    <!-- RIGHT panel 476x400 — COMPONENTS -->
+    <div class="surface-elev" style="width:476px; height:400px; padding:14px 16px; display:flex; flex-direction:column;">
+      <div class="eyebrow" style="color:var(--brand-light); margin-bottom:12px;">COMPONENTS</div>
 
-        <div class="surface" style="padding:9px 12px; display:flex; align-items:center; gap:10px; border-radius:6px;">
-          <span style="font-family:var(--font-num); font-size:11px; color:var(--brand); font-weight:600; letter-spacing:0.06em; min-width:18px;">01</span>
+      <div style="display:flex; flex-direction:column; gap:6px; flex:1;">
+        <!-- Component 1 -->
+        <div class="surface" style="padding:7px 10px; display:flex; align-items:center; gap:10px;">
+          <span style="font-family:var(--font-num); font-size:11px; color:var(--brand); font-weight:600; min-width:18px;">01</span>
           <span class="material-icons" style="font-size:18px; color:var(--brand-light);">shield</span>
-          <div style="flex:1;">
+          <div style="flex:1; min-width:0;">
             <div style="font-family:var(--font-heading); font-size:12px; font-weight:600; color:var(--primary); line-height:1.2;">LMS/SIS VAPT</div>
             <div style="font-family:var(--font-body); font-size:10px; color:var(--text-secondary); line-height:1.35; margin-top:2px;">Penetration testing of LMS and SIS — student records, grades, financial aid data.</div>
           </div>
         </div>
-
-        <div class="surface" style="padding:9px 12px; display:flex; align-items:center; gap:10px; border-radius:6px;">
-          <span style="font-family:var(--font-num); font-size:11px; color:var(--brand); font-weight:600; letter-spacing:0.06em; min-width:18px;">02</span>
+        <!-- Component 2 -->
+        <div class="surface" style="padding:7px 10px; display:flex; align-items:center; gap:10px;">
+          <span style="font-family:var(--font-num); font-size:11px; color:var(--brand); font-weight:600; min-width:18px;">02</span>
           <span class="material-icons" style="font-size:18px; color:var(--brand-light);">shield</span>
-          <div style="flex:1;">
+          <div style="flex:1; min-width:0;">
             <div style="font-family:var(--font-heading); font-size:12px; font-weight:600; color:var(--primary); line-height:1.2;">Student Portal VAPT</div>
             <div style="font-family:var(--font-body); font-size:10px; color:var(--text-secondary); line-height:1.35; margin-top:2px;">VAPT for student portals — auth, session management, file upload vulnerabilities.</div>
           </div>
         </div>
-
-        <div class="surface" style="padding:9px 12px; display:flex; align-items:center; gap:10px; border-radius:6px;">
-          <span style="font-family:var(--font-num); font-size:11px; color:var(--brand); font-weight:600; letter-spacing:0.06em; min-width:18px;">03</span>
+        <!-- Component 3 -->
+        <div class="surface" style="padding:7px 10px; display:flex; align-items:center; gap:10px;">
+          <span style="font-family:var(--font-num); font-size:11px; color:var(--brand); font-weight:600; min-width:18px;">03</span>
           <span class="material-icons" style="font-size:18px; color:var(--brand-light);">shield</span>
-          <div style="flex:1;">
+          <div style="flex:1; min-width:0;">
             <div style="font-family:var(--font-heading); font-size:12px; font-weight:600; color:var(--primary); line-height:1.2;">EdTech Platform VAPT</div>
             <div style="font-family:var(--font-body); font-size:10px; color:var(--text-secondary); line-height:1.35; margin-top:2px;">Security testing of third-party EdTech platforms — proctoring, plagiarism, content providers.</div>
           </div>
         </div>
-
-        <div class="surface" style="padding:9px 12px; display:flex; align-items:center; gap:10px; border-radius:6px;">
-          <span style="font-family:var(--font-num); font-size:11px; color:var(--brand); font-weight:600; letter-spacing:0.06em; min-width:18px;">04</span>
+        <!-- Component 4 -->
+        <div class="surface" style="padding:7px 10px; display:flex; align-items:center; gap:10px;">
+          <span style="font-family:var(--font-num); font-size:11px; color:var(--brand); font-weight:600; min-width:18px;">04</span>
           <span class="material-icons" style="font-size:18px; color:var(--brand-light);">shield</span>
-          <div style="flex:1;">
+          <div style="flex:1; min-width:0;">
             <div style="font-family:var(--font-heading); font-size:12px; font-weight:600; color:var(--primary); line-height:1.2;">Assessment Platform VAPT</div>
             <div style="font-family:var(--font-body); font-size:10px; color:var(--text-secondary); line-height:1.35; margin-top:2px;">Security testing of assessment platforms — exam integrity, question banks, results.</div>
           </div>
         </div>
-
-        <div class="surface" style="padding:9px 12px; display:flex; align-items:center; gap:10px; border-radius:6px;">
-          <span style="font-family:var(--font-num); font-size:11px; color:var(--brand); font-weight:600; letter-spacing:0.06em; min-width:18px;">05</span>
+        <!-- Component 5 -->
+        <div class="surface" style="padding:7px 10px; display:flex; align-items:center; gap:10px;">
+          <span style="font-family:var(--font-num); font-size:11px; color:var(--brand); font-weight:600; min-width:18px;">05</span>
           <span class="material-icons" style="font-size:18px; color:var(--brand-light);">shield</span>
-          <div style="flex:1;">
+          <div style="flex:1; min-width:0;">
             <div style="font-family:var(--font-heading); font-size:12px; font-weight:600; color:var(--primary); line-height:1.2;">Cloud Infrastructure VAPT for Education</div>
             <div style="font-family:var(--font-body); font-size:10px; color:var(--text-secondary); line-height:1.35; margin-top:2px;">Penetration testing of cloud-hosted education infrastructure — IAM, network, storage.</div>
           </div>
         </div>
-
       </div>
     </div>
 
