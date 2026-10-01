@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Reference Architecture</title>
+<title>Reference Architecture — Healthcare & Pharma</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="global.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
   .h1-sora { font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--primary); line-height: 1.2; letter-spacing: -0.01em; }
   .subtitle { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
-  .arch-layer { min-height: 80px; }
+  .arch-layer { min-height: 76px; }
 </style>
 </head>
 <body>
@@ -21,9 +21,9 @@
   </div>
 
   <div style="position:absolute; top:108px; left:104px; right:72px;">
-    <div class="eyebrow">REFERENCE ARCHITECTURE</div>
-    <h1 class="h1-sora" style="margin-top:10px;">A reference architecture for data analytics &amp; data engineering.</h1>
-    <p class="subtitle" style="margin-top:8px;">Five layers from foundation through consumption — with industry-specific components for healthcare &amp; pharma.</p>
+    <div class="eyebrow">REFERENCE ARCHITECTURE · HEALTHCARE &amp; PHARMA</div>
+    <h1 class="h1-sora" style="margin-top:10px;">A reference architecture for data analytics &amp; data engineering — healthcare &amp; pharma.</h1>
+    <p class="subtitle" style="margin-top:8px;">Five layers with real industry technology platforms.</p>
   </div>
 
   <!-- Stacked vertical column of 5 .arch-layer elements -->
@@ -32,50 +32,50 @@
     <div class="arch-layer">
       <div class="arch-layer-label">CONSUMPTION</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Clinical Outcomes</span>
-        <span class="arch-component">Operational Performance</span>
-        <span class="arch-component">Quality &amp; Safety</span>
-        <span class="arch-component">Financial Performance</span>
+        <span class="arch-component">Power BI (Outcomes)</span>
+        <span class="arch-component">Tableau (Operations)</span>
+        <span class="arch-component">Epic Cogito (Quality)</span>
+        <span class="arch-component">Oracle EPM (Finance)</span>
       </div>
     </div>
 
     <div class="arch-layer">
       <div class="arch-layer-label">SEMANTIC</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Patient 360</span>
-        <span class="arch-component">Clinical Metrics</span>
-        <span class="arch-component">Care Pathway Lineage</span>
-        <span class="arch-component">Drug Catalog</span>
+        <span class="arch-component">Snowflake (Clinical Metrics)</span>
+        <span class="arch-component">Informatica MDM (Patient)</span>
+        <span class="arch-component">Collibra (Lineage)</span>
+        <span class="arch-component">LOINC/RxNorm Catalog</span>
       </div>
     </div>
 
     <div class="arch-layer">
       <div class="arch-layer-label">PROCESSING</div>
       <div class="arch-layer-content">
-        <span class="arch-component">EHR Stream</span>
-        <span class="arch-component">Device Telemetry</span>
-        <span class="arch-component">Claims Batch</span>
-        <span class="arch-component">Lab Results</span>
+        <span class="arch-component">Epic FHIR R4 Pipeline</span>
+        <span class="arch-component">Azure IoT Hub (Devices)</span>
+        <span class="arch-component">Veeva Vault (Trials)</span>
+        <span class="arch-component">Availity (Claims)</span>
       </div>
     </div>
 
     <div class="arch-layer">
       <div class="arch-layer-label">STORAGE</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Patient Lake</span>
-        <span class="arch-component">Clinical Warehouse</span>
-        <span class="arch-component">Trial Lakehouse</span>
-        <span class="arch-component">Imaging NoSQL</span>
+        <span class="arch-component">Snowflake (Clinical DW)</span>
+        <span class="arch-component">Databricks Lakehouse</span>
+        <span class="arch-component">Epic Chronicles</span>
+        <span class="arch-component">Azure Blob (Imaging)</span>
       </div>
     </div>
 
     <div class="arch-layer">
       <div class="arch-layer-label">PLATFORM</div>
       <div class="arch-layer-content">
-        <span class="arch-component">HIPAA Cloud Hub</span>
-        <span class="arch-component">FHIR Orchestrator</span>
-        <span class="arch-component">PHI Governance</span>
-        <span class="arch-component">Consent Catalog</span>
+        <span class="arch-component">AWS (HIPAA)</span>
+        <span class="arch-component">Azure (FHIR Service)</span>
+        <span class="arch-component">Collibra (Governance)</span>
+        <span class="arch-component">OneTrust (Consent)</span>
       </div>
     </div>
 

@@ -7,110 +7,138 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="global.css">
 <style>
+  .s-headline {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.22;
+    letter-spacing: -0.012em;
+  }
+  .s-sub {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin-top: 8px;
+  }
   .app-card {
     background: var(--bg-elev);
     border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px 18px;
-    height: 150px;
+    border-radius: 12px;
+    padding: 18px 22px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
+    height: 165px;
+    position: relative;
   }
-  .app-top {
+  .app-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--brand);
+    border-radius: 12px 12px 0 0;
+  }
+  .app-card.accent::before { background: var(--accent); }
+  .app-head {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2px;
   }
   .app-icon {
-    color: var(--brand);
     font-size: 28px !important;
+    color: var(--brand);
   }
   .app-num {
     font-family: var(--font-num);
-    font-size: 12px;
+    font-size: 14px;
     color: var(--accent);
-    font-weight: 600;
-    letter-spacing: 0.10em;
+    font-weight: 700;
+    letter-spacing: 0.06em;
   }
   .app-name {
     font-family: var(--font-heading);
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 700;
     color: var(--primary);
     line-height: 1.2;
-    letter-spacing: -0.005em;
+    margin-top: 4px;
   }
   .app-desc {
     font-family: var(--font-body);
     font-size: 12px;
     color: var(--text-secondary);
-    line-height: 1.5;
+    line-height: 1.55;
+    margin-top: 4px;
   }
 </style>
 </head>
 <body>
 <div class="slide">
-  <div class="brand-stripe-thin" data-decor aria-hidden="true"></div>
+  <!-- Top bar -->
+  <div class="flex items-center justify-between" style="height:18px;">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span style="font-family:var(--font-num); font-size:10px; color:var(--text-muted); letter-spacing:0.18em; text-transform:uppercase; font-weight:500;">Applications</span>
+  </div>
 
-  <span class="text-wordmark" style="position:absolute; top:64px; left:104px;">KEFI TECH</span>
-
-  <!-- Header -->
-  <div style="margin-top:6px;">
-    <div class="eyebrow">Industry Applications · Healthcare &amp; Pharma</div>
-    <h1 style="font-family:var(--font-heading); font-size:30px; font-weight:700; color:var(--primary); line-height:1.2; letter-spacing:-0.01em; margin-top:8px;">
+  <!-- Eyebrow + headline -->
+  <div style="margin-top:22px;">
+    <div class="eyebrow">Applications · Healthcare &amp; Pharma</div>
+    <h1 class="s-headline" style="margin-top:10px; max-width:1100px;">
       How digital engineering &amp; transformation applies to healthcare &amp; pharma.
     </h1>
-    <p style="font-family:var(--font-body); font-size:14px; color:var(--text-secondary); margin-top:6px;">
-      Four industry-specific applications where digital engineering &amp; transformation creates measurable value.
-    </p>
+    <p class="s-sub">Four industry-specific applications with real technology platforms.</p>
   </div>
 
   <!-- 2x2 grid -->
-  <div style="display:grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap:16px; margin-top:24px;">
-    <!-- I -->
+  <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin-top:22px;">
+
     <div class="app-card">
-      <div class="app-top">
+      <div class="app-head">
         <span class="material-icons app-icon">description</span>
-        <span class="app-num">I</span>
+        <span class="app-num">01</span>
       </div>
-      <div class="app-name">Clinical Document Intelligence</div>
-      <div class="app-desc">Medical records, clinical trials, regulatory submissions, claims processing at scale.</div>
+      <div class="app-name">Clinical Document Intelligence (Epic + Azure OpenAI)</div>
+      <div class="app-desc">Epic EHR clinical documentation via Azure OpenAI + Nuance DAX — discharge summaries, clinical notes.</div>
     </div>
-    <!-- II -->
+
     <div class="app-card">
-      <div class="app-top">
+      <div class="app-head">
         <span class="material-icons app-icon">favorite</span>
-        <span class="app-num">II</span>
+        <span class="app-num">02</span>
       </div>
-      <div class="app-name">Patient Engagement</div>
-      <div class="app-desc">Patient portals, conversational AI, care navigation, personalized health experiences.</div>
+      <div class="app-name">Patient Engagement (MyChart + Salesforce Health Cloud)</div>
+      <div class="app-desc">Patient portals, telehealth, care navigation via Epic MyChart + Salesforce Health Cloud + Twilio.</div>
     </div>
-    <!-- III -->
+
     <div class="app-card">
-      <div class="app-top">
+      <div class="app-head">
         <span class="material-icons app-icon">insights</span>
-        <span class="app-num">III</span>
+        <span class="app-num">03</span>
       </div>
-      <div class="app-name">Operational Decision Support</div>
-      <div class="app-desc">Resource allocation, capacity planning, staffing optimization, supply chain.</div>
+      <div class="app-name">Operational Decision Support (Epic Cogito)</div>
+      <div class="app-desc">Resource allocation, capacity planning via Epic Cogito analytics + Power BI dashboards.</div>
     </div>
-    <!-- IV -->
-    <div class="app-card">
-      <div class="app-top">
+
+    <div class="app-card accent">
+      <div class="app-head">
         <span class="material-icons app-icon">science</span>
-        <span class="app-num">IV</span>
+        <span class="app-num">04</span>
       </div>
-      <div class="app-name">Research &amp; RWE</div>
-      <div class="app-desc">Clinical research support, RWE analytics, drug safety surveillance, trial recruitment.</div>
+      <div class="app-name">Research &amp; RWE (Veeva Vault + Medidata)</div>
+      <div class="app-desc">Clinical research support, RWE analytics via Veeva Vault CDMS + Medidata Clinical Cloud.</div>
     </div>
+
   </div>
 
   <!-- Foot-rail -->
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
     <span>08 / 12</span>
-    <span>Industry Applications</span>
+    <span>Applications</span>
   </div>
 </div>
 </body>

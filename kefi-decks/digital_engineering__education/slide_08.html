@@ -29,17 +29,18 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 16px;
-    margin-top: 22px;
+    margin-top: 24px;
   }
   .app-card {
     background: var(--bg-elev);
     border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 18px 20px;
+    border-radius: 12px;
+    padding: 18px 22px;
     height: 150px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
+    position: relative;
   }
   .app-top {
     display: flex;
@@ -52,10 +53,10 @@
   }
   .app-num {
     font-family: var(--font-num);
-    font-size: 14px;
+    font-size: 13px;
     color: var(--accent);
     font-weight: 600;
-    letter-spacing: 0.10em;
+    letter-spacing: 0.06em;
   }
   .app-name {
     font-family: var(--font-heading);
@@ -63,14 +64,15 @@
     font-weight: 700;
     color: var(--primary);
     line-height: 1.2;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.005em;
+    margin-top: 4px;
   }
   .app-desc {
     font-family: var(--font-body);
     font-size: 12px;
     color: var(--text-secondary);
     line-height: 1.5;
-    margin-top: 2px;
+    margin-top: 4px;
   }
   .top-right-label {
     font-family: var(--font-num);
@@ -86,53 +88,53 @@
   <!-- Top bar -->
   <div style="display:flex; justify-content:space-between; align-items:center;">
     <span class="text-wordmark">KEFI TECH</span>
-    <span class="top-right-label">08 / 12 · INDUSTRY APPLICATIONS</span>
+    <span class="top-right-label">08 / 12 · APPLICATIONS</span>
   </div>
 
   <!-- Eyebrow + Headline -->
-  <div style="margin-top:22px;">
-    <div class="eyebrow">INDUSTRY APPLICATIONS · EDUCATION</div>
-    <h1 class="h-title" style="margin-top:8px;">How digital engineering &amp; transformation applies to education.</h1>
-    <p class="h-subtitle">Four industry-specific applications where digital engineering &amp; transformation creates measurable value.</p>
+  <div style="margin-top:24px;">
+    <div class="eyebrow">APPLICATIONS · EDUCATION</div>
+    <h1 class="h-title" style="margin-top:10px;">How digital engineering &amp; transformation applies to education.</h1>
+    <p class="h-subtitle">Four industry-specific applications with real technology platforms.</p>
   </div>
 
-  <!-- 2x2 application grid -->
+  <!-- 2x2 grid of applications -->
   <div class="app-grid">
 
     <div class="app-card">
       <div class="app-top">
         <span class="material-icons app-icon">school</span>
-        <span class="app-num">I</span>
+        <span class="app-num">01</span>
       </div>
-      <div class="app-name">Student &amp; Faculty Assistants</div>
-      <div class="app-desc">AI assistants for student services, faculty support, research help, academic advising.</div>
+      <div class="app-name">Student &amp; Faculty Assistants (Azure OpenAI + Canvas)</div>
+      <div class="app-desc">AI assistants via Azure OpenAI grounded in Canvas LMS — course help, advising, research.</div>
     </div>
 
     <div class="app-card">
       <div class="app-top">
         <span class="material-icons app-icon">menu_book</span>
-        <span class="app-num">II</span>
+        <span class="app-num">02</span>
       </div>
-      <div class="app-name">Institutional Knowledge Systems</div>
-      <div class="app-desc">Enterprise search, RAG, document intelligence across academic and administrative systems.</div>
+      <div class="app-name">Institutional Knowledge Systems (Azure AI Search)</div>
+      <div class="app-desc">RAG over policies, catalogs, research via Azure AI Search + Pinecone + Alma library system.</div>
     </div>
 
     <div class="app-card">
       <div class="app-top">
         <span class="material-icons app-icon">account_circle</span>
-        <span class="app-num">III</span>
+        <span class="app-num">03</span>
       </div>
-      <div class="app-name">Student Lifecycle Platform</div>
-      <div class="app-desc">Admissions, enrollment, progression, retention, alumni — unified digital experience.</div>
+      <div class="app-name">Student Lifecycle Platform (Salesforce Education Cloud)</div>
+      <div class="app-desc">Admissions through alumni via Salesforce Education Cloud + Banner SIS + Slate CRM.</div>
     </div>
 
     <div class="app-card">
       <div class="app-top">
         <span class="material-icons app-icon">analytics</span>
-        <span class="app-num">IV</span>
+        <span class="app-num">04</span>
       </div>
-      <div class="app-name">Predictive Insights</div>
-      <div class="app-desc">At-risk student identification, enrollment forecasting, resource planning, outcomes analytics.</div>
+      <div class="app-name">Predictive Insights (XGBoost + Banner SIS)</div>
+      <div class="app-desc">At-risk prediction, enrollment forecasting via XGBoost + Prophet + Banner SIS data.</div>
     </div>
 
   </div>
@@ -141,8 +143,10 @@
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
     <span style="color:var(--text-muted);">08 / 12</span>
-    <span style="color:var(--text-muted);">INDUSTRY APPLICATIONS</span>
+    <span style="color:var(--text-muted);">APPLICATIONS</span>
   </div>
+
+  <aside data-notes hidden aria-hidden="true">none</aside>
 </div>
 </body>
 </html>

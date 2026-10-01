@@ -8,37 +8,35 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
   .h-eyebrow { font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.20em; text-transform: uppercase; color: var(--brand); }
-  .h-eyebrow-accent { color: var(--accent-dark); }
-  .h-headline { font-family: var(--font-heading); font-size: 32px; font-weight: 700; line-height: 1.2; color: var(--primary); letter-spacing: -0.01em; }
-  .h-subtitle { font-family: var(--font-body); font-size: 15px; color: var(--text-secondary); line-height: 1.5; max-width: 1080px; }
-  .driver-card { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; }
+  .h-headline { font-family: var(--font-heading); font-size: 34px; font-weight: 700; line-height: 1.18; color: var(--primary); letter-spacing: -0.015em; max-width: 980px; }
+  .h-subtitle { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; max-width: 940px; }
+  .panel-eyebrow { font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+  .panel-eyebrow.brand { color: var(--brand); }
+  .panel-eyebrow.accent { color: var(--accent-dark); }
+  .panel-body { font-family: var(--font-body); font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+  .driver-card { padding: 14px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: flex-start; gap: 12px; }
   .driver-icon { font-size: 20px !important; color: var(--brand); flex-shrink: 0; }
   .driver-title { font-family: var(--font-heading); font-size: 13px; font-weight: 600; color: var(--primary); line-height: 1.2; }
-  .driver-desc { font-family: var(--font-body); font-size: 11px; color: var(--text-secondary); line-height: 1.4; margin-top: 3px; }
-  .panel-eyebrow { font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand); }
-  .panel-eyebrow-accent { color: var(--accent-dark); }
-  .panel-body { font-family: var(--font-body); font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+  .driver-desc { font-family: var(--font-body); font-size: 11px; color: var(--text-secondary); line-height: 1.45; margin-top: 3px; }
 </style>
 </head>
 <body>
 <div class="slide">
   <div class="brand-stripe" data-decor></div>
 
-  <!-- Top-left wordmark -->
   <span class="text-wordmark" style="position:absolute; top:48px; left:104px;">KEFI TECH</span>
 
-  <!-- Eyebrow + Headline -->
-  <div style="margin-top: 32px;">
+  <div style="margin-top: 30px;">
     <div class="h-eyebrow">INDUSTRY CONTEXT · BFSI &amp; INSURANCE</div>
-    <h1 class="h-headline" style="margin-top: 14px; max-width: 1080px;">BFSI &amp; Insurance operates in a regulated, document-intensive, high-stakes environment.</h1>
-    <p class="h-subtitle" style="margin-top: 12px;">Customer trust, regulatory compliance, transaction integrity and operational resilience define competitive position.</p>
+    <h1 class="h-headline" style="margin-top: 12px;">BFSI &amp; Insurance operates in a regulated, document-intensive, high-stakes environment.</h1>
+    <p class="h-subtitle" style="margin-top: 10px;">Customer trust, regulatory compliance, transaction integrity and operational resilience define competitive position.</p>
   </div>
 
   <!-- Two-column layout -->
-  <div style="display: grid; grid-template-columns: 560px 440px; gap: 24px; margin-top: 24px;">
+  <div style="display: grid; grid-template-columns: 560px 440px; gap: 28px; margin-top: 22px;">
     <!-- LEFT: WHY BFSI & INSURANCE NEEDS THIS NOW -->
-    <div class="surface-elev" style="padding: 20px 22px; height: 360px; display: flex; flex-direction: column; gap: 14px;">
-      <div class="panel-eyebrow">WHY BFSI &amp; INSURANCE NEEDS THIS NOW</div>
+    <div class="surface-elev" style="padding: 22px 22px; height: 360px; display: flex; flex-direction: column; gap: 14px;">
+      <div class="panel-eyebrow brand">WHY BFSI &amp; INSURANCE NEEDS THIS NOW</div>
       <div style="display: flex; flex-direction: column; gap: 10px;">
         <div class="driver-card">
           <span class="material-icons driver-icon">trending_up</span>
@@ -72,8 +70,8 @@
     </div>
 
     <!-- RIGHT: WHAT THIS MEANS FOR AI TRANSFORMATION -->
-    <div class="surface-elev" style="padding: 20px 22px; height: 360px; display: flex; flex-direction: column; gap: 14px;">
-      <div class="panel-eyebrow panel-eyebrow-accent">WHAT THIS MEANS FOR AI TRANSFORMATION</div>
+    <div class="surface-elev" style="padding: 22px 22px; height: 360px; display: flex; flex-direction: column; gap: 18px;">
+      <div class="panel-eyebrow accent">WHAT THIS MEANS FOR AI TRANSFORMATION</div>
       <p class="panel-body">AI Transformation applied to bfsi &amp; insurance requires industry-specific capability, not generic technology. The right approach connects ai transformation to the regulatory, operational and customer realities that define bfsi &amp; insurance.</p>
       <div style="margin-top: auto;">
         <span class="tag-pill">INDUSTRY-SPECIFIC APPROACH</span>
@@ -81,12 +79,12 @@
     </div>
   </div>
 
-  <!-- Bottom rail -->
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
     <span>02 / 12</span>
-    <span>INDUSTRY CONTEXT</span>
+    <span>BFSI &amp; INSURANCE CONTEXT</span>
   </div>
 </div>
+<aside data-notes hidden>none</aside>
 </body>
 </html>

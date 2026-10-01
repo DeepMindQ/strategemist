@@ -43,11 +43,11 @@
     </div>
   </div>
 
-  <!-- Right-side vertical hairline + three stacked callouts -->
+  <!-- Right-side vertical hairline + three stacked callouts (Discover / Engineer / Scale third in accent) -->
   <div style="position:absolute; top:240px; right:104px; width:240px;
-              display:flex; gap:24px; align-items:flex-start;">
-    <div style="width:1px; height:280px; background:var(--border-strong); flex-shrink:0;" data-decor aria-hidden="true"></div>
-    <div style="display:flex; flex-direction:column; gap:36px; padding-top:6px; margin-left:auto; text-align:right;">
+              display:grid; grid-template-columns:1px 1fr; align-items:start; gap:24px;">
+    <div style="width:1px; height:280px; background:var(--border-strong); justify-self:start;" data-decor aria-hidden="true"></div>
+    <div style="display:flex; flex-direction:column; gap:36px; padding-top:6px; text-align:right; justify-items:end;">
       <div style="font-family:var(--font-heading); font-size:24px;
                   color:var(--brand); letter-spacing:-0.01em;
                   font-weight:700;">Discover.</div>

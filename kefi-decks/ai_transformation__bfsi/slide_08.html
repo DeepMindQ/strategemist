@@ -8,12 +8,12 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
   .h-eyebrow { font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.20em; text-transform: uppercase; color: var(--brand); }
-  .h-headline { font-family: var(--font-heading); font-size: 32px; font-weight: 700; line-height: 1.2; color: var(--primary); letter-spacing: -0.01em; }
-  .h-subtitle { font-family: var(--font-body); font-size: 15px; color: var(--text-secondary); line-height: 1.5; }
-  .app-card { padding: 20px 22px; background: var(--bg-elev); border: 1px solid var(--border); border-radius: 10px; display: flex; flex-direction: column; gap: 10px; height: 150px; }
-  .app-top { display: flex; align-items: center; justify-content: space-between; }
+  .h-headline { font-family: var(--font-heading); font-size: 34px; font-weight: 700; line-height: 1.18; color: var(--primary); letter-spacing: -0.015em; }
+  .h-subtitle { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+  .app-card { padding: 18px 22px; background: var(--bg-elev); border: 1px solid var(--border); border-radius: 12px; display: flex; flex-direction: column; gap: 8px; height: 150px; }
+  .app-header { display: flex; align-items: center; gap: 12px; }
   .app-icon { font-size: 28px !important; color: var(--brand); }
-  .app-num { font-family: var(--font-num); font-size: 14px; color: var(--accent); font-weight: 600; letter-spacing: 0.06em; }
+  .app-num { font-family: var(--font-num); font-size: 13px; color: var(--accent); font-weight: 600; letter-spacing: 0.06em; margin-left: auto; }
   .app-name { font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: var(--primary); line-height: 1.2; }
   .app-desc { font-family: var(--font-body); font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
 </style>
@@ -24,53 +24,54 @@
 
   <span class="text-wordmark" style="position:absolute; top:48px; left:104px;">KEFI TECH</span>
 
-  <div style="margin-top: 32px;">
-    <div class="h-eyebrow">INDUSTRY APPLICATIONS · BFSI &amp; INSURANCE</div>
-    <h1 class="h-headline" style="margin-top: 12px;">How ai transformation applies to bfsi &amp; insurance.</h1>
-    <p class="h-subtitle" style="margin-top: 10px;">Four industry-specific applications where ai transformation creates measurable value.</p>
+  <div style="margin-top: 30px;">
+    <div class="h-eyebrow">APPLICATIONS · BFSI &amp; INSURANCE</div>
+    <h1 class="h-headline" style="margin-top: 10px;">How ai transformation applies to bfsi &amp; insurance.</h1>
+    <p class="h-subtitle" style="margin-top: 8px;">Four industry-specific applications with real technology platforms.</p>
   </div>
 
-  <!-- 2x2 application grid -->
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px;">
+  <!-- 2x2 grid -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px;">
     <div class="app-card">
-      <div class="app-top">
+      <div class="app-header">
         <span class="material-icons app-icon">description</span>
-        <span class="app-num">I</span>
+        <span class="app-name">Claims Document Intelligence</span>
+        <span class="app-num">01</span>
       </div>
-      <div class="app-name">Document Intelligence</div>
-      <div class="app-desc">Claims, underwriting, KYC, policy and contract document processing at scale.</div>
+      <div class="app-desc">Guidewire ClaimCenter claims document processing via GenAI — coverage decisions, settlement drafts.</div>
     </div>
     <div class="app-card">
-      <div class="app-top">
+      <div class="app-header">
         <span class="material-icons app-icon">security</span>
-        <span class="app-num">II</span>
+        <span class="app-name">Fraud Detection (FICO Falcon)</span>
+        <span class="app-num">02</span>
       </div>
-      <div class="app-name">Fraud Detection</div>
-      <div class="app-desc">Anomaly identification, predictive risk scoring, real-time transaction monitoring.</div>
+      <div class="app-desc">Real-time fraud scoring via FICO Falcon Fraud Manager on SWIFT ISO 20022 transaction streams.</div>
     </div>
     <div class="app-card">
-      <div class="app-top">
+      <div class="app-header">
         <span class="material-icons app-icon">group</span>
-        <span class="app-num">III</span>
+        <span class="app-name">Customer 360 (Salesforce CDP)</span>
+        <span class="app-num">03</span>
       </div>
-      <div class="app-name">Customer Intelligence</div>
-      <div class="app-desc">Customer 360, next-best-action, retention modeling, personalized servicing.</div>
+      <div class="app-desc">Unified customer data across banking, insurance, wealth via Salesforce Data Cloud + Temenos T24.</div>
     </div>
     <div class="app-card">
-      <div class="app-top">
+      <div class="app-header">
         <span class="material-icons app-icon">gavel</span>
-        <span class="app-num">IV</span>
+        <span class="app-name">Regulatory Operations (AxiomSL)</span>
+        <span class="app-num">04</span>
       </div>
-      <div class="app-name">Regulatory Operations</div>
-      <div class="app-desc">Compliance reporting, audit trails, transaction surveillance, regulatory change management.</div>
+      <div class="app-desc">Automated compliance reporting via AxiomSL for FFIEC, FinCEN, Basel III, OCC/FRB submissions.</div>
     </div>
   </div>
 
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
     <span>08 / 12</span>
-    <span>INDUSTRY APPLICATIONS</span>
+    <span>APPLICATIONS</span>
   </div>
 </div>
+<aside data-notes hidden>none</aside>
 </body>
 </html>

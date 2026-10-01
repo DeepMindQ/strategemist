@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Reference Architecture</title>
+<title>Reference Architecture — Education</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="global.css">
@@ -14,35 +14,31 @@
     line-height: 1.2;
     letter-spacing: -0.01em;
     color: var(--primary);
-    max-width: 980px;
+    max-width: 1080px;
   }
   .h-subtitle {
     font-family: var(--font-body);
     font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.55;
-    margin-top: 6px;
-    max-width: 980px;
+    margin-top: 8px;
+    max-width: 1080px;
   }
-  /* Fix 3: rely on global.css justify-content: space-between for distribution */
   .arch-stack {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     margin-top: 22px;
   }
   .arch-layer {
-    height: 78px;
+    height: 76px;
   }
   .arch-layer-content {
-    padding: 10px 16px;
+    padding: 8px 16px;
   }
   .arch-component {
     padding: 6px 12px;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--primary);
-    letter-spacing: 0.01em;
+    font-size: 11px;
   }
   .top-right-label {
     font-family: var(--font-num);
@@ -62,62 +58,62 @@
   </div>
 
   <!-- Eyebrow + Headline -->
-  <div style="margin-top:20px;">
-    <div class="eyebrow">REFERENCE ARCHITECTURE</div>
-    <h1 class="h-title" style="margin-top:8px;">A reference architecture for digital engineering &amp; transformation.</h1>
-    <p class="h-subtitle">Five layers from foundation through consumption — with industry-specific components for education.</p>
+  <div style="margin-top:22px;">
+    <div class="eyebrow">REFERENCE ARCHITECTURE · EDUCATION</div>
+    <h1 class="h-title" style="margin-top:8px;">A reference architecture for digital engineering &amp; transformation — education.</h1>
+    <p class="h-subtitle">Five layers with real industry technology platforms.</p>
   </div>
 
-  <!-- 5-layer architecture stack (Fix 5: industry-specific education component names) -->
+  <!-- 5 architecture layers -->
   <div class="arch-stack">
 
     <div class="arch-layer">
-      <div class="arch-layer-label">EXPERIENCE</div>
+      <div class="arch-layer-label">Experience</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Student Portal</span>
-        <span class="arch-component">Faculty Workstation</span>
-        <span class="arch-component">Advisor Dashboard</span>
-        <span class="arch-component">Admin Portal</span>
+        <span class="arch-component">React Student Portal</span>
+        <span class="arch-component">React Faculty Workstation</span>
+        <span class="arch-component">Slate CRM (Admissions)</span>
+        <span class="arch-component">Salesforce Education Cloud</span>
       </div>
     </div>
 
     <div class="arch-layer">
-      <div class="arch-layer-label">APPLICATION</div>
+      <div class="arch-layer-label">Application</div>
       <div class="arch-layer-content">
-        <span class="arch-component">LMS Service</span>
-        <span class="arch-component">SIS Service</span>
-        <span class="arch-component">Financial Aid Service</span>
-        <span class="arch-component">Notification Service</span>
+        <span class="arch-component">Canvas LMS (Instructure)</span>
+        <span class="arch-component">Banner 9 SIS (Ellucian)</span>
+        <span class="arch-component">Workday Student</span>
+        <span class="arch-component">Salesforce Education Cloud</span>
       </div>
     </div>
 
     <div class="arch-layer">
-      <div class="arch-layer-label">PLATFORM</div>
+      <div class="arch-layer-label">Platform</div>
       <div class="arch-layer-content">
-        <span class="arch-component">FERPA CI/CD</span>
-        <span class="arch-component">Kubernetes Cluster</span>
-        <span class="arch-component">LTI Event Bus</span>
-        <span class="arch-component">Developer Portal</span>
+        <span class="arch-component">GitLab CI (FERPA)</span>
+        <span class="arch-component">Kubernetes (EKS)</span>
+        <span class="arch-component">Kafka (Engagement)</span>
+        <span class="arch-component">Backstage Dev Portal</span>
       </div>
     </div>
 
     <div class="arch-layer">
-      <div class="arch-layer-label">INTEGRATION</div>
+      <div class="arch-layer-label">Integration</div>
       <div class="arch-layer-content">
-        <span class="arch-component">LMS-SIS</span>
-        <span class="arch-component">Library Systems</span>
-        <span class="arch-component">Identity Provider</span>
-        <span class="arch-component">Assessment API</span>
+        <span class="arch-component">LTI 1.3 / OneRoster</span>
+        <span class="arch-component">Canvas API</span>
+        <span class="arch-component">Banner Integration</span>
+        <span class="arch-component">SAML 2.0 / OIDC SSO</span>
       </div>
     </div>
 
     <div class="arch-layer">
-      <div class="arch-layer-label">INFRASTRUCTURE</div>
+      <div class="arch-layer-label">Infrastructure</div>
       <div class="arch-layer-content">
-        <span class="arch-component">FERPA Cloud</span>
-        <span class="arch-component">DR Site</span>
+        <span class="arch-component">AWS FERPA</span>
+        <span class="arch-component">Azure DR Site</span>
         <span class="arch-component">Student Data Network</span>
-        <span class="arch-component">Audit Stack</span>
+        <span class="arch-component">AWS Macie (Student PII)</span>
       </div>
     </div>
 
@@ -129,6 +125,8 @@
     <span style="color:var(--text-muted);">09 / 12</span>
     <span style="color:var(--text-muted);">ARCHITECTURE</span>
   </div>
+
+  <aside data-notes hidden aria-hidden="true">none</aside>
 </div>
 </body>
 </html>

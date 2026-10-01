@@ -70,6 +70,11 @@
     border-radius: 8px;
     padding: 7px 12px;
     display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .comp-card-head {
+    display: flex;
     align-items: center;
     gap: 10px;
   }
@@ -93,16 +98,13 @@
     font-weight: 600;
     color: var(--primary);
     line-height: 1.2;
-    white-space: nowrap;
   }
   .comp-desc {
     font-family: var(--font-body);
     font-size: 10px;
     color: var(--text-secondary);
-    line-height: 1.35;
-    margin-left: auto;
-    text-align: right;
-    max-width: 220px;
+    line-height: 1.4;
+    padding-left: 38px;
   }
 </style>
 </head>
@@ -112,53 +114,63 @@
 
   <div class="top-bar">
     <span class="text-wordmark">KEFI TECH</span>
-    <span class="eyebrow">CAPABILITY 03</span>
+    <span class="eyebrow">CAPABILITY 03 · EDUCATION</span>
   </div>
 
   <h1 class="head-headline">Data Platforms &amp; Modernization.</h1>
-  <p class="head-sub">Data lakes, warehouses, lakehouses, cloud data platforms, legacy modernization.</p>
+  <p class="head-sub">Lakehouse, warehouse, cloud platforms, legacy modernization.</p>
 
   <div class="twocol">
     <div class="panel surface-elev">
       <div class="panel-title brand">WHAT WE DO</div>
-      <p class="left-body">Our data platforms &amp; modernization capability is engineered for education environments. We bring together the data analytics &amp; data engineering discipline, the education domain context, and the engineering rigor required to ship production-grade solutions.</p>
+      <p class="left-body">Our data platforms &amp; modernization capability is engineered for education environments with real industry platforms and tools — not generic technology.</p>
       <div style="margin-top:auto; padding-top:18px;">
-        <span class="tag-pill">CAPABILITY 3 OF 6</span>
+        <span class="tag-pill">CAPABILITY 3 OF 6 · EDUCATION</span>
       </div>
     </div>
 
     <div class="panel surface-elev">
-      <div class="panel-title brand-light">COMPONENTS</div>
+      <div class="panel-title brand-light">SUB-SERVICES</div>
       <div class="comp-list">
         <div class="comp-card">
-          <span class="comp-num">01</span>
-          <span class="material-icons comp-icon">cloud</span>
-          <span class="comp-name">Student 360 Platform</span>
-          <span class="comp-desc">Unified student data platform across academic, financial, and engagement data.</span>
+          <div class="comp-card-head">
+            <span class="comp-num">01</span>
+            <span class="material-icons comp-icon">cloud</span>
+            <span class="comp-name">Student 360 Platform (Salesforce Education Cloud)</span>
+          </div>
+          <div class="comp-desc">Unified student data platform across academic, financial, engagement data via Salesforce Education Cloud.</div>
         </div>
         <div class="comp-card">
-          <span class="comp-num">02</span>
-          <span class="material-icons comp-icon">cloud</span>
-          <span class="comp-name">Learning Analytics Warehouse</span>
-          <span class="comp-desc">Warehouse purpose-built for learning analytics — outcomes, engagement, retention.</span>
+          <div class="comp-card-head">
+            <span class="comp-num">02</span>
+            <span class="material-icons comp-icon">cloud</span>
+            <span class="comp-name">Learning Analytics Warehouse (Snowflake)</span>
+          </div>
+          <div class="comp-desc">Warehouse purpose-built for learning analytics — outcomes, engagement, retention via Snowflake on Azure.</div>
         </div>
         <div class="comp-card">
-          <span class="comp-num">03</span>
-          <span class="material-icons comp-icon">cloud</span>
-          <span class="comp-name">Institutional Research Platform</span>
-          <span class="comp-desc">Platform supporting institutional research — enrollment forecasting, accreditation reporting.</span>
+          <div class="comp-card-head">
+            <span class="comp-num">03</span>
+            <span class="material-icons comp-icon">cloud</span>
+            <span class="comp-name">Institutional Research Platform (Databricks)</span>
+          </div>
+          <div class="comp-desc">Platform supporting institutional research — enrollment forecasting, accreditation reporting via Databricks.</div>
         </div>
         <div class="comp-card">
-          <span class="comp-num">04</span>
-          <span class="material-icons comp-icon">cloud</span>
-          <span class="comp-name">Real-Time Engagement Monitoring</span>
-          <span class="comp-desc">Stream processing platform for real-time student engagement monitoring and alerts.</span>
+          <div class="comp-card-head">
+            <span class="comp-num">04</span>
+            <span class="material-icons comp-icon">cloud</span>
+            <span class="comp-name">Real-Time Engagement Monitoring (Kafka)</span>
+          </div>
+          <div class="comp-desc">Stream processing platform for real-time student engagement monitoring and early alerts via Kafka + Flink.</div>
         </div>
         <div class="comp-card">
-          <span class="comp-num">05</span>
-          <span class="material-icons comp-icon">cloud</span>
-          <span class="comp-name">Cloud Education Data Lakehouse</span>
-          <span class="comp-desc">Cloud-native lakehouse for education analytics — FERPA-compliant, scalable.</span>
+          <div class="comp-card-head">
+            <span class="comp-num">05</span>
+            <span class="material-icons comp-icon">cloud</span>
+            <span class="comp-name">Cloud Education Data Lakehouse (Databricks)</span>
+          </div>
+          <div class="comp-desc">Cloud-native lakehouse for education analytics — FERPA-compliant, scalable on AWS.</div>
         </div>
       </div>
     </div>

@@ -2,23 +2,27 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Quality & Security Engineering — Capability Overview</title>
+<title>Quality &amp; Security Engineering — Capability Overview</title>
 <link rel="stylesheet" href="global.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
-  .cap-headline { font-family: var(--font-heading); font-size: 30px; font-weight: 700; color: var(--primary); line-height: 1.2; letter-spacing: -0.015em; max-width: 1080px; }
-  .cap-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
-  .lifecycle-stage { display:flex; align-items:center; gap:10px; padding:14px 16px; background:var(--bg-elev); border:1px solid var(--border); border-radius:10px; flex:1; }
-  .lifecycle-icon { color: var(--brand); font-size: 24px !important; }
-  .lifecycle-name { font-family: var(--font-heading); font-size: 14px; font-weight: 600; color: var(--primary); letter-spacing: 0.02em; }
-  .lifecycle-arrow { color: var(--accent); font-size: 22px; font-weight: 700; padding: 0 4px; }
-  .pillar-card { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; height: 120px; display:flex; flex-direction:column; gap:6px; }
-  .pillar-top { display:flex; align-items:center; justify-content:space-between; }
+  .cap-headline { font-family: var(--font-heading); font-size: 30px; font-weight: 700; color: var(--primary); line-height: 1.2; letter-spacing: -0.015em; }
+  .cap-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-top: 6px; }
+
+  .lifecycle { display:flex; align-items:stretch; gap:0; width: 1136px; height: 90px; }
+  .lc-stage { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; background: var(--bg-elev); border: 1px solid var(--border); border-radius: 10px; padding: 12px; }
+  .lc-icon { color: var(--brand); font-size: 26px !important; }
+  .lc-name { font-family: var(--font-heading); font-size: 12px; font-weight: 700; color: var(--primary); letter-spacing: 0.10em; text-transform: uppercase; }
+  .lc-arrow { display:flex; align-items:center; justify-content:center; width: 28px; color: var(--accent); font-size: 18px; font-weight: 800; flex-shrink:0; }
+
+  .pillar-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; width: 1136px; }
+  .pillar-card { height: 120px; padding: 14px 16px; background: var(--bg); border: 1px solid var(--border); border-left: 3px solid var(--brand); border-radius: 8px; display:flex; flex-direction:column; gap:6px; }
+  .pillar-row { display:flex; align-items:center; gap:10px; }
   .pillar-icon { color: var(--brand); font-size: 24px !important; }
-  .pillar-num { font-family: var(--font-num); font-size: 13px; font-weight: 600; color: var(--accent); letter-spacing: 0.06em; }
+  .pillar-num { font-family: var(--font-num); font-size: 13px; font-weight: 600; color: var(--accent); letter-spacing: 0.06em; margin-left: auto; }
   .pillar-name { font-family: var(--font-heading); font-size: 14px; font-weight: 600; color: var(--primary); line-height: 1.2; }
-  .pillar-desc { font-family: var(--font-body); font-size: 11px; color: var(--text-secondary); line-height: 1.45; }
+  .pillar-desc { font-family: var(--font-body); font-size: 11px; color: var(--text-secondary); line-height: 1.4; }
 </style>
 </head>
 <body>
@@ -28,88 +32,88 @@
   <!-- Header -->
   <div style="margin-top: 18px;">
     <div class="eyebrow">CAPABILITIES</div>
-    <h1 class="cap-headline" style="margin-top:10px;">Quality &amp; Security Engineering across the complete lifecycle.</h1>
-    <p class="cap-sub" style="margin-top:8px;">Six capability pillars covering the full quality &amp; security engineering spectrum.</p>
+    <h1 class="cap-headline" style="margin-top:8px;">Quality &amp; Security Engineering across the complete lifecycle.</h1>
+    <p class="cap-sub">Six capability pillars for healthcare &amp; pharma.</p>
   </div>
 
   <!-- Lifecycle flow -->
-  <div style="display:flex; align-items:stretch; gap:0; margin-top: 18px; height: 90px;">
-    <div class="lifecycle-stage">
-      <span class="material-icons lifecycle-icon">lightbulb</span>
-      <span class="lifecycle-name">STRATEGY</span>
+  <div class="lifecycle" style="margin-top: 18px;">
+    <div class="lc-stage">
+      <span class="material-icons lc-icon">lightbulb</span>
+      <div class="lc-name">Strategy</div>
     </div>
-    <div class="lifecycle-arrow">►</div>
-    <div class="lifecycle-stage">
-      <span class="material-icons lifecycle-icon">engineering</span>
-      <span class="lifecycle-name">BUILD</span>
+    <div class="lc-arrow">►</div>
+    <div class="lc-stage">
+      <span class="material-icons lc-icon">engineering</span>
+      <div class="lc-name">Build</div>
     </div>
-    <div class="lifecycle-arrow">►</div>
-    <div class="lifecycle-stage">
-      <span class="material-icons lifecycle-icon">integration_instructions</span>
-      <span class="lifecycle-name">INTEGRATE</span>
+    <div class="lc-arrow">►</div>
+    <div class="lc-stage">
+      <span class="material-icons lc-icon">integration_instructions</span>
+      <div class="lc-name">Integrate</div>
     </div>
-    <div class="lifecycle-arrow">►</div>
-    <div class="lifecycle-stage">
-      <span class="material-icons lifecycle-icon">monitoring</span>
-      <span class="lifecycle-name">OPERATE</span>
+    <div class="lc-arrow">►</div>
+    <div class="lc-stage">
+      <span class="material-icons lc-icon">monitoring</span>
+      <div class="lc-name">Operate</div>
     </div>
   </div>
 
-  <!-- 3x2 capability grid -->
-  <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px;">
+  <!-- 3x2 pillar grid -->
+  <div class="pillar-grid" style="margin-top: 16px;">
 
     <div class="pillar-card">
-      <div class="pillar-top">
+      <div class="pillar-row">
         <span class="material-icons pillar-icon">security</span>
         <span class="pillar-num">01</span>
       </div>
       <div class="pillar-name">Application Security &amp; DevSecOps</div>
-      <div class="pillar-desc">SAST, DAST, SCA, secure code review, CI/CD pipeline security, OWASP, NIST, SANS.</div>
+      <div class="pillar-desc">SAST, DAST, SCA, secure code review, CI/CD pipeline security.</div>
     </div>
 
     <div class="pillar-card">
-      <div class="pillar-top">
+      <div class="pillar-row">
         <span class="material-icons pillar-icon">shield</span>
         <span class="pillar-num">02</span>
       </div>
       <div class="pillar-name">VAPT &amp; Risk Assessment</div>
-      <div class="pillar-desc">Web, API, mobile, IoT, cloud, container VAPT. MITRE ATT&amp;CK, CIS frameworks.</div>
+      <div class="pillar-desc">Web, API, mobile, cloud, platform-specific VAPT per industry frameworks.</div>
     </div>
 
     <div class="pillar-card">
-      <div class="pillar-top">
+      <div class="pillar-row">
         <span class="material-icons pillar-icon">speed</span>
         <span class="pillar-num">03</span>
       </div>
       <div class="pillar-name">Performance Engineering</div>
-      <div class="pillar-desc">Load, stress, spike, soak testing. Capacity planning, bottleneck analysis, tuning.</div>
+      <div class="pillar-desc">Load, stress, spike, soak testing, capacity planning, bottleneck analysis.</div>
     </div>
 
     <div class="pillar-card">
-      <div class="pillar-top">
+      <div class="pillar-row">
         <span class="material-icons pillar-icon">precision_manufacturing</span>
         <span class="pillar-num">04</span>
       </div>
       <div class="pillar-name">Test Automation &amp; Continuous Testing</div>
-      <div class="pillar-desc">UI, web, mobile, API automation, BDD, codeless/AI-assisted, CI/CD integration.</div>
+      <div class="pillar-desc">UI, web, mobile, API automation, BDD, continuous testing in CI/CD.</div>
     </div>
 
     <div class="pillar-card">
-      <div class="pillar-top">
+      <div class="pillar-row">
         <span class="material-icons pillar-icon">psychology</span>
         <span class="pillar-num">05</span>
       </div>
       <div class="pillar-name">AI &amp; Intelligent Systems Testing</div>
-      <div class="pillar-desc">AI/ML model testing, GenAI/LLM testing, bias assessment, prompt/response validation.</div>
+      <div class="pillar-desc">AI/ML model validation, GenAI testing, bias audits, AI governance testing.</div>
     </div>
 
     <div class="pillar-card">
-      <div class="pillar-top">
+      <div class="pillar-row">
         <span class="material-icons pillar-icon">gavel</span>
         <span class="pillar-num">06</span>
       </div>
       <div class="pillar-name">Quality Consulting &amp; Assurance</div>
-      <div class="pillar-desc">Test strategy, QA process assessment, quality governance, release readiness, metrics.</div>
+      <div class="pillar-desc">QA assessment, test strategy, quality metrics, release readiness, managed testing.</div>
     </div>
 
   </div>
@@ -120,6 +124,8 @@
     <span>03 / 12</span>
     <span>CAPABILITIES</span>
   </div>
+
+  <aside data-notes aria-hidden="true" style="display:none;">none</aside>
 </div>
 </body>
 </html>

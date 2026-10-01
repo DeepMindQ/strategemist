@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Reference Architecture</title>
+<title>Reference Architecture — BFSI & Insurance</title>
 <link rel="stylesheet" href="global.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
   .h-eyebrow { font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.20em; text-transform: uppercase; color: var(--brand); }
-  .h-headline { font-family: var(--font-heading); font-size: 30px; font-weight: 700; line-height: 1.2; color: var(--primary); letter-spacing: -0.01em; }
+  .h-headline { font-family: var(--font-heading); font-size: 32px; font-weight: 700; line-height: 1.18; color: var(--primary); letter-spacing: -0.015em; }
   .h-subtitle { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
-  .arch-stack { display: flex; flex-direction: column; gap: 10px; margin-top: 22px; width: 1136px; }
-  .arch-layer { min-height: 64px; }
-  .arch-layer-label { font-size: 11px; }
-  .arch-component { padding: 5px 12px; font-size: 11px; font-weight: 500; }
+  .arch-stack { display: flex; flex-direction: column; gap: 12px; }
+  .arch-layer { display: flex; align-items: stretch; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-elev); overflow: hidden; min-height: 88px; }
+  .arch-layer-label { width: 130px; padding: 14px 14px; background: var(--brand-soft); border-right: 1px solid var(--border); font-family: var(--font-heading); font-size: 12px; font-weight: 700; color: var(--brand); letter-spacing: 0.10em; text-transform: uppercase; display: flex; align-items: center; }
+  .arch-layer-content { flex: 1; padding: 16px 18px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: flex-start; }
+  .arch-component { padding: 6px 11px; background: var(--bg); border: 1px solid var(--border); border-radius: 5px; font-family: var(--font-body); font-size: 11px; color: var(--primary); font-weight: 500; }
 </style>
 </head>
 <body>
@@ -22,27 +23,27 @@
 
   <span class="text-wordmark" style="position:absolute; top:48px; left:104px;">KEFI TECH</span>
 
-  <div style="margin-top: 32px;">
-    <div class="h-eyebrow">REFERENCE ARCHITECTURE</div>
-    <h1 class="h-headline" style="margin-top: 12px;">A reference architecture for ai transformation.</h1>
-    <p class="h-subtitle" style="margin-top: 10px;">Five layers from foundation through consumption — with industry-specific components for bfsi &amp; insurance.</p>
+  <div style="margin-top: 30px;">
+    <div class="h-eyebrow">REFERENCE ARCHITECTURE · BFSI &amp; INSURANCE</div>
+    <h1 class="h-headline" style="margin-top: 10px;">A reference architecture for ai transformation — bfsi &amp; insurance.</h1>
+    <p class="h-subtitle" style="margin-top: 8px;">Five layers with real industry technology platforms.</p>
   </div>
 
-  <!-- Five arch layers — INDUSTRY-SPECIFIC component names (FIX 5), NO .kefi-asset variant -->
-  <div class="arch-stack">
+  <!-- Architecture stack -->
+  <div class="arch-stack" style="margin-top: 22px;">
     <div class="arch-layer">
       <div class="arch-layer-label">APPLICATION</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Claims Copilot</span>
-        <span class="arch-component">Underwriting Assistant</span>
-        <span class="arch-component">KYC Agent</span>
-        <span class="arch-component">Policy Query Bot</span>
+        <span class="arch-component">Claims Copilot (Azure OpenAI)</span>
+        <span class="arch-component">Underwriting Asst (GPT-4)</span>
+        <span class="arch-component">KYC Agent (DocumentAI)</span>
+        <span class="arch-component">Policy Bot (RAG)</span>
       </div>
     </div>
     <div class="arch-layer">
       <div class="arch-layer-label">ORCHESTRATION</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Claims Triage Flow</span>
+        <span class="arch-component">Claims Triage (LangGraph)</span>
         <span class="arch-component">Fraud Check RAG</span>
         <span class="arch-component">Auth Decision Engine</span>
         <span class="arch-component">Compliance Validator</span>
@@ -51,28 +52,28 @@
     <div class="arch-layer">
       <div class="arch-layer-label">MODELS</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Fraud Detection LLM</span>
-        <span class="arch-component">Underwriting ML</span>
-        <span class="arch-component">Risk Scoring Model</span>
-        <span class="arch-component">Sentiment Classifier</span>
+        <span class="arch-component">Fraud LLM (XGBoost)</span>
+        <span class="arch-component">Credit Risk (Blaze)</span>
+        <span class="arch-component">Churn (LightGBM)</span>
+        <span class="arch-component">Anomaly (Isolation Forest)</span>
       </div>
     </div>
     <div class="arch-layer">
       <div class="arch-layer-label">DATA</div>
       <div class="arch-layer-content">
-        <span class="arch-component">Policy Library</span>
-        <span class="arch-component">Claims History</span>
-        <span class="arch-component">Watchlist Data</span>
-        <span class="arch-component">Regulatory Docs</span>
+        <span class="arch-component">Guidewire PolicyCenter</span>
+        <span class="arch-component">Claims History (SAS)</span>
+        <span class="arch-component">Bloomberg Feed</span>
+        <span class="arch-component">Watchlist (Dow Jones)</span>
       </div>
     </div>
     <div class="arch-layer">
       <div class="arch-layer-label">PLATFORM</div>
       <div class="arch-layer-content">
-        <span class="arch-component">LLMOps Pipeline</span>
-        <span class="arch-component">Model Monitor</span>
-        <span class="arch-component">AI Governance</span>
-        <span class="arch-component">Audit Logger</span>
+        <span class="arch-component">Azure OpenAI + LangFuse</span>
+        <span class="arch-component">MLflow + Datadog</span>
+        <span class="arch-component">SR 11-7 Governance</span>
+        <span class="arch-component">Azure AI Content Safety</span>
       </div>
     </div>
   </div>
@@ -83,5 +84,6 @@
     <span>ARCHITECTURE</span>
   </div>
 </div>
+<aside data-notes hidden>none</aside>
 </body>
 </html>

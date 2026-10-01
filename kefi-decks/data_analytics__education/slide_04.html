@@ -70,6 +70,11 @@
     border-radius: 8px;
     padding: 7px 12px;
     display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .comp-card-head {
+    display: flex;
     align-items: center;
     gap: 10px;
   }
@@ -93,16 +98,13 @@
     font-weight: 600;
     color: var(--primary);
     line-height: 1.2;
-    white-space: nowrap;
   }
   .comp-desc {
     font-family: var(--font-body);
     font-size: 10px;
     color: var(--text-secondary);
-    line-height: 1.35;
-    margin-left: auto;
-    text-align: right;
-    max-width: 220px;
+    line-height: 1.4;
+    padding-left: 38px;
   }
 </style>
 </head>
@@ -112,53 +114,63 @@
 
   <div class="top-bar">
     <span class="text-wordmark">KEFI TECH</span>
-    <span class="eyebrow">CAPABILITY 01</span>
+    <span class="eyebrow">CAPABILITY 01 · EDUCATION</span>
   </div>
 
   <h1 class="head-headline">Data Strategy &amp; Governance.</h1>
-  <p class="head-sub">Data strategy, maturity assessment, architecture, governance, lineage, MDM.</p>
+  <p class="head-sub">Data strategy, governance, lineage, MDM aligned to industry regulations.</p>
 
   <div class="twocol">
     <div class="panel surface-elev">
       <div class="panel-title brand">WHAT WE DO</div>
-      <p class="left-body">Our data strategy &amp; governance capability is engineered for education environments. We bring together the data analytics &amp; data engineering discipline, the education domain context, and the engineering rigor required to ship production-grade solutions.</p>
+      <p class="left-body">Our data strategy &amp; governance capability is engineered for education environments with real industry platforms and tools — not generic technology.</p>
       <div style="margin-top:auto; padding-top:18px;">
-        <span class="tag-pill">CAPABILITY 1 OF 6</span>
+        <span class="tag-pill">CAPABILITY 1 OF 6 · EDUCATION</span>
       </div>
     </div>
 
     <div class="panel surface-elev">
-      <div class="panel-title brand-light">COMPONENTS</div>
+      <div class="panel-title brand-light">SUB-SERVICES</div>
       <div class="comp-list">
         <div class="comp-card">
-          <span class="comp-num">01</span>
-          <span class="material-icons comp-icon">lightbulb</span>
-          <span class="comp-name">Student Data Governance</span>
-          <span class="comp-desc">Governance framework for student records — privacy, consent, FERPA compliance.</span>
+          <div class="comp-card-head">
+            <span class="comp-num">01</span>
+            <span class="material-icons comp-icon">lightbulb</span>
+            <span class="comp-name">Student Data Governance (FERPA)</span>
+          </div>
+          <div class="comp-desc">Governance framework for student records — privacy, consent, FERPA compliance via Collibra.</div>
         </div>
         <div class="comp-card">
-          <span class="comp-num">02</span>
-          <span class="material-icons comp-icon">lightbulb</span>
-          <span class="comp-name">Academic Data MDM</span>
-          <span class="comp-desc">Master data management for student records across admissions, registrar, financial aid.</span>
+          <div class="comp-card-head">
+            <span class="comp-num">02</span>
+            <span class="material-icons comp-icon">lightbulb</span>
+            <span class="comp-name">Academic Data MDM (Informatica)</span>
+          </div>
+          <div class="comp-desc">Master data management for student records across Slate admissions, Banner SIS, Workday Student via Informatica.</div>
         </div>
         <div class="comp-card">
-          <span class="comp-num">03</span>
-          <span class="material-icons comp-icon">lightbulb</span>
-          <span class="comp-name">FERPA-Compliant Architecture</span>
-          <span class="comp-desc">Architecture meeting FERPA and student privacy protection requirements.</span>
+          <div class="comp-card-head">
+            <span class="comp-num">03</span>
+            <span class="material-icons comp-icon">lightbulb</span>
+            <span class="comp-name">FERPA-Compliant Data Architecture</span>
+          </div>
+          <div class="comp-desc">Architecture meeting FERPA, ADA, and student privacy protection requirements on AWS/Azure.</div>
         </div>
         <div class="comp-card">
-          <span class="comp-num">04</span>
-          <span class="material-icons comp-icon">lightbulb</span>
-          <span class="comp-name">Learning Data Quality</span>
-          <span class="comp-desc">Quality controls for learning data — assessment integrity, completion, outcomes.</span>
+          <div class="comp-card-head">
+            <span class="comp-num">04</span>
+            <span class="material-icons comp-icon">lightbulb</span>
+            <span class="comp-name">Learning Data Quality (Talend)</span>
+          </div>
+          <div class="comp-desc">Quality controls for learning data — assessment integrity, completion, outcomes via Talend Data Quality.</div>
         </div>
         <div class="comp-card">
-          <span class="comp-num">05</span>
-          <span class="material-icons comp-icon">lightbulb</span>
-          <span class="comp-name">Research Data Governance</span>
-          <span class="comp-desc">Governance for research data — grants, IRB approvals, data sharing.</span>
+          <div class="comp-card-head">
+            <span class="comp-num">05</span>
+            <span class="material-icons comp-icon">lightbulb</span>
+            <span class="comp-name">Research Data Governance</span>
+          </div>
+          <div class="comp-desc">Governance for research data — grants, IRB approvals, data sharing via Cayuse/Workday.</div>
         </div>
       </div>
     </div>

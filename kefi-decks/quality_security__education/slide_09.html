@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Slide 09 — Reference Architecture</title>
+<title>Slide 09 — Reference Architecture · Education</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="global.css">
@@ -16,17 +16,17 @@
 
   <!-- Header block -->
   <div style="position:absolute; top:96px; left:104px; right:104px;">
-    <div class="eyebrow" style="margin-bottom:14px;">REFERENCE ARCHITECTURE</div>
+    <div class="eyebrow" style="margin-bottom:14px;">REFERENCE ARCHITECTURE · EDUCATION</div>
     <h1 style="font-family:var(--font-heading); font-size:32px; font-weight:700; color:var(--primary); line-height:1.2; letter-spacing:-0.01em; margin:0;">
-      A reference architecture for quality &amp; security engineering.
+      A reference architecture for quality &amp; security engineering — education.
     </h1>
-    <p style="font-family:var(--font-body); font-size:15px; color:var(--text-secondary); line-height:1.5; margin:12px 0 0 0;">
-      Five layers from foundation through consumption — with industry-specific components for education.
+    <p style="font-family:var(--font-body); font-size:15px; color:var(--text-secondary); line-height:1.5; margin:14px 0 0 0;">
+      Five layers with real industry technology platforms.
     </p>
   </div>
 
   <!-- 5 stacked arch layers -->
-  <div style="position:absolute; top:236px; left:104px; right:104px; display:flex; flex-direction:column; gap:10px;">
+  <div style="position:absolute; top:240px; left:104px; right:104px; display:flex; flex-direction:column; gap:10px;">
 
     <!-- LAYER 1: STANDARDS -->
     <div class="arch-layer" style="height:74px;">
@@ -35,7 +35,7 @@
         <div class="arch-component">FERPA</div>
         <div class="arch-component">WCAG 2.1 AA</div>
         <div class="arch-component">NIST 800-171</div>
-        <div class="arch-component">ISO 27001</div>
+        <div class="arch-component">ADA Title II</div>
       </div>
     </div>
 
@@ -43,10 +43,10 @@
     <div class="arch-layer" style="height:74px;">
       <div class="arch-layer-label">SECURITY TESTING</div>
       <div class="arch-layer-content">
-        <div class="arch-component">LMS/SIS VAPT</div>
-        <div class="arch-component">Education SAST</div>
-        <div class="arch-component">Student Portal DAST</div>
-        <div class="arch-component">Assessment Pen Test</div>
+        <div class="arch-component">SonarQube (SAST)</div>
+        <div class="arch-component">Burp Suite (DAST)</div>
+        <div class="arch-component">Canvas/Banner VAPT</div>
+        <div class="arch-component">EdTech LTI VAPT</div>
       </div>
     </div>
 
@@ -54,10 +54,10 @@
     <div class="arch-layer" style="height:74px;">
       <div class="arch-layer-label">PERFORMANCE</div>
       <div class="arch-layer-content">
-        <div class="arch-component">LMS Load Test</div>
-        <div class="arch-component">SIS Enrollment Perf</div>
-        <div class="arch-component">Assessment Perf</div>
-        <div class="arch-component">Streaming Perf</div>
+        <div class="arch-component">JMeter (Canvas LMS)</div>
+        <div class="arch-component">LoadRunner (Banner SIS)</div>
+        <div class="arch-component">k6 (Assessment)</div>
+        <div class="arch-component">Panopto Streaming Perf</div>
       </div>
     </div>
 
@@ -65,10 +65,10 @@
     <div class="arch-layer" style="height:74px;">
       <div class="arch-layer-label">AUTOMATION</div>
       <div class="arch-layer-content">
-        <div class="arch-component">LMS Functional</div>
-        <div class="arch-component">SIS Regression</div>
-        <div class="arch-component">Student Portal Auto</div>
-        <div class="arch-component">LTI Contract</div>
+        <div class="arch-component">Cypress (Canvas)</div>
+        <div class="arch-component">Selenium (Banner)</div>
+        <div class="arch-component">Appium (Student Portal)</div>
+        <div class="arch-component">Postman (LTI APIs)</div>
       </div>
     </div>
 
@@ -76,10 +76,10 @@
     <div class="arch-layer" style="height:74px;">
       <div class="arch-layer-label">OPERATIONS</div>
       <div class="arch-layer-content">
-        <div class="arch-component">FERPA CI/CD</div>
-        <div class="arch-component">LMS Monitoring</div>
-        <div class="arch-component">Academic IR</div>
-        <div class="arch-component">Accessibility Audit</div>
+        <div class="arch-component">GitLab CI (FERPA)</div>
+        <div class="arch-component">Datadog (Monitoring)</div>
+        <div class="arch-component">PagerDuty (Academic IR)</div>
+        <div class="arch-component">FERPA Audit</div>
       </div>
     </div>
 

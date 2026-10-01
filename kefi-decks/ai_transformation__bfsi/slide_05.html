@@ -8,17 +8,18 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
   .h-eyebrow { font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.20em; text-transform: uppercase; color: var(--brand); }
-  .h-headline { font-family: var(--font-heading); font-size: 36px; font-weight: 700; line-height: 1.15; color: var(--primary); letter-spacing: -0.01em; }
-  .h-subtitle { font-family: var(--font-body); font-size: 15px; color: var(--text-secondary); line-height: 1.5; max-width: 920px; }
-  .panel-eyebrow { font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand); }
-  .panel-eyebrow-light { color: var(--brand-light); }
+  .h-headline { font-family: var(--font-heading); font-size: 36px; font-weight: 700; line-height: 1.18; color: var(--primary); letter-spacing: -0.015em; }
+  .h-subtitle { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; max-width: 920px; }
+  .panel-eyebrow { font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+  .panel-eyebrow.brand { color: var(--brand); }
+  .panel-eyebrow.brand-light { color: var(--brand-light); }
   .panel-body { font-family: var(--font-body); font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
-  .comp-card { padding: 7px 10px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; display: flex; flex-direction: column; gap: 4px; }
+  .comp-card { padding: 7px 10px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; display: flex; flex-direction: column; gap: 3px; }
   .comp-row { display: flex; align-items: center; gap: 8px; }
   .comp-num { font-family: var(--font-num); font-size: 11px; color: var(--brand); font-weight: 600; letter-spacing: 0.06em; }
   .comp-icon { font-size: 18px !important; color: var(--brand-light); }
   .comp-name { font-family: var(--font-heading); font-size: 12px; font-weight: 600; color: var(--primary); line-height: 1.2; }
-  .comp-desc { font-family: var(--font-body); font-size: 10px; color: var(--text-secondary); line-height: 1.35; }
+  .comp-desc { font-family: var(--font-body); font-size: 10px; color: var(--text-secondary); line-height: 1.4; }
 </style>
 </head>
 <body>
@@ -27,63 +28,65 @@
 
   <span class="text-wordmark" style="position:absolute; top:48px; left:104px;">KEFI TECH</span>
 
-  <div style="margin-top: 32px;">
-    <div class="h-eyebrow">CAPABILITY 02</div>
-    <h1 class="h-headline" style="margin-top: 12px;">Agentic AI &amp; Automation.</h1>
-    <p class="h-subtitle" style="margin-top: 10px;">AI agents, multi-agent systems, autonomous workflows, human-in-the-loop processes.</p>
+  <div style="margin-top: 30px;">
+    <div class="h-eyebrow">CAPABILITY 02 · BFSI &amp; INSURANCE</div>
+    <h1 class="h-headline" style="margin-top: 10px;">Agentic AI &amp; Automation.</h1>
+    <p class="h-subtitle" style="margin-top: 8px;">Multi-agent systems for automated workflows with human-in-the-loop controls.</p>
   </div>
 
-  <div style="display: grid; grid-template-columns: 560px 440px; gap: 24px; margin-top: 24px;">
+  <div style="display: grid; grid-template-columns: 560px 440px; gap: 24px; margin-top: 22px;">
+    <!-- LEFT: WHAT WE DO -->
     <div class="surface-elev" style="padding: 22px 24px; height: 400px; display: flex; flex-direction: column; gap: 16px;">
-      <div class="panel-eyebrow">WHAT WE DO</div>
-      <p class="panel-body">Our agentic ai &amp; automation capability is engineered for bfsi &amp; insurance environments. We bring together the ai transformation discipline, the bfsi &amp; insurance domain context, and the engineering rigor required to ship production-grade solutions.</p>
+      <div class="panel-eyebrow brand">WHAT WE DO</div>
+      <p class="panel-body">Our agentic ai &amp; automation capability is engineered for bfsi &amp; insurance environments with real industry platforms and tools — not generic technology.</p>
       <div style="margin-top: auto;">
-        <span class="tag-pill">CAPABILITY 2 OF 6</span>
+        <span class="tag-pill">CAPABILITY 2 OF 6 · BFSI &amp; INSURANCE</span>
       </div>
     </div>
 
-    <div class="surface-elev" style="padding: 18px 20px; height: 400px; display: flex; flex-direction: column; gap: 10px;">
-      <div class="panel-eyebrow panel-eyebrow-light">COMPONENTS</div>
-      <div style="display: flex; flex-direction: column; gap: 8px;">
+    <!-- RIGHT: SUB-SERVICES -->
+    <div class="surface-elev" style="padding: 16px 18px; height: 400px; display: flex; flex-direction: column; gap: 8px;">
+      <div class="panel-eyebrow brand-light">SUB-SERVICES</div>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
         <div class="comp-card">
           <div class="comp-row">
             <span class="comp-num">01</span>
             <span class="material-icons comp-icon">smart_toy</span>
-            <span class="comp-name">Claims Triage Agent</span>
+            <span class="comp-name">Claims Triage Agent (LangGraph)</span>
           </div>
-          <div class="comp-desc">Autonomous agent that reads inbound claims, classifies severity, and routes to the right adjuster.</div>
+          <div class="comp-desc">Autonomous agent reading inbound claims from Guidewire ClaimCenter — classifies severity, routes to adjuster, reserves reserves in SAP FS-CD.</div>
         </div>
         <div class="comp-card">
           <div class="comp-row">
             <span class="comp-num">02</span>
             <span class="material-icons comp-icon">smart_toy</span>
-            <span class="comp-name">Fraud Investigation Agent</span>
+            <span class="comp-name">Fraud Investigation Agent (Multi-Agent)</span>
           </div>
-          <div class="comp-desc">Multi-agent system that cross-references claims against fraud indicators and surfaces suspicious patterns.</div>
+          <div class="comp-desc">Multi-agent system cross-referencing claims against SAS Fraud Detection Server and FICO Falcon Fraud scores.</div>
         </div>
         <div class="comp-card">
           <div class="comp-row">
             <span class="comp-num">03</span>
             <span class="material-icons comp-icon">smart_toy</span>
-            <span class="comp-name">Policy Renewal Agent</span>
+            <span class="comp-name">Policy Renewal Agent (SAP FS-CD)</span>
           </div>
-          <div class="comp-desc">Agent that monitors renewal calendars, pulls underwriting data, and drafts renewal recommendations.</div>
+          <div class="comp-desc">Agent monitoring renewal calendars in SAP Financial Services Collections &amp; Disbursements — drafts renewal recommendations.</div>
         </div>
         <div class="comp-card">
           <div class="comp-row">
             <span class="comp-num">04</span>
             <span class="material-icons comp-icon">smart_toy</span>
-            <span class="comp-name">Customer Onboarding Workflow</span>
+            <span class="comp-name">Customer Onboarding Workflow (Pega)</span>
           </div>
-          <div class="comp-desc">Human-in-the-loop agent that handles KYC, document collection, and policy issuance.</div>
+          <div class="comp-desc">Human-in-the-loop agent handling KYC via LexisNexis, document collection, and policy issuance in Temenos T24.</div>
         </div>
         <div class="comp-card">
           <div class="comp-row">
             <span class="comp-num">05</span>
             <span class="material-icons comp-icon">smart_toy</span>
-            <span class="comp-name">Compliance Reporting Agent</span>
+            <span class="comp-name">Compliance Reporting Agent (RegTech)</span>
           </div>
-          <div class="comp-desc">Agent that compiles compliance evidence from across systems and generates regulator-ready reports.</div>
+          <div class="comp-desc">Agent compiling compliance evidence from Actimize AML and generating FinCEN/OFAC regulator-ready reports.</div>
         </div>
       </div>
     </div>
@@ -95,5 +98,6 @@
     <span>AGENTIC AI &amp; AUTOMATION</span>
   </div>
 </div>
+<aside data-notes hidden>none</aside>
 </body>
 </html>

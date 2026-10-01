@@ -6,6 +6,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link rel="stylesheet" href="global.css" />
+  <aside data-notes hidden>none</aside>
 </head>
 <body>
   <div class="slide" style="padding:0;">
@@ -16,71 +17,77 @@
     <div style="position:absolute; top:64px; left:104px;">
       <span class="text-wordmark">KEFI TECH</span>
     </div>
-    <div style="position:absolute; top:64px; right:104px; font-family:var(--font-num); font-size:10px; color:var(--text-muted); letter-spacing:0.16em; text-transform:uppercase;">
+    <div data-decor aria-hidden="true"
+         style="position:absolute; top:64px; right:104px; font-family:var(--font-num); font-size:10px; color:var(--text-muted); letter-spacing:0.16em; text-transform:uppercase;">
       09 / 12
     </div>
 
     <!-- Header -->
     <div style="position:absolute; top:118px; left:104px; right:104px;">
-      <div class="eyebrow" style="font-size:11px; letter-spacing:0.22em;">REFERENCE ARCHITECTURE</div>
-      <h1 style="font-family:var(--font-heading); font-weight:700; font-size:30px; line-height:1.18; color:var(--primary); margin:8px 0 6px 0; letter-spacing:-0.01em; max-width:980px;">
-        A reference architecture for digital engineering &amp; transformation.
+      <div class="eyebrow" style="font-size:11px; letter-spacing:0.22em;">REFERENCE ARCHITECTURE · BFSI &amp; INSURANCE</div>
+      <h1 style="font-family:var(--font-heading); font-weight:700; font-size:28px; line-height:1.18; color:var(--primary); margin:8px 0 6px 0; letter-spacing:-0.01em; max-width:1080px;">
+        A reference architecture for digital engineering &amp; transformation — bfsi &amp; insurance.
       </h1>
       <p style="font-family:var(--font-body); font-size:14px; color:var(--text-secondary); margin:0; line-height:1.5;">
-        Five layers from foundation through consumption — with industry-specific components for bfsi &amp; insurance.
+        Five layers with real industry technology platforms.
       </p>
     </div>
 
-    <!-- 5 stacked architecture layers — FIX 5: BFSI-specific component names; FIX 3: justify-content: space-between (in CSS) -->
-    <div style="position:absolute; top:240px; left:104px; right:104px; display:flex; flex-direction:column; gap:10px;">
+    <!-- 5 arch layers -->
+    <div style="position:absolute; top:236px; left:104px; right:104px; display:flex; flex-direction:column; gap:10px;">
 
+      <!-- LAYER 1: EXPERIENCE -->
       <div class="arch-layer" style="height:80px;">
         <div class="arch-layer-label">EXPERIENCE</div>
         <div class="arch-layer-content">
-          <div class="arch-component">Digital Banking UI</div>
-          <div class="arch-component">Wealth Portal</div>
-          <div class="arch-component">Claims Adjuster</div>
-          <div class="arch-component">Branch Tablet</div>
+          <div class="arch-component">Temenos Digital Banking</div>
+          <div class="arch-component">Guidewire Portals</div>
+          <div class="arch-component">Salesforce FSC (Wealth)</div>
+          <div class="arch-component">Flutter Mobile</div>
         </div>
       </div>
 
+      <!-- LAYER 2: APPLICATION -->
       <div class="arch-layer" style="height:80px;">
         <div class="arch-layer-label">APPLICATION</div>
         <div class="arch-layer-content">
-          <div class="arch-component">Payment Service</div>
-          <div class="arch-component">Policy Service</div>
-          <div class="arch-component">KYC Service</div>
-          <div class="arch-component">Notification Service</div>
+          <div class="arch-component">Temenos T24 (Core)</div>
+          <div class="arch-component">Guidewire PolicyCenter</div>
+          <div class="arch-component">Salesforce FSC</div>
+          <div class="arch-component">Apigee API Platform</div>
         </div>
       </div>
 
+      <!-- LAYER 3: PLATFORM -->
       <div class="arch-layer" style="height:80px;">
         <div class="arch-layer-label">PLATFORM</div>
         <div class="arch-layer-content">
-          <div class="arch-component">Banking CI/CD</div>
-          <div class="arch-component">Kubernetes Cluster</div>
-          <div class="arch-component">Event Bus</div>
-          <div class="arch-component">Developer Portal</div>
+          <div class="arch-component">GitLab CI (PCI-DSS)</div>
+          <div class="arch-component">Kubernetes (EKS)</div>
+          <div class="arch-component">Kafka (Event Streaming)</div>
+          <div class="arch-component">Backstage Dev Portal</div>
         </div>
       </div>
 
+      <!-- LAYER 4: INTEGRATION -->
       <div class="arch-layer" style="height:80px;">
         <div class="arch-layer-label">INTEGRATION</div>
         <div class="arch-layer-content">
-          <div class="arch-component">Payment Rails</div>
-          <div class="arch-component">Core Banking API</div>
-          <div class="arch-component">KYC Gateway</div>
-          <div class="arch-component">Market Data Feed</div>
+          <div class="arch-component">SWIFT Alliance Access</div>
+          <div class="arch-component">Apigee API Gateway</div>
+          <div class="arch-component">MuleSoft (Bloomberg)</div>
+          <div class="arch-component">Visa/Mastercard Rails</div>
         </div>
       </div>
 
+      <!-- LAYER 5: INFRASTRUCTURE -->
       <div class="arch-layer" style="height:80px;">
         <div class="arch-layer-label">INFRASTRUCTURE</div>
         <div class="arch-layer-content">
-          <div class="arch-component">Multi-Cloud</div>
-          <div class="arch-component">DR Site</div>
-          <div class="arch-component">PCI Network</div>
-          <div class="arch-component">Observability Stack</div>
+          <div class="arch-component">AWS Multi-Region</div>
+          <div class="arch-component">Azure DR Site</div>
+          <div class="arch-component">PCI Network Segment</div>
+          <div class="arch-component">AWS GuardDuty</div>
         </div>
       </div>
 

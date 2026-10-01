@@ -2,18 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Industry Applications — Healthcare & Pharma</title>
+<title>Industry Applications — Healthcare &amp; Pharma</title>
 <link rel="stylesheet" href="global.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
-  .ia-headline { font-family: var(--font-heading); font-size: 30px; font-weight: 700; color: var(--primary); line-height: 1.2; letter-spacing: -0.015em; max-width: 1080px; }
-  .ia-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
-  .app-card { background: var(--bg-elev); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; height: 150px; display:flex; flex-direction:column; gap:8px; }
-  .app-top { display:flex; align-items:center; justify-content:space-between; }
+  .app-headline { font-family: var(--font-heading); font-size: 30px; font-weight: 700; color: var(--primary); line-height: 1.2; letter-spacing: -0.015em; max-width: 1080px; }
+  .app-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-top: 6px; }
+
+  .app-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 16px; width: 1136px; }
+  .app-card { height: 200px; padding: 22px 24px; background: var(--bg-elev); border: 1px solid var(--border); border-top: 4px solid var(--brand); border-radius: 10px; display:flex; flex-direction:column; gap:10px; }
+  .app-card.accent-top { border-top-color: var(--accent); }
+  .app-row { display:flex; align-items:center; gap:14px; }
   .app-icon { color: var(--brand); font-size: 28px !important; }
-  .app-num { font-family: var(--font-num); font-size: 14px; font-weight: 600; color: var(--accent); letter-spacing: 0.08em; }
-  .app-name { font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: var(--primary); line-height: 1.2; }
+  .app-num { font-family: var(--font-num); font-size: 13px; font-weight: 600; color: var(--accent); letter-spacing: 0.06em; margin-left: auto; }
+  .app-name { font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: var(--primary); line-height: 1.2; letter-spacing: -0.01em; }
   .app-desc { font-family: var(--font-body); font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
 </style>
 </head>
@@ -21,58 +24,62 @@
 <div class="slide" style="padding: 56px 72px 80px 72px;">
   <span class="text-wordmark" style="position:absolute; top:32px; left:72px;">KEFI TECH</span>
 
+  <!-- Header -->
   <div style="margin-top: 18px;">
-    <div class="eyebrow">INDUSTRY APPLICATIONS · HEALTHCARE &amp; PHARMA</div>
-    <h1 class="ia-headline" style="margin-top:10px;">How quality &amp; security engineering applies to healthcare &amp; pharma.</h1>
-    <p class="ia-sub" style="margin-top:8px;">Four industry-specific applications where quality &amp; security engineering creates measurable value.</p>
+    <div class="eyebrow">APPLICATIONS · HEALTHCARE &amp; PHARMA</div>
+    <h1 class="app-headline" style="margin-top:8px;">How quality &amp; security engineering applies to healthcare &amp; pharma.</h1>
+    <p class="app-sub">Four industry-specific applications with real technology platforms.</p>
   </div>
 
-  <!-- 2x2 grid -->
-  <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px;">
+  <!-- 2x2 applications grid -->
+  <div class="app-grid" style="margin-top: 22px;">
 
     <div class="app-card">
-      <div class="app-top">
+      <div class="app-row">
         <span class="material-icons app-icon">description</span>
-        <span class="app-num">I</span>
+        <span class="app-num">01</span>
       </div>
-      <div class="app-name">Clinical Document Intelligence</div>
-      <div class="app-desc">Medical records, clinical trials, regulatory submissions, claims processing at scale.</div>
+      <div class="app-name">Clinical Document Intelligence (Epic + Azure OpenAI)</div>
+      <div class="app-desc">Epic EHR clinical documentation via Azure OpenAI + Nuance DAX — discharge summaries, clinical notes.</div>
     </div>
 
     <div class="app-card">
-      <div class="app-top">
+      <div class="app-row">
         <span class="material-icons app-icon">favorite</span>
-        <span class="app-num">II</span>
+        <span class="app-num">02</span>
       </div>
-      <div class="app-name">Patient Engagement</div>
-      <div class="app-desc">Patient portals, conversational AI, care navigation, personalized health experiences.</div>
+      <div class="app-name">Patient Engagement (MyChart + Salesforce Health Cloud)</div>
+      <div class="app-desc">Patient portals, telehealth, care navigation via Epic MyChart + Salesforce Health Cloud + Twilio.</div>
     </div>
 
     <div class="app-card">
-      <div class="app-top">
+      <div class="app-row">
         <span class="material-icons app-icon">insights</span>
-        <span class="app-num">III</span>
+        <span class="app-num">03</span>
       </div>
-      <div class="app-name">Operational Decision Support</div>
-      <div class="app-desc">Resource allocation, capacity planning, staffing optimization, supply chain.</div>
+      <div class="app-name">Operational Decision Support (Epic Cogito)</div>
+      <div class="app-desc">Resource allocation, capacity planning via Epic Cogito analytics + Power BI dashboards.</div>
     </div>
 
-    <div class="app-card">
-      <div class="app-top">
+    <div class="app-card accent-top">
+      <div class="app-row">
         <span class="material-icons app-icon">science</span>
-        <span class="app-num">IV</span>
+        <span class="app-num">04</span>
       </div>
-      <div class="app-name">Research &amp; RWE</div>
-      <div class="app-desc">Clinical research support, RWE analytics, drug safety surveillance, trial recruitment.</div>
+      <div class="app-name">Research &amp; RWE (Veeva Vault + Medidata)</div>
+      <div class="app-desc">Clinical research support, RWE analytics via Veeva Vault CDMS + Medidata Clinical Cloud.</div>
     </div>
 
   </div>
 
+  <!-- Foot rail -->
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
     <span>08 / 12</span>
-    <span>INDUSTRY APPLICATIONS</span>
+    <span>APPLICATIONS</span>
   </div>
+
+  <aside data-notes aria-hidden="true" style="display:none;">none</aside>
 </div>
 </body>
 </html>

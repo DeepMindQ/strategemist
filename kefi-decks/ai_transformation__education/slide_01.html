@@ -2,84 +2,65 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Cover — AI Transformation for Education</title>
+<title>AI Transformation for Education — Cover</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="global.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
-  .cover-headline {
-    font-family: var(--font-heading);
-    font-size: var(--fs-display);
-    font-weight: 800;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-  }
-  .cover-eyebrow {
-    font-family: var(--font-body);
-    font-size: 11px;
-    letter-spacing: 0.20em;
-    text-transform: uppercase;
-    color: var(--brand);
-    font-weight: 600;
-  }
-  .cover-callout {
-    font-family: var(--font-num);
-    font-size: 12px;
-    color: var(--brand);
-    letter-spacing: 0.04em;
-    line-height: 1.4;
-    text-align: right;
-  }
-  .cover-callout-num {
-    color: var(--accent);
-    font-weight: 600;
-    margin-right: 8px;
-  }
-  .top-right-label {
-    font-family: var(--font-num);
-    font-size: 10px;
-    color: var(--text-muted);
-    letter-spacing: 0.10em;
-    text-transform: uppercase;
-  }
+  .cover-eyebrow { font-family: var(--font-body); font-size: 12px; font-weight: 600; letter-spacing: 0.20em; text-transform: uppercase; color: var(--brand); }
+  .cover-display { font-family: var(--font-heading); font-size: var(--fs-display); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; }
+  .cover-subtitle { font-family: var(--font-body); font-size: var(--fs-h3); font-weight: 400; color: var(--text-secondary); line-height: 1.45; max-width: 600px; }
+  .cover-callout-num { font-family: var(--font-num); font-size: 12px; font-weight: 600; color: var(--brand); letter-spacing: 0.10em; }
+  .cover-callout-name { font-family: var(--font-heading); font-size: 15px; font-weight: 600; color: var(--primary); line-height: 1.25; }
+  .cover-callout { display: flex; flex-direction: column; gap: 4px; }
+  .top-meta { font-family: var(--font-body); font-size: 11px; font-weight: 600; letter-spacing: 0.20em; text-transform: uppercase; color: var(--text-muted); }
 </style>
 </head>
 <body>
 <div class="slide grid-bg">
-  <div class="brand-stripe" data-decor></div>
+  <div class="brand-stripe"></div>
+  <aside data-notes hidden>none</aside>
 
   <!-- Logo top-left -->
-  <img src="assets/kefi_logo.png" class="kefi-logo-lg" style="position:absolute; top:64px; left:104px;" alt="Kefi Tech">
+  <img src="assets/kefi_logo.png" alt="Kefi Tech logo" class="kefi-logo-lg" style="position:absolute; top:64px; left:104px;">
 
-  <!-- Top-right small label -->
-  <div class="top-right-label" style="position:absolute; top:80px; right:72px;">
-    AI TRANSFORMATION SERVICES · 2026
-  </div>
+  <!-- Top-right meta -->
+  <div class="top-meta" style="position:absolute; top:80px; right:104px;">KEFI TECH · EDUCATION · 2026</div>
 
   <!-- Center-left composition -->
-  <div style="position:absolute; top:240px; left:104px; max-width:720px;">
+  <div style="position:absolute; top:240px; left:104px; max-width:680px;">
     <div class="cover-eyebrow">KEFI TECH · EDUCATION</div>
-    <h1 class="cover-headline" style="margin-top:18px; color: var(--primary);">AI Transformation</h1>
-    <h1 class="cover-headline" style="color: var(--accent);">for Education.</h1>
+    <h1 class="cover-display" style="margin-top:18px;">
+      <span style="color: var(--primary); display:block;">AI Transformation</span>
+      <span style="color: var(--accent); display:block;">for Education.</span>
+    </h1>
     <div class="accent-bar" style="margin-top:24px;"></div>
-    <p style="font-family: var(--font-body); font-size: var(--fs-h3); color: var(--text-secondary); line-height: 1.4; margin-top:20px; max-width:640px; font-weight:400;">
-      A capability brief on Kefi Tech AI Transformation Services for Education.
-    </p>
+    <p class="cover-subtitle" style="margin-top:24px;">A deep-tech capability brief on Kefi Tech AI Transformation Services for Education.</p>
   </div>
 
-  <!-- Right-side vertical hairline + callouts -->
-  <div style="position:absolute; top:200px; right:96px; height:280px; display:flex; align-items:flex-start; gap:32px;">
-    <div style="width:1px; height:280px; background: var(--border-soft);" data-decor></div>
-    <div style="display:flex; flex-direction:column; gap:36px; padding-top:6px;">
-      <div class="cover-callout"><span class="cover-callout-num">01</span>Generative AI Solutions</div>
-      <div class="cover-callout"><span class="cover-callout-num">02</span>Agentic AI &amp; Automation</div>
-      <div class="cover-callout"><span class="cover-callout-num">03</span>Enterprise Knowledge &amp; RAG</div>
+  <!-- Right vertical hairline + 3 callouts -->
+  <div style="position:absolute; top:240px; right:104px; bottom:120px; display:flex; flex-direction:row; gap:36px; align-items:flex-start;">
+    <div style="width:1px; background: var(--border-soft); align-self:stretch;"></div>
+    <div style="display:flex; flex-direction:column; gap:36px; padding-top:8px; min-width:260px;">
+      <div class="cover-callout">
+        <span class="cover-callout-num">01</span>
+        <span class="cover-callout-name">Generative AI Solutions</span>
+      </div>
+      <div class="cover-callout">
+        <span class="cover-callout-num">02</span>
+        <span class="cover-callout-name">Agentic AI &amp; Automation</span>
+      </div>
+      <div class="cover-callout">
+        <span class="cover-callout-num">03</span>
+        <span class="cover-callout-name">Enterprise Knowledge &amp; RAG</span>
+      </div>
     </div>
   </div>
 
-  <!-- Bottom rail -->
+  <!-- Foot rail -->
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
+    <span></span>
     <span>01 / 12 · AI TRANSFORMATION SERVICES</span>
   </div>
 </div>

@@ -8,82 +8,88 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
   .arch-headline { font-family: var(--font-heading); font-size: 30px; font-weight: 700; color: var(--primary); line-height: 1.2; letter-spacing: -0.015em; max-width: 1080px; }
-  .arch-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
-  .arch-layer { height: 88px; }
-  .arch-layer-content { padding: 12px 16px; }
-  .arch-component { padding: 6px 12px; font-size: 11px; font-weight: 600; }
+  .arch-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-top: 6px; }
+
+  .arch-stack { display:flex; flex-direction:column; gap: 10px; margin-top: 22px; }
+  .arch-layer { height: 78px; }
+  .arch-component { font-size: 11px; padding: 5px 10px; }
+  .arch-layer-label { font-size: 11px; }
 </style>
 </head>
 <body>
 <div class="slide" style="padding: 56px 72px 80px 72px;">
   <span class="text-wordmark" style="position:absolute; top:32px; left:72px;">KEFI TECH</span>
 
+  <!-- Header -->
   <div style="margin-top: 18px;">
-    <div class="eyebrow">REFERENCE ARCHITECTURE</div>
-    <h1 class="arch-headline" style="margin-top:10px;">A reference architecture for quality &amp; security engineering.</h1>
-    <p class="arch-sub" style="margin-top:8px;">Five layers from foundation through consumption — with industry-specific components for healthcare &amp; pharma.</p>
+    <div class="eyebrow">REFERENCE ARCHITECTURE · HEALTHCARE &amp; PHARMA</div>
+    <h1 class="arch-headline" style="margin-top:8px;">A reference architecture for quality &amp; security engineering — healthcare &amp; pharma.</h1>
+    <p class="arch-sub">Five layers with real industry technology platforms.</p>
   </div>
 
-  <!-- Stacked architecture layers -->
-  <div style="display:flex; flex-direction:column; gap: 12px; margin-top: 22px;">
+  <!-- 5-layer architecture stack -->
+  <div class="arch-stack">
 
     <div class="arch-layer">
-      <div class="arch-layer-label">STANDARDS</div>
+      <div class="arch-layer-label">Standards</div>
       <div class="arch-layer-content">
-        <span class="arch-component">HIPAA</span>
-        <span class="arch-component">HITRUST</span>
-        <span class="arch-component">FDA SaMD</span>
+        <span class="arch-component">HIPAA Security Rule</span>
+        <span class="arch-component">HITRUST CSF</span>
+        <span class="arch-component">FDA 21 CFR Part 11</span>
         <span class="arch-component">ISO 27001</span>
       </div>
     </div>
 
     <div class="arch-layer">
-      <div class="arch-layer-label">SECURITY TESTING</div>
+      <div class="arch-layer-label">Security Testing</div>
       <div class="arch-layer-content">
-        <span class="arch-component">EHR VAPT</span>
-        <span class="arch-component">Clinical SAST</span>
-        <span class="arch-component">Patient Portal DAST</span>
-        <span class="arch-component">FHIR API Pen Test</span>
+        <span class="arch-component">Veracode (SAST)</span>
+        <span class="arch-component">Burp Suite (DAST)</span>
+        <span class="arch-component">EHR VAPT (Epic)</span>
+        <span class="arch-component">Medical Device (FDA)</span>
       </div>
     </div>
 
     <div class="arch-layer">
-      <div class="arch-layer-label">PERFORMANCE</div>
+      <div class="arch-layer-label">Performance</div>
       <div class="arch-layer-content">
-        <span class="arch-component">EHR Load Test</span>
-        <span class="arch-component">Portal Performance</span>
-        <span class="arch-component">CDS Performance</span>
-        <span class="arch-component">HIE Scale</span>
+        <span class="arch-component">JMeter (Epic EHR)</span>
+        <span class="arch-component">k6 (MyChart Portal)</span>
+        <span class="arch-component">CDS Hooks Perf</span>
+        <span class="arch-component">DICOM Throughput</span>
       </div>
     </div>
 
     <div class="arch-layer">
-      <div class="arch-layer-label">AUTOMATION</div>
+      <div class="arch-layer-label">Automation</div>
       <div class="arch-layer-content">
-        <span class="arch-component">EHR Functional</span>
-        <span class="arch-component">Clinical Workflow Auto</span>
-        <span class="arch-component">Patient Portal Auto</span>
-        <span class="arch-component">FHIR Contract</span>
+        <span class="arch-component">Epic Cypress (Functional)</span>
+        <span class="arch-component">Selenium (Workflows)</span>
+        <span class="arch-component">Appium (MyChart)</span>
+        <span class="arch-component">Postman (FHIR)</span>
       </div>
     </div>
 
     <div class="arch-layer">
-      <div class="arch-layer-label">OPERATIONS</div>
+      <div class="arch-layer-label">Operations</div>
       <div class="arch-layer-content">
-        <span class="arch-component">HIPAA CI/CD</span>
-        <span class="arch-component">Clinical Monitoring</span>
-        <span class="arch-component">Patient Safety IR</span>
+        <span class="arch-component">GitLab CI (HIPAA)</span>
+        <span class="arch-component">Datadog (Monitoring)</span>
+        <span class="arch-component">PagerDuty (Patient Safety)</span>
         <span class="arch-component">HITRUST Audit</span>
       </div>
     </div>
 
   </div>
 
+  <!-- Foot rail -->
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
     <span>09 / 12</span>
     <span>ARCHITECTURE</span>
   </div>
+
+  <aside data-notes aria-hidden="true" style="display:none;">none</aside>
 </div>
 </body>
 </html>
