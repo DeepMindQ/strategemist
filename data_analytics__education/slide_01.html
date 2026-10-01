@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cover — Data Analytics &amp; Data Engineering for Education</title>
+<link rel="stylesheet" href="global.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+  .cover { padding: 0 !important; }
+  .cover-headline {
+    font-family: var(--font-heading);
+    font-size: var(--fs-display);
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+    margin: 0;
+  }
+  .cover-headline .l1 { color: var(--primary); font-weight: 800; display: block; }
+  .cover-headline .l2 { color: var(--accent); font-weight: 700; display: block; }
+  .cover-sub {
+    font-family: var(--font-body);
+    font-size: var(--fs-h3);
+    color: var(--text-secondary);
+    line-height: 1.45;
+    max-width: 580px;
+    margin: 22px 0 0;
+    font-weight: 400;
+  }
+  .top-right-label {
+    position: absolute;
+    top: 80px;
+    right: 104px;
+    font-family: var(--font-num);
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .center-block {
+    position: absolute;
+    top: 250px;
+    left: 104px;
+    right: 480px;
+  }
+  .right-rail {
+    position: absolute;
+    top: 250px;
+    bottom: 200px;
+    left: 70%;
+    width: 1px;
+    background: var(--border-strong);
+  }
+  .right-callouts {
+    position: absolute;
+    top: 250px;
+    left: calc(70% + 28px);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    font-family: var(--font-num);
+    font-size: 13px;
+    color: var(--brand);
+    letter-spacing: 0.16em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .right-callouts .row { display: flex; align-items: baseline; gap: 10px; }
+  .right-callouts .num { color: var(--accent); font-weight: 700; }
+  .logo-anchor { position: absolute; top: 64px; left: 104px; }
+</style>
+</head>
+<body>
+<div class="slide cover grid-bg">
+  <div class="brand-stripe" data-decor aria-hidden="true"></div>
+
+  <img src="assets/kefi_logo.png" class="kefi-logo-lg logo-anchor" alt="KEFI TECH">
+
+  <div class="top-right-label">DATA ANALYTICS AND DATA ENGINEERING SERVICES · 2026</div>
+
+  <div class="center-block">
+    <div class="eyebrow" style="margin-bottom:20px;">KEFI TECH · EDUCATION</div>
+    <h1 class="cover-headline">
+      <span class="l1">Data Analytics &amp; Data Engineering</span>
+      <span class="l2">for Education.</span>
+    </h1>
+    <div class="accent-bar" style="margin-top:26px;"></div>
+    <p class="cover-sub">A capability brief on Kefi Tech Data Analytics &amp; Data Engineering Services for Education.</p>
+  </div>
+
+  <div class="right-rail" data-decor aria-hidden="true"></div>
+  <div class="right-callouts">
+    <div class="row"><span class="num">01</span><span>Data</span></div>
+    <div class="row"><span class="num">02</span><span>Data</span></div>
+    <div class="row"><span class="num">03</span><span>Data</span></div>
+  </div>
+
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>01 / 12 · DATA ANALYTICS AND DATA ENGINEERING SERVICES</span>
+  </div>
+</div>
+</body>
+</html>

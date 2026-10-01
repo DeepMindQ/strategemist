@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Capability 03 — Enterprise Knowledge &amp; RAG</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="global.css">
+<style>
+  .slide { padding: 0; }
+  .top-bar { position: absolute; top: 40px; left: 72px; right: 72px; display: flex; justify-content: space-between; align-items: center; }
+  .head-block { position: absolute; top: 92px; left: 72px; right: 72px; }
+  .head-eyebrow { font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--brand); letter-spacing: 0.20em; text-transform: uppercase; }
+  .head-h { font-family: var(--font-heading); font-weight: 700; font-size: 36px; color: var(--primary); line-height: 1.15; letter-spacing: -0.01em; margin-top: 10px; }
+  .head-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-top: 8px; max-width: 980px; }
+
+  .columns { position: absolute; top: 224px; left: 72px; right: 72px; display: grid; grid-template-columns: 55fr 45fr; gap: 24px; height: 360px; }
+
+  .panel { padding: 22px 24px; display: flex; flex-direction: column; gap: 14px; }
+  .panel-eyebrow { font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+  .panel-eyebrow.brand { color: var(--brand); }
+  .panel-eyebrow.brand-light { color: var(--brand-light); }
+
+  .left-body { font-family: var(--font-body); font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+  .left-tag-row { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--border); display: flex; gap: 8px; }
+
+  .comp-list { display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .comp-card {
+    display: grid; grid-template-columns: 28px 24px 1fr; gap: 10px; align-items: flex-start;
+    padding: 9px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+  }
+  .comp-num { font-family: var(--font-num); font-size: 11px; color: var(--brand); font-weight: 600; letter-spacing: 0.06em; line-height: 1; padding-top: 4px; }
+  .comp-icon { font-size: 18px !important; color: var(--brand-light); }
+  .comp-name { font-family: var(--font-heading); font-size: 12px; font-weight: 600; color: var(--primary); line-height: 1.2; }
+  .comp-desc { font-family: var(--font-body); font-size: 10px; color: var(--text-secondary); line-height: 1.4; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="brand-stripe-thin"></div>
+
+  <div class="top-bar">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span style="font-family:var(--font-num); font-size:10px; color:var(--text-muted); letter-spacing:0.16em;">AI TRANSFORMATION · MANUFACTURING</span>
+  </div>
+
+  <div class="head-block">
+    <div class="head-eyebrow">CAPABILITY 03</div>
+    <h1 class="head-h">Enterprise Knowledge &amp; RAG.</h1>
+    <p class="head-sub">RAG applications, enterprise search, vector search, knowledge assistants.</p>
+  </div>
+
+  <div class="columns">
+    <div class="surface-elev panel">
+      <div class="panel-eyebrow brand">WHAT WE DO</div>
+      <p class="left-body">
+        Our enterprise knowledge &amp; rag capability is engineered for manufacturing environments. We bring together the ai transformation discipline, the manufacturing domain context, and the engineering rigor required to ship production-grade solutions.
+      </p>
+      <div class="left-tag-row">
+        <span class="tag-pill">CAPABILITY 3 OF 6</span>
+      </div>
+    </div>
+
+    <div class="surface-elev panel">
+      <div class="panel-eyebrow brand-light">COMPONENTS</div>
+      <div class="comp-list">
+        <div class="comp-card">
+          <div class="comp-num">01</div>
+          <span class="material-icons comp-icon">menu_book</span>
+          <div>
+            <div class="comp-name">Component 1</div>
+            <div class="comp-desc">Industry-specific component 1 for manufacturing.</div>
+          </div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-num">02</div>
+          <span class="material-icons comp-icon">menu_book</span>
+          <div>
+            <div class="comp-name">Component 2</div>
+            <div class="comp-desc">Industry-specific component 2 for manufacturing.</div>
+          </div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-num">03</div>
+          <span class="material-icons comp-icon">menu_book</span>
+          <div>
+            <div class="comp-name">Component 3</div>
+            <div class="comp-desc">Industry-specific component 3 for manufacturing.</div>
+          </div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-num">04</div>
+          <span class="material-icons comp-icon">menu_book</span>
+          <div>
+            <div class="comp-name">Component 4</div>
+            <div class="comp-desc">Industry-specific component 4 for manufacturing.</div>
+          </div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-num">05</div>
+          <span class="material-icons comp-icon">menu_book</span>
+          <div>
+            <div class="comp-name">Component 5</div>
+            <div class="comp-desc">Industry-specific component 5 for manufacturing.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>06 / 12</span>
+    <span>ENTERPRISE KNOWLEDGE &amp; RAG</span>
+  </div>
+</div>
+</body>
+</html>

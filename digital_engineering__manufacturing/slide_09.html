@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reference Architecture</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="global.css">
+<style>
+  .arch-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 18px;
+  }
+  .arch-layer {
+    height: 78px;
+  }
+  .arch-layer-label {
+    font-family: var(--font-heading);
+    font-size: 12px;
+  }
+  .arch-component {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="brand-stripe-thin"></div>
+
+  <div style="position:absolute; top:64px; left:72px;">
+    <span class="text-wordmark">KEFI TECH</span>
+  </div>
+
+  <div style="margin-top:32px;">
+    <div class="eyebrow">REFERENCE ARCHITECTURE</div>
+    <h1 style="font-family:var(--font-heading); font-size:30px; font-weight:700; color:var(--primary); line-height:1.18; letter-spacing:-0.01em; margin-top:10px;">
+      A reference architecture for digital engineering &amp; transformation.
+    </h1>
+    <p style="font-family:var(--font-body); font-size:14px; color:var(--text-secondary); line-height:1.5; margin-top:8px;">
+      Five layers from foundation through consumption.
+    </p>
+  </div>
+
+  <div class="arch-stack">
+    <div class="arch-layer">
+      <div class="arch-layer-label">EXPERIENCE</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Web</span>
+        <span class="arch-component">Mobile</span>
+        <span class="arch-component">Portals</span>
+        <span class="arch-component">Design Systems</span>
+      </div>
+    </div>
+    <div class="arch-layer">
+      <div class="arch-layer-label">APPLICATION</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Microservices</span>
+        <span class="arch-component">APIs</span>
+        <span class="arch-component">Custom Apps</span>
+        <span class="arch-component">ERP Modules</span>
+      </div>
+    </div>
+    <div class="arch-layer">
+      <div class="arch-layer-label">PLATFORM</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">CI/CD</span>
+        <span class="arch-component">Containers</span>
+        <span class="arch-component">Serverless</span>
+        <span class="arch-component">Platform Engineering</span>
+      </div>
+    </div>
+    <div class="arch-layer">
+      <div class="arch-layer-label">INTEGRATION</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">API Gateway</span>
+        <span class="arch-component">Event Bus</span>
+        <span class="arch-component">Middleware</span>
+        <span class="arch-component">Integration Hub</span>
+      </div>
+    </div>
+    <div class="arch-layer">
+      <div class="arch-layer-label">INFRASTRUCTURE</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Cloud</span>
+        <span class="arch-component">Kubernetes</span>
+        <span class="arch-component">Edge</span>
+        <span class="arch-component">Observability</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>09 / 12</span>
+    <span>ARCHITECTURE</span>
+  </div>
+</div>
+</body>
+</html>

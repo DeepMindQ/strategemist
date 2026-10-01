@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Industry Applications — Manufacturing</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="global.css">
+<style>
+  .app-card {
+    padding: 20px 22px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    height: 158px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .app-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .app-icon {
+    font-size: 28px !important;
+    color: var(--brand);
+  }
+  .app-num {
+    font-family: var(--font-num);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.10em;
+  }
+  .app-name {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.2;
+  }
+  .app-desc {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="brand-stripe-thin"></div>
+
+  <div style="position:absolute; top:64px; left:72px;">
+    <span class="text-wordmark">KEFI TECH</span>
+  </div>
+
+  <div style="margin-top:32px;">
+    <div class="eyebrow">INDUSTRY APPLICATIONS · MANUFACTURING</div>
+    <h1 style="font-family:var(--font-heading); font-size:30px; font-weight:700; color:var(--primary); line-height:1.18; letter-spacing:-0.01em; margin-top:10px; max-width:1100px;">
+      How digital engineering &amp; transformation applies to manufacturing.
+    </h1>
+    <p style="font-family:var(--font-body); font-size:14px; color:var(--text-secondary); line-height:1.5; margin-top:8px;">
+      Four industry-specific applications where digital engineering &amp; transformation creates measurable value.
+    </p>
+  </div>
+
+  <!-- 2x2 application grid -->
+  <div style="display:grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap:16px; margin-top:24px;">
+    <div class="app-card">
+      <div class="app-top">
+        <span class="material-icons app-icon">visibility</span>
+        <span class="app-num">I</span>
+      </div>
+      <div class="app-name">Computer Vision</div>
+      <div class="app-desc">Defect detection, visual inspection, safety monitoring, production line analytics.</div>
+    </div>
+
+    <div class="app-card">
+      <div class="app-top">
+        <span class="material-icons app-icon">build</span>
+        <span class="app-num">II</span>
+      </div>
+      <div class="app-name">Predictive Maintenance</div>
+      <div class="app-desc">Equipment health monitoring, failure prediction, maintenance scheduling optimization.</div>
+    </div>
+
+    <div class="app-card">
+      <div class="app-top">
+        <span class="material-icons app-icon">local_shipping</span>
+        <span class="app-num">III</span>
+      </div>
+      <div class="app-name">Supply Chain Intelligence</div>
+      <div class="app-desc">Demand forecasting, inventory optimization, supplier risk, logistics visibility.</div>
+    </div>
+
+    <div class="app-card">
+      <div class="app-top">
+        <span class="material-icons app-icon">engineering</span>
+        <span class="app-num">IV</span>
+      </div>
+      <div class="app-name">Operational Copilots</div>
+      <div class="app-desc">Floor-worker assistants, knowledge access, workflow automation, quality intelligence.</div>
+    </div>
+  </div>
+
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>08 / 12</span>
+    <span>INDUSTRY APPLICATIONS</span>
+  </div>
+</div>
+</body>
+</html>

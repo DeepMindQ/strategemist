@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Closing — Kefi Tech</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="global.css">
+<style>
+  .closing-display {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+  }
+  .closing-eyebrow {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--brand);
+  }
+  .contact-line {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  .right-callouts {
+    font-family: var(--font-num);
+    font-size: 14px;
+    color: var(--brand);
+    letter-spacing: 0.10em;
+    font-weight: 600;
+    text-align: right;
+  }
+</style>
+</head>
+<body>
+<div class="slide grid-bg">
+  <div class="brand-stripe"></div>
+
+  <!-- Top-left logo -->
+  <img src="assets/kefi_logo.png" class="kefi-logo-lg" style="position:absolute; top:96px; left:104px;" alt="Kefi Tech">
+
+  <!-- Center-left composition -->
+  <div style="position:absolute; top:248px; left:104px; width:760px;">
+    <div class="closing-eyebrow">Get in Touch</div>
+    <h1 class="closing-display" style="margin-top:16px;">
+      <span style="display:block; color: var(--primary);">Let us engineer</span>
+      <span style="display:block; color: var(--accent);">what is next.</span>
+    </h1>
+    <div style="margin-top:32px;">
+      <div class="contact-line">info@kefitech.com  ·  www.kefitech.com</div>
+      <div class="contact-line">Bengaluru, India  ·  Hyderabad, India</div>
+    </div>
+  </div>
+
+  <!-- Right vertical hairline + callouts -->
+  <div style="position:absolute; top:248px; right:104px; width:200px; height:240px; display:grid; grid-template-rows: 1fr 1fr 1fr; align-items:center; border-left:1px solid var(--border); padding-left:28px;">
+    <div class="right-callouts">Discover.</div>
+    <div class="right-callouts">Engineer.</div>
+    <div class="right-callouts" style="color: var(--accent);">Scale.</div>
+  </div>
+
+  <!-- Foot rail -->
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>12 / 12</span>
+    <span>info@kefitech.com · www.kefitech.com</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cover — Digital Engineering & Transformation for Manufacturing</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="global.css">
+<style>
+  .cover-headline {
+    font-family: var(--font-heading);
+    font-size: var(--fs-display);
+    font-weight: 800;
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+  }
+  .top-right-meta {
+    font-family: var(--font-num);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .vertical-hairline {
+    position: absolute;
+    top: 200px;
+    bottom: 120px;
+    left: 70%;
+    width: 1px;
+    background: var(--border-strong);
+  }
+  .vertical-callouts {
+    position: absolute;
+    top: 240px;
+    left: calc(70% + 32px);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    font-family: var(--font-num);
+    font-size: 13px;
+    color: var(--brand);
+    font-weight: 500;
+    letter-spacing: 0.10em;
+  }
+  .vertical-callouts .num {
+    color: var(--text-muted);
+    margin-right: 8px;
+  }
+</style>
+</head>
+<body>
+<div class="slide grid-bg">
+  <div class="brand-stripe"></div>
+
+  <!-- Logo top-left -->
+  <img src="assets/kefi_logo.png" class="kefi-logo-lg" style="position:absolute; top:64px; left:104px;" alt="Kefi Tech">
+
+  <!-- Top-right meta -->
+  <div class="top-right-meta" style="position:absolute; top:80px; right:72px;">
+    DIGITAL ENGINEERING AND TRANSFORMATION SERVICES · 2026
+  </div>
+
+  <!-- Center-left composition -->
+  <div style="position:absolute; top:240px; left:104px; max-width:780px;">
+    <div class="eyebrow" style="color:var(--brand); margin-bottom:18px;">KEFI TECH · MANUFACTURING</div>
+    <h1 class="cover-headline">
+      <span style="display:block; color:var(--primary);">Digital Engineering &amp; Transformation</span>
+      <span style="display:block; color:var(--accent);">for Manufacturing.</span>
+    </h1>
+    <div class="accent-bar" style="margin-top:24px;"></div>
+    <p style="font-family:var(--font-body); font-size:var(--fs-h3); color:var(--text-secondary); line-height:1.45; margin-top:20px; max-width:640px; font-weight:400;">
+      A capability brief on Kefi Tech Digital Engineering &amp; Transformation Services for Manufacturing.
+    </p>
+  </div>
+
+  <!-- Right vertical hairline + callouts -->
+  <div class="vertical-hairline"></div>
+  <div class="vertical-callouts">
+    <div><span class="num">01</span>Product</div>
+    <div><span class="num">02</span>Cloud-Native</div>
+    <div><span class="num">03</span>Application</div>
+  </div>
+
+  <!-- Foot rail -->
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>01 / 12 · DIGITAL ENGINEERING AND TRANSFORMATION SERVICES</span>
+  </div>
+</div>
+</body>
+</html>

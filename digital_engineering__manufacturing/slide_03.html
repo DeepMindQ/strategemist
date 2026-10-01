@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Digital Engineering & Transformation — Capability Overview</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="global.css">
+<style>
+  .lifecycle-stage {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    min-height: 70px;
+  }
+  .lifecycle-icon {
+    font-size: 24px !important;
+    color: var(--brand);
+  }
+  .lifecycle-name {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: 0.04em;
+  }
+  .lifecycle-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    color: var(--accent);
+    font-size: 22px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .pillar-card {
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    height: 116px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .pillar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .pillar-icon {
+    font-size: 22px !important;
+    color: var(--brand);
+  }
+  .pillar-num {
+    font-family: var(--font-num);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.10em;
+  }
+  .pillar-name {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1.2;
+  }
+  .pillar-desc {
+    font-family: var(--font-body);
+    font-size: 11px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="brand-stripe-thin"></div>
+
+  <div style="position:absolute; top:64px; left:72px;">
+    <span class="text-wordmark">KEFI TECH</span>
+  </div>
+
+  <div style="margin-top:32px;">
+    <div class="eyebrow">CAPABILITIES</div>
+    <h1 style="font-family:var(--font-heading); font-size:30px; font-weight:700; color:var(--primary); line-height:1.18; letter-spacing:-0.01em; margin-top:10px;">
+      Digital Engineering &amp; Transformation across the complete lifecycle.
+    </h1>
+    <p style="font-family:var(--font-body); font-size:14px; color:var(--text-secondary); line-height:1.5; margin-top:8px;">
+      Six capability pillars covering the full digital engineering &amp; transformation spectrum.
+    </p>
+  </div>
+
+  <!-- Lifecycle flow -->
+  <div style="display:flex; align-items:stretch; gap:0; margin-top:18px;">
+    <div class="lifecycle-stage">
+      <span class="material-icons lifecycle-icon">lightbulb</span>
+      <span class="lifecycle-name">STRATEGY</span>
+    </div>
+    <div class="lifecycle-arrow">►</div>
+    <div class="lifecycle-stage">
+      <span class="material-icons lifecycle-icon">engineering</span>
+      <span class="lifecycle-name">BUILD</span>
+    </div>
+    <div class="lifecycle-arrow">►</div>
+    <div class="lifecycle-stage">
+      <span class="material-icons lifecycle-icon">integration_instructions</span>
+      <span class="lifecycle-name">INTEGRATE</span>
+    </div>
+    <div class="lifecycle-arrow">►</div>
+    <div class="lifecycle-stage">
+      <span class="material-icons lifecycle-icon">monitoring</span>
+      <span class="lifecycle-name">OPERATE</span>
+    </div>
+  </div>
+
+  <!-- 6 capability pillars grid -->
+  <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; margin-top:14px;">
+    <div class="pillar-card">
+      <div class="pillar-top">
+        <span class="material-icons pillar-icon">inventory_2</span>
+        <span class="pillar-num">01</span>
+      </div>
+      <div class="pillar-name">Product &amp; Platform Engineering</div>
+      <div class="pillar-desc">End-to-end product development, SaaS platforms, MVP development, product modernization.</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-top">
+        <span class="material-icons pillar-icon">cloud</span>
+        <span class="pillar-num">02</span>
+      </div>
+      <div class="pillar-name">Cloud-Native &amp; Platform Engineering</div>
+      <div class="pillar-desc">Cloud-native applications, microservices, containers, serverless, platform engineering.</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-top">
+        <span class="material-icons pillar-icon">cached</span>
+        <span class="pillar-num">03</span>
+      </div>
+      <div class="pillar-name">Application Modernization</div>
+      <div class="pillar-desc">Legacy modernization, monolith-to-microservices, technology migration, cloud-native modernization.</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-top">
+        <span class="material-icons pillar-icon">api</span>
+        <span class="pillar-num">04</span>
+      </div>
+      <div class="pillar-name">API &amp; Integration Engineering</div>
+      <div class="pillar-desc">API development, microservices, enterprise integrations, middleware, system interoperability.</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-top">
+        <span class="material-icons pillar-icon">design_services</span>
+        <span class="pillar-num">05</span>
+      </div>
+      <div class="pillar-name">UI/UX &amp; Experience Engineering</div>
+      <div class="pillar-desc">UX strategy, user research, information architecture, interaction design, design systems.</div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-top">
+        <span class="material-icons pillar-icon">hub</span>
+        <span class="pillar-num">06</span>
+      </div>
+      <div class="pillar-name">DevSecOps &amp; Engineering Consulting</div>
+      <div class="pillar-desc">CI/CD pipelines, DevOps/DevSecOps, solution architecture, engineering standards, scalability.</div>
+    </div>
+  </div>
+
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>03 / 12</span>
+    <span>CAPABILITIES</span>
+  </div>
+</div>
+</body>
+</html>

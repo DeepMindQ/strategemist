@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Industry Applications — Education</title>
+<link rel="stylesheet" href="global.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+  .slide { padding: 56px 72px 0; }
+  .top-bar { display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; }
+  .top-meta { font-family: var(--font-num); font-size:11px; color:var(--text-muted); letter-spacing:0.16em; text-transform:uppercase; }
+  .headline { font-family: var(--font-heading); font-size: 28px; font-weight:700; color:var(--primary); line-height:1.25; letter-spacing:-0.01em; margin: 4px 0 6px; max-width: 1000px; }
+  .sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; max-width: 1000px; }
+
+  .apps-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 16px;
+    margin-top: 22px;
+    height: 360px;
+  }
+  .app-card {
+    padding: 20px 22px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .app-top { display: flex; align-items: center; justify-content: space-between; }
+  .app-icon { font-size: 28px !important; color: var(--brand); }
+  .app-num { font-family: var(--font-num); font-size: 14px; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; }
+  .app-name { font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: var(--primary); line-height: 1.2; }
+  .app-desc { font-family: var(--font-body); font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="top-bar">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span class="top-meta">INDUSTRY APPLICATIONS · 08</span>
+  </div>
+
+  <div class="eyebrow">INDUSTRY APPLICATIONS · EDUCATION</div>
+  <h2 class="headline">How data analytics &amp; data engineering applies to education.</h2>
+  <p class="sub">Four industry-specific applications where data analytics &amp; data engineering creates measurable value.</p>
+
+  <div class="apps-grid">
+    <div class="app-card">
+      <div class="app-top">
+        <span class="material-icons app-icon">school</span>
+        <span class="app-num">I</span>
+      </div>
+      <div class="app-name">Student &amp; Faculty Assistants</div>
+      <div class="app-desc">AI assistants for student services, faculty support, research help, academic advising.</div>
+    </div>
+
+    <div class="app-card">
+      <div class="app-top">
+        <span class="material-icons app-icon">menu_book</span>
+        <span class="app-num">II</span>
+      </div>
+      <div class="app-name">Institutional Knowledge Systems</div>
+      <div class="app-desc">Enterprise search, RAG, document intelligence across academic and administrative systems.</div>
+    </div>
+
+    <div class="app-card">
+      <div class="app-top">
+        <span class="material-icons app-icon">account_circle</span>
+        <span class="app-num">III</span>
+      </div>
+      <div class="app-name">Student Lifecycle Platform</div>
+      <div class="app-desc">Admissions, enrollment, progression, retention, alumni — unified digital experience.</div>
+    </div>
+
+    <div class="app-card">
+      <div class="app-top">
+        <span class="material-icons app-icon">analytics</span>
+        <span class="app-num">IV</span>
+      </div>
+      <div class="app-name">Predictive Insights</div>
+      <div class="app-desc">At-risk student identification, enrollment forecasting, resource planning, outcomes analytics.</div>
+    </div>
+  </div>
+
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>08 / 12</span>
+    <span>INDUSTRY APPLICATIONS</span>
+  </div>
+</div>
+</body>
+</html>

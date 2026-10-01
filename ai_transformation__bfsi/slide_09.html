@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reference Architecture</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="global.css">
+<style>
+  .headline {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-top: 8px;
+  }
+  .arch-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .arch-layer {
+    height: 78px;
+  }
+  .arch-layer-label {
+    width: 130px;
+    font-size: 12px;
+  }
+  .arch-component {
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="brand-stripe-thin"></div>
+
+  <div style="position:absolute; top:48px; left:72px;"><span class="text-wordmark">KEFI TECH</span></div>
+
+  <div style="position:absolute; top:96px; left:72px; right:72px;">
+    <div class="eyebrow">Reference Architecture</div>
+    <h1 class="headline" style="margin-top:10px;">A reference architecture for AI Transformation.</h1>
+    <p class="subtitle">Five layers from foundation through consumption.</p>
+  </div>
+
+  <div style="position:absolute; top:218px; left:72px; right:72px;" class="arch-stack">
+    <div class="arch-layer">
+      <div class="arch-layer-label">Application</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Copilots</span>
+        <span class="arch-component">Assistants</span>
+        <span class="arch-component">Agents</span>
+        <span class="arch-component">Workflows</span>
+      </div>
+    </div>
+    <div class="arch-layer">
+      <div class="arch-layer-label">Orchestration</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">RAG</span>
+        <span class="arch-component">Function Calling</span>
+        <span class="arch-component">Multi-Agent Orchestration</span>
+        <span class="arch-component">Evaluation Harnesses</span>
+      </div>
+    </div>
+    <div class="arch-layer">
+      <div class="arch-layer-label">Models</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">LLMs</span>
+        <span class="arch-component">Embedding Models</span>
+        <span class="arch-component">ML Models</span>
+        <span class="arch-component">Fine-Tuned Models</span>
+      </div>
+    </div>
+    <div class="arch-layer">
+      <div class="arch-layer-label">Data</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Vector Stores</span>
+        <span class="arch-component">Knowledge Bases</span>
+        <span class="arch-component">Enterprise Data</span>
+        <span class="arch-component">Document Pipelines</span>
+      </div>
+    </div>
+    <div class="arch-layer">
+      <div class="arch-layer-label">Platform</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">LLMOps</span>
+        <span class="arch-component">Monitoring</span>
+        <span class="arch-component">Governance</span>
+        <span class="arch-component">Security</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>09 / 12</span>
+    <span>Architecture</span>
+  </div>
+</div>
+</body>
+</html>
