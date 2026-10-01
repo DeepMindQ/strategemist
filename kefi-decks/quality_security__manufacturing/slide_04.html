@@ -7,22 +7,21 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="global.css">
 <style>
-  .slide { padding: 48px 72px; }
+  .slide { padding: 44px 72px; }
   .top-bar { display: flex; justify-content: space-between; align-items: center; }
-  .head-block { margin-top: 12px; max-width: 1080px; }
-  .headline { font-family: var(--font-heading); font-size: 30px; font-weight: 700; line-height: 1.18; color: var(--primary); letter-spacing: -0.015em; margin-top: 6px; }
+  .head-block { margin-top: 12px; max-width: 1100px; }
+  .headline { font-family: var(--font-heading); font-size: 30px; font-weight: 700; line-height: 1.2; color: var(--primary); letter-spacing: -0.015em; margin-top: 6px; }
   .subtitle { font-family: var(--font-body); font-size: 13px; line-height: 1.55; color: var(--text-secondary); margin-top: 8px; max-width: 980px; }
-  .two-col { display: grid; grid-template-columns: 1.22fr 1fr; gap: 24px; margin-top: 22px; }
-  /* FIX 2 — panel height 400px to fit all 5 cards */
-  .panel { padding: 22px 24px; height: 400px; display: flex; flex-direction: column; }
+
+  .two-col { display: grid; grid-template-columns: 55fr 45fr; gap: 22px; margin-top: 18px; }
+  .panel { padding: 20px 22px; height: 400px; display: flex; flex-direction: column; }
   .panel-eyebrow { font-family: var(--font-body); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; }
   .panel-eyebrow.brand { color: var(--brand); }
   .panel-eyebrow.brand-light { color: var(--brand-light); }
   .left-body { font-family: var(--font-body); font-size: 13px; line-height: 1.7; color: var(--text-secondary); margin-top: 16px; }
   .tag-pill { margin-top: auto; align-self: flex-start; }
 
-  .component-list { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
-  /* FIX 2 — card padding 7px so 5th card fully visible inside 400px panel */
+  .component-list { display: flex; flex-direction: column; gap: 7px; margin-top: 12px; }
   .component-card { display: grid; grid-template-columns: 22px 22px 1fr; gap: 10px; align-items: flex-start; padding: 7px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; }
   .comp-num { font-family: var(--font-num); font-size: 11px; font-weight: 600; color: var(--brand); letter-spacing: 0.04em; padding-top: 1px; }
   .comp-icon { color: var(--brand-light); font-size: 18px !important; }
@@ -38,61 +37,61 @@
   </div>
 
   <div class="head-block">
-    <span class="eyebrow">CAPABILITY 01</span>
+    <span class="eyebrow">CAPABILITY 01 · MANUFACTURING</span>
     <h1 class="headline">Application Security &amp; DevSecOps.</h1>
-    <p class="subtitle">SAST, DAST, SCA, secure code review, CI/CD pipeline security, OWASP, NIST, SANS.</p>
+    <p class="subtitle">SAST for PLC logic, DAST for Ignition/MES web UIs, Claroty/Nozomi ICS vulnerability scanning.</p>
   </div>
 
   <div class="two-col">
     <!-- LEFT — WHAT WE DO -->
     <div class="surface-elev panel">
       <span class="panel-eyebrow brand">WHAT WE DO</span>
-      <p class="left-body">Our application security &amp; devsecops capability is engineered for manufacturing environments. We bring together the quality &amp; security engineering discipline, the manufacturing domain context, and the engineering rigor required to ship production-grade solutions.</p>
-      <span class="tag-pill">CAPABILITY 1 OF 6</span>
+      <p class="left-body">Our application security &amp; devsecops capability is engineered for manufacturing environments. We work with Siemens Opcenter, SAP S/4HANA, AWS IoT SiteWise, Ignition SCADA, and NVIDIA Jetson edge — not generic platforms. Every sub-service below is aligned to ISA-95 hierarchy and IEC 62443 security.</p>
+      <span class="tag-pill">CAPABILITY 1 OF 6 · MANUFACTURING</span>
     </div>
 
-    <!-- RIGHT — COMPONENTS -->
+    <!-- RIGHT — SUB-SERVICES -->
     <div class="surface-elev panel">
-      <span class="panel-eyebrow brand-light">COMPONENTS</span>
+      <span class="panel-eyebrow brand-light">SUB-SERVICES</span>
       <div class="component-list">
         <div class="component-card">
           <span class="comp-num">01</span>
           <span class="material-icons comp-icon">security</span>
           <div>
-            <div class="comp-name">OT/IT Security Scanning</div>
-            <div class="comp-desc">Static and dynamic analysis tuned for OT/IT convergence — IEC 62443 patterns.</div>
+            <div class="comp-name">SAST for Industrial Codebases (OT-Aware)</div>
+            <div class="comp-desc">Static analysis tuned for OT code — PLC logic (Siemens TIA Portal), SCADA scripts (Ignition), MES APIs — per IEC 62443-4-1.</div>
           </div>
         </div>
         <div class="component-card">
           <span class="comp-num">02</span>
           <span class="material-icons comp-icon">security</span>
           <div>
-            <div class="comp-name">MES Secure Code Review</div>
-            <div class="comp-desc">Manual review of MES code — production data flows, equipment control logic.</div>
+            <div class="comp-name">DAST for MES &amp; SCADA Web Interfaces</div>
+            <div class="comp-desc">Dynamic testing of Ignition Perspective, Siemens Opcenter web UIs — OWASP Top 10 + ICS-specific (CWE-1214 ICS).</div>
           </div>
         </div>
         <div class="component-card">
           <span class="comp-num">03</span>
           <span class="material-icons comp-icon">security</span>
           <div>
-            <div class="comp-name">CI/CD for Industrial Software</div>
-            <div class="comp-desc">Pipeline-embedded security gates for industrial software — including OT change management.</div>
+            <div class="comp-name">Secure Code Review for PLC/SCADA</div>
+            <div class="comp-desc">Manual review of PLC ladder logic (IEC 61131-3) and SCADA scripts — injection, authentication bypass, unsafe states.</div>
           </div>
         </div>
         <div class="component-card">
           <span class="comp-num">04</span>
           <span class="material-icons comp-icon">security</span>
           <div>
-            <div class="comp-name">IIoT Device Security Testing</div>
-            <div class="comp-desc">Security testing of IoT devices on the factory floor — firmware, network, physical.</div>
+            <div class="comp-name">CI/CD Security Gates for Industrial Software</div>
+            <div class="comp-desc">GitLab CI pipeline with SAST (SonarQube), SCA (Snyk), secrets scanning, and IEC 62443 compliance checks.</div>
           </div>
         </div>
         <div class="component-card">
           <span class="comp-num">05</span>
           <span class="material-icons comp-icon">security</span>
           <div>
-            <div class="comp-name">IEC 62443 Compliance Scanning</div>
-            <div class="comp-desc">Continuous scanning aligned to IEC 62443 industrial cybersecurity standards.</div>
+            <div class="comp-name">ICS Vulnerability Scanning (Claroty / Nozomi)</div>
+            <div class="comp-desc">Continuous passive scanning of OT network via Claroty xDome / Nozomi Guardian — ICS CVE detection without disruption.</div>
           </div>
         </div>
       </div>

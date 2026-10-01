@@ -9,13 +9,13 @@
 <style>
   .slide { padding: 0; }
   .top-bar { position: absolute; top: 40px; left: 72px; right: 72px; display: flex; justify-content: space-between; align-items: center; }
-  .head-block { position: absolute; top: 92px; left: 72px; right: 72px; }
+  .head-block { position: absolute; top: 88px; left: 72px; right: 72px; }
   .head-eyebrow { font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--brand); letter-spacing: 0.20em; text-transform: uppercase; }
   .head-h { font-family: var(--font-heading); font-weight: 700; font-size: 30px; color: var(--primary); line-height: 1.2; letter-spacing: -0.01em; margin-top: 12px; }
   .head-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-top: 8px; }
 
   /* Lifecycle flow */
-  .lifecycle { position: absolute; top: 224px; left: 72px; right: 72px; height: 78px; display: flex; align-items: stretch; gap: 0; }
+  .lifecycle { position: absolute; top: 224px; left: 72px; right: 72px; height: 84px; display: flex; align-items: stretch; gap: 0; }
   .lc-stage {
     flex: 1; display: flex; align-items: center; justify-content: center; gap: 12px;
     background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
@@ -27,7 +27,7 @@
 
   /* Capability pillar grid */
   .cap-grid {
-    position: absolute; top: 326px; left: 72px; right: 72px;
+    position: absolute; top: 332px; left: 72px; right: 72px;
     display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr);
     gap: 12px; height: 280px;
   }
@@ -50,13 +50,12 @@
 
   <div class="top-bar">
     <span class="text-wordmark">KEFI TECH</span>
-    <span style="font-family:var(--font-num); font-size:10px; color:var(--text-muted); letter-spacing:0.16em;">AI TRANSFORMATION · MANUFACTURING</span>
   </div>
 
   <div class="head-block">
     <div class="head-eyebrow">CAPABILITIES</div>
-    <h1 class="head-h">AI Transformation across the complete lifecycle.</h1>
-    <p class="head-sub">Six capability pillars covering the full ai transformation spectrum.</p>
+    <h1 class="head-h">AI Transformation for the connected factory.</h1>
+    <p class="head-sub">Six capability pillars aligned to ISA-95 manufacturing hierarchy.</p>
   </div>
 
   <!-- Lifecycle flow -->
@@ -65,7 +64,7 @@
     <div class="lc-arrow">►</div>
     <div class="lc-stage"><span class="material-icons mi">engineering</span><span class="name">Build</span></div>
     <div class="lc-arrow">►</div>
-    <div class="lc-stage"><span class="material-icons mi">integration_instructions</span><span class="name">Integrate</span></div>
+    <div class="lc-stage"><span class="material-icons mi">integration_instructions</span><span class="name">Integrate (OT/IT)</span></div>
     <div class="lc-arrow">►</div>
     <div class="lc-stage"><span class="material-icons mi">monitoring</span><span class="name">Operate</span></div>
   </div>
@@ -75,32 +74,32 @@
     <div class="cap-card-mini">
       <div class="cap-top"><span class="material-icons mi">chat</span><span class="cap-num">01</span></div>
       <div class="cap-name">Generative AI Solutions</div>
-      <div class="cap-desc">Copilots, knowledge assistants, conversational AI, document intelligence, multimodal AI.</div>
+      <div class="cap-desc">RAG copilots over OEM manuals, GenAI shift reports, LLM-powered production schedulers.</div>
     </div>
     <div class="cap-card-mini">
       <div class="cap-top"><span class="material-icons mi">smart_toy</span><span class="cap-num">02</span></div>
       <div class="cap-name">Agentic AI &amp; Automation</div>
-      <div class="cap-desc">AI agents, multi-agent systems, autonomous workflows, human-in-the-loop processes.</div>
+      <div class="cap-desc">Multi-agent systems for equipment failure response, quality triage, inventory replenishment.</div>
     </div>
     <div class="cap-card-mini">
       <div class="cap-top"><span class="material-icons mi">menu_book</span><span class="cap-num">03</span></div>
       <div class="cap-name">Enterprise Knowledge &amp; RAG</div>
-      <div class="cap-desc">RAG applications, enterprise search, vector search, knowledge assistants.</div>
+      <div class="cap-desc">RAG over 50K+ equipment manuals, SOPs, and compliance documents with cited answers.</div>
     </div>
     <div class="cap-card-mini">
       <div class="cap-top"><span class="material-icons mi">analytics</span><span class="cap-num">04</span></div>
       <div class="cap-name">AI/ML &amp; Predictive Intelligence</div>
-      <div class="cap-desc">Predictive analytics, forecasting, classification, recommendation engines, anomaly detection.</div>
+      <div class="cap-desc">LSTM failure prediction, YOLOv8 defect detection, XGBoost energy optimisation.</div>
     </div>
     <div class="cap-card-mini">
       <div class="cap-top"><span class="material-icons mi">memory</span><span class="cap-num">05</span></div>
       <div class="cap-name">AI Engineering &amp; LLMOps</div>
-      <div class="cap-desc">Model lifecycle, versioning, monitoring, evaluation, observability, scalable infrastructure.</div>
+      <div class="cap-desc">Edge AI on NVIDIA Jetson, MLOps with MLflow, model drift detection with Evidently AI.</div>
     </div>
     <div class="cap-card-mini accent-left">
       <div class="cap-top"><span class="material-icons mi">shield</span><span class="cap-num">06</span></div>
       <div class="cap-name">Responsible AI &amp; Governance</div>
-      <div class="cap-desc">AI governance, privacy, security, guardrails, bias assessment, explainability.</div>
+      <div class="cap-desc">IEC 62443 AI governance, IEC 61508 SIL validation, ISO 13849 worker safety AI.</div>
     </div>
   </div>
 

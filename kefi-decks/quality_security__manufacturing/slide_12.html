@@ -2,27 +2,24 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Closing — Kefi Tech</title>
+<title>Closing — Manufacturing</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="global.css">
 <style>
-  .slide { padding: 0; }
   .closing-canvas { position: relative; }
   .closing-logo { position: absolute; top: 96px; left: 104px; z-index: 4; }
 
-  .closing-headline-block { position: absolute; left: 104px; top: 248px; max-width: 720px; z-index: 4; }
-  .closing-eyebrow { font-family: var(--font-body); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brand); font-weight: 600; margin-bottom: 22px; }
-  .closing-headline { font-family: var(--font-heading); font-size: 56px; font-weight: 700; line-height: 1.05; letter-spacing: -0.025em; color: var(--primary); }
+  .closing-headline-block { position: absolute; left: 104px; top: 240px; max-width: 720px; z-index: 4; }
+  .closing-eyebrow { font-family: var(--font-body); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brand); font-weight: 700; margin-bottom: 22px; }
+  .closing-headline { font-family: var(--font-heading); font-size: 56px; font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; color: var(--primary); }
   .closing-headline .accent-line { color: var(--accent); display: block; margin-top: 4px; }
+  .closing-contacts { margin-top: 28px; font-family: var(--font-body); font-size: 16px; color: var(--text-secondary); line-height: 1.7; }
 
-  .closing-contact { position: absolute; left: 104px; top: 470px; display: flex; flex-direction: column; gap: 6px; z-index: 4; }
-  .contact-line { font-family: var(--font-body); font-size: 16px; color: var(--text-secondary); line-height: 1.5; letter-spacing: 0.02em; }
-  .contact-line strong { color: var(--primary); font-weight: 600; }
-
-  .closing-right-rail { position: absolute; top: 230px; right: 130px; width: 1px; height: 300px; background: var(--border-strong); z-index: 4; }
-  .closing-right-callouts { position: absolute; top: 248px; right: 110px; display: flex; flex-direction: column; gap: 38px; align-items: flex-end; z-index: 4; }
-  .right-callout { font-family: var(--font-heading); font-size: 22px; color: var(--brand); font-weight: 700; letter-spacing: -0.01em; text-align: right; }
+  /* Right rail at ~70% width (x=896) */
+  .closing-right-rail { position: absolute; top: 240px; right: 384px; width: 1px; height: 280px; background: var(--border-strong); z-index: 4; }
+  .closing-right-callouts { position: absolute; top: 240px; right: 96px; width: 280px; display: flex; flex-direction: column; gap: 36px; align-items: flex-end; z-index: 4; }
+  .right-callout { font-family: var(--font-num); font-size: 18px; color: var(--brand); font-weight: 600; letter-spacing: 0.04em; text-align: right; }
   .right-callout.accent { color: var(--accent); }
 </style>
 </head>
@@ -37,11 +34,10 @@
       Let us engineer
       <span class="accent-line">what is next.</span>
     </h1>
-  </div>
-
-  <div class="closing-contact">
-    <div class="contact-line"><strong>info@kefitech.com</strong>  ·  www.kefitech.com</div>
-    <div class="contact-line">Bengaluru, India  ·  Hyderabad, India</div>
+    <div class="closing-contacts">
+      <div>info@kefitech.com&nbsp;&nbsp;·&nbsp;&nbsp;www.kefitech.com</div>
+      <div>Bengaluru, India&nbsp;&nbsp;·&nbsp;&nbsp;Hyderabad, India</div>
+    </div>
   </div>
 
   <div class="closing-right-rail" data-decor aria-hidden="true"></div>

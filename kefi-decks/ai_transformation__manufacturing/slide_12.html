@@ -2,43 +2,55 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Closing — Kefi Tech</title>
+<title>Closing — Manufacturing</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="global.css">
 <style>
+  .slide { padding: 0; }
   .closing-headline {
-    font-family: var(--font-heading); font-size: 56px; font-weight: 700;
-    line-height: 1.08; letter-spacing: -0.02em;
+    font-family: var(--font-heading);
+    font-size: 56px;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    font-weight: 700;
   }
   .closing-headline .line-primary { color: var(--primary); display: block; }
-  .closing-headline .line-accent  { color: var(--accent); display: block; font-style: italic; }
-  .closing-eyebrow {
-    font-family: var(--font-body); font-size: 11px; font-weight: 700;
-    color: var(--brand); letter-spacing: 0.22em; text-transform: uppercase;
+  .closing-headline .line-accent  { color: var(--accent); display: block; }
+  .closing-contact {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.6;
   }
-  .contact-line {
-    font-family: var(--font-body); font-size: 16px; color: var(--text-secondary);
-    line-height: 1.6; letter-spacing: 0.01em;
-  }
-  .contact-line .dot { color: var(--accent); font-weight: 700; padding: 0 8px; }
-
   .right-rail {
-    position: absolute; right: 104px; top: 240px;
-    display: grid; grid-template-columns: 1fr 1px; gap: 0 28px;
-    align-items: stretch; height: 280px;
+    position: absolute;
+    right: 104px;
+    top: 240px;
+    display: grid;
+    grid-template-columns: 1fr 1px;
+    gap: 0 32px;
+    align-items: stretch;
+    height: 280px;
   }
   .right-rail .hair { background: var(--border); }
   .right-callouts {
-    display: flex; flex-direction: column; justify-content: space-between;
-    align-items: flex-end; padding: 6px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 6px 0;
   }
   .right-callout {
-    font-family: var(--font-num); font-size: 16px;
-    color: var(--brand); letter-spacing: 0.08em; font-weight: 500;
-    text-align: right; line-height: 1.2;
+    font-family: var(--font-num);
+    font-size: 16px;
+    color: var(--brand);
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    text-align: right;
+    line-height: 1.25;
   }
-  .right-callout.accent { color: var(--accent); font-weight: 600; }
+  .right-callout.accent { color: var(--accent); }
 </style>
 </head>
 <body>
@@ -50,17 +62,17 @@
 
   <!-- Center-left composition -->
   <div style="position:absolute; left:104px; top:240px; max-width:780px;">
-    <div class="closing-eyebrow" style="margin-bottom:18px;">GET IN TOUCH</div>
+    <div class="eyebrow" style="margin-bottom:18px;">GET IN TOUCH</div>
     <h1 class="closing-headline">
       <span class="line-primary">Let us engineer</span>
       <span class="line-accent">what is next.</span>
     </h1>
     <div class="accent-bar" style="margin-top:24px; margin-bottom:22px;"></div>
-    <div class="contact-line">info@kefitech.com<span class="dot">·</span>www.kefitech.com</div>
-    <div class="contact-line">Bengaluru, India<span class="dot">·</span>Hyderabad, India</div>
+    <p class="closing-contact">info@kefitech.com  ·  www.kefitech.com</p>
+    <p class="closing-contact">Bengaluru, India  ·  Hyderabad, India</p>
   </div>
 
-  <!-- Right vertical hairline + three stacked callouts -->
+  <!-- Right vertical hairline with three stacked callouts (decor) -->
   <div class="right-rail" aria-hidden="true" data-decor>
     <div class="right-callouts">
       <div class="right-callout">Discover.</div>

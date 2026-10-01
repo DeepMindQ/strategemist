@@ -2,34 +2,35 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Industry Applications — Manufacturing</title>
+<title>Manufacturing Applications</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="global.css">
 <style>
   .slide { padding: 0; }
   .top-bar { position: absolute; top: 40px; left: 72px; right: 72px; display: flex; justify-content: space-between; align-items: center; }
-  .head-block { position: absolute; top: 92px; left: 72px; right: 72px; }
+  .head-block { position: absolute; top: 88px; left: 72px; right: 72px; }
   .head-eyebrow { font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--brand); letter-spacing: 0.20em; text-transform: uppercase; }
-  .head-h { font-family: var(--font-heading); font-weight: 700; font-size: 32px; color: var(--primary); line-height: 1.2; letter-spacing: -0.01em; margin-top: 12px; }
-  .head-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-top: 8px; }
+  .head-h { font-family: var(--font-heading); font-weight: 700; font-size: 30px; color: var(--primary); line-height: 1.2; letter-spacing: -0.01em; margin-top: 12px; }
+  .head-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-top: 8px; max-width: 980px; }
 
   .app-grid {
-    position: absolute; top: 248px; left: 72px; right: 72px;
+    position: absolute; top: 240px; left: 72px; right: 72px;
     display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
-    gap: 16px; height: 320px;
+    gap: 16px; height: 380px;
   }
   .app-card {
-    padding: 18px 22px;
+    padding: 20px 22px; background: var(--bg-elev);
+    border: 1px solid var(--border); border-radius: 10px;
     display: flex; flex-direction: column; gap: 10px;
     border-left: 4px solid var(--brand);
   }
   .app-card.accent-left { border-left-color: var(--accent); }
   .app-top { display: flex; justify-content: space-between; align-items: center; }
   .app-icon { font-size: 28px !important; color: var(--brand); }
-  .app-num { font-family: var(--font-num); font-size: 13px; color: var(--accent); font-weight: 600; letter-spacing: 0.10em; }
+  .app-num { font-family: var(--font-num); font-size: 14px; color: var(--accent); font-weight: 600; letter-spacing: 0.10em; }
   .app-name { font-family: var(--font-heading); font-size: var(--fs-h3); font-weight: 700; color: var(--primary); line-height: 1.2; }
-  .app-desc { font-family: var(--font-body); font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+  .app-desc { font-family: var(--font-body); font-size: 12px; color: var(--text-secondary); line-height: 1.55; }
 </style>
 </head>
 <body>
@@ -38,54 +39,56 @@
 
   <div class="top-bar">
     <span class="text-wordmark">KEFI TECH</span>
-    <span style="font-family:var(--font-num); font-size:10px; color:var(--text-muted); letter-spacing:0.16em;">AI TRANSFORMATION · MANUFACTURING</span>
   </div>
 
   <div class="head-block">
-    <div class="head-eyebrow">INDUSTRY APPLICATIONS · MANUFACTURING</div>
-    <h1 class="head-h">How ai transformation applies to manufacturing.</h1>
-    <p class="head-sub">Four industry-specific applications where ai transformation creates measurable value.</p>
+    <div class="head-eyebrow">MANUFACTURING APPLICATIONS</div>
+    <h1 class="head-h">How ai transformation applies to the factory floor.</h1>
+    <p class="head-sub">Four manufacturing-specific applications with real technology stacks.</p>
   </div>
 
   <div class="app-grid">
-    <div class="surface-elev app-card">
+    <div class="app-card">
       <div class="app-top">
         <span class="material-icons app-icon">visibility</span>
         <span class="app-num">I</span>
       </div>
-      <div class="app-name">Computer Vision</div>
-      <div class="app-desc">Defect detection, visual inspection, safety monitoring, production line analytics.</div>
+      <div class="app-name">Computer Vision Quality Control</div>
+      <div class="app-desc">YOLOv8 on NVIDIA Jetson — real-time defect detection on Cognex/Keyence camera feeds at 60fps.</div>
     </div>
-    <div class="surface-elev app-card">
+
+    <div class="app-card">
       <div class="app-top">
         <span class="material-icons app-icon">build</span>
         <span class="app-num">II</span>
       </div>
       <div class="app-name">Predictive Maintenance</div>
-      <div class="app-desc">Equipment health monitoring, failure prediction, maintenance scheduling optimization.</div>
+      <div class="app-desc">AWS Lookout for Equipment + LSTM on vibration FFT data — bearing failure predicted 14-30 days ahead.</div>
     </div>
-    <div class="surface-elev app-card">
+
+    <div class="app-card">
       <div class="app-top">
         <span class="material-icons app-icon">local_shipping</span>
         <span class="app-num">III</span>
       </div>
       <div class="app-name">Supply Chain Intelligence</div>
-      <div class="app-desc">Demand forecasting, inventory optimization, supplier risk, logistics visibility.</div>
+      <div class="app-desc">SAP IBP + LightGBM forecasting — demand, inventory, and supplier risk across multi-echelon supply chain.</div>
     </div>
-    <div class="surface-elev app-card accent-left">
+
+    <div class="app-card accent-left">
       <div class="app-top">
-        <span class="material-icons app-icon">engineering</span>
+        <span class="material-icons app-icon">hub</span>
         <span class="app-num">IV</span>
       </div>
-      <div class="app-name">Operational Copilots</div>
-      <div class="app-desc">Floor-worker assistants, knowledge access, workflow automation, quality intelligence.</div>
+      <div class="app-name">Connected Factory Operations</div>
+      <div class="app-desc">AWS IoT SiteWise + Siemens Opcenter — real-time OEE, digital twin, and ISA-95 hierarchy visibility.</div>
     </div>
   </div>
 
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
     <span>08 / 12</span>
-    <span>INDUSTRY APPLICATIONS</span>
+    <span>APPLICATIONS</span>
   </div>
 
   <aside data-notes hidden>none</aside>

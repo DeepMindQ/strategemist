@@ -2,58 +2,63 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Why Kefi Tech</title>
+<title>Why Kefi Tech — Manufacturing</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="global.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
-  .h1 { font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: var(--primary); line-height: 1.18; letter-spacing: -0.01em; }
-  .sub { font-family: var(--font-body); font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-top: 6px; }
+  .h-display { font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: var(--primary); line-height: 1.18; letter-spacing: -0.01em; }
+  .h-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+  .why-icon { font-size: 26px !important; color: var(--brand); margin-bottom: 4px; }
+  .exec-summary-card.accent .why-icon { color: var(--accent); }
+  .exec-summary-card.accent .exec-num { color: var(--accent); }
 </style>
 </head>
 <body>
 <div class="slide">
   <div class="brand-stripe" data-decor aria-hidden="true"></div>
 
-  <span class="text-wordmark" style="position:absolute; top:64px; left:104px;">KEFI TECH</span>
+  <span class="text-wordmark" style="position:absolute; top:40px; left:104px;">KEFI TECH</span>
 
-  <!-- Header -->
-  <div style="position:absolute; top:108px; left:104px; right:104px;">
-    <div class="eyebrow">WHY KEFI TECH</div>
-    <h1 class="h1" style="margin-top:8px;">Four reasons enterprises work with us.</h1>
-    <p class="sub">Not generic services. Specific differentiators for manufacturing.</p>
+  <div style="position:absolute; top:84px; left:104px; right:104px;">
+    <div class="eyebrow">WHY KEFI TECH · MANUFACTURING</div>
+    <h1 class="h-display" style="margin-top:8px;">Four reasons manufacturing enterprises work with us.</h1>
+    <p class="h-sub" style="margin-top:10px;">Not generic IT services. OT-aware, ISA-95 aligned, IEC 62443 compliant.</p>
   </div>
 
-  <!-- 2x2 differentiator grid -->
-  <div style="position:absolute; top:248px; left:104px; right:104px; display:grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap:20px; height:340px;">
+  <!-- 2x2 grid -->
+  <div style="position:absolute; top:248px; left:104px; right:104px; display:grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 20px;">
 
-    <div class="exec-summary-card">
+    <div class="exec-summary-card" style="height: 160px;">
+      <span class="material-icons why-icon">account_tree</span>
       <div class="exec-num">01</div>
-      <div class="exec-headline">Decision-grade data</div>
-      <div class="exec-body">Data engineered to be operational, governed, and decision-grade.</div>
+      <div class="exec-headline">ISA-95 structured</div>
+      <div class="exec-body">Data architecture aligned to ISA-95 hierarchy — from sensor to enterprise, not flat data lakes.</div>
     </div>
 
-    <div class="exec-summary-card">
+    <div class="exec-summary-card" style="height: 160px;">
+      <span class="material-icons why-icon">sensors</span>
       <div class="exec-num">02</div>
-      <div class="exec-headline">Lakehouse first</div>
-      <div class="exec-body">Modern lakehouse architecture converging warehouse and lake.</div>
+      <div class="exec-headline">Real-time OT ingestion</div>
+      <div class="exec-body">Kafka + OPC UA + MTConnect pipelines ingesting 10kHz sensor data from 500+ machines.</div>
     </div>
 
-    <div class="exec-summary-card">
+    <div class="exec-summary-card" style="height: 160px;">
+      <span class="material-icons why-icon">storage</span>
       <div class="exec-num">03</div>
-      <div class="exec-headline">AI-powered analytics</div>
-      <div class="exec-body">GenAI over enterprise data — natural-language querying.</div>
+      <div class="exec-headline">Lakehouse + Historian</div>
+      <div class="exec-body">Databricks Lakehouse replacing legacy PI System / GE Historian with cloud-native InfluxDB.</div>
     </div>
 
-    <div class="exec-summary-card accent">
-      <div class="exec-num" style="color:var(--accent-dark);">04</div>
-      <div class="exec-headline">Governance embedded</div>
-      <div class="exec-body">Data quality, lineage, and MDM as a discipline, not an afterthought.</div>
+    <div class="exec-summary-card accent" style="height: 160px;">
+      <span class="material-icons why-icon">factory</span>
+      <div class="exec-num">04</div>
+      <div class="exec-headline">SAP-native analytics</div>
+      <div class="exec-body">Embedded analytics in SAP S/4HANA and SAP IBP — not parallel BI stacks.</div>
     </div>
 
   </div>
 
-  <!-- Bottom rail -->
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
     <span>11 / 12</span>

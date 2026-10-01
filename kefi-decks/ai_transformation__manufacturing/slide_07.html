@@ -9,13 +9,12 @@
 <style>
   .slide { padding: 0; }
   .top-bar { position: absolute; top: 40px; left: 72px; right: 72px; display: flex; justify-content: space-between; align-items: center; }
-  .head-block { position: absolute; top: 92px; left: 72px; right: 72px; }
+  .head-block { position: absolute; top: 88px; left: 72px; right: 72px; }
   .head-eyebrow { font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--brand); letter-spacing: 0.20em; text-transform: uppercase; }
-  .head-h { font-family: var(--font-heading); font-weight: 700; font-size: 36px; color: var(--primary); line-height: 1.15; letter-spacing: -0.01em; margin-top: 10px; }
+  .head-h { font-family: var(--font-heading); font-weight: 700; font-size: 32px; color: var(--primary); line-height: 1.15; letter-spacing: -0.01em; margin-top: 12px; }
   .head-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-top: 8px; max-width: 980px; }
 
-  /* FIX 2: panel height 400px (was 360px) */
-  .columns { position: absolute; top: 224px; left: 72px; right: 72px; display: grid; grid-template-columns: 55fr 45fr; gap: 24px; height: 400px; }
+  .columns { position: absolute; top: 232px; left: 72px; right: 72px; display: grid; grid-template-columns: 55fr 45fr; gap: 24px; height: 392px; }
 
   .panel { padding: 22px 24px; display: flex; flex-direction: column; gap: 14px; }
   .panel-eyebrow { font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
@@ -23,19 +22,19 @@
   .panel-eyebrow.brand-light { color: var(--brand-light); }
 
   .left-body { font-family: var(--font-body); font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
-
   .left-tag-row { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--border); display: flex; gap: 8px; }
 
-  .comp-list { display: flex; flex-direction: column; gap: 7px; flex: 1; }
-  /* FIX 2: padding reduced to 7px so 5 cards fit cleanly in 400px panel */
-  .comp-card {
-    display: grid; grid-template-columns: 28px 24px 1fr; gap: 10px; align-items: flex-start;
-    padding: 7px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+  .sub-list { display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .sub-card {
+    display: grid; grid-template-columns: 22px 22px 1fr; gap: 10px;
+    padding: 7px 10px; background: var(--surface);
+    border: 1px solid var(--border); border-radius: 8px;
+    align-items: flex-start;
   }
-  .comp-num { font-family: var(--font-num); font-size: 11px; color: var(--brand); font-weight: 600; letter-spacing: 0.06em; line-height: 1; padding-top: 4px; }
-  .comp-icon { font-size: 18px !important; color: var(--brand-light); }
-  .comp-name { font-family: var(--font-heading); font-size: 12px; font-weight: 600; color: var(--primary); line-height: 1.2; }
-  .comp-desc { font-family: var(--font-body); font-size: 10px; color: var(--text-secondary); line-height: 1.4; margin-top: 2px; }
+  .sub-num { font-family: var(--font-num); font-size: 11px; color: var(--brand); font-weight: 600; letter-spacing: 0.06em; line-height: 1.2; padding-top: 2px; }
+  .sub-icon { font-size: 18px !important; color: var(--brand-light); }
+  .sub-name { font-family: var(--font-heading); font-size: 12px; font-weight: 600; color: var(--primary); line-height: 1.2; }
+  .sub-desc { font-family: var(--font-body); font-size: 10px; color: var(--text-secondary); line-height: 1.4; margin-top: 2px; }
 </style>
 </head>
 <body>
@@ -44,69 +43,68 @@
 
   <div class="top-bar">
     <span class="text-wordmark">KEFI TECH</span>
-    <span style="font-family:var(--font-num); font-size:10px; color:var(--text-muted); letter-spacing:0.16em;">AI TRANSFORMATION · MANUFACTURING</span>
   </div>
 
   <div class="head-block">
-    <div class="head-eyebrow">CAPABILITY 04</div>
+    <div class="head-eyebrow">CAPABILITY 04 · MANUFACTURING</div>
     <h1 class="head-h">AI/ML &amp; Predictive Intelligence.</h1>
-    <p class="head-sub">Predictive analytics, forecasting, classification, recommendation engines, anomaly detection.</p>
+    <p class="head-sub">LSTM failure prediction, YOLOv8 defect detection, XGBoost energy optimisation.</p>
   </div>
 
   <div class="columns">
-    <!-- LEFT 55% -->
+    <!-- LEFT column 55% -->
     <div class="surface-elev panel">
       <div class="panel-eyebrow brand">WHAT WE DO</div>
       <p class="left-body">
-        Our ai/ml &amp; predictive intelligence capability is engineered for manufacturing environments. We bring together the ai transformation discipline, the manufacturing domain context, and the engineering rigor required to ship production-grade solutions.
+        Our ai/ml &amp; predictive intelligence capability is engineered for manufacturing environments. We work with Siemens Opcenter, SAP S/4HANA, AWS IoT SiteWise, Ignition SCADA, and NVIDIA Jetson edge — not generic platforms. Every sub-service below is aligned to ISA-95 hierarchy and IEC 62443 security.
       </p>
       <div class="left-tag-row">
-        <span class="tag-pill">CAPABILITY 4 OF 6</span>
+        <span class="tag-pill">CAPABILITY 4 OF 6 · MANUFACTURING</span>
       </div>
     </div>
 
-    <!-- RIGHT 45% -->
+    <!-- RIGHT column 45% -->
     <div class="surface-elev panel">
-      <div class="panel-eyebrow brand-light">COMPONENTS</div>
-      <div class="comp-list">
-        <div class="comp-card">
-          <div class="comp-num">01</div>
-          <span class="material-icons comp-icon">analytics</span>
+      <div class="panel-eyebrow brand-light">SUB-SERVICES</div>
+      <div class="sub-list">
+        <div class="sub-card">
+          <span class="sub-num">01</span>
+          <span class="material-icons sub-icon">analytics</span>
           <div>
-            <div class="comp-name">Predictive Maintenance Models</div>
-            <div class="comp-desc">ML models predicting equipment failure windows from sensor and historical data.</div>
+            <div class="sub-name">Vibration-Based Failure Prediction</div>
+            <div class="sub-desc">LSTM models on accelerometer data from Azure IoT Edge → predicts bearing failure 14-30 days ahead — deployed on NVIDIA Jetson edge.</div>
           </div>
         </div>
-        <div class="comp-card">
-          <div class="comp-num">02</div>
-          <span class="material-icons comp-icon">analytics</span>
+        <div class="sub-card">
+          <span class="sub-num">02</span>
+          <span class="material-icons sub-icon">analytics</span>
           <div>
-            <div class="comp-name">Demand Forecasting</div>
-            <div class="comp-desc">Time-series forecasting of product demand per SKU, region, and channel.</div>
+            <div class="sub-name">Demand Forecasting (SOP/ S&amp;OP)</div>
+            <div class="sub-desc">Prophet / LightGBM time-series forecasting per SKU/region → feeds SAP IBP (Integrated Business Planning) for production scheduling.</div>
           </div>
         </div>
-        <div class="comp-card">
-          <div class="comp-num">03</div>
-          <span class="material-icons comp-icon">analytics</span>
+        <div class="sub-card">
+          <span class="sub-num">03</span>
+          <span class="material-icons sub-icon">analytics</span>
           <div>
-            <div class="comp-name">Quality Defect Prediction</div>
-            <div class="comp-desc">Models predicting defect probability per batch based on process parameters.</div>
+            <div class="sub-name">Vision-Based Defect Detection</div>
+            <div class="sub-desc">YOLOv8 / ResNet models on Cognex / Keyence camera feeds → classifies surface defects at 60fps on factory line.</div>
           </div>
         </div>
-        <div class="comp-card">
-          <div class="comp-num">04</div>
-          <span class="material-icons comp-icon">analytics</span>
+        <div class="sub-card">
+          <span class="sub-num">04</span>
+          <span class="material-icons sub-icon">analytics</span>
           <div>
-            <div class="comp-name">Energy Consumption Optimisation</div>
-            <div class="comp-desc">ML models optimising energy use across plant operations.</div>
+            <div class="sub-name">Energy Consumption Optimisation</div>
+            <div class="sub-desc">XGBoost models optimising energy use per machine cycle → integrated with Schneider EcoStruxure Resource Advisor.</div>
           </div>
         </div>
-        <div class="comp-card">
-          <div class="comp-num">05</div>
-          <span class="material-icons comp-icon">analytics</span>
+        <div class="sub-card">
+          <span class="sub-num">05</span>
+          <span class="material-icons sub-icon">analytics</span>
           <div>
-            <div class="comp-name">Supply Chain Risk Scoring</div>
-            <div class="comp-desc">Predictive models scoring supplier risk based on financial, operational, and geopolitical signals.</div>
+            <div class="sub-name">OEE Anomaly Detection</div>
+            <div class="sub-desc">Unsupervised models (Isolation Forest) on MTConnect/ OPC UA stream → flags OEE drops below ISA-95 benchmark thresholds.</div>
           </div>
         </div>
       </div>

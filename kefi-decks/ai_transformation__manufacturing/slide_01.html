@@ -7,28 +7,67 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="global.css">
 <style>
-  .cover-headline { font-family: var(--font-heading); font-size: var(--fs-display); line-height: 1.05; letter-spacing: -0.02em; font-weight: 800; }
+  .slide { padding: 0; }
+  .cover-headline {
+    font-family: var(--font-heading);
+    font-size: var(--fs-display);
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+    font-weight: 800;
+  }
   .cover-headline .line-primary { color: var(--primary); display: block; }
   .cover-headline .line-accent  { color: var(--accent); display: block; font-weight: 700; }
-  .top-right-tag { font-family: var(--font-num); font-size: 11px; color: var(--text-muted); letter-spacing: 0.18em; }
+  .top-right-tag {
+    font-family: var(--font-num);
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.18em;
+  }
   .right-rail {
-    position: absolute; right: 104px; top: 240px;
-    display: grid; grid-template-columns: 1fr 1px; gap: 0 32px;
-    align-items: stretch; height: 280px;
+    position: absolute;
+    right: 104px;
+    top: 240px;
+    display: grid;
+    grid-template-columns: 1fr 1px;
+    gap: 0 32px;
+    align-items: stretch;
+    height: 280px;
   }
   .right-rail .hair { background: var(--border); }
   .right-callouts {
-    display: flex; flex-direction: column; justify-content: space-between;
-    align-items: flex-end; padding: 6px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 6px 0;
   }
   .right-callout {
-    font-family: var(--font-num); font-size: 13px;
-    color: var(--brand); letter-spacing: 0.08em; font-weight: 600;
-    text-align: right; line-height: 1.25;
-    max-width: 230px;
+    font-family: var(--font-num);
+    font-size: 13px;
+    color: var(--brand);
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    text-align: right;
+    line-height: 1.25;
+    max-width: 240px;
   }
-  .right-callout .num { display: block; font-size: 10px; color: var(--text-muted); font-weight: 600; letter-spacing: 0.18em; margin-bottom: 4px; }
+  .right-callout .num {
+    display: block;
+    font-size: 10px;
+    color: var(--text-muted);
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    margin-bottom: 4px;
+  }
   .right-callout .name { display: block; }
+  .cover-sub {
+    font-family: var(--font-body);
+    font-size: var(--fs-h3);
+    color: var(--text-secondary);
+    line-height: 1.4;
+    max-width: 680px;
+    font-weight: 400;
+  }
 </style>
 </head>
 <body>
@@ -40,7 +79,7 @@
 
   <!-- Top-right tag -->
   <div class="top-right-tag" style="position:absolute; top:80px; right:104px;">
-    AI TRANSFORMATION SERVICES · 2026
+    KEFI TECH · MANUFACTURING · 2026
   </div>
 
   <!-- Center-left composition -->
@@ -51,12 +90,10 @@
       <span class="line-accent">for Manufacturing.</span>
     </h1>
     <div class="accent-bar" style="margin-top:24px; margin-bottom:22px;"></div>
-    <p style="font-family:var(--font-body); font-size:var(--fs-h3); color:var(--text-secondary); line-height:1.4; max-width:680px; font-weight:400;">
-      A capability brief on Kefi Tech AI Transformation Services for Manufacturing.
-    </p>
+    <p class="cover-sub">From AI opportunity to production-floor impact.</p>
   </div>
 
-  <!-- Right vertical hairline with three stacked callouts (FIX 4: full capability names) -->
+  <!-- Right vertical hairline with three stacked callouts (decor) -->
   <div class="right-rail" aria-hidden="true" data-decor>
     <div class="right-callouts">
       <div class="right-callout"><span class="num">01</span><span class="name">Generative AI Solutions</span></div>

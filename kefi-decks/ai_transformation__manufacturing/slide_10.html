@@ -9,59 +9,42 @@
 <style>
   .slide { padding: 0; }
   .top-bar { position: absolute; top: 40px; left: 72px; right: 72px; display: flex; justify-content: space-between; align-items: center; }
-  .head-block { position: absolute; top: 92px; left: 72px; right: 72px; }
+  .head-block { position: absolute; top: 88px; left: 72px; right: 72px; }
   .head-eyebrow { font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--brand); letter-spacing: 0.20em; text-transform: uppercase; }
-  .head-h { font-family: var(--font-heading); font-weight: 700; font-size: 30px; color: var(--primary); line-height: 1.2; letter-spacing: -0.01em; margin-top: 12px; }
-  .head-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-top: 8px; }
+  .head-h { font-family: var(--font-heading); font-weight: 700; font-size: 28px; color: var(--primary); line-height: 1.2; letter-spacing: -0.01em; margin-top: 12px; }
+  .head-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-top: 8px; max-width: 980px; }
 
-  .path-grid {
-    position: absolute; top: 224px; left: 72px; right: 72px;
+  .pathway-grid {
+    position: absolute; top: 232px; left: 72px; right: 72px;
     display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
-    height: 360px;
+    height: 380px;
   }
-  .pathway-stage {
-    padding: 16px 16px;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    position: relative;
-    height: 100%;
+  .pathway-stage { padding: 16px 14px; gap: 6px; }
+  .pathway-stage-num { font-size: 12px; }
+  .pathway-stage-name { font-size: 16px; }
+  .pathway-stage-meta { font-size: 9px; }
+  .deliv-eyebrow {
+    font-family: var(--font-body); font-size: 9px; font-weight: 700;
+    color: var(--text-muted); letter-spacing: 0.14em;
+    text-transform: uppercase; margin-top: 4px;
   }
-  .pathway-stage::before {
-    content: '';
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    height: 3px;
-    background: var(--brand);
-    border-radius: 10px 10px 0 0;
+  .deliv-list {
+    list-style: none; padding: 0; margin: 4px 0 0 0;
+    display: flex; flex-direction: column; gap: 5px;
+    flex: 1;
   }
-  .pathway-stage.accent::before { background: var(--accent); }
-  .pathway-stage-num { font-family: var(--font-num); font-size: 11px; color: var(--brand); font-weight: 600; letter-spacing: 0.10em; }
-  .pathway-stage-name { font-family: var(--font-heading); font-size: 17px; font-weight: 700; color: var(--primary); line-height: 1.2; }
-  .pathway-stage-meta { font-family: var(--font-body); font-size: 9px; color: var(--text-muted); letter-spacing: 0.10em; text-transform: uppercase; font-weight: 700; }
-  .hairline-soft { height: 1px; background: var(--border-soft); width: 100%; margin: 6px 0 4px; }
-  .deliv-eyebrow { font-family: var(--font-body); font-size: 9px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brand); }
-  .deliv-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; flex: 1; }
   .deliv-list li {
-    font-family: var(--font-body); font-size: 11px; color: var(--text-secondary); line-height: 1.4;
-    padding-left: 12px; position: relative;
+    font-family: var(--font-body); font-size: 11px; color: var(--text-secondary);
+    line-height: 1.35; padding-left: 12px; position: relative;
   }
   .deliv-list li::before {
-    content: ''; position: absolute; left: 0; top: 7px; width: 4px; height: 4px; border-radius: 50%; background: var(--brand);
+    content: ''; position: absolute; left: 0; top: 6px;
+    width: 4px; height: 4px; border-radius: 50%; background: var(--brand);
   }
   .pathway-stage.accent .deliv-list li::before { background: var(--accent); }
   .pathway-stage-fee {
-    font-family: var(--font-num);
-    font-size: 14px;
-    color: var(--brand);
-    font-weight: 700;
-    margin-top: auto;
-    padding-top: 10px;
+    font-family: var(--font-num); font-size: 13px; color: var(--brand);
+    font-weight: 600; margin-top: 6px; padding-top: 8px;
     border-top: 1px solid var(--border);
   }
   .pathway-stage.accent .pathway-stage-fee { color: var(--accent); }
@@ -73,78 +56,73 @@
 
   <div class="top-bar">
     <span class="text-wordmark">KEFI TECH</span>
-    <span style="font-family:var(--font-num); font-size:10px; color:var(--text-muted); letter-spacing:0.16em;">AI TRANSFORMATION · MANUFACTURING</span>
   </div>
 
   <div class="head-block">
     <div class="head-eyebrow">ENGAGEMENT PATHWAY</div>
-    <h1 class="head-h">A four-stage pathway from discovery to operations.</h1>
+    <h1 class="head-h">A four-stage pathway from discovery to managed operations.</h1>
     <p class="head-sub">Each stage carries concrete deliverables, a fixed duration, and a transparent commercial frame.</p>
   </div>
 
-  <div class="path-grid">
-    <!-- Stage 01 -->
+  <div class="pathway-grid">
     <div class="pathway-stage">
       <div class="pathway-stage-num">STAGE 01</div>
       <div class="pathway-stage-name">Discovery</div>
       <div class="pathway-stage-meta">2 WEEKS · FIXED FEE</div>
-      <div class="hairline-soft"></div>
+      <div class="hairline-soft" style="margin-top:6px;"></div>
       <div class="deliv-eyebrow">DELIVERABLES</div>
       <ul class="deliv-list">
         <li>AI Transformation maturity assessment</li>
-        <li>Opportunity prioritization</li>
+        <li>OT/IT landscape mapping</li>
+        <li>ISA-95 gap analysis</li>
         <li>90-day roadmap</li>
-        <li>ROI business case</li>
       </ul>
-      <div class="pathway-stage-fee">$25K&ndash;$75K</div>
+      <div class="pathway-stage-fee">$25K–$75K</div>
     </div>
 
-    <!-- Stage 02 -->
     <div class="pathway-stage">
       <div class="pathway-stage-num">STAGE 02</div>
       <div class="pathway-stage-name">Solution Design</div>
-      <div class="pathway-stage-meta">3&ndash;4 WEEKS · FIXED FEE</div>
-      <div class="hairline-soft"></div>
+      <div class="pathway-stage-meta">3–4 WEEKS · FIXED FEE</div>
+      <div class="hairline-soft" style="margin-top:6px;"></div>
       <div class="deliv-eyebrow">DELIVERABLES</div>
       <ul class="deliv-list">
-        <li>Target architecture</li>
-        <li>CoE charter</li>
-        <li>Governance framework</li>
+        <li>Target architecture (OT/IT)</li>
+        <li>IEC 62443 security design</li>
+        <li>Platform selection</li>
         <li>Build plan</li>
       </ul>
-      <div class="pathway-stage-fee">$50K&ndash;$150K</div>
+      <div class="pathway-stage-fee">$50K–$150K</div>
     </div>
 
-    <!-- Stage 03 -->
     <div class="pathway-stage">
       <div class="pathway-stage-num">STAGE 03</div>
       <div class="pathway-stage-name">Delivery</div>
-      <div class="pathway-stage-meta">8&ndash;24 WEEKS · T&amp;M OR FIXED</div>
-      <div class="hairline-soft"></div>
+      <div class="pathway-stage-meta">8–24 WEEKS · T&amp;M OR FIXED</div>
+      <div class="hairline-soft" style="margin-top:6px;"></div>
       <div class="deliv-eyebrow">DELIVERABLES</div>
       <ul class="deliv-list">
         <li>Production system</li>
-        <li>Integration complete</li>
-        <li>Documentation</li>
+        <li>OT/IT integration</li>
+        <li>IEC 62443 validation</li>
         <li>Knowledge transfer</li>
       </ul>
-      <div class="pathway-stage-fee">$300K&ndash;$1M</div>
+      <div class="pathway-stage-fee">$300K–$1M</div>
     </div>
 
-    <!-- Stage 04 — accent -->
     <div class="pathway-stage accent">
-      <div class="pathway-stage-num" style="color:var(--accent-dark);">STAGE 04</div>
+      <div class="pathway-stage-num">STAGE 04</div>
       <div class="pathway-stage-name">Managed Operations</div>
       <div class="pathway-stage-meta">ONGOING · RETAINER</div>
-      <div class="hairline-soft"></div>
-      <div class="deliv-eyebrow" style="color:var(--accent-dark);">DELIVERABLES</div>
+      <div class="hairline-soft" style="margin-top:6px;"></div>
+      <div class="deliv-eyebrow">DELIVERABLES</div>
       <ul class="deliv-list">
-        <li>Managed services</li>
+        <li>Managed services (OT-aware)</li>
         <li>Continuous optimization</li>
         <li>Quarterly reviews</li>
         <li>SLA-backed operations</li>
       </ul>
-      <div class="pathway-stage-fee">$50K&ndash;$500K / mo</div>
+      <div class="pathway-stage-fee">$50K–$500K / mo</div>
     </div>
   </div>
 
