@@ -2,54 +2,49 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Industry Applications — Healthcare & Pharma</title>
+<title>Industry Applications — Healthcare &amp; Pharma</title>
 <link rel="stylesheet" href="global.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
   .slide-headline {
     font-family: var(--font-heading);
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--primary);
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-    max-width: 1000px;
+    line-height: 1.18;
+    letter-spacing: -0.015em;
+    max-width: 1080px;
   }
   .slide-subtitle {
     font-family: var(--font-body);
     font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.5;
-    max-width: 980px;
-  }
-  .app-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    margin-top: 8px;
   }
   .app-card {
     background: var(--bg-elev);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 22px 26px;
-    height: 150px;
+    padding: 22px 24px;
+    height: 160px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
-  .app-row-top {
+  .app-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .app-icon {
+  .app-top .material-icons {
     color: var(--brand);
     font-size: 28px !important;
   }
   .app-num {
     font-family: var(--font-num);
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     color: var(--accent);
     letter-spacing: 0.10em;
@@ -73,6 +68,7 @@
 <div class="slide">
   <div class="brand-stripe-thin" aria-hidden="true"></div>
 
+  <!-- Top header -->
   <div style="display:flex; justify-content:space-between; align-items:center;">
     <span class="text-wordmark">KEFI TECH</span>
     <span class="eyebrow">INDUSTRY APPLICATIONS &middot; HEALTHCARE &amp; PHARMA</span>
@@ -80,44 +76,51 @@
 
   <div style="margin-top:20px;">
     <h1 class="slide-headline">How data analytics &amp; data engineering applies to healthcare &amp; pharma.</h1>
-    <p class="slide-subtitle" style="margin-top:8px;">Four industry-specific applications where data analytics &amp; data engineering creates measurable value.</p>
+    <p class="slide-subtitle">Four industry-specific applications where data analytics &amp; data engineering creates measurable value.</p>
   </div>
 
-  <div class="app-grid" style="margin-top:24px;">
+  <!-- 2x2 grid -->
+  <div style="display:grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap:16px; margin-top:24px;">
+
     <div class="app-card">
-      <div class="app-row-top">
-        <span class="material-icons app-icon">description</span>
+      <div class="app-top">
+        <span class="material-icons">description</span>
         <span class="app-num">I</span>
       </div>
       <div class="app-name">Clinical Document Intelligence</div>
       <div class="app-desc">Medical records, clinical trials, regulatory submissions, claims processing at scale.</div>
     </div>
+
     <div class="app-card">
-      <div class="app-row-top">
-        <span class="material-icons app-icon">favorite</span>
+      <div class="app-top">
+        <span class="material-icons">favorite</span>
         <span class="app-num">II</span>
       </div>
       <div class="app-name">Patient Engagement</div>
       <div class="app-desc">Patient portals, conversational AI, care navigation, personalized health experiences.</div>
     </div>
+
     <div class="app-card">
-      <div class="app-row-top">
-        <span class="material-icons app-icon">insights</span>
+      <div class="app-top">
+        <span class="material-icons">insights</span>
         <span class="app-num">III</span>
       </div>
       <div class="app-name">Operational Decision Support</div>
       <div class="app-desc">Resource allocation, capacity planning, staffing optimization, supply chain.</div>
     </div>
+
     <div class="app-card">
-      <div class="app-row-top">
-        <span class="material-icons app-icon">science</span>
+      <div class="app-top">
+        <span class="material-icons">science</span>
         <span class="app-num">IV</span>
       </div>
       <div class="app-name">Research &amp; RWE</div>
       <div class="app-desc">Clinical research support, RWE analytics, drug safety surveillance, trial recruitment.</div>
     </div>
+
   </div>
 
+  <!-- Bottom rail -->
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
     <span>08 / 12</span>

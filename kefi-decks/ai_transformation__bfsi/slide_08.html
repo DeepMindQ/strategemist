@@ -3,80 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <title>Industry Applications — BFSI & Insurance</title>
+<link rel="stylesheet" href="global.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="global.css">
 <style>
-  .headline {
-    font-family: var(--font-heading);
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--primary);
-    line-height: 1.25;
-    letter-spacing: -0.01em;
-  }
-  .subtitle {
-    font-family: var(--font-body);
-    font-size: 13px;
-    color: var(--text-secondary);
-    line-height: 1.5;
-    margin-top: 8px;
-    max-width: 980px;
-  }
-  .app-card {
-    background: var(--bg-elev);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 22px 24px;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .app-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .app-icon {
-    color: var(--brand);
-    font-size: 28px !important;
-  }
-  .app-num {
-    font-family: var(--font-num);
-    font-size: 13px;
-    color: var(--accent);
-    font-weight: 600;
-    letter-spacing: 0.10em;
-  }
-  .app-name {
-    font-family: var(--font-heading);
-    font-size: var(--fs-h3);
-    font-weight: 700;
-    color: var(--primary);
-    line-height: 1.2;
-  }
-  .app-desc {
-    font-family: var(--font-body);
-    font-size: 12px;
-    color: var(--text-secondary);
-    line-height: 1.5;
-  }
+  .s-headline { font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--primary); line-height: 1.2; letter-spacing: -0.01em; }
+  .s-subtitle { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-top: 6px; }
+  .app-card { padding: 22px 26px; background: var(--bg-elev); border: 1px solid var(--border); border-radius: 10px; height: 150px; display: flex; flex-direction: column; gap: 10px; }
+  .app-top { display: flex; align-items: center; justify-content: space-between; }
+  .app-icon { font-size: 28px !important; color: var(--brand); }
+  .app-num { font-family: var(--font-num); font-size: 16px; font-weight: 600; color: var(--accent); letter-spacing: 0.06em; }
+  .app-name { font-family: var(--font-heading); font-size: 22px; font-weight: 700; color: var(--primary); line-height: 1.15; letter-spacing: -0.01em; }
+  .app-desc { font-family: var(--font-body); font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
 </style>
 </head>
 <body>
 <div class="slide">
-  <div class="brand-stripe-thin"></div>
+  <!-- Top-left text wordmark -->
+  <div style="position:absolute; top:64px; left:72px;"><span class="text-wordmark">KEFI TECH</span></div>
 
-  <div style="position:absolute; top:48px; left:72px;"><span class="text-wordmark">KEFI TECH</span></div>
-
-  <div style="position:absolute; top:96px; left:72px; right:72px;">
-    <div class="eyebrow">Industry Applications · BFSI &amp; Insurance</div>
-    <h1 class="headline" style="margin-top:10px;">How AI Transformation applies to BFSI &amp; Insurance.</h1>
-    <p class="subtitle">Four industry-specific applications where AI Transformation creates measurable value.</p>
+  <!-- Eyebrow + Headline + Subtitle -->
+  <div style="margin-top: 24px;">
+    <div class="eyebrow">INDUSTRY APPLICATIONS · BFSI &amp; INSURANCE</div>
+    <h1 class="s-headline" style="margin-top: 10px;">How ai transformation applies to bfsi &amp; insurance.</h1>
+    <p class="s-subtitle">Four industry-specific applications where ai transformation creates measurable value.</p>
   </div>
 
-  <div style="position:absolute; top:240px; left:72px; right:72px; display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+  <!-- 2x2 application grid -->
+  <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px;">
+
     <div class="app-card">
       <div class="app-top">
         <span class="material-icons app-icon">description</span>
@@ -85,6 +40,7 @@
       <div class="app-name">Document Intelligence</div>
       <div class="app-desc">Claims, underwriting, KYC, policy and contract document processing at scale.</div>
     </div>
+
     <div class="app-card">
       <div class="app-top">
         <span class="material-icons app-icon">security</span>
@@ -93,6 +49,7 @@
       <div class="app-name">Fraud Detection</div>
       <div class="app-desc">Anomaly identification, predictive risk scoring, real-time transaction monitoring.</div>
     </div>
+
     <div class="app-card">
       <div class="app-top">
         <span class="material-icons app-icon">group</span>
@@ -101,6 +58,7 @@
       <div class="app-name">Customer Intelligence</div>
       <div class="app-desc">Customer 360, next-best-action, retention modeling, personalized servicing.</div>
     </div>
+
     <div class="app-card">
       <div class="app-top">
         <span class="material-icons app-icon">gavel</span>
@@ -109,12 +67,14 @@
       <div class="app-name">Regulatory Operations</div>
       <div class="app-desc">Compliance reporting, audit trails, transaction surveillance, regulatory change management.</div>
     </div>
+
   </div>
 
+  <!-- Bottom rail -->
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
     <span>08 / 12</span>
-    <span>Industry Applications</span>
+    <span>INDUSTRY APPLICATIONS</span>
   </div>
 </div>
 </body>

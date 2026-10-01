@@ -2,105 +2,103 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Capability Overview — Data Analytics & Data Engineering</title>
+<title>Data Analytics &amp; Data Engineering — Capability Overview</title>
 <link rel="stylesheet" href="global.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
   .slide-headline {
     font-family: var(--font-heading);
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--primary);
-    line-height: 1.2;
-    letter-spacing: -0.01em;
+    line-height: 1.18;
+    letter-spacing: -0.015em;
   }
   .slide-subtitle {
     font-family: var(--font-body);
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.5;
+    margin-top: 8px;
   }
-  .lifecycle-row {
+  .lifecycle-flow {
     display: flex;
-    align-items: center;
-    gap: 8px;
-    width: 100%;
+    align-items: stretch;
+    gap: 0;
+    height: 90px;
   }
-  .lifecycle-stage {
+  .stage-card {
     flex: 1;
-    height: 78px;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 10px;
+    padding: 14px 18px;
     display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 0 20px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
   }
-  .lifecycle-stage .material-icons {
+  .stage-card .material-icons {
     color: var(--brand);
     font-size: 24px !important;
   }
-  .lifecycle-stage .stage-name {
+  .stage-name {
     font-family: var(--font-heading);
     font-size: 14px;
     font-weight: 600;
     color: var(--primary);
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
   }
-  .lifecycle-arrow {
+  .flow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
     color: var(--accent);
-    font-family: var(--font-num);
     font-size: 22px;
-    font-weight: 600;
-    flex: 0 0 auto;
-    width: 16px;
-    text-align: center;
+    font-weight: 700;
   }
-  .cap-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-  }
-  .cap-pillar {
-    background: var(--bg-elev);
+  .pillar-card {
+    background: var(--bg);
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 14px 16px;
     height: 120px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
   }
-  .cap-pillar .row-top {
+  .pillar-top {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
   }
-  .cap-pillar .material-icons {
+  .pillar-top .material-icons {
     color: var(--brand);
     font-size: 24px !important;
   }
-  .cap-pillar .cap-num {
+  .pillar-num {
     font-family: var(--font-num);
-    font-size: 12px;
-    color: var(--accent);
+    font-size: 11px;
     font-weight: 600;
+    color: var(--accent);
     letter-spacing: 0.10em;
   }
-  .cap-pillar .cap-name {
+  .pillar-name {
     font-family: var(--font-heading);
     font-size: 14px;
     font-weight: 600;
     color: var(--primary);
     line-height: 1.2;
+    margin-top: 2px;
   }
-  .cap-pillar .cap-desc {
+  .pillar-desc {
     font-family: var(--font-body);
     font-size: 11px;
     color: var(--text-secondary);
     line-height: 1.4;
+    margin-top: 2px;
   }
 </style>
 </head>
@@ -116,82 +114,89 @@
 
   <div style="margin-top:18px;">
     <h1 class="slide-headline">Data Analytics &amp; Data Engineering across the complete lifecycle.</h1>
-    <p class="slide-subtitle" style="margin-top:8px;">Six capability pillars covering the full data analytics &amp; data engineering spectrum.</p>
+    <p class="slide-subtitle">Six capability pillars covering the full data analytics &amp; data engineering spectrum.</p>
   </div>
 
   <!-- Lifecycle flow -->
-  <div class="lifecycle-row" style="margin-top:22px;">
-    <div class="lifecycle-stage">
+  <div class="lifecycle-flow" style="margin-top:18px;">
+    <div class="stage-card">
       <span class="material-icons">lightbulb</span>
-      <span class="stage-name">STRATEGY</span>
+      <div class="stage-name">STRATEGY</div>
     </div>
-    <div class="lifecycle-arrow">&#9658;</div>
-    <div class="lifecycle-stage">
+    <div class="flow-arrow">&#9658;</div>
+    <div class="stage-card">
       <span class="material-icons">engineering</span>
-      <span class="stage-name">BUILD</span>
+      <div class="stage-name">BUILD</div>
     </div>
-    <div class="lifecycle-arrow">&#9658;</div>
-    <div class="lifecycle-stage">
+    <div class="flow-arrow">&#9658;</div>
+    <div class="stage-card">
       <span class="material-icons">integration_instructions</span>
-      <span class="stage-name">INTEGRATE</span>
+      <div class="stage-name">INTEGRATE</div>
     </div>
-    <div class="lifecycle-arrow">&#9658;</div>
-    <div class="lifecycle-stage">
+    <div class="flow-arrow">&#9658;</div>
+    <div class="stage-card">
       <span class="material-icons">monitoring</span>
-      <span class="stage-name">OPERATE</span>
+      <div class="stage-name">OPERATE</div>
     </div>
   </div>
 
-  <!-- 6 capability pillars -->
-  <div class="cap-grid" style="margin-top:18px;">
-    <div class="cap-pillar">
-      <div class="row-top">
+  <!-- 6-pillar grid -->
+  <div style="display:grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap:12px; margin-top:16px;">
+
+    <div class="pillar-card">
+      <div class="pillar-top">
         <span class="material-icons">lightbulb</span>
-        <span class="cap-num">01</span>
+        <span class="pillar-num">01</span>
       </div>
-      <div class="cap-name">Data Strategy &amp; Governance</div>
-      <div class="cap-desc">Data strategy, maturity assessment, architecture, governance, lineage, MDM.</div>
+      <div class="pillar-name">Data Strategy &amp; Governance</div>
+      <div class="pillar-desc">Data strategy, maturity assessment, architecture, governance, lineage, MDM.</div>
     </div>
-    <div class="cap-pillar">
-      <div class="row-top">
+
+    <div class="pillar-card">
+      <div class="pillar-top">
         <span class="material-icons">storage</span>
-        <span class="cap-num">02</span>
+        <span class="pillar-num">02</span>
       </div>
-      <div class="cap-name">Data Engineering &amp; Integration</div>
-      <div class="cap-desc">Data pipelines, ETL/ELT, APIs, integration, migration, data quality.</div>
+      <div class="pillar-name">Data Engineering &amp; Integration</div>
+      <div class="pillar-desc">Data pipelines, ETL/ELT, APIs, integration, migration, data quality.</div>
     </div>
-    <div class="cap-pillar">
-      <div class="row-top">
+
+    <div class="pillar-card">
+      <div class="pillar-top">
         <span class="material-icons">cloud</span>
-        <span class="cap-num">03</span>
+        <span class="pillar-num">03</span>
       </div>
-      <div class="cap-name">Data Platforms &amp; Modernization</div>
-      <div class="cap-desc">Data lakes, warehouses, lakehouses, cloud data platforms, legacy modernization.</div>
+      <div class="pillar-name">Data Platforms &amp; Modernization</div>
+      <div class="pillar-desc">Data lakes, warehouses, lakehouses, cloud data platforms, legacy modernization.</div>
     </div>
-    <div class="cap-pillar">
-      <div class="row-top">
+
+    <div class="pillar-card">
+      <div class="pillar-top">
         <span class="material-icons">analytics</span>
-        <span class="cap-num">04</span>
+        <span class="pillar-num">04</span>
       </div>
-      <div class="cap-name">BI &amp; Decision Intelligence</div>
-      <div class="cap-desc">Enterprise dashboards, reporting, KPI frameworks, self-service BI, executive analytics.</div>
+      <div class="pillar-name">BI &amp; Decision Intelligence</div>
+      <div class="pillar-desc">Enterprise dashboards, reporting, KPI frameworks, self-service BI, executive analytics.</div>
     </div>
-    <div class="cap-pillar">
-      <div class="row-top">
+
+    <div class="pillar-card">
+      <div class="pillar-top">
         <span class="material-icons">science</span>
-        <span class="cap-num">05</span>
+        <span class="pillar-num">05</span>
       </div>
-      <div class="cap-name">Advanced Analytics &amp; Data Science</div>
-      <div class="cap-desc">Predictive analytics, forecasting, segmentation, optimization, statistical modelling.</div>
+      <div class="pillar-name">Advanced Analytics &amp; Data Science</div>
+      <div class="pillar-desc">Predictive analytics, forecasting, segmentation, optimization, statistical modelling.</div>
     </div>
-    <div class="cap-pillar">
-      <div class="row-top">
+
+    <div class="pillar-card">
+      <div class="pillar-top">
         <span class="material-icons">auto_awesome</span>
-        <span class="cap-num">06</span>
+        <span class="pillar-num">06</span>
       </div>
-      <div class="cap-name">AI-Powered Analytics</div>
-      <div class="cap-desc">Conversational analytics, GenAI over enterprise data, NL querying, decision support.</div>
+      <div class="pillar-name">AI-Powered Analytics</div>
+      <div class="pillar-desc">Conversational analytics, GenAI over enterprise data, NL querying, decision support.</div>
     </div>
+
   </div>
 
   <!-- Bottom rail -->

@@ -3,82 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <title>Cover — AI Transformation for BFSI & Insurance</title>
+<link rel="stylesheet" href="global.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="global.css">
 <style>
-  .cover-display {
-    font-family: var(--font-heading);
-    font-size: var(--fs-display);
-    font-weight: 800;
-    line-height: 1.04;
-    letter-spacing: -0.025em;
-  }
-  .cover-eyebrow {
-    font-family: var(--font-body);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--brand);
-  }
-  .top-meta {
-    font-family: var(--font-num);
-    font-size: 10px;
-    color: var(--text-muted);
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-  }
-  .right-callouts {
-    font-family: var(--font-num);
-    font-size: 12px;
-    color: var(--brand);
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-  .cover-subtitle {
-    font-family: var(--font-body);
-    font-size: var(--fs-h3);
-    color: var(--text-secondary);
-    line-height: 1.45;
-    font-weight: 400;
-    max-width: 580px;
-  }
+  .cover-display { font-family: var(--font-heading); font-size: 64px; font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; }
+  .cover-eyebrow { font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brand); }
+  .cover-subtitle { font-family: var(--font-body); font-size: 22px; font-weight: 400; color: var(--text-secondary); line-height: 1.4; max-width: 560px; }
+  .right-callout { font-family: var(--font-num); font-size: 12px; font-weight: 500; color: var(--brand); letter-spacing: 0.10em; }
+  .right-callout-num { color: var(--accent); font-weight: 600; margin-right: 8px; }
+  .top-right-label { font-family: var(--font-num); font-size: 11px; font-weight: 500; color: var(--text-muted); letter-spacing: 0.12em; }
+  .vertical-hairline { position: absolute; top: 240px; bottom: 120px; left: 70%; width: 1px; background: var(--border-strong); }
 </style>
 </head>
 <body>
 <div class="slide grid-bg">
-  <div class="brand-stripe"></div>
+  <div class="brand-stripe" data-decor></div>
 
-  <!-- Top-left logo -->
+  <!-- Top-left logo (single image logo on cover) -->
   <img src="assets/kefi_logo.png" class="kefi-logo-lg" style="position:absolute; top:64px; left:104px;" alt="Kefi Tech">
 
-  <!-- Top-right meta -->
-  <div class="top-meta" style="position:absolute; top:88px; right:104px;">AI Transformation Services · 2026</div>
+  <!-- Top-right small label -->
+  <div class="top-right-label" style="position:absolute; top:80px; right:104px;">AI TRANSFORMATION SERVICES · 2026</div>
+
+  <!-- Vertical hairline at 70% width -->
+  <div class="vertical-hairline" data-decor></div>
+
+  <!-- Right-side stacked callouts -->
+  <div style="position:absolute; top:260px; right:104px; display:flex; flex-direction:column; gap:32px; text-align:right;">
+    <div class="right-callout"><span class="right-callout-num">01</span>Generative</div>
+    <div class="right-callout"><span class="right-callout-num">02</span>Agentic</div>
+    <div class="right-callout"><span class="right-callout-num">03</span>Enterprise</div>
+  </div>
 
   <!-- Center-left composition -->
-  <div style="position:absolute; top:248px; left:104px; width:760px;">
-    <div class="cover-eyebrow">Kefi Tech · BFSI &amp; Insurance</div>
-    <h1 class="cover-display" style="margin-top:14px;">
-      <span style="display:block; color: var(--primary);">AI Transformation</span>
-      <span style="display:block; color: var(--accent);">for BFSI &amp; Insurance.</span>
-    </h1>
-    <div class="accent-bar" style="margin-top:22px;"></div>
-    <p class="cover-subtitle" style="margin-top:22px;">A capability brief on Kefi Tech AI Transformation Services for BFSI &amp; Insurance.</p>
+  <div style="position:absolute; top:240px; left:104px; max-width:680px;">
+    <div class="cover-eyebrow">KEFI TECH · BFSI &amp; INSURANCE</div>
+    <h1 class="cover-display" style="margin:18px 0 0 0; color: var(--primary);">AI Transformation</h1>
+    <h1 class="cover-display" style="margin:0; color: var(--accent);">for BFSI &amp; Insurance.</h1>
+    <div class="accent-bar" style="margin-top:24px;"></div>
+    <p class="cover-subtitle" style="margin-top:24px;">A capability brief on Kefi Tech AI Transformation Services for BFSI &amp; Insurance.</p>
   </div>
 
-  <!-- Right vertical hairline + callouts -->
-  <div style="position:absolute; top:248px; right:104px; width:200px; height:240px; display:grid; grid-template-rows: 1fr 1fr 1fr; align-items:center; border-left:1px solid var(--border); padding-left:28px;">
-    <div class="right-callouts">01 &nbsp;Generative</div>
-    <div class="right-callouts">02 &nbsp;Agentic</div>
-    <div class="right-callouts" style="color: var(--accent);">03 &nbsp;Enterprise</div>
-  </div>
-
-  <!-- Foot rail -->
+  <!-- Bottom rail -->
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
-    <span>01 / 12 · AI Transformation Services</span>
+    <span>01 / 12 · AI TRANSFORMATION SERVICES</span>
   </div>
 </div>
 </body>

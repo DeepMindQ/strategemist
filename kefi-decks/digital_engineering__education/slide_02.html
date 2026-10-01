@@ -9,20 +9,20 @@
 <style>
   .h-title {
     font-family: var(--font-heading);
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 700;
-    line-height: 1.25;
+    line-height: 1.2;
     letter-spacing: -0.01em;
     color: var(--primary);
-    max-width: 1080px;
+    max-width: 980px;
   }
   .h-subtitle {
     font-family: var(--font-body);
     font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.55;
+    margin-top: 8px;
     max-width: 980px;
-    margin-top: 10px;
   }
   .panel-title {
     font-family: var(--font-body);
@@ -31,20 +31,26 @@
     text-transform: uppercase;
     font-weight: 700;
   }
+  .body-text {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
   .driver-card {
     background: var(--bg);
     border: 1px solid var(--border);
-    border-left: 3px solid var(--brand);
     border-radius: 8px;
-    padding: 10px 14px;
-    display: flex;
-    gap: 12px;
+    padding: 10px 12px;
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 10px;
     align-items: flex-start;
   }
   .driver-icon {
     color: var(--brand);
     font-size: 20px !important;
-    margin-top: 2px;
+    line-height: 1;
   }
   .driver-title {
     font-family: var(--font-heading);
@@ -58,13 +64,7 @@
     font-size: 11px;
     color: var(--text-secondary);
     line-height: 1.45;
-    margin-top: 4px;
-  }
-  .body-text {
-    font-family: var(--font-body);
-    font-size: 13px;
-    color: var(--text-secondary);
-    line-height: 1.7;
+    margin-top: 3px;
   }
   .top-right-label {
     font-family: var(--font-num);
@@ -84,23 +84,19 @@
   </div>
 
   <!-- Eyebrow + Headline -->
-  <div style="margin-top:28px;">
+  <div style="margin-top:24px;">
     <div class="eyebrow">INDUSTRY CONTEXT · EDUCATION</div>
-    <h1 class="h-title" style="margin-top:12px;">
-      Education is being reshaped by digital learning, institutional automation and student lifecycle intelligence.
-    </h1>
-    <p class="h-subtitle">
-      Student success, faculty productivity, institutional efficiency and digital experience define modern education.
-    </p>
+    <h1 class="h-title" style="margin-top:10px;">Education is being reshaped by digital learning, institutional automation and student lifecycle intelligence.</h1>
+    <p class="h-subtitle">Student success, faculty productivity, institutional efficiency and digital experience define modern education.</p>
   </div>
 
   <!-- Two-column layout -->
   <div style="display:grid; grid-template-columns: 560px 1fr; gap:32px; margin-top:24px;">
 
-    <!-- LEFT panel -->
-    <div class="surface-elev" style="width:560px; padding:20px 22px; height:360px; display:flex; flex-direction:column;">
+    <!-- LEFT panel: WHY EDUCATION NEEDS THIS NOW -->
+    <div class="surface-elev" style="padding:22px 24px; height:360px; display:flex; flex-direction:column;">
       <div class="panel-title" style="color:var(--brand);">WHY EDUCATION NEEDS THIS NOW</div>
-      <div class="hairline-soft" style="margin-top:10px;"></div>
+      <div class="hairline-soft" style="margin-top:12px;"></div>
       <div style="display:flex; flex-direction:column; gap:10px; margin-top:14px;">
 
         <div class="driver-card">
@@ -138,11 +134,11 @@
       </div>
     </div>
 
-    <!-- RIGHT panel -->
-    <div class="surface-elev" style="padding:20px 22px; height:360px; display:flex; flex-direction:column;">
+    <!-- RIGHT panel: WHAT THIS MEANS -->
+    <div class="surface-elev" style="padding:22px 24px; height:360px; display:flex; flex-direction:column;">
       <div class="panel-title" style="color:var(--accent-dark);">WHAT THIS MEANS FOR DIGITAL ENGINEERING &amp; TRANSFORMATION</div>
-      <div class="hairline-soft" style="margin-top:10px;"></div>
-      <p class="body-text" style="margin-top:14px;">
+      <div class="hairline-soft" style="margin-top:12px;"></div>
+      <p class="body-text" style="margin-top:18px;">
         Digital Engineering &amp; Transformation applied to education requires industry-specific capability, not generic technology. The right approach connects digital engineering &amp; transformation to the regulatory, operational and customer realities that define education.
       </p>
       <div style="margin-top:auto;">

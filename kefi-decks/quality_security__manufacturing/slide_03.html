@@ -4,106 +4,83 @@
 <meta charset="UTF-8">
 <title>Quality & Security Engineering — Capability Overview</title>
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="global.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
-  .h-eyebrow { font-family: var(--font-body); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brand); font-weight: 700; }
-  .h-title { font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--primary); line-height: 1.18; letter-spacing: -0.01em; }
-  .h-sub { font-family: var(--font-body); font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
-  .lifecycle-stage { display:flex; align-items:center; gap:10px; padding:14px 18px; background: var(--bg-elev); border:1px solid var(--border); border-radius:8px; flex:1; }
-  .lifecycle-icon { font-size:24px !important; color: var(--brand); }
-  .lifecycle-name { font-family: var(--font-heading); font-size:14px; font-weight:600; color: var(--primary); letter-spacing:0.02em; }
-  .arrow-sep { color: var(--accent); font-family: var(--font-heading); font-size:18px; font-weight:700; }
-  .pillar-card { background: var(--bg); border: 1px solid var(--border); border-radius:8px; padding:12px 14px; display:flex; flex-direction:column; gap:6px; height:120px; }
-  .pillar-top { display:flex; justify-content:space-between; align-items:center; }
-  .pillar-icon { font-size:24px !important; color: var(--brand); }
-  .pillar-num { font-family: var(--font-num); font-size:11px; color: var(--accent); font-weight:600; letter-spacing:0.06em; }
-  .pillar-name { font-family: var(--font-heading); font-size:14px; font-weight:600; color: var(--primary); line-height:1.2; }
-  .pillar-desc { font-family: var(--font-body); font-size:11px; color: var(--text-secondary); line-height:1.4; }
+  .slide { padding: 48px 72px; }
+  .top-bar { display: flex; justify-content: space-between; align-items: center; }
+  .head-block { margin-top: 12px; max-width: 1080px; }
+  .headline { font-family: var(--font-heading); font-size: 28px; font-weight: 700; line-height: 1.2; color: var(--primary); letter-spacing: -0.015em; margin-top: 6px; }
+  .subtitle { font-family: var(--font-body); font-size: 13px; line-height: 1.55; color: var(--text-secondary); margin-top: 6px; max-width: 920px; }
+
+  .lifecycle-flow { display: flex; align-items: stretch; gap: 0; margin-top: 18px; }
+  .lc-stage { flex: 1; display: flex; align-items: center; gap: 12px; padding: 14px 18px; background: var(--bg-elev); border: 1px solid var(--border); border-radius: 10px; }
+  .lc-stage .mi { color: var(--brand); font-size: 24px !important; }
+  .lc-stage-name { font-family: var(--font-heading); font-size: 14px; font-weight: 600; color: var(--primary); letter-spacing: 0.04em; text-transform: uppercase; }
+  .lc-arrow { display: flex; align-items: center; justify-content: center; width: 30px; color: var(--accent); font-size: 22px; font-weight: 700; flex-shrink: 0; }
+
+  .pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap: 12px; margin-top: 18px; }
+  .pillar-card { padding: 14px 16px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; display: flex; flex-direction: column; gap: 6px; height: 124px; }
+  .pillar-top { display: flex; justify-content: space-between; align-items: center; }
+  .pillar-top .mi { color: var(--brand); font-size: 24px !important; }
+  .pillar-num { font-family: var(--font-num); font-size: 11px; font-weight: 600; color: var(--accent); letter-spacing: 0.10em; }
+  .pillar-name { font-family: var(--font-heading); font-size: 14px; font-weight: 600; color: var(--primary); line-height: 1.2; margin-top: 2px; }
+  .pillar-desc { font-family: var(--font-body); font-size: 11px; color: var(--text-secondary); line-height: 1.45; }
 </style>
 </head>
 <body>
 <div class="slide">
-  <div class="brand-stripe" data-decor></div>
+  <div class="top-bar">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span class="num-mono" style="font-size:11px; color:var(--text-muted); letter-spacing:0.16em;">03 · CAPABILITIES</span>
+  </div>
 
-  <div style="position:absolute; top:64px; left:104px;"><span class="text-wordmark">KEFI TECH</span></div>
-
-  <div style="position:absolute; top:106px; left:104px; right:104px;">
-    <div class="h-eyebrow">CAPABILITIES</div>
-    <h2 class="h-title" style="margin-top:8px;">Quality &amp; Security Engineering across the complete lifecycle.</h2>
-    <p class="h-sub" style="margin-top:6px;">Six capability pillars covering the full quality &amp; security engineering spectrum.</p>
+  <div class="head-block">
+    <span class="eyebrow">CAPABILITIES</span>
+    <h1 class="headline">Quality &amp; Security Engineering across the complete lifecycle.</h1>
+    <p class="subtitle">Six capability pillars covering the full quality &amp; security engineering spectrum.</p>
   </div>
 
   <!-- Lifecycle flow -->
-  <div style="position:absolute; top:230px; left:104px; right:104px; display:flex; align-items:center; gap:8px; height:60px;">
-    <div class="lifecycle-stage">
-      <span class="material-icons lifecycle-icon">lightbulb</span>
-      <span class="lifecycle-name">STRATEGY</span>
-    </div>
-    <span class="arrow-sep">►</span>
-    <div class="lifecycle-stage">
-      <span class="material-icons lifecycle-icon">engineering</span>
-      <span class="lifecycle-name">BUILD</span>
-    </div>
-    <span class="arrow-sep">►</span>
-    <div class="lifecycle-stage">
-      <span class="material-icons lifecycle-icon">integration_instructions</span>
-      <span class="lifecycle-name">INTEGRATE</span>
-    </div>
-    <span class="arrow-sep">►</span>
-    <div class="lifecycle-stage">
-      <span class="material-icons lifecycle-icon">monitoring</span>
-      <span class="lifecycle-name">OPERATE</span>
-    </div>
+  <div class="lifecycle-flow">
+    <div class="lc-stage"><span class="material-icons mi">lightbulb</span><span class="lc-stage-name">Strategy</span></div>
+    <div class="lc-arrow">►</div>
+    <div class="lc-stage"><span class="material-icons mi">engineering</span><span class="lc-stage-name">Build</span></div>
+    <div class="lc-arrow">►</div>
+    <div class="lc-stage"><span class="material-icons mi">integration_instructions</span><span class="lc-stage-name">Integrate</span></div>
+    <div class="lc-arrow">►</div>
+    <div class="lc-stage"><span class="material-icons mi">monitoring</span><span class="lc-stage-name">Operate</span></div>
   </div>
 
-  <!-- 3x2 capability pillar grid -->
-  <div style="position:absolute; top:316px; left:104px; right:104px; display:grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr); gap:12px;">
+  <!-- 6 capability pillars -->
+  <div class="pillar-grid">
     <div class="pillar-card">
-      <div class="pillar-top">
-        <span class="material-icons pillar-icon">security</span>
-        <span class="pillar-num">01</span>
-      </div>
+      <div class="pillar-top"><span class="material-icons mi">security</span><span class="pillar-num">01</span></div>
       <div class="pillar-name">Application Security &amp; DevSecOps</div>
       <div class="pillar-desc">SAST, DAST, SCA, secure code review, CI/CD pipeline security, OWASP, NIST, SANS.</div>
     </div>
     <div class="pillar-card">
-      <div class="pillar-top">
-        <span class="material-icons pillar-icon">shield</span>
-        <span class="pillar-num">02</span>
-      </div>
+      <div class="pillar-top"><span class="material-icons mi">shield</span><span class="pillar-num">02</span></div>
       <div class="pillar-name">VAPT &amp; Risk Assessment</div>
       <div class="pillar-desc">Web, API, mobile, IoT, cloud, container VAPT. MITRE ATT&amp;CK, CIS frameworks.</div>
     </div>
     <div class="pillar-card">
-      <div class="pillar-top">
-        <span class="material-icons pillar-icon">speed</span>
-        <span class="pillar-num">03</span>
-      </div>
+      <div class="pillar-top"><span class="material-icons mi">speed</span><span class="pillar-num">03</span></div>
       <div class="pillar-name">Performance Engineering</div>
       <div class="pillar-desc">Load, stress, spike, soak testing. Capacity planning, bottleneck analysis, tuning.</div>
     </div>
     <div class="pillar-card">
-      <div class="pillar-top">
-        <span class="material-icons pillar-icon">precision_manufacturing</span>
-        <span class="pillar-num">04</span>
-      </div>
+      <div class="pillar-top"><span class="material-icons mi">precision_manufacturing</span><span class="pillar-num">04</span></div>
       <div class="pillar-name">Test Automation &amp; Continuous Testing</div>
       <div class="pillar-desc">UI, web, mobile, API automation, BDD, codeless/AI-assisted, CI/CD integration.</div>
     </div>
     <div class="pillar-card">
-      <div class="pillar-top">
-        <span class="material-icons pillar-icon">psychology</span>
-        <span class="pillar-num">05</span>
-      </div>
+      <div class="pillar-top"><span class="material-icons mi">psychology</span><span class="pillar-num">05</span></div>
       <div class="pillar-name">AI &amp; Intelligent Systems Testing</div>
       <div class="pillar-desc">AI/ML model testing, GenAI/LLM testing, bias assessment, prompt/response validation.</div>
     </div>
     <div class="pillar-card">
-      <div class="pillar-top">
-        <span class="material-icons pillar-icon">gavel</span>
-        <span class="pillar-num">06</span>
-      </div>
+      <div class="pillar-top"><span class="material-icons mi">gavel</span><span class="pillar-num">06</span></div>
       <div class="pillar-name">Quality Consulting &amp; Assurance</div>
       <div class="pillar-desc">Test strategy, QA process assessment, quality governance, release readiness, metrics.</div>
     </div>

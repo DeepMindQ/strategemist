@@ -9,65 +9,35 @@
 <style>
   .slide-headline {
     font-family: var(--font-heading);
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--primary);
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-    max-width: 1000px;
+    line-height: 1.18;
+    letter-spacing: -0.015em;
   }
   .slide-subtitle {
     font-family: var(--font-body);
     font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.5;
+    margin-top: 8px;
   }
   .arch-stack {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: 22px;
   }
   .arch-layer {
-    height: 76px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: var(--bg-elev);
-    overflow: hidden;
-    display: flex;
-    align-items: stretch;
+    height: 78px;
   }
   .arch-layer-label {
-    width: 130px;
-    padding: 0 14px;
-    background: var(--brand-soft);
-    border-right: 1px solid var(--border);
-    font-family: var(--font-heading);
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--brand);
+    font-size: 12px;
     letter-spacing: 0.08em;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-  }
-  .arch-layer-content {
-    flex: 1;
-    padding: 0 16px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    align-items: center;
   }
   .arch-component {
+    font-size: 12px;
     padding: 6px 12px;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    font-family: var(--font-body);
-    font-size: 11px;
-    color: var(--primary);
-    font-weight: 500;
-    letter-spacing: 0.01em;
   }
 </style>
 </head>
@@ -75,17 +45,20 @@
 <div class="slide">
   <div class="brand-stripe-thin" aria-hidden="true"></div>
 
+  <!-- Top header -->
   <div style="display:flex; justify-content:space-between; align-items:center;">
     <span class="text-wordmark">KEFI TECH</span>
     <span class="eyebrow">REFERENCE ARCHITECTURE</span>
   </div>
 
-  <div style="margin-top:18px;">
+  <div style="margin-top:20px;">
     <h1 class="slide-headline">A reference architecture for data analytics &amp; data engineering.</h1>
-    <p class="slide-subtitle" style="margin-top:8px;">Five layers from foundation through consumption.</p>
+    <p class="slide-subtitle">Five layers from foundation through consumption.</p>
   </div>
 
-  <div class="arch-stack" style="margin-top:20px;">
+  <!-- Architecture stack -->
+  <div class="arch-stack">
+
     <div class="arch-layer">
       <div class="arch-layer-label">CONSUMPTION</div>
       <div class="arch-layer-content">
@@ -95,6 +68,7 @@
         <span class="arch-component">Conversational Analytics</span>
       </div>
     </div>
+
     <div class="arch-layer">
       <div class="arch-layer-label">SEMANTIC</div>
       <div class="arch-layer-content">
@@ -104,6 +78,7 @@
         <span class="arch-component">Lineage</span>
       </div>
     </div>
+
     <div class="arch-layer">
       <div class="arch-layer-label">PROCESSING</div>
       <div class="arch-layer-content">
@@ -113,6 +88,7 @@
         <span class="arch-component">Data Quality</span>
       </div>
     </div>
+
     <div class="arch-layer">
       <div class="arch-layer-label">STORAGE</div>
       <div class="arch-layer-content">
@@ -122,6 +98,7 @@
         <span class="arch-component">NoSQL</span>
       </div>
     </div>
+
     <div class="arch-layer">
       <div class="arch-layer-label">PLATFORM</div>
       <div class="arch-layer-content">
@@ -131,8 +108,10 @@
         <span class="arch-component">Security</span>
       </div>
     </div>
+
   </div>
 
+  <!-- Bottom rail -->
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
     <span>09 / 12</span>

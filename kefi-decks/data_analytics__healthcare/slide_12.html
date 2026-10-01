@@ -2,86 +2,85 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Closing — Kefi Tech</title>
+<title>Closing</title>
 <link rel="stylesheet" href="global.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
-  .close-eyebrow {
+  .closing-eyebrow {
     font-family: var(--font-body);
     font-size: 11px;
+    font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    font-weight: 600;
     color: var(--brand);
   }
-  .close-headline {
+  .closing-headline {
     font-family: var(--font-heading);
     font-size: 56px;
     font-weight: 700;
     line-height: 1.08;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
   }
-  .close-contact {
+  .closing-headline .line-primary { color: var(--primary); display: block; }
+  .closing-headline .line-accent { color: var(--accent); display: block; }
+  .closing-contact {
     font-family: var(--font-body);
     font-size: 16px;
     color: var(--text-secondary);
     line-height: 1.7;
     font-weight: 400;
-    letter-spacing: 0.01em;
   }
-  .close-right-rail {
-    position: absolute;
-    top: 168px;
-    bottom: 140px;
-    right: 96px;
-    width: 1px;
-    background: var(--border-soft);
-  }
-  .close-callout {
-    position: absolute;
-    right: 110px;
+  .vcallout {
     font-family: var(--font-num);
-    font-size: 16px;
-    letter-spacing: 0.10em;
-    color: var(--brand);
+    font-size: 13px;
     font-weight: 600;
+    color: var(--brand);
+    letter-spacing: 0.18em;
     text-align: right;
     line-height: 1;
   }
-  .close-callout.accent { color: var(--accent); }
+  .vcallout.accent { color: var(--accent); }
+  .v-divider {
+    position: absolute;
+    top: 220px;
+    bottom: 130px;
+    left: 70%;
+    width: 1px;
+    background: var(--border);
+  }
 </style>
 </head>
 <body>
-<div class="slide grid-bg" style="padding:0;">
+<div class="slide grid-bg">
   <div class="brand-stripe" aria-hidden="true"></div>
 
-  <!-- Top-left logo -->
-  <img src="assets/kefi_logo.png" class="kefi-logo-lg" style="position:absolute; top:96px; left:104px;">
+  <!-- Top-left: Kefi Tech logo image -->
+  <img src="assets/kefi_logo.png" class="kefi-logo-lg" alt="Kefi Tech" style="position:absolute; top:96px; left:104px;">
 
-  <!-- Vertical hairline at ~70% width -->
-  <div class="close-right-rail" aria-hidden="true"></div>
-
-  <!-- Right callouts: Discover. / Engineer. / Scale. -->
-  <div class="close-callout" style="top:230px;">Discover.</div>
-  <div class="close-callout" style="top:300px;">Engineer.</div>
-  <div class="close-callout accent" style="top:370px;">Scale.</div>
+  <!-- Right-side vertical hairline + callouts -->
+  <div class="v-divider" aria-hidden="true"></div>
+  <div style="position:absolute; top:240px; left:72%; display:flex; flex-direction:column; gap:64px; align-items:flex-end;">
+    <div class="vcallout">Discover.</div>
+    <div class="vcallout">Engineer.</div>
+    <div class="vcallout accent">Scale.</div>
+  </div>
 
   <!-- Center-left composition -->
-  <div style="position:absolute; top:262px; left:104px; max-width:760px;">
-    <div class="close-eyebrow">GET IN TOUCH</div>
-    <h1 class="close-headline" style="margin:16px 0 0 0;">
-      <span style="color:var(--primary); display:block;">Let us engineer</span>
-      <span style="color:var(--accent); display:block;">what is next.</span>
+  <div style="position:absolute; top:240px; left:104px; max-width:780px;">
+    <div class="closing-eyebrow">GET IN TOUCH</div>
+    <h1 class="closing-headline" style="margin-top:18px;">
+      <span class="line-primary">Let us engineer</span>
+      <span class="line-accent">what is next.</span>
     </h1>
-    <div style="margin-top:28px;">
-      <div class="close-contact">info@kefitech.com &nbsp;&middot;&nbsp; www.kefitech.com</div>
-      <div class="close-contact">Bengaluru, India &nbsp;&middot;&nbsp; Hyderabad, India</div>
+    <div class="closing-contact" style="margin-top:28px;">
+      info@kefitech.com &nbsp;&middot;&nbsp; www.kefitech.com<br>
+      Bengaluru, India &nbsp;&middot;&nbsp; Hyderabad, India
     </div>
   </div>
 
   <!-- Bottom rail -->
-  <div class="foot-rail bordered" style="left:104px; right:104px;">
+  <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
     <span>12 / 12</span>
     <span>INFO@KEFITECH.COM &middot; WWW.KEFITECH.COM</span>

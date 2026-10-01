@@ -4,95 +4,95 @@
 <meta charset="UTF-8">
 <title>Capability 03 — Performance Engineering</title>
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="global.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
-  .h-eyebrow { font-family: var(--font-body); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brand); font-weight: 700; }
-  .h-title { font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: var(--primary); line-height: 1.18; letter-spacing: -0.01em; }
-  .h-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
-  .panel-eyebrow { font-family: var(--font-body); font-size: 10px; letter-spacing: 0.20em; text-transform: uppercase; font-weight: 700; }
+  .slide { padding: 48px 72px; }
+  .top-bar { display: flex; justify-content: space-between; align-items: center; }
+  .head-block { margin-top: 12px; max-width: 1080px; }
+  .headline { font-family: var(--font-heading); font-size: 30px; font-weight: 700; line-height: 1.18; color: var(--primary); letter-spacing: -0.015em; margin-top: 6px; }
+  .subtitle { font-family: var(--font-body); font-size: 13px; line-height: 1.55; color: var(--text-secondary); margin-top: 8px; max-width: 980px; }
+  .two-col { display: grid; grid-template-columns: 1.22fr 1fr; gap: 24px; margin-top: 22px; }
+  .panel { padding: 22px 24px; height: 360px; display: flex; flex-direction: column; }
+  .panel-eyebrow { font-family: var(--font-body); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; }
   .panel-eyebrow.brand { color: var(--brand); }
   .panel-eyebrow.brand-light { color: var(--brand-light); }
-  .body-text { font-family: var(--font-body); font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
-  .component-card { background: var(--surface); border: 1px solid var(--border); border-radius:8px; padding:10px 12px; display:flex; align-items:center; gap:10px; }
-  .comp-num { font-family: var(--font-num); font-size:11px; color: var(--brand); font-weight:600; letter-spacing:0.04em; width:22px; flex-shrink:0; }
-  .comp-icon { font-size:18px !important; color: var(--brand-light); flex-shrink:0; }
-  .comp-text { flex:1; min-width:0; }
-  .comp-name { font-family: var(--font-heading); font-size:12px; font-weight:600; color: var(--primary); line-height:1.2; }
-  .comp-desc { font-family: var(--font-body); font-size:10px; color: var(--text-secondary); line-height:1.35; margin-top:2px; }
+  .left-body { font-family: var(--font-body); font-size: 13px; line-height: 1.7; color: var(--text-secondary); margin-top: 16px; }
+  .tag-pill { margin-top: auto; align-self: flex-start; }
+
+  .component-list { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+  .component-card { display: grid; grid-template-columns: 22px 22px 1fr; gap: 10px; align-items: flex-start; padding: 9px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; }
+  .comp-num { font-family: var(--font-num); font-size: 11px; font-weight: 600; color: var(--brand); letter-spacing: 0.04em; padding-top: 1px; }
+  .comp-icon { color: var(--brand-light); font-size: 18px !important; }
+  .comp-name { font-family: var(--font-heading); font-size: 12px; font-weight: 600; color: var(--primary); line-height: 1.25; }
+  .comp-desc { font-family: var(--font-body); font-size: 10px; color: var(--text-secondary); line-height: 1.4; margin-top: 2px; }
 </style>
 </head>
 <body>
 <div class="slide">
-  <div class="brand-stripe" data-decor></div>
-
-  <div style="position:absolute; top:64px; left:104px;"><span class="text-wordmark">KEFI TECH</span></div>
-
-  <div style="position:absolute; top:108px; left:104px; right:104px;">
-    <div class="h-eyebrow">CAPABILITY 03</div>
-    <h2 class="h-title" style="margin-top:8px;">Performance Engineering.</h2>
-    <p class="h-sub" style="margin-top:6px;">Load, stress, spike, soak testing. Capacity planning, bottleneck analysis, tuning.</p>
+  <div class="top-bar">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span class="num-mono" style="font-size:11px; color:var(--text-muted); letter-spacing:0.16em;">06 · CAPABILITY 03</span>
   </div>
 
-  <!-- Two columns -->
-  <div style="position:absolute; top:248px; left:104px; right:104px; display:grid; grid-template-columns: 560px 1fr; gap:36px;">
+  <div class="head-block">
+    <span class="eyebrow">CAPABILITY 03</span>
+    <h1 class="headline">Performance Engineering.</h1>
+    <p class="subtitle">Load, stress, spike, soak testing. Capacity planning, bottleneck analysis, tuning.</p>
+  </div>
 
-    <!-- LEFT — WHAT WE DO -->
-    <div class="surface-elev" style="width:560px; height:360px; padding:24px 26px; display:flex; flex-direction:column;">
-      <div class="panel-eyebrow brand">WHAT WE DO</div>
-      <p class="body-text" style="margin-top:18px;">Our performance engineering capability is engineered for manufacturing environments. We bring together the quality &amp; security engineering discipline, the manufacturing domain context, and the engineering rigor required to ship production-grade solutions.</p>
-      <div style="margin-top:auto;">
-        <span class="tag-pill">CAPABILITY 3 OF 6</span>
-      </div>
+  <div class="two-col">
+    <div class="surface-elev panel">
+      <span class="panel-eyebrow brand">WHAT WE DO</span>
+      <p class="left-body">Our performance engineering capability is engineered for manufacturing environments. We bring together the quality &amp; security engineering discipline, the manufacturing domain context, and the engineering rigor required to ship production-grade solutions.</p>
+      <span class="tag-pill">CAPABILITY 3 OF 6</span>
     </div>
 
-    <!-- RIGHT — COMPONENTS -->
-    <div class="surface-elev" style="padding:24px 22px; height:360px; display:flex; flex-direction:column;">
-      <div class="panel-eyebrow brand-light">COMPONENTS</div>
-      <div style="display:flex; flex-direction:column; gap:8px; margin-top:14px;">
+    <div class="surface-elev panel">
+      <span class="panel-eyebrow brand-light">COMPONENTS</span>
+      <div class="component-list">
         <div class="component-card">
           <span class="comp-num">01</span>
           <span class="material-icons comp-icon">speed</span>
-          <div class="comp-text">
-            <div class="comp-name">Component 1</div>
-            <div class="comp-desc">Industry-specific component 1 for manufacturing.</div>
+          <div>
+            <div class="comp-name">MES Load Testing</div>
+            <div class="comp-desc">Load testing of MES under peak production — orders, work orders, shop floor transactions.</div>
           </div>
         </div>
         <div class="component-card">
           <span class="comp-num">02</span>
           <span class="material-icons comp-icon">speed</span>
-          <div class="comp-text">
-            <div class="comp-name">Component 2</div>
-            <div class="comp-desc">Industry-specific component 2 for manufacturing.</div>
+          <div>
+            <div class="comp-name">IoT Data Pipeline Performance</div>
+            <div class="comp-desc">Performance testing of IoT data pipelines — sensor data volume, throughput, latency.</div>
           </div>
         </div>
         <div class="component-card">
           <span class="comp-num">03</span>
           <span class="material-icons comp-icon">speed</span>
-          <div class="comp-text">
-            <div class="comp-name">Component 3</div>
-            <div class="comp-desc">Industry-specific component 3 for manufacturing.</div>
+          <div>
+            <div class="comp-name">ERP Performance at Month-End</div>
+            <div class="comp-desc">Stress testing ERP for month-end close — inventory, costing, financials.</div>
           </div>
         </div>
         <div class="component-card">
           <span class="comp-num">04</span>
           <span class="material-icons comp-icon">speed</span>
-          <div class="comp-text">
-            <div class="comp-name">Component 4</div>
-            <div class="comp-desc">Industry-specific component 4 for manufacturing.</div>
+          <div>
+            <div class="comp-name">Quality System Performance</div>
+            <div class="comp-desc">Performance testing of QMS — inspection data volume, CAPA workflow, reporting.</div>
           </div>
         </div>
         <div class="component-card">
           <span class="comp-num">05</span>
           <span class="material-icons comp-icon">speed</span>
-          <div class="comp-text">
-            <div class="comp-name">Component 5</div>
-            <div class="comp-desc">Industry-specific component 5 for manufacturing.</div>
+          <div>
+            <div class="comp-name">Connected Factory Scalability</div>
+            <div class="comp-desc">Scalability testing of connected factory platforms — devices, sensors, edge compute.</div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 
   <div class="foot-rail bordered">

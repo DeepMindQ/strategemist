@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Kefi Tech — Data Analytics & Data Engineering for Healthcare & Pharma</title>
+<title>Cover — Data Analytics &amp; Data Engineering for Healthcare &amp; Pharma</title>
 <link rel="stylesheet" href="global.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -10,111 +10,98 @@
   .cover-eyebrow {
     font-family: var(--font-body);
     font-size: 11px;
+    font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    font-weight: 600;
     color: var(--brand);
   }
   .cover-headline {
     font-family: var(--font-heading);
-    font-size: var(--fs-display);
     font-weight: 800;
-    line-height: 1.04;
-    letter-spacing: -0.015em;
+    font-size: var(--fs-display);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
   }
+  .cover-headline .line-primary { color: var(--primary); display: block; }
+  .cover-headline .line-accent { color: var(--accent); display: block; }
   .cover-subtitle {
     font-family: var(--font-body);
     font-size: var(--fs-h3);
     color: var(--text-secondary);
-    line-height: 1.45;
-    font-weight: 400;
+    line-height: 1.5;
     max-width: 640px;
+    font-weight: 400;
   }
-  .cover-corner-meta {
+  .top-meta {
     font-family: var(--font-num);
-    font-size: 11px;
-    letter-spacing: 0.18em;
+    font-size: 10px;
     color: var(--text-muted);
-    text-transform: uppercase;
+    letter-spacing: 0.18em;
     font-weight: 500;
   }
-  .cover-right-rail {
-    position: absolute;
-    top: 168px;
-    bottom: 140px;
-    right: 96px;
-    width: 1px;
-    background: var(--border-soft);
-  }
-  .cover-callout {
-    position: absolute;
-    right: 110px;
+  .vcallout {
     font-family: var(--font-num);
-    font-size: 13px;
-    letter-spacing: 0.10em;
-    color: var(--brand);
+    font-size: 11px;
     font-weight: 600;
+    color: var(--brand);
+    letter-spacing: 0.18em;
     text-align: right;
     line-height: 1;
   }
-  .cover-callout .label {
+  .vcallout .v-num {
     display: block;
-    font-family: var(--font-body);
-    font-size: 9px;
-    letter-spacing: 0.20em;
-    color: var(--text-muted);
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-top: 6px;
+    color: var(--brand);
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+  }
+  .v-divider {
+    position: absolute;
+    top: 200px;
+    bottom: 120px;
+    left: 70%;
+    width: 1px;
+    background: var(--border);
   }
 </style>
 </head>
 <body>
-<div class="slide grid-bg" style="padding:0;">
+<div class="slide grid-bg">
   <div class="brand-stripe" aria-hidden="true"></div>
 
-  <!-- Top-left logo -->
-  <img src="assets/kefi_logo.png" class="kefi-logo-lg" style="position:absolute; top:64px; left:104px;">
+  <!-- Top-left: Kefi Tech logo image -->
+  <img src="assets/kefi_logo.png" class="kefi-logo-lg" alt="Kefi Tech" style="position:absolute; top:64px; left:104px;">
 
-  <!-- Top-right corner meta -->
-  <div class="cover-corner-meta" style="position:absolute; top:96px; right:104px;">
-    DATA ANALYTICS AND DATA ENGINEERING SERVICES &middot; 2026
-  </div>
+  <!-- Top-right meta -->
+  <div class="top-meta" style="position:absolute; top:80px; right:72px;">DATA ANALYTICS AND DATA ENGINEERING SERVICES &middot; 2026</div>
 
-  <!-- Vertical hairline at ~70% width -->
-  <div class="cover-right-rail" aria-hidden="true"></div>
-
-  <!-- Right callouts -->
-  <div class="cover-callout" style="top:220px;">
-    01 DATA
-    <span class="label">Strategy</span>
-  </div>
-  <div class="cover-callout" style="top:300px;">
-    02 DATA
-    <span class="label">Engineering</span>
-  </div>
-  <div class="cover-callout" style="top:380px;">
-    03 DATA
-    <span class="label">Intelligence</span>
+  <!-- Right-side vertical hairline + callouts -->
+  <div class="v-divider" aria-hidden="true"></div>
+  <div style="position:absolute; top:240px; left:72%; display:flex; flex-direction:column; gap:60px; align-items:flex-end;">
+    <div class="vcallout"><span class="v-num">01</span>DATA</div>
+    <div class="vcallout"><span class="v-num">02</span>DATA</div>
+    <div class="vcallout"><span class="v-num">03</span>DATA</div>
   </div>
 
   <!-- Center-left composition -->
-  <div style="position:absolute; top:240px; left:104px; max-width:760px;">
+  <div style="position:absolute; top:240px; left:104px; max-width:780px;">
     <div class="cover-eyebrow">KEFI TECH &middot; HEALTHCARE &amp; PHARMA</div>
-    <h1 class="cover-headline" style="margin:14px 0 0 0;">
-      <span style="color:var(--primary); display:block;">Data Analytics &amp; Data Engineering</span>
-      <span style="color:var(--accent); display:block;">for Healthcare &amp; Pharma.</span>
+    <h1 class="cover-headline" style="margin-top:18px;">
+      <span class="line-primary">Data Analytics &amp; Data Engineering</span>
+      <span class="line-accent">for Healthcare &amp; Pharma.</span>
     </h1>
-    <div class="accent-bar" style="margin:22px 0 18px 0;"></div>
-    <p class="cover-subtitle">
+    <div class="accent-bar" style="margin-top:24px;"></div>
+    <p class="cover-subtitle" style="margin-top:22px;">
       A capability brief on Kefi Tech Data Analytics &amp; Data Engineering Services for Healthcare &amp; Pharma.
     </p>
   </div>
 
   <!-- Bottom rail -->
-  <div class="foot-rail bordered" style="left:104px; right:104px;">
+  <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
-    <span style="font-family:var(--font-num); font-size:10px; letter-spacing:0.10em; color:var(--text-muted);">01 / 12 &middot; DATA ANALYTICS AND DATA ENGINEERING SERVICES</span>
+    <span></span>
+    <span>01 / 12 &middot; DATA ANALYTICS AND DATA ENGINEERING SERVICES</span>
   </div>
 </div>
 </body>

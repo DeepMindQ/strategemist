@@ -2,64 +2,62 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Cover — Quality & Security Engineering for Manufacturing</title>
+<title>Quality & Security Engineering for Manufacturing — Cover</title>
 <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="global.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
-  .cover-display { font-family: var(--font-heading); font-size: var(--fs-display); font-weight: 800; line-height: 1.04; letter-spacing: -0.02em; }
-  .cover-display-line2 { font-weight: 700; }
-  .cover-eyebrow { font-family: var(--font-body); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brand); font-weight: 700; }
-  .cover-sub { font-family: var(--font-body); font-size: var(--fs-h3); color: var(--text-secondary); line-height: 1.45; max-width: 560px; font-weight: 400; }
-  .cover-meta { font-family: var(--font-num); font-size: 10px; color: var(--text-muted); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; }
-  .v-callout { font-family: var(--font-num); font-size: 14px; color: var(--brand); letter-spacing: 0.06em; font-weight: 600; }
-  .v-callout-num { font-family: var(--font-num); font-size: 10px; color: var(--text-muted); letter-spacing: 0.18em; font-weight: 600; }
-  .v-divider { width: 1px; background: var(--border); height: 240px; }
+  .cover-canvas { position: relative; }
+  .cover-logo { position: absolute; top: 64px; left: 104px; z-index: 4; }
+  .cover-meta { position: absolute; top: 80px; right: 72px; font-family: var(--font-num); font-size: 11px; color: var(--text-muted); letter-spacing: 0.18em; text-transform: uppercase; z-index: 4; }
+  .cover-headline-block { position: absolute; left: 104px; top: 248px; max-width: 720px; z-index: 4; }
+  .cover-eyebrow { font-family: var(--font-body); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brand); font-weight: 600; margin-bottom: 22px; }
+  .cover-headline { font-family: var(--font-heading); font-size: 64px; font-weight: 800; line-height: 1.05; letter-spacing: -0.025em; color: var(--primary); }
+  .cover-headline .accent-line { color: var(--accent); display: block; margin-top: 4px; }
+  .cover-bar { width: 48px; height: 3px; background: var(--accent); border-radius: 2px; margin-top: 28px; margin-bottom: 22px; }
+  .cover-subtitle { font-family: var(--font-body); font-size: 22px; line-height: 1.45; color: var(--text-secondary); font-weight: 400; max-width: 640px; }
+  .cover-right-rail { position: absolute; top: 230px; right: 96px; width: 1px; height: 320px; background: var(--border-strong); z-index: 4; }
+  .cover-right-callouts { position: absolute; top: 240px; right: 116px; display: flex; flex-direction: column; gap: 36px; align-items: flex-end; z-index: 4; }
+  .right-callout { font-family: var(--font-num); font-size: 13px; color: var(--brand); letter-spacing: 0.10em; font-weight: 600; text-align: right; }
+  .right-callout .num { color: var(--accent); font-weight: 700; }
+  .right-callout .label { display: block; color: var(--text-secondary); font-size: 11px; letter-spacing: 0.16em; margin-top: 4px; font-weight: 500; }
 </style>
 </head>
 <body>
-<div class="slide grid-bg">
-  <div class="brand-stripe" data-decor></div>
+<div class="slide cover-canvas grid-bg">
+  <div class="brand-stripe"></div>
+  <img src="assets/kefi_logo.png" class="kefi-logo-lg cover-logo" alt="Kefi Tech">
+  <div class="cover-meta">QUALITY &amp; SECURITY ENGINEERING SERVICES · 2026</div>
 
-  <!-- Top-left logo (single image) -->
-  <img src="assets/kefi_logo.png" class="kefi-logo-lg" alt="Kefi Tech" style="position:absolute; top:64px; left:104px;">
-
-  <!-- Top-right meta -->
-  <div class="cover-meta" style="position:absolute; top:80px; right:104px;">QUALITY &amp; SECURITY ENGINEERING SERVICES · 2026</div>
-
-  <!-- Center-left composition -->
-  <div style="position:absolute; top:240px; left:104px; max-width:760px; display:flex; flex-direction:column; gap:18px;">
+  <div class="cover-headline-block">
     <div class="cover-eyebrow">KEFI TECH · MANUFACTURING</div>
-    <h1 class="cover-display">
-      <span style="color:var(--primary);">Quality &amp; Security Engineering</span><br>
-      <span class="cover-display-line2" style="color:var(--accent);">for Manufacturing.</span>
+    <h1 class="cover-headline">
+      Quality &amp; Security Engineering
+      <span class="accent-line">for Manufacturing.</span>
     </h1>
-    <div class="accent-bar" data-decor></div>
-    <p class="cover-sub">A capability brief on Kefi Tech Quality &amp; Security Engineering Services for Manufacturing.</p>
+    <div class="cover-bar"></div>
+    <p class="cover-subtitle">A capability brief on Kefi Tech Quality &amp; Security Engineering Services for Manufacturing.</p>
   </div>
 
-  <!-- Right vertical hairline + stacked callouts -->
-  <div style="position:absolute; top:240px; right:104px; display:flex; align-items:flex-start; gap:32px;">
-    <div style="display:flex; flex-direction:column; gap:28px; align-items:flex-end; padding-top:4px;">
-      <div>
-        <div class="v-callout-num">01</div>
-        <div class="v-callout">Application</div>
-      </div>
-      <div>
-        <div class="v-callout-num">02</div>
-        <div class="v-callout">VAPT</div>
-      </div>
-      <div>
-        <div class="v-callout-num">03</div>
-        <div class="v-callout">Performance</div>
-      </div>
+  <div class="cover-right-rail" data-decor aria-hidden="true"></div>
+  <div class="cover-right-callouts">
+    <div class="right-callout">
+      <span class="num">01</span> Application
+      <span class="label">SECURITY</span>
     </div>
-    <div class="v-divider" data-decor></div>
+    <div class="right-callout">
+      <span class="num">02</span> VAPT
+      <span class="label">RISK</span>
+    </div>
+    <div class="right-callout">
+      <span class="num">03</span> Performance
+      <span class="label">ENGINEERING</span>
+    </div>
   </div>
 
-  <!-- Bottom rail -->
   <div class="foot-rail bordered">
     <span class="text-wordmark">KEFI TECH</span>
+    <span></span>
     <span>01 / 12 · QUALITY &amp; SECURITY ENGINEERING SERVICES</span>
   </div>
 </div>

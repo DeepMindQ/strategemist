@@ -9,12 +9,12 @@
 <style>
   .h-title {
     font-family: var(--font-heading);
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 700;
-    line-height: 1.25;
+    line-height: 1.2;
     letter-spacing: -0.01em;
     color: var(--primary);
-    max-width: 1080px;
+    max-width: 980px;
   }
   .h-subtitle {
     font-family: var(--font-body);
@@ -22,24 +22,36 @@
     color: var(--text-secondary);
     line-height: 1.55;
     margin-top: 8px;
+    max-width: 980px;
   }
-  .deliverables-eyebrow {
+  .pathway-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .pathway-stage {
+    height: 360px;
+    padding: 18px 16px;
+  }
+  .pathway-deliv-eyebrow {
     font-family: var(--font-body);
-    font-size: 9px;
+    font-size: 10px;
     color: var(--text-muted);
-    letter-spacing: 0.16em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     font-weight: 700;
+    margin-top: 4px;
   }
-  .deliverables-list {
+  .pathway-deliv-list {
     list-style: none;
     padding: 0;
-    margin: 6px 0 0 0;
+    margin: 8px 0 0 0;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
   }
-  .deliverables-list li {
+  .pathway-deliv-list li {
     font-family: var(--font-body);
     font-size: 11px;
     color: var(--text-secondary);
@@ -47,18 +59,19 @@
     padding-left: 12px;
     position: relative;
   }
-  .deliverables-list li::before {
+  .pathway-deliv-list li::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 7px;
+    top: 6px;
     width: 4px;
     height: 4px;
     border-radius: 50%;
     background: var(--brand);
   }
-  .pathway-stage.accent .deliverables-list li::before {
-    background: var(--accent);
+  .pathway-stage.accent .pathway-deliv-list li::before { background: var(--accent); }
+  .pathway-stage-fee {
+    margin-top: auto;
   }
   .top-right-label {
     font-family: var(--font-num);
@@ -78,89 +91,73 @@
   </div>
 
   <!-- Eyebrow + Headline -->
-  <div style="margin-top:24px;">
+  <div style="margin-top:22px;">
     <div class="eyebrow">ENGAGEMENT PATHWAY</div>
-    <h1 class="h-title" style="margin-top:10px;">
-      A four-stage pathway from discovery to operations.
-    </h1>
-    <p class="h-subtitle">
-      Each stage carries concrete deliverables, a fixed duration, and a transparent commercial frame.
-    </p>
+    <h1 class="h-title" style="margin-top:8px;">A four-stage pathway from discovery to operations.</h1>
+    <p class="h-subtitle">Each stage carries concrete deliverables, a fixed duration, and a transparent commercial frame.</p>
   </div>
 
-  <!-- 4-stage pathway grid -->
-  <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:16px; margin-top:22px;">
+  <!-- 4-stage pathway -->
+  <div class="pathway-grid">
 
-    <!-- STAGE 01 -->
-    <div class="pathway-stage" style="height:360px;">
+    <div class="pathway-stage">
       <div class="pathway-stage-num">STAGE 01</div>
       <div class="pathway-stage-name">Discovery</div>
       <div class="pathway-stage-meta">2 WEEKS · FIXED FEE</div>
-      <div class="hairline-soft" style="margin-top:6px;"></div>
-      <div class="deliverables-eyebrow" style="margin-top:8px;">DELIVERABLES</div>
-      <ul class="deliverables-list">
+      <div class="hairline-soft" style="margin-top:10px;"></div>
+      <div class="pathway-deliv-eyebrow">DELIVERABLES</div>
+      <ul class="pathway-deliv-list">
         <li>Digital Engineering &amp; Transformation maturity assessment</li>
         <li>Opportunity prioritization</li>
         <li>90-day roadmap</li>
         <li>ROI business case</li>
       </ul>
-      <div style="margin-top:auto;">
-        <div class="pathway-stage-fee">$25K-$75K</div>
-      </div>
+      <div class="pathway-stage-fee">$25K-$75K</div>
     </div>
 
-    <!-- STAGE 02 -->
-    <div class="pathway-stage" style="height:360px;">
+    <div class="pathway-stage">
       <div class="pathway-stage-num">STAGE 02</div>
       <div class="pathway-stage-name">Solution Design</div>
       <div class="pathway-stage-meta">3-4 WEEKS · FIXED FEE</div>
-      <div class="hairline-soft" style="margin-top:6px;"></div>
-      <div class="deliverables-eyebrow" style="margin-top:8px;">DELIVERABLES</div>
-      <ul class="deliverables-list">
+      <div class="hairline-soft" style="margin-top:10px;"></div>
+      <div class="pathway-deliv-eyebrow">DELIVERABLES</div>
+      <ul class="pathway-deliv-list">
         <li>Target architecture</li>
         <li>CoE charter</li>
         <li>Governance framework</li>
         <li>Build plan</li>
       </ul>
-      <div style="margin-top:auto;">
-        <div class="pathway-stage-fee">$50K-$150K</div>
-      </div>
+      <div class="pathway-stage-fee">$50K-$150K</div>
     </div>
 
-    <!-- STAGE 03 -->
-    <div class="pathway-stage" style="height:360px;">
+    <div class="pathway-stage">
       <div class="pathway-stage-num">STAGE 03</div>
       <div class="pathway-stage-name">Delivery</div>
       <div class="pathway-stage-meta">8-24 WEEKS · T&amp;M OR FIXED</div>
-      <div class="hairline-soft" style="margin-top:6px;"></div>
-      <div class="deliverables-eyebrow" style="margin-top:8px;">DELIVERABLES</div>
-      <ul class="deliverables-list">
+      <div class="hairline-soft" style="margin-top:10px;"></div>
+      <div class="pathway-deliv-eyebrow">DELIVERABLES</div>
+      <ul class="pathway-deliv-list">
         <li>Production system</li>
         <li>Integration complete</li>
         <li>Documentation</li>
         <li>Knowledge transfer</li>
       </ul>
-      <div style="margin-top:auto;">
-        <div class="pathway-stage-fee">$300K-$1M</div>
-      </div>
+      <div class="pathway-stage-fee">$300K-$1M</div>
     </div>
 
-    <!-- STAGE 04 (accent) -->
-    <div class="pathway-stage accent" style="height:360px;">
+    <div class="pathway-stage accent">
       <div class="pathway-stage-num">STAGE 04</div>
       <div class="pathway-stage-name">Managed Operations</div>
       <div class="pathway-stage-meta">ONGOING · RETAINER</div>
-      <div class="hairline-soft" style="margin-top:6px;"></div>
-      <div class="deliverables-eyebrow" style="margin-top:8px;">DELIVERABLES</div>
-      <ul class="deliverables-list">
+      <div class="hairline-soft" style="margin-top:10px;"></div>
+      <div class="pathway-deliv-eyebrow">DELIVERABLES</div>
+      <ul class="pathway-deliv-list">
         <li>Managed services</li>
         <li>Continuous optimization</li>
         <li>Quarterly reviews</li>
         <li>SLA-backed operations</li>
       </ul>
-      <div style="margin-top:auto;">
-        <div class="pathway-stage-fee">$50K-$500K / mo</div>
-      </div>
+      <div class="pathway-stage-fee">$50K-$500K / mo</div>
     </div>
 
   </div>

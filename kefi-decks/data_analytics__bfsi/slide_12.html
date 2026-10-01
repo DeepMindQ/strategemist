@@ -1,62 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Closing</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <link rel="stylesheet" href="global.css" />
+<meta charset="UTF-8">
+<title>Closing</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="global.css">
+<style>
+  .closing-eyebrow {
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--brand);
+    font-weight: 700;
+  }
+  .closing-headline {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+  }
+  .contact-line {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--text-secondary);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  .right-callout {
+    font-family: var(--font-num);
+    font-size: 14px;
+    color: var(--text-secondary);
+    letter-spacing: 0.10em;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: right;
+  }
+  .right-callout.accent { color: var(--accent); }
+  .vertical-hairline {
+    position: absolute;
+    top: 200px;
+    bottom: 200px;
+    right: 28%;
+    width: 1px;
+    background: var(--border);
+  }
+</style>
 </head>
 <body>
-  <div class="slide grid-bg" style="padding:0;">
+<aside data-notes style="display:none;">none</aside>
+<div class="slide grid-bg">
+  <div class="brand-stripe" data-decor></div>
 
-    <div class="brand-stripe" data-decor aria-hidden="true"></div>
+  <!-- Top-left logo -->
+  <img src="assets/kefi_logo.png" class="kefi-logo-lg" alt="Kefi Tech" style="position:absolute; top:96px; left:104px;">
 
-    <!-- Top-left logo (single image logo, second of two logo slides) -->
-    <img src="assets/kefi_logo.png" class="kefi-logo-lg" alt="Kefi Tech"
-         style="position:absolute; top:96px; left:104px;" />
+  <!-- Vertical hairline divider -->
+  <div class="vertical-hairline" data-decor></div>
 
-    <!-- Center-left composition -->
-    <div style="position:absolute; top:240px; left:104px; right:104px; display:grid; grid-template-columns: 7fr 3fr; gap:48px; align-items:start;">
-
-      <!-- LEFT: hero headline + contact -->
-      <div style="display:flex; flex-direction:column; gap:24px;">
-        <div class="eyebrow" style="font-size:11px; letter-spacing:0.22em;">GET IN TOUCH</div>
-
-        <h1 style="font-family:var(--font-heading); font-weight:700; font-size:56px; line-height:1.05; letter-spacing:-0.02em; margin:0;">
-          <span style="display:block; color:var(--primary);">Let us engineer</span>
-          <span style="display:block; color:var(--accent);">what is next.</span>
-        </h1>
-
-        <div class="accent-bar"></div>
-
-        <div style="display:flex; flex-direction:column; gap:6px; font-family:var(--font-body); font-size:16px; color:var(--text-secondary); line-height:1.5; margin-top:8px;">
-          <div>info@kefitech.com  ·  www.kefitech.com</div>
-          <div>Bengaluru, India  ·  Hyderabad, India</div>
-        </div>
-      </div>
-
-      <!-- RIGHT: vertical hairline + three JetBrains Mono callouts -->
-      <div style="position:relative; height:260px; padding-right:0; display:grid; align-items:end;">
-        <div data-decor aria-hidden="true"
-             style="position:absolute; left:0; top:0; bottom:0; width:1px; background:var(--border);"></div>
-
-        <div style="display:flex; flex-direction:column; gap:28px; align-items:flex-end; padding-left:24px;">
-          <div style="font-family:var(--font-num); font-size:18px; color:var(--brand); font-weight:600; letter-spacing:0.04em;">Discover.</div>
-          <div style="font-family:var(--font-num); font-size:18px; color:var(--brand); font-weight:600; letter-spacing:0.04em;">Engineer.</div>
-          <div style="font-family:var(--font-num); font-size:18px; color:var(--accent); font-weight:600; letter-spacing:0.04em;">Scale.</div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Bottom rail -->
-    <div class="foot-rail bordered" style="left:104px; right:104px; bottom:40px;">
-      <span class="text-wordmark">KEFI TECH</span>
-      <span>12 / 12</span>
-      <span>INFO@KEFITECH.COM · WWW.KEFITECH.COM</span>
-    </div>
-
+  <!-- Right-side stacked callouts -->
+  <div style="position:absolute; top:240px; right:104px; display:flex; flex-direction:column; gap:36px; align-items:flex-end;">
+    <div class="right-callout">Discover.</div>
+    <div class="right-callout">Engineer.</div>
+    <div class="right-callout accent">Scale.</div>
   </div>
+
+  <!-- Center-left composition -->
+  <div style="position:absolute; top:240px; left:104px; max-width:760px;">
+    <div class="closing-eyebrow">GET IN TOUCH</div>
+    <h1 class="closing-headline" style="margin-top:18px;">
+      <span style="display:block; color:var(--primary);">Let us engineer</span>
+      <span style="display:block; color:var(--accent);">what is next.</span>
+    </h1>
+    <div style="margin-top:36px; display:flex; flex-direction:column; gap:8px;">
+      <div class="contact-line">info@kefitech.com  ·  www.kefitech.com</div>
+      <div class="contact-line">Bengaluru, India  ·  Hyderabad, India</div>
+    </div>
+  </div>
+
+  <!-- Foot rail -->
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>12 / 12</span>
+    <span>INFO@KEFITECH.COM · WWW.KEFITECH.COM</span>
+  </div>
+</div>
 </body>
 </html>

@@ -1,91 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Industry Context — Education</title>
-  <link rel="stylesheet" href="global.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<title>Industry Context — Education</title>
+<link rel="stylesheet" href="global.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+  .slide { padding: 56px 72px 0; }
+  .top-bar { display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; }
+  .top-meta { font-family: var(--font-num); font-size:11px; color:var(--text-muted); letter-spacing:0.16em; text-transform:uppercase; }
+  .headline { font-family: var(--font-heading); font-size: 28px; font-weight:700; color:var(--primary); line-height:1.25; letter-spacing:-0.01em; max-width: 1000px; margin: 4px 0 8px; }
+  .sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; max-width: 1000px; }
+  .grid-2 { display:grid; grid-template-columns: 55fr 45fr; gap: 20px; margin-top: 22px; }
+  .panel { padding: 22px 22px 20px; }
+  .panel-title { font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+  .panel-title.brand { color: var(--brand); }
+  .panel-title.accent-dark { color: var(--accent-dark); }
+  .driver-card {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 12px;
+    padding: 11px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    align-items: start;
+  }
+  .driver-icon { font-size: 20px !important; color: var(--brand); margin-top: 1px; }
+  .driver-title { font-family: var(--font-heading); font-size: 13px; font-weight: 600; color: var(--primary); line-height: 1.25; }
+  .driver-desc { font-family: var(--font-body); font-size: 11px; color: var(--text-secondary); line-height: 1.45; margin-top: 2px; }
+  .driver-list { display:flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+  .panel-body { font-family: var(--font-body); font-size: 13px; color: var(--text-secondary); line-height: 1.7; margin-top: 14px; }
+  .panel-pill-wrap { margin-top: 18px; }
+</style>
 </head>
 <body>
-  <div class="slide" style="padding: 56px 72px;">
-    <div class="brand-stripe-thin" data-decor></div>
+<div class="slide">
+  <div class="top-bar">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span class="top-meta">INDUSTRY CONTEXT · 02</span>
+  </div>
 
-    <!-- Top wordmark -->
-    <div style="position:absolute; top:48px; left:104px;">
-      <span class="text-wordmark">KEFI TECH</span>
-    </div>
+  <div class="eyebrow">INDUSTRY CONTEXT · EDUCATION</div>
+  <h2 class="headline">Education is being reshaped by digital learning, institutional automation and student lifecycle intelligence.</h2>
+  <p class="sub">Student success, faculty productivity, institutional efficiency and digital experience define modern education.</p>
 
-    <!-- Header block -->
-    <div style="margin-top:8px;">
-      <div class="eyebrow">INDUSTRY CONTEXT · EDUCATION</div>
-      <h2 style="font-family:var(--font-heading); font-size:28px; font-weight:700; color:var(--primary); line-height:1.2; margin:10px 0 0 0; letter-spacing:-0.015em; max-width:1100px;">
-        Education is being reshaped by digital learning, institutional automation and student lifecycle intelligence.
-      </h2>
-      <p style="font-family:var(--font-body); font-size:14px; color:var(--text-secondary); line-height:1.5; margin:8px 0 0 0; max-width:1080px;">
-        Student success, faculty productivity, institutional efficiency and digital experience define modern education.
-      </p>
-    </div>
-
-    <!-- Two-column layout -->
-    <div style="display:grid; grid-template-columns: 610px 1fr; gap:24px; margin-top:22px;">
-      <!-- LEFT panel: WHY EDUCATION NEEDS THIS NOW -->
-      <div class="surface-elev" style="padding:22px 22px;">
-        <div class="eyebrow" style="margin-bottom:14px;">WHY EDUCATION NEEDS THIS NOW</div>
-        <div style="display:flex; flex-direction:column; gap:10px;">
-          <!-- Driver 1 -->
-          <div class="surface" style="padding:11px 14px; display:flex; gap:12px; align-items:flex-start;">
-            <span class="material-icons" style="font-size:20px; color:var(--brand);">trending_up</span>
-            <div style="flex:1;">
-              <div style="font-family:var(--font-heading); font-size:13px; font-weight:600; color:var(--primary); line-height:1.25;">Digital transformation pressure</div>
-              <div style="font-family:var(--font-body); font-size:11px; color:var(--text-secondary); line-height:1.4; margin-top:3px;">Enterprise digital adoption accelerating across the industry.</div>
-            </div>
-          </div>
-          <!-- Driver 2 -->
-          <div class="surface" style="padding:11px 14px; display:flex; gap:12px; align-items:flex-start;">
-            <span class="material-icons" style="font-size:20px; color:var(--brand);">shield</span>
-            <div style="flex:1;">
-              <div style="font-family:var(--font-heading); font-size:13px; font-weight:600; color:var(--primary); line-height:1.25;">Regulatory &amp; compliance demands</div>
-              <div style="font-family:var(--font-body); font-size:11px; color:var(--text-secondary); line-height:1.4; margin-top:3px;">Industry-specific regulations require continuous compliance technology.</div>
-            </div>
-          </div>
-          <!-- Driver 3 -->
-          <div class="surface" style="padding:11px 14px; display:flex; gap:12px; align-items:flex-start;">
-            <span class="material-icons" style="font-size:20px; color:var(--brand);">speed</span>
-            <div style="flex:1;">
-              <div style="font-family:var(--font-heading); font-size:13px; font-weight:600; color:var(--primary); line-height:1.25;">Operational efficiency mandate</div>
-              <div style="font-family:var(--font-body); font-size:11px; color:var(--text-secondary); line-height:1.4; margin-top:3px;">Cost-to-serve reduction while maintaining quality and resilience.</div>
-            </div>
-          </div>
-          <!-- Driver 4 -->
-          <div class="surface" style="padding:11px 14px; display:flex; gap:12px; align-items:flex-start;">
-            <span class="material-icons" style="font-size:20px; color:var(--brand);">group</span>
-            <div style="flex:1;">
-              <div style="font-family:var(--font-heading); font-size:13px; font-weight:600; color:var(--primary); line-height:1.25;">Customer &amp; employee expectations</div>
-              <div style="font-family:var(--font-body); font-size:11px; color:var(--text-secondary); line-height:1.4; margin-top:3px;">Modern digital experiences are now table stakes, not differentiation.</div>
-            </div>
+  <div class="grid-2">
+    <!-- LEFT panel: WHY EDUCATION NEEDS THIS NOW -->
+    <div class="surface-elev panel" style="min-height: 360px;">
+      <div class="panel-title brand">WHY EDUCATION NEEDS THIS NOW</div>
+      <div class="driver-list">
+        <div class="driver-card">
+          <span class="material-icons driver-icon">trending_up</span>
+          <div>
+            <div class="driver-title">Digital transformation pressure</div>
+            <div class="driver-desc">Enterprise digital adoption accelerating across the industry.</div>
           </div>
         </div>
-      </div>
-
-      <!-- RIGHT panel: WHAT THIS MEANS -->
-      <div class="surface-elev" style="padding:22px 22px;">
-        <div class="eyebrow" style="color:var(--accent-dark); margin-bottom:14px;">WHAT THIS MEANS FOR AI TRANSFORMATION</div>
-        <p style="font-family:var(--font-body); font-size:13px; color:var(--text-secondary); line-height:1.7; margin:0;">
-          AI Transformation applied to education requires industry-specific capability, not generic technology. The right approach connects ai transformation to the regulatory, operational and customer realities that define education.
-        </p>
-        <div style="margin-top:22px;">
-          <span class="tag-pill">INDUSTRY-SPECIFIC APPROACH</span>
+        <div class="driver-card">
+          <span class="material-icons driver-icon">shield</span>
+          <div>
+            <div class="driver-title">Regulatory &amp; compliance demands</div>
+            <div class="driver-desc">Industry-specific regulations require continuous compliance technology.</div>
+          </div>
+        </div>
+        <div class="driver-card">
+          <span class="material-icons driver-icon">speed</span>
+          <div>
+            <div class="driver-title">Operational efficiency mandate</div>
+            <div class="driver-desc">Cost-to-serve reduction while maintaining quality and resilience.</div>
+          </div>
+        </div>
+        <div class="driver-card">
+          <span class="material-icons driver-icon">group</span>
+          <div>
+            <div class="driver-title">Customer &amp; employee expectations</div>
+            <div class="driver-desc">Modern digital experiences are now table stakes, not differentiation.</div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Foot rail -->
-    <div class="foot-rail bordered" style="left:72px; right:72px;">
-      <span class="text-wordmark">KEFI TECH</span>
-      <span>02 / 12</span>
-      <span>INDUSTRY CONTEXT</span>
+    <!-- RIGHT panel: WHAT THIS MEANS -->
+    <div class="surface-elev panel" style="min-height: 360px;">
+      <div class="panel-title accent-dark">WHAT THIS MEANS FOR AI TRANSFORMATION</div>
+      <p class="panel-body">AI Transformation applied to education requires industry-specific capability, not generic technology. The right approach connects ai transformation to the regulatory, operational and customer realities that define education.</p>
+      <div class="panel-pill-wrap">
+        <span class="tag-pill">INDUSTRY-SPECIFIC APPROACH</span>
+      </div>
     </div>
   </div>
+
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>02 / 12</span>
+    <span>INDUSTRY CONTEXT</span>
+  </div>
+</div>
 </body>
 </html>
