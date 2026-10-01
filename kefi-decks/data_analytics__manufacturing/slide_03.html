@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Data Analytics & Data Engineering — Capability Overview</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="global.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  .h1 { font-family: var(--font-heading); font-size: 30px; font-weight: 700; color: var(--primary); line-height: 1.2; letter-spacing: -0.01em; }
+  .sub { font-family: var(--font-body); font-size: 13px; color: var(--text-secondary); line-height: 1.5; margin-top: 6px; }
+
+  .lifecycle-stage { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; display: flex; align-items: center; gap: 10px; flex: 1; }
+  .lifecycle-name { font-family: var(--font-heading); font-size: 14px; font-weight: 600; color: var(--primary); letter-spacing: 0.02em; }
+  .lifecycle-arrow { font-family: var(--font-heading); color: var(--accent); font-size: 22px; font-weight: 700; }
+
+  .pillar-card { background: var(--bg-elev); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; height: 100%; }
+  .pillar-name { font-family: var(--font-heading); font-size: 14px; font-weight: 600; color: var(--primary); line-height: 1.2; }
+  .pillar-desc { font-family: var(--font-body); font-size: 11px; color: var(--text-secondary); line-height: 1.4; }
+  .pillar-num { font-family: var(--font-num); font-size: 11px; color: var(--accent); font-weight: 600; letter-spacing: 0.10em; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="brand-stripe" data-decor aria-hidden="true"></div>
+
+  <span class="text-wordmark" style="position:absolute; top:64px; left:104px;">KEFI TECH</span>
+
+  <!-- Header -->
+  <div style="position:absolute; top:108px; left:104px; right:104px;">
+    <div class="eyebrow">CAPABILITIES</div>
+    <h1 class="h1" style="margin-top:8px;">Data Analytics &amp; Data Engineering across the complete lifecycle.</h1>
+    <p class="sub">Six capability pillars covering the full data analytics &amp; data engineering spectrum.</p>
+  </div>
+
+  <!-- Lifecycle flow -->
+  <div style="position:absolute; top:236px; left:104px; right:104px; height:60px; display:flex; align-items:center; gap:8px;">
+    <div class="lifecycle-stage">
+      <span class="material-icons" style="font-size:24px; color:var(--brand);">lightbulb</span>
+      <span class="lifecycle-name">STRATEGY</span>
+    </div>
+    <span class="lifecycle-arrow">►</span>
+    <div class="lifecycle-stage">
+      <span class="material-icons" style="font-size:24px; color:var(--brand);">engineering</span>
+      <span class="lifecycle-name">BUILD</span>
+    </div>
+    <span class="lifecycle-arrow">►</span>
+    <div class="lifecycle-stage">
+      <span class="material-icons" style="font-size:24px; color:var(--brand);">integration_instructions</span>
+      <span class="lifecycle-name">INTEGRATE</span>
+    </div>
+    <span class="lifecycle-arrow">►</span>
+    <div class="lifecycle-stage">
+      <span class="material-icons" style="font-size:24px; color:var(--brand);">monitoring</span>
+      <span class="lifecycle-name">OPERATE</span>
+    </div>
+  </div>
+
+  <!-- 3x2 capability grid -->
+  <div style="position:absolute; top:320px; left:104px; right:104px; display:grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr 1fr; gap:12px; height:300px;">
+
+    <div class="pillar-card">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <span class="material-icons" style="font-size:24px; color:var(--brand);">lightbulb</span>
+        <span class="pillar-num">01</span>
+      </div>
+      <div class="pillar-name">Data Strategy &amp; Governance</div>
+      <div class="pillar-desc">Data strategy, maturity assessment, architecture, governance, lineage, MDM.</div>
+    </div>
+
+    <div class="pillar-card">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <span class="material-icons" style="font-size:24px; color:var(--brand);">storage</span>
+        <span class="pillar-num">02</span>
+      </div>
+      <div class="pillar-name">Data Engineering &amp; Integration</div>
+      <div class="pillar-desc">Data pipelines, ETL/ELT, APIs, integration, migration, data quality.</div>
+    </div>
+
+    <div class="pillar-card">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <span class="material-icons" style="font-size:24px; color:var(--brand);">cloud</span>
+        <span class="pillar-num">03</span>
+      </div>
+      <div class="pillar-name">Data Platforms &amp; Modernization</div>
+      <div class="pillar-desc">Data lakes, warehouses, lakehouses, cloud data platforms, legacy modernization.</div>
+    </div>
+
+    <div class="pillar-card">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <span class="material-icons" style="font-size:24px; color:var(--brand);">analytics</span>
+        <span class="pillar-num">04</span>
+      </div>
+      <div class="pillar-name">BI &amp; Decision Intelligence</div>
+      <div class="pillar-desc">Enterprise dashboards, reporting, KPI frameworks, self-service BI, executive analytics.</div>
+    </div>
+
+    <div class="pillar-card">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <span class="material-icons" style="font-size:24px; color:var(--brand);">science</span>
+        <span class="pillar-num">05</span>
+      </div>
+      <div class="pillar-name">Advanced Analytics &amp; Data Science</div>
+      <div class="pillar-desc">Predictive analytics, forecasting, segmentation, optimization, statistical modelling.</div>
+    </div>
+
+    <div class="pillar-card">
+      <div style="display:flex; align-items:center; justify-content:space-between;">
+        <span class="material-icons" style="font-size:24px; color:var(--brand);">auto_awesome</span>
+        <span class="pillar-num">06</span>
+      </div>
+      <div class="pillar-name">AI-Powered Analytics</div>
+      <div class="pillar-desc">Conversational analytics, GenAI over enterprise data, NL querying, decision support.</div>
+    </div>
+
+  </div>
+
+  <!-- Bottom rail -->
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>03 / 12</span>
+    <span>CAPABILITIES</span>
+  </div>
+
+  <aside data-notes hidden>none</aside>
+</div>
+</body>
+</html>

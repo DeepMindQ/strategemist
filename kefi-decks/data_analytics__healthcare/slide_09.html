@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reference Architecture</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="global.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+  .h1-sora { font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--primary); line-height: 1.2; letter-spacing: -0.01em; }
+  .subtitle { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+  .arch-layer { min-height: 80px; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="brand-stripe-thin" data-decor></div>
+
+  <div style="position:absolute; top:64px; left:104px;">
+    <span class="text-wordmark">KEFI TECH</span>
+  </div>
+
+  <div style="position:absolute; top:108px; left:104px; right:72px;">
+    <div class="eyebrow">REFERENCE ARCHITECTURE</div>
+    <h1 class="h1-sora" style="margin-top:10px;">A reference architecture for data analytics &amp; data engineering.</h1>
+    <p class="subtitle" style="margin-top:8px;">Five layers from foundation through consumption — with industry-specific components for healthcare &amp; pharma.</p>
+  </div>
+
+  <!-- Stacked vertical column of 5 .arch-layer elements -->
+  <div style="position:absolute; top:236px; left:72px; right:72px; display:flex; flex-direction:column; gap: 10px;">
+
+    <div class="arch-layer">
+      <div class="arch-layer-label">CONSUMPTION</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Clinical Outcomes</span>
+        <span class="arch-component">Operational Performance</span>
+        <span class="arch-component">Quality &amp; Safety</span>
+        <span class="arch-component">Financial Performance</span>
+      </div>
+    </div>
+
+    <div class="arch-layer">
+      <div class="arch-layer-label">SEMANTIC</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Patient 360</span>
+        <span class="arch-component">Clinical Metrics</span>
+        <span class="arch-component">Care Pathway Lineage</span>
+        <span class="arch-component">Drug Catalog</span>
+      </div>
+    </div>
+
+    <div class="arch-layer">
+      <div class="arch-layer-label">PROCESSING</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">EHR Stream</span>
+        <span class="arch-component">Device Telemetry</span>
+        <span class="arch-component">Claims Batch</span>
+        <span class="arch-component">Lab Results</span>
+      </div>
+    </div>
+
+    <div class="arch-layer">
+      <div class="arch-layer-label">STORAGE</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Patient Lake</span>
+        <span class="arch-component">Clinical Warehouse</span>
+        <span class="arch-component">Trial Lakehouse</span>
+        <span class="arch-component">Imaging NoSQL</span>
+      </div>
+    </div>
+
+    <div class="arch-layer">
+      <div class="arch-layer-label">PLATFORM</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">HIPAA Cloud Hub</span>
+        <span class="arch-component">FHIR Orchestrator</span>
+        <span class="arch-component">PHI Governance</span>
+        <span class="arch-component">Consent Catalog</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>09 / 12</span>
+    <span>ARCHITECTURE</span>
+  </div>
+</div>
+</body>
+</html>

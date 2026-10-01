@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quality & Security Engineering — Capability Overview</title>
+<link rel="stylesheet" href="global.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+  .cap-headline { font-family: var(--font-heading); font-size: 30px; font-weight: 700; color: var(--primary); line-height: 1.2; letter-spacing: -0.015em; max-width: 1080px; }
+  .cap-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+  .lifecycle-stage { display:flex; align-items:center; gap:10px; padding:14px 16px; background:var(--bg-elev); border:1px solid var(--border); border-radius:10px; flex:1; }
+  .lifecycle-icon { color: var(--brand); font-size: 24px !important; }
+  .lifecycle-name { font-family: var(--font-heading); font-size: 14px; font-weight: 600; color: var(--primary); letter-spacing: 0.02em; }
+  .lifecycle-arrow { color: var(--accent); font-size: 22px; font-weight: 700; padding: 0 4px; }
+  .pillar-card { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; height: 120px; display:flex; flex-direction:column; gap:6px; }
+  .pillar-top { display:flex; align-items:center; justify-content:space-between; }
+  .pillar-icon { color: var(--brand); font-size: 24px !important; }
+  .pillar-num { font-family: var(--font-num); font-size: 13px; font-weight: 600; color: var(--accent); letter-spacing: 0.06em; }
+  .pillar-name { font-family: var(--font-heading); font-size: 14px; font-weight: 600; color: var(--primary); line-height: 1.2; }
+  .pillar-desc { font-family: var(--font-body); font-size: 11px; color: var(--text-secondary); line-height: 1.45; }
+</style>
+</head>
+<body>
+<div class="slide" style="padding: 56px 72px 80px 72px;">
+  <span class="text-wordmark" style="position:absolute; top:32px; left:72px;">KEFI TECH</span>
+
+  <!-- Header -->
+  <div style="margin-top: 18px;">
+    <div class="eyebrow">CAPABILITIES</div>
+    <h1 class="cap-headline" style="margin-top:10px;">Quality &amp; Security Engineering across the complete lifecycle.</h1>
+    <p class="cap-sub" style="margin-top:8px;">Six capability pillars covering the full quality &amp; security engineering spectrum.</p>
+  </div>
+
+  <!-- Lifecycle flow -->
+  <div style="display:flex; align-items:stretch; gap:0; margin-top: 18px; height: 90px;">
+    <div class="lifecycle-stage">
+      <span class="material-icons lifecycle-icon">lightbulb</span>
+      <span class="lifecycle-name">STRATEGY</span>
+    </div>
+    <div class="lifecycle-arrow">►</div>
+    <div class="lifecycle-stage">
+      <span class="material-icons lifecycle-icon">engineering</span>
+      <span class="lifecycle-name">BUILD</span>
+    </div>
+    <div class="lifecycle-arrow">►</div>
+    <div class="lifecycle-stage">
+      <span class="material-icons lifecycle-icon">integration_instructions</span>
+      <span class="lifecycle-name">INTEGRATE</span>
+    </div>
+    <div class="lifecycle-arrow">►</div>
+    <div class="lifecycle-stage">
+      <span class="material-icons lifecycle-icon">monitoring</span>
+      <span class="lifecycle-name">OPERATE</span>
+    </div>
+  </div>
+
+  <!-- 3x2 capability grid -->
+  <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px;">
+
+    <div class="pillar-card">
+      <div class="pillar-top">
+        <span class="material-icons pillar-icon">security</span>
+        <span class="pillar-num">01</span>
+      </div>
+      <div class="pillar-name">Application Security &amp; DevSecOps</div>
+      <div class="pillar-desc">SAST, DAST, SCA, secure code review, CI/CD pipeline security, OWASP, NIST, SANS.</div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-top">
+        <span class="material-icons pillar-icon">shield</span>
+        <span class="pillar-num">02</span>
+      </div>
+      <div class="pillar-name">VAPT &amp; Risk Assessment</div>
+      <div class="pillar-desc">Web, API, mobile, IoT, cloud, container VAPT. MITRE ATT&amp;CK, CIS frameworks.</div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-top">
+        <span class="material-icons pillar-icon">speed</span>
+        <span class="pillar-num">03</span>
+      </div>
+      <div class="pillar-name">Performance Engineering</div>
+      <div class="pillar-desc">Load, stress, spike, soak testing. Capacity planning, bottleneck analysis, tuning.</div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-top">
+        <span class="material-icons pillar-icon">precision_manufacturing</span>
+        <span class="pillar-num">04</span>
+      </div>
+      <div class="pillar-name">Test Automation &amp; Continuous Testing</div>
+      <div class="pillar-desc">UI, web, mobile, API automation, BDD, codeless/AI-assisted, CI/CD integration.</div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-top">
+        <span class="material-icons pillar-icon">psychology</span>
+        <span class="pillar-num">05</span>
+      </div>
+      <div class="pillar-name">AI &amp; Intelligent Systems Testing</div>
+      <div class="pillar-desc">AI/ML model testing, GenAI/LLM testing, bias assessment, prompt/response validation.</div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-top">
+        <span class="material-icons pillar-icon">gavel</span>
+        <span class="pillar-num">06</span>
+      </div>
+      <div class="pillar-name">Quality Consulting &amp; Assurance</div>
+      <div class="pillar-desc">Test strategy, QA process assessment, quality governance, release readiness, metrics.</div>
+    </div>
+
+  </div>
+
+  <!-- Foot rail -->
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>03 / 12</span>
+    <span>CAPABILITIES</span>
+  </div>
+</div>
+</body>
+</html>

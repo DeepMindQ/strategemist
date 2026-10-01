@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Industry Applications — Education</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="global.css">
+<style>
+  .app-card {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .app-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .app-icon {
+    font-size: 28px !important;
+    color: var(--brand);
+  }
+  .app-num {
+    font-family: var(--font-num);
+    font-size: 14px;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+  .app-name {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h3);
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.2;
+  }
+  .app-desc {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="brand-stripe-thin" data-decor></div>
+
+  <span class="text-wordmark" style="position:absolute; top:32px; left:72px;">KEFI TECH</span>
+
+  <div style="margin-top:8px;">
+    <div class="eyebrow">INDUSTRY APPLICATIONS · EDUCATION</div>
+    <h1 style="font-family: var(--font-heading); font-size: var(--fs-h1); font-weight: 700; color: var(--primary); line-height: 1.15; margin-top:10px; letter-spacing: -0.01em;">
+      How ai transformation applies to education.
+    </h1>
+    <p style="font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-top:8px;">
+      Four industry-specific applications where ai transformation creates measurable value.
+    </p>
+  </div>
+
+  <!-- 2x2 grid -->
+  <div style="display:grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 16px; margin-top: 24px;">
+    <div class="app-card">
+      <div class="app-top">
+        <span class="material-icons app-icon">school</span>
+        <span class="app-num">I</span>
+      </div>
+      <div class="app-name">Student &amp; Faculty Assistants</div>
+      <div class="app-desc">AI assistants for student services, faculty support, research help, academic advising.</div>
+    </div>
+    <div class="app-card">
+      <div class="app-top">
+        <span class="material-icons app-icon">menu_book</span>
+        <span class="app-num">II</span>
+      </div>
+      <div class="app-name">Institutional Knowledge Systems</div>
+      <div class="app-desc">Enterprise search, RAG, document intelligence across academic and administrative systems.</div>
+    </div>
+    <div class="app-card">
+      <div class="app-top">
+        <span class="material-icons app-icon">account_circle</span>
+        <span class="app-num">III</span>
+      </div>
+      <div class="app-name">Student Lifecycle Platform</div>
+      <div class="app-desc">Admissions, enrollment, progression, retention, alumni — unified digital experience.</div>
+    </div>
+    <div class="app-card">
+      <div class="app-top">
+        <span class="material-icons app-icon">analytics</span>
+        <span class="app-num">IV</span>
+      </div>
+      <div class="app-name">Predictive Insights</div>
+      <div class="app-desc">At-risk student identification, enrollment forecasting, resource planning, outcomes analytics.</div>
+    </div>
+  </div>
+
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>08 / 12</span>
+    <span>INDUSTRY APPLICATIONS</span>
+  </div>
+</div>
+</body>
+</html>

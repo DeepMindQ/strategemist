@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reference Architecture</title>
+<link rel="stylesheet" href="global.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<div class="slide">
+  <span class="text-wordmark" style="position:absolute; top:64px; left:72px;">KEFI TECH</span>
+
+  <div class="eyebrow" style="position:absolute; top:96px; left:72px;">REFERENCE ARCHITECTURE</div>
+
+  <h1 style="position:absolute; top:120px; left:72px; width:1136px;
+             font-family:var(--font-heading); font-weight:700; font-size:30px;
+             line-height:1.22; color:var(--primary); margin:0;
+             letter-spacing:-0.012em;">
+    A reference architecture for quality &amp; security engineering.
+  </h1>
+
+  <p style="position:absolute; top:188px; left:72px; width:1136px;
+            font-family:var(--font-body); font-size:14px;
+            color:var(--text-secondary); line-height:1.55; margin:0;">
+    Five layers from foundation through consumption &mdash; with industry-specific components for bfsi &amp; insurance.
+  </p>
+
+  <!-- 5 stacked arch layers — all neutral (no .kefi-asset orange variant) -->
+  <div style="position:absolute; top:238px; left:72px; right:72px;
+              display:flex; flex-direction:column; gap:10px;">
+
+    <!-- LAYER 1: STANDARDS -->
+    <div class="arch-layer" style="height:80px;">
+      <div class="arch-layer-label">STANDARDS</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">OWASP Top 10</span>
+        <span class="arch-component">PCI-DSS</span>
+        <span class="arch-component">NIST 800-53</span>
+        <span class="arch-component">ISO 27001</span>
+      </div>
+    </div>
+
+    <!-- LAYER 2: SECURITY TESTING -->
+    <div class="arch-layer" style="height:80px;">
+      <div class="arch-layer-label">SECURITY TESTING</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Core Banking VAPT</span>
+        <span class="arch-component">Payment App SAST</span>
+        <span class="arch-component">Mobile Banking DAST</span>
+        <span class="arch-component">API Pen Test</span>
+      </div>
+    </div>
+
+    <!-- LAYER 3: PERFORMANCE -->
+    <div class="arch-layer" style="height:80px;">
+      <div class="arch-layer-label">PERFORMANCE</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Payment Load Test</span>
+        <span class="arch-component">Core Stress Test</span>
+        <span class="arch-component">Mobile Performance</span>
+        <span class="arch-component">Real-Time Scale</span>
+      </div>
+    </div>
+
+    <!-- LAYER 4: AUTOMATION -->
+    <div class="arch-layer" style="height:80px;">
+      <div class="arch-layer-label">AUTOMATION</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Core Regression</span>
+        <span class="arch-component">Payment Flow Automation</span>
+        <span class="arch-component">Mobile Automation</span>
+        <span class="arch-component">API Contract</span>
+      </div>
+    </div>
+
+    <!-- LAYER 5: OPERATIONS -->
+    <div class="arch-layer" style="height:80px;">
+      <div class="arch-layer-label">OPERATIONS</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">PCI CI/CD</span>
+        <span class="arch-component">SoC Monitoring</span>
+        <span class="arch-component">Incident Response</span>
+        <span class="arch-component">Compliance Audit</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>09 / 12</span>
+    <span>ARCHITECTURE</span>
+  </div>
+</div>
+</body>
+</html>

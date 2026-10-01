@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Closing — Kefi Tech</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="global.css">
+<style>
+  .slide { padding: 0; }
+  .closing-canvas { position: relative; }
+  .closing-logo { position: absolute; top: 96px; left: 104px; z-index: 4; }
+
+  .closing-headline-block { position: absolute; left: 104px; top: 248px; max-width: 720px; z-index: 4; }
+  .closing-eyebrow { font-family: var(--font-body); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brand); font-weight: 600; margin-bottom: 22px; }
+  .closing-headline { font-family: var(--font-heading); font-size: 56px; font-weight: 700; line-height: 1.05; letter-spacing: -0.025em; color: var(--primary); }
+  .closing-headline .accent-line { color: var(--accent); display: block; margin-top: 4px; }
+
+  .closing-contact { position: absolute; left: 104px; top: 470px; display: flex; flex-direction: column; gap: 6px; z-index: 4; }
+  .contact-line { font-family: var(--font-body); font-size: 16px; color: var(--text-secondary); line-height: 1.5; letter-spacing: 0.02em; }
+  .contact-line strong { color: var(--primary); font-weight: 600; }
+
+  .closing-right-rail { position: absolute; top: 230px; right: 130px; width: 1px; height: 300px; background: var(--border-strong); z-index: 4; }
+  .closing-right-callouts { position: absolute; top: 248px; right: 110px; display: flex; flex-direction: column; gap: 38px; align-items: flex-end; z-index: 4; }
+  .right-callout { font-family: var(--font-heading); font-size: 22px; color: var(--brand); font-weight: 700; letter-spacing: -0.01em; text-align: right; }
+  .right-callout.accent { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="slide closing-canvas grid-bg">
+  <div class="brand-stripe"></div>
+  <img src="assets/kefi_logo.png" class="kefi-logo-lg closing-logo" alt="Kefi Tech">
+
+  <div class="closing-headline-block">
+    <div class="closing-eyebrow">GET IN TOUCH</div>
+    <h1 class="closing-headline">
+      Let us engineer
+      <span class="accent-line">what is next.</span>
+    </h1>
+  </div>
+
+  <div class="closing-contact">
+    <div class="contact-line"><strong>info@kefitech.com</strong>  ·  www.kefitech.com</div>
+    <div class="contact-line">Bengaluru, India  ·  Hyderabad, India</div>
+  </div>
+
+  <div class="closing-right-rail" data-decor aria-hidden="true"></div>
+  <div class="closing-right-callouts">
+    <div class="right-callout">Discover.</div>
+    <div class="right-callout">Engineer.</div>
+    <div class="right-callout accent">Scale.</div>
+  </div>
+
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>12 / 12</span>
+    <span>INFO@KEFITECH.COM · WWW.KEFITECH.COM</span>
+  </div>
+</div>
+</body>
+</html>

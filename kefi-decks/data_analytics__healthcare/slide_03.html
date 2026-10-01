@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Capability Overview</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="global.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+  .h1-sora { font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--primary); line-height: 1.2; letter-spacing: -0.01em; }
+  .subtitle { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+  .lifecycle-stage { flex:1; padding: 14px 16px; background: var(--bg-elev); border:1px solid var(--border); border-radius: 10px; display:flex; align-items:center; gap:10px; min-height: 70px; }
+  .lifecycle-stage .mi-md { color: var(--brand); }
+  .stage-name { font-family: var(--font-heading); font-size: 14px; font-weight: 600; color: var(--primary); letter-spacing: 0.04em; }
+  .flow-arrow-lc { display:flex; align-items:center; justify-content:center; width:28px; flex-shrink:0; color: var(--accent); font-size: 22px; font-weight: 700; }
+  .cap-card { padding: 14px 16px; background: var(--bg); border:1px solid var(--border); border-radius: 8px; height: 120px; display:flex; flex-direction:column; gap:6px; }
+  .cap-card-top { display:flex; align-items:center; justify-content: space-between; }
+  .cap-card-top .mi-md { color: var(--brand); }
+  .cap-num { font-family: var(--font-num); font-size: 13px; color: var(--accent); font-weight: 600; letter-spacing: 0.06em; }
+  .cap-name { font-family: var(--font-heading); font-size: 14px; font-weight: 600; color: var(--primary); line-height: 1.2; }
+  .cap-desc { font-family: var(--font-body); font-size: 11px; color: var(--text-secondary); line-height: 1.45; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="brand-stripe-thin" data-decor></div>
+
+  <div style="position:absolute; top:64px; left:104px;">
+    <span class="text-wordmark">KEFI TECH</span>
+  </div>
+
+  <div style="position:absolute; top:108px; left:104px; right:72px;">
+    <div class="eyebrow">CAPABILITIES</div>
+    <h1 class="h1-sora" style="margin-top:10px;">Data Analytics &amp; Data Engineering across the complete lifecycle.</h1>
+    <p class="subtitle" style="margin-top:8px;">Six capability pillars covering the full data analytics &amp; data engineering spectrum.</p>
+  </div>
+
+  <!-- Lifecycle flow -->
+  <div style="position:absolute; top:236px; left:72px; right:72px;">
+    <div style="display:flex; align-items:stretch; gap:0;">
+      <div class="lifecycle-stage">
+        <span class="material-icons mi-md">lightbulb</span>
+        <span class="stage-name">STRATEGY</span>
+      </div>
+      <div class="flow-arrow-lc">►</div>
+      <div class="lifecycle-stage">
+        <span class="material-icons mi-md">engineering</span>
+        <span class="stage-name">BUILD</span>
+      </div>
+      <div class="flow-arrow-lc">►</div>
+      <div class="lifecycle-stage">
+        <span class="material-icons mi-md">integration_instructions</span>
+        <span class="stage-name">INTEGRATE</span>
+      </div>
+      <div class="flow-arrow-lc">►</div>
+      <div class="lifecycle-stage">
+        <span class="material-icons mi-md">monitoring</span>
+        <span class="stage-name">OPERATE</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3x2 capability grid -->
+  <div style="position:absolute; top:340px; left:72px; right:72px; display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+    <div class="cap-card">
+      <div class="cap-card-top">
+        <span class="material-icons mi-md">lightbulb</span>
+        <span class="cap-num">01</span>
+      </div>
+      <div class="cap-name">Data Strategy &amp; Governance</div>
+      <div class="cap-desc">Data strategy, maturity assessment, architecture, governance, lineage, MDM.</div>
+    </div>
+    <div class="cap-card">
+      <div class="cap-card-top">
+        <span class="material-icons mi-md">storage</span>
+        <span class="cap-num">02</span>
+      </div>
+      <div class="cap-name">Data Engineering &amp; Integration</div>
+      <div class="cap-desc">Data pipelines, ETL/ELT, APIs, integration, migration, data quality.</div>
+    </div>
+    <div class="cap-card">
+      <div class="cap-card-top">
+        <span class="material-icons mi-md">cloud</span>
+        <span class="cap-num">03</span>
+      </div>
+      <div class="cap-name">Data Platforms &amp; Modernization</div>
+      <div class="cap-desc">Data lakes, warehouses, lakehouses, cloud data platforms, legacy modernization.</div>
+    </div>
+    <div class="cap-card">
+      <div class="cap-card-top">
+        <span class="material-icons mi-md">analytics</span>
+        <span class="cap-num">04</span>
+      </div>
+      <div class="cap-name">BI &amp; Decision Intelligence</div>
+      <div class="cap-desc">Enterprise dashboards, reporting, KPI frameworks, self-service BI, executive analytics.</div>
+    </div>
+    <div class="cap-card">
+      <div class="cap-card-top">
+        <span class="material-icons mi-md">science</span>
+        <span class="cap-num">05</span>
+      </div>
+      <div class="cap-name">Advanced Analytics &amp; Data Science</div>
+      <div class="cap-desc">Predictive analytics, forecasting, segmentation, optimization, statistical modelling.</div>
+    </div>
+    <div class="cap-card">
+      <div class="cap-card-top">
+        <span class="material-icons mi-md">auto_awesome</span>
+        <span class="cap-num">06</span>
+      </div>
+      <div class="cap-name">AI-Powered Analytics</div>
+      <div class="cap-desc">Conversational analytics, GenAI over enterprise data, NL querying, decision support.</div>
+    </div>
+  </div>
+
+  <!-- Foot-rail -->
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>03 / 12</span>
+    <span>CAPABILITIES</span>
+  </div>
+</div>
+</body>
+</html>

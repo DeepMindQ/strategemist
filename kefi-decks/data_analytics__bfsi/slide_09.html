@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reference Architecture</title>
+<link rel="stylesheet" href="global.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  .arch-layer { height: 78px; }
+  .arch-layer-label { font-size: 12px; }
+  .arch-component { font-size: 11px; padding: 5px 11px; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="brand-stripe-thin" data-decor></div>
+
+  <div style="position:absolute; top:48px; left:96px;">
+    <span class="text-wordmark">KEFI TECH</span>
+  </div>
+
+  <!-- Header -->
+  <div style="margin-top:24px;">
+    <div class="eyebrow" style="margin-bottom:10px;">REFERENCE ARCHITECTURE</div>
+    <h1 style="font-family:var(--font-heading); font-size:28px; font-weight:700; color:var(--primary); line-height:1.22; letter-spacing:-0.015em; margin:0 0 8px 0;">A reference architecture for data analytics &amp; data engineering.</h1>
+    <p style="font-family:var(--font-body); font-size:14px; color:var(--text-secondary); line-height:1.5; margin:0;">Five layers from foundation through consumption — with industry-specific components for bfsi &amp; insurance.</p>
+  </div>
+
+  <!-- 5 arch layers -->
+  <div style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
+    <!-- LAYER 1 CONSUMPTION -->
+    <div class="arch-layer">
+      <div class="arch-layer-label">CONSUMPTION</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Risk Dashboard</span>
+        <span class="arch-component">Branch Analytics</span>
+        <span class="arch-component">Product P&amp;L</span>
+        <span class="arch-component">Regulatory Metrics</span>
+      </div>
+    </div>
+    <!-- LAYER 2 SEMANTIC -->
+    <div class="arch-layer">
+      <div class="arch-layer-label">SEMANTIC</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Risk Metrics Layer</span>
+        <span class="arch-component">Customer 360 Catalog</span>
+        <span class="arch-component">Policy Lineage</span>
+        <span class="arch-component">Capital Adequacy</span>
+      </div>
+    </div>
+    <!-- LAYER 3 PROCESSING -->
+    <div class="arch-layer">
+      <div class="arch-layer-label">PROCESSING</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Real-Time Tx Pipeline</span>
+        <span class="arch-component">Policy ETL</span>
+        <span class="arch-component">Claims Stream</span>
+        <span class="arch-component">Regulatory Batch</span>
+      </div>
+    </div>
+    <!-- LAYER 4 STORAGE -->
+    <div class="arch-layer">
+      <div class="arch-layer-label">STORAGE</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Transaction Lake</span>
+        <span class="arch-component">Policy Warehouse</span>
+        <span class="arch-component">Claims Lakehouse</span>
+        <span class="arch-component">Watchlist NoSQL</span>
+      </div>
+    </div>
+    <!-- LAYER 5 PLATFORM -->
+    <div class="arch-layer">
+      <div class="arch-layer-label">PLATFORM</div>
+      <div class="arch-layer-content">
+        <span class="arch-component">Cloud Data Hub</span>
+        <span class="arch-component">Airflow Orchestrator</span>
+        <span class="arch-component">Risk Governance</span>
+        <span class="arch-component">PII Vault</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Foot rail -->
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>09 / 12</span>
+    <span>ARCHITECTURE</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Closing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="global.css" />
+</head>
+<body>
+  <div class="slide grid-bg" style="padding: 0;">
+    <!-- Brand stripe -->
+    <div class="brand-stripe" data-decor aria-hidden="true"></div>
+
+    <!-- Top-left logo (single logo per slide discipline) -->
+    <img src="assets/kefi_logo.png" class="kefi-logo-lg" alt="Kefi Tech"
+         style="position:absolute; top:96px; left:104px;" />
+
+    <!-- Center-left composition -->
+    <div style="position:absolute; top:240px; left:104px; right:104px; display:grid; grid-template-columns: 1fr 1fr; gap:48px; align-items:start;">
+
+      <!-- LEFT: hero headline + contact -->
+      <div style="display:flex; flex-direction:column; gap:22px;">
+        <div class="eyebrow" style="font-size:11px; letter-spacing:0.22em;">GET IN TOUCH</div>
+
+        <h1 style="font-family:var(--font-heading); font-weight:700; font-size:56px; line-height:1.04; letter-spacing:-0.02em; margin:0;">
+          <span style="display:block; color:var(--primary);">Let us engineer</span>
+          <span style="display:block; color:var(--accent);">what is next.</span>
+        </h1>
+
+        <div style="display:flex; flex-direction:column; gap:6px; margin-top:6px;">
+          <div style="font-family:var(--font-body); font-size:16px; color:var(--text-secondary); line-height:1.5;">
+            info@kefitech.com  ·  www.kefitech.com
+          </div>
+          <div style="font-family:var(--font-body); font-size:16px; color:var(--text-secondary); line-height:1.5;">
+            Bengaluru, India  ·  Hyderabad, India
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: vertical hairline + three JetBrains Mono callouts (right-aligned via align-items:flex-end) -->
+      <div style="position:relative; min-height:300px; padding-left:32px;">
+        <div data-decor aria-hidden="true"
+             style="position:absolute; left:0; top:0; bottom:0; width:1px; background:var(--border);"></div>
+
+        <div style="display:flex; flex-direction:column; gap:36px; padding-top:8px; align-items:flex-end; text-align:right;">
+          <div style="font-family:var(--font-num); font-size:14px; color:var(--brand); font-weight:600; letter-spacing:0.12em;">Discover.</div>
+          <div style="font-family:var(--font-num); font-size:14px; color:var(--brand); font-weight:600; letter-spacing:0.12em;">Engineer.</div>
+          <div style="font-family:var(--font-num); font-size:14px; color:var(--accent); font-weight:600; letter-spacing:0.12em;">Scale.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom rail -->
+    <div class="foot-rail bordered" style="left:104px; right:104px; bottom:40px;">
+      <span class="text-wordmark">KEFI TECH</span>
+      <span>12 / 12</span>
+      <span>INFO@KEFITECH.COM · WWW.KEFITECH.COM</span>
+    </div>
+  </div>
+</body>
+</html>

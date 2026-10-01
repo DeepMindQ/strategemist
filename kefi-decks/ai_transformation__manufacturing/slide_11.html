@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Why Kefi Tech</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="global.css">
+<style>
+  .slide { padding: 0; }
+  .top-bar { position: absolute; top: 40px; left: 72px; right: 72px; display: flex; justify-content: space-between; align-items: center; }
+  .head-block { position: absolute; top: 92px; left: 72px; right: 72px; }
+  .head-eyebrow { font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--brand); letter-spacing: 0.20em; text-transform: uppercase; }
+  .head-h { font-family: var(--font-heading); font-weight: 700; font-size: 32px; color: var(--primary); line-height: 1.2; letter-spacing: -0.01em; margin-top: 12px; }
+  .head-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-secondary); line-height: 1.5; margin-top: 8px; }
+
+  .why-grid {
+    position: absolute; top: 248px; left: 72px; right: 72px;
+    display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
+    gap: 20px; height: 320px;
+  }
+  .exec-summary-card { padding: 20px 24px; gap: 10px; }
+  .exec-num { font-size: 13px; }
+  .exec-headline { font-size: 18px; }
+  .exec-body { font-size: 13px; line-height: 1.55; }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="brand-stripe-thin"></div>
+
+  <div class="top-bar">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span style="font-family:var(--font-num); font-size:10px; color:var(--text-muted); letter-spacing:0.16em;">AI TRANSFORMATION · MANUFACTURING</span>
+  </div>
+
+  <div class="head-block">
+    <div class="head-eyebrow">WHY KEFI TECH</div>
+    <h1 class="head-h">Four reasons enterprises work with us.</h1>
+    <p class="head-sub">Not generic services. Specific differentiators for manufacturing.</p>
+  </div>
+
+  <div class="why-grid">
+    <div class="exec-summary-card">
+      <div class="exec-num">01</div>
+      <div class="exec-headline">Production-first</div>
+      <div class="exec-body">AI engineered for production from day one, not a model demo.</div>
+    </div>
+    <div class="exec-summary-card">
+      <div class="exec-num">02</div>
+      <div class="exec-headline">Full-stack</div>
+      <div class="exec-body">Strategy through operations — one team, one operating model.</div>
+    </div>
+    <div class="exec-summary-card">
+      <div class="exec-num">03</div>
+      <div class="exec-headline">Industry depth</div>
+      <div class="exec-body">AI capability matched to industry context, not generic AI.</div>
+    </div>
+    <div class="exec-summary-card accent">
+      <div class="exec-num" style="color:var(--accent-dark);">04</div>
+      <div class="exec-headline">Responsible AI</div>
+      <div class="exec-body">Governance, security and compliance built in, not bolted on.</div>
+    </div>
+  </div>
+
+  <div class="foot-rail bordered">
+    <span class="text-wordmark">KEFI TECH</span>
+    <span>11 / 12</span>
+    <span>WHY KEFI TECH</span>
+  </div>
+
+  <aside data-notes hidden>none</aside>
+</div>
+</body>
+</html>
